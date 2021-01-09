@@ -1,0 +1,18 @@
+.btn {
+  cursor: pointer;
+  padding: 1.1rem 1.5rem;
+  border: none;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  outline: none;
+  transition: all 0.4s;
+
+  &--black {
+    background-color: $color-primary;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: lighten($color-primary, 10%);
+  }
+}
