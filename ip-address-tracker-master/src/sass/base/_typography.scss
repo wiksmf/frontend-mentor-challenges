@@ -35,3 +35,23 @@ body {
     font-weight: $font-weight-bold;
   }
 }
+
+.footer {
+  font-size: $font-size-small;
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-link-primary;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-link-secondary;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

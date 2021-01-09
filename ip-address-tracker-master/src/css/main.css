@@ -63,6 +63,21 @@ body {
   font-weight: 700;
 }
 
+.footer {
+  font-size: 0.9rem;
+}
+
+.footer__link:link, .footer__link:visited {
+  color: #ff00dd;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  color: #0026ff;
+  font-weight: 500;
+}
+
 .u-center-text {
   text-align: center;
 }
@@ -150,6 +165,24 @@ body {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   outline: none;
+}
+
+.footer {
+  padding: 2rem 0;
+}
+
+.footer__link:link, .footer__link:visited {
+  display: inline-block;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header {
