@@ -43,6 +43,8 @@ body {
     &:link,
     &:visited {
       color: $color-link-primary;
+      font-weight: $font-weight-medium;
+
       text-transform: uppercase;
       text-decoration: none;
     }
@@ -51,7 +53,7 @@ body {
     &:hover,
     &:active {
       color: $color-link-secondary;
-      font-weight: $font-weight-medium;
+      font-weight: $font-weight-bold;
     }
   }
 }

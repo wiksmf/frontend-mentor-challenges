@@ -3,12 +3,24 @@
 
   &__input {
     cursor: pointer;
-    width: 80%;
+    width: 30rem;
     padding: 1.1rem;
     padding: 0.7rem 1rem;
     border: none;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     outline: none;
+
+    @include responsive(small) {
+      width: 32.5rem;
+    }
+
+    @include responsive(medium) {
+      width: 50rem;
+    }
+
+    @include responsive(large) {
+      width: 43rem;
+    }
   }
 }

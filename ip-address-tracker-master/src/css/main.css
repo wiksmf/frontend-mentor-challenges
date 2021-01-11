@@ -6,12 +6,52 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+}
+
+@media only screen and (min-width: 25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 body {
@@ -69,13 +109,14 @@ body {
 
 .footer__link:link, .footer__link:visited {
   color: #ff00dd;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .footer__link:focus, .footer__link:hover, .footer__link:active {
   color: #0026ff;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .u-center-text {
@@ -111,7 +152,7 @@ body {
 
 .card {
   position: absolute;
-  top: 0.5rem;
+  top: 24rem;
   left: 50%;
   z-index: 1;
   -webkit-transform: translate(-50%, -50%);
@@ -130,14 +171,67 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 25rem;
-  width: calc(100% - 2.5rem);
+  width: 35rem;
   padding: 1rem;
   border-radius: 1rem;
   background-color: #fff;
 }
 
+@media only screen and (min-width: 25em) {
+  .card {
+    width: 36.5rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .card {
+    top: 17rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10rem;
+    width: 72rem;
+    padding: 2rem 3rem;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .card {
+    top: 16rem;
+    max-width: 100vw;
+  }
+}
+
+.card-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0rem;
+          flex: 1 1 0rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
 .card-box__info {
-  padding: 0.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .card-box:not(:first-child) {
+    border-left: 1px solid #969696;
+    padding-left: 2rem;
+  }
 }
 
 .form {
@@ -158,7 +252,7 @@ body {
 
 .form__input {
   cursor: pointer;
-  width: 80%;
+  width: 30rem;
   padding: 1.1rem;
   padding: 0.7rem 1rem;
   border: none;
@@ -167,8 +261,26 @@ body {
   outline: none;
 }
 
+@media only screen and (min-width: 25em) {
+  .form__input {
+    width: 32.5rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .form__input {
+    width: 50rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .form__input {
+    width: 43rem;
+  }
+}
+
 .footer {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .footer__link:link, .footer__link:visited {
@@ -187,16 +299,37 @@ body {
 
 .header {
   height: 30vh;
+  position: relative;
   background-image: url(../img/pattern-bg.png);
   background-size: cover;
   padding-top: 2rem;
 }
 
-.main {
-  position: relative;
+@media only screen and (min-width: 61.875em) {
+  .header {
+    height: 32.5vh;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  .header {
+    height: 24vh;
+  }
 }
 
 #mapid {
   height: 65vh;
   z-index: 0;
+}
+
+@media only screen and (min-width: 61.875em) {
+  #mapid {
+    height: 68vh;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  #mapid {
+    height: 71vh;
+  }
 }

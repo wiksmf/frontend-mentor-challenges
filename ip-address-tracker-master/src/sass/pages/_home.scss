@@ -1,8 +1,12 @@
-.main {
-  position: relative;
-}
-
 #mapid {
   height: 65vh;
   z-index: 0;
+
+  @include responsive(large) {
+    height: 68vh;
+  }
+
+  @include responsive(xx-large) {
+    height: 71vh;
+  }
 }
