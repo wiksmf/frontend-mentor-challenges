@@ -16,11 +16,15 @@ html {
   }
 
   @include responsive(large) {
-    font-size: 75%; // 1 rem = 12px -> (12px / 16px) * 100 = 75%;
+    font-size: 68.75%; // 1 rem = 11px -> (11px / 16px) * 100 = 68.75%;
   }
 
   @include responsive(x-large) {
-    font-size: 87.5%; // 1rem = 14px -> (14px / 16px) * 100 = 187.5%;
+    font-size: 75%; // 1rem = 12px -> (12px / 16px) * 100 = 75%;
+  }
+
+  @include responsive(xx-large) {
+    font-size: 87.5%; // 1rem = 14px -> (14px / 16px) * 100 = 87.5%;
   }
 }
 

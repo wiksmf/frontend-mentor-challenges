@@ -23,11 +23,17 @@ html {
 
 @media only screen and (min-width: 61.875em) {
   html {
-    font-size: 75%;
+    font-size: 68.75%;
   }
 }
 
 @media only screen and (min-width: 75em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
   html {
     font-size: 87.5%;
   }
@@ -298,17 +304,11 @@ body {
 }
 
 .header {
-  height: 30vh;
+  height: 28vh;
   position: relative;
   background-image: url(../img/pattern-bg.png);
   background-size: cover;
   padding-top: 2rem;
-}
-
-@media only screen and (min-width: 61.875em) {
-  .header {
-    height: 32.5vh;
-  }
 }
 
 @media only screen and (min-width: 112.5em) {
@@ -318,14 +318,8 @@ body {
 }
 
 #mapid {
-  height: 65vh;
+  height: 67vh;
   z-index: 0;
-}
-
-@media only screen and (min-width: 61.875em) {
-  #mapid {
-    height: 68vh;
-  }
 }
 
 @media only screen and (min-width: 112.5em) {

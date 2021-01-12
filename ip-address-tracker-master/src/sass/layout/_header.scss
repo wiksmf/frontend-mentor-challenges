@@ -1,14 +1,10 @@
 .header {
-  height: 30vh;
+  height: 28vh;
   position: relative;
 
   background-image: url(../img/pattern-bg.png);
   background-size: cover;
   padding-top: 2rem;
-
-  @include responsive(large) {
-    height: 32.5vh;
-  }
 
   @include responsive(xx-large) {
     height: 24vh;

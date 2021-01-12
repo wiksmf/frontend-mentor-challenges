@@ -1,10 +1,6 @@
 #mapid {
-  height: 65vh;
+  height: 67vh;
   z-index: 0;
-
-  @include responsive(large) {
-    height: 68vh;
-  }
 
   @include responsive(xx-large) {
     height: 71vh;
