@@ -317,13 +317,13 @@ body {
   }
 }
 
-#mapid {
+#map {
   height: 67vh;
   z-index: 0;
 }
 
 @media only screen and (min-width: 112.5em) {
-  #mapid {
+  #map {
     height: 71vh;
   }
 }
