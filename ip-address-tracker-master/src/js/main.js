@@ -2,7 +2,12 @@
 
 const form = document.querySelector('.form');
 const userInput = document.querySelector('.form__input');
-const infoCard = document.querySelector('.card');
+const ipInfo = document.querySelector('.card-box__ip');
+const cityInfo = document.querySelector('.card-box__city');
+const countryInfo = document.querySelector('.card-box__country');
+const postalCodeInfo = document.querySelector('.card-box__postalCode');
+const timezoneInfo = document.querySelector('.card-box__timezone');
+const ispInfo = document.querySelector('.card-box__isp');
 
 const accessToken = config.ACCESS_TOKEN;
 const apiKey = config.API_KEY;
@@ -48,26 +53,12 @@ const loadMap = function (latitude, longitude) {
 
 // Updating information card
 const displayInformation = function (geoData) {
-  let html = `
-    <div class="card-box">
-      <h2 class="heading-secondary u-margin-bottom-small">IP ADDRESS</h2>
-      <p class="card-box__info">${geoData.ip}</p>
-    </div>
-    <div class="card-box">
-      <h2 class="heading-secondary u-margin-bottom-small">LOCATION</h2>
-      <p class="card-box__info">${geoData.location.city}, ${geoData.location.country} ${geoData.location.postalCode}</p>
-    </div>
-    <div class="card-box">
-      <h2 class="heading-secondary u-margin-bottom-small">TIMEZONE</h2>
-      <p class="card-box__info">UTC${geoData.location.timezone}</p>
-    </div>
-    <div class="card-box">
-      <h2 class="heading-secondary u-margin-bottom-small">ISP</h2>
-      <p class="card-box__info">${geoData.isp}</p>
-    </div>
-  `;
-
-  infoCard.insertAdjacentHTML('afterbegin', html);
+  ipInfo.textContent = geoData.ip;
+  cityInfo.textContent = geoData.location.city;
+  countryInfo.textContent = geoData.location.country;
+  postalCodeInfo.textContent = geoData.location.postalCode;
+  timezoneInfo.textContent = geoData.location.timezone;
+  ispInfo.textContent = geoData.isp;
 };
 
 const init = function () {
