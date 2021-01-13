@@ -10,30 +10,49 @@ const timezoneInfo = document.querySelector('.card-box__timezone');
 const ispInfo = document.querySelector('.card-box__isp');
 
 const accessToken = config.ACCESS_TOKEN;
-const apiKey = config.API_KEY;
+const url = `https://geo.ipify.org/api/v1?apiKey=${config.API_KEY}`;
 
 const map = L.map('map');
 const blackIcon = L.icon({ iconUrl: 'src/img/icon-location.svg' });
 
-// Getting user's position
+// Get user's position
 const getPosition = async function () {
   try {
-    const res = await fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}`);
+    const res = await fetch(url);
     if (!res.ok) throw new Error('Problem getting location data.');
 
     const geoData = await res.json();
-
-    loadMap(geoData.location.lat, geoData.location.lng);
+    updateMap(geoData.location.lat, geoData.location.lng);
     displayInformation(geoData);
   } catch (err) {
     console.error(`⛔ ${err}`);
   }
 };
 
-// Loading Leaflet map
-const loadMap = function (latitude, longitude) {
+// Track Address
+const trackAddress = async function () {
+  try {
+    const res = await fetch(`${url}&domain=${userInput.value}`);
+    if (!res.ok) throw new Error('Problem getting location data.');
+
+    const userData = await res.json();
+    updateMap(userData.location.lat, userData.location.lng);
+    displayInformation(userData);
+  } catch (err) {
+    console.error(`⛔ ${err}`);
+  }
+};
+
+// Update position on map
+const updateMap = function (latitude, longitude) {
   const coords = [latitude, longitude];
 
+  map.setView(coords, 13);
+  L.marker(coords, { icon: blackIcon }).addTo(map);
+};
+
+// Load Leaflet map
+const loadMap = function () {
   L.tileLayer(
     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
     {
@@ -46,12 +65,9 @@ const loadMap = function (latitude, longitude) {
       accessToken: accessToken,
     },
   ).addTo(map);
-
-  map.setView(coords, 13);
-  L.marker(coords, { icon: blackIcon }).addTo(map);
 };
 
-// Updating information card
+// Update information card
 const displayInformation = function (geoData) {
   ipInfo.textContent = geoData.ip;
   cityInfo.textContent = geoData.location.city;
@@ -60,6 +76,14 @@ const displayInformation = function (geoData) {
   timezoneInfo.textContent = geoData.location.timezone;
   ispInfo.textContent = geoData.isp;
 };
+
+// Collect input from the user
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  trackAddress();
+  userInput.value = '';
+  userInput.focus();
+});
 
 const init = function () {
   getPosition();
