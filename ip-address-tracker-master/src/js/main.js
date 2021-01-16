@@ -12,20 +12,21 @@ const ispInfo = document.querySelector('.card-box__isp');
 const accessToken = config.ACCESS_TOKEN;
 const url = `https://geo.ipify.org/api/v1?apiKey=${config.API_KEY}`;
 
-const map = L.map('map');
+const map = L.map('map', { zoomControl: false });
 const blackIcon = L.icon({ iconUrl: 'src/img/icon-location.svg' });
 
 // Get user's position
 const getPosition = async function () {
   try {
     const res = await fetch(url);
-    if (!res.ok) throw new Error('Problem getting location data.');
+    if (!res.ok)
+      throw new Error(`Whoops! We're having problem getting location data.`);
 
     const geoData = await res.json();
     updateMap(geoData.location.lat, geoData.location.lng);
     displayInformation(geoData);
   } catch (err) {
-    console.error(`⛔ ${err}`);
+    alert(`💥 ${err}`);
   }
 };
 
@@ -33,13 +34,16 @@ const getPosition = async function () {
 const trackAddress = async function () {
   try {
     const res = await fetch(`${url}&domain=${userInput.value}`);
-    if (!res.ok) throw new Error('Problem getting location data.');
+    if (!res.ok)
+      throw new Error(
+        `Whoops! It looks like an invalid input. Please try again.`,
+      );
 
     const userData = await res.json();
     updateMap(userData.location.lat, userData.location.lng);
     displayInformation(userData);
   } catch (err) {
-    console.error(`⛔ ${err}`);
+    alert(`💥 ${err}`);
   }
 };
 

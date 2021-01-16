@@ -1,39 +1,33 @@
 .card {
-  position: absolute;
-  top: 24rem;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
+  grid-row: 2 / 3;
+  grid-column: 2 / 16;
+  z-index: 100;
 
   @include flexCenter(column, space-evenly, center);
-  height: 25rem;
-  width: 35rem;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
   background-color: $color-tertiary;
 
   @include responsive(small) {
-    width: 36.5rem;
+    grid-column: 3 / 15;
   }
 
   @include responsive(medium) {
-    top: 17rem;
+    grid-column: 2 / 16;
 
     @include flexCenter(row, space-evenly, center);
-    height: 10rem;
-    width: 72rem;
     padding: 2rem 3rem;
     text-align: left;
   }
 
   @include responsive(large) {
-    top: 16rem;
-    max-width: 100vw;
+    grid-column: 4/ 14;
   }
 
   &-box {
     flex: 1 1 0rem;
     align-self: stretch;
+    padding: 0.5rem;
 
     &__info {
       padding-top: 0.3rem;

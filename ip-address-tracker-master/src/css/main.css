@@ -15,7 +15,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 43.75em) {
   html {
     font-size: 62.5%;
   }
@@ -45,22 +45,16 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content (minmax(7vh, auto))[2] auto 1rem;
+      grid-template-rows: -webkit-min-content repeat(2, minmax(7vh, auto)) auto 1rem;
+      grid-template-rows: min-content repeat(2, minmax(7vh, auto)) auto 1rem;
+  -ms-grid-columns: (1fr)[16];
+      grid-template-columns: repeat(16, 1fr);
 }
 
-body {
+.container {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   letter-spacing: 0.05rem;
@@ -157,12 +151,13 @@ body {
 }
 
 .card {
-  position: absolute;
-  top: 24rem;
-  left: 50%;
-  z-index: 1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 14;
+  grid-column: 2 / 16;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,22 +171,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 25rem;
-  width: 35rem;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
   background-color: #fff;
 }
 
 @media only screen and (min-width: 25em) {
   .card {
-    width: 36.5rem;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 12;
+    grid-column: 3 / 15;
   }
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 43.75em) {
   .card {
-    top: 17rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 14;
+    grid-column: 2 / 16;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -205,8 +202,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 10rem;
-    width: 72rem;
     padding: 2rem 3rem;
     text-align: left;
   }
@@ -214,8 +209,9 @@ body {
 
 @media only screen and (min-width: 61.875em) {
   .card {
-    top: 16rem;
-    max-width: 100vw;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 10;
+    grid-column: 4/ 14;
   }
 }
 
@@ -226,6 +222,7 @@ body {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  padding: 0.5rem;
 }
 
 .card-box__info {
@@ -233,7 +230,7 @@ body {
   padding-bottom: 0.3rem;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 43.75em) {
   .card-box:not(:first-child) {
     border-left: 1px solid #969696;
     padding-left: 2rem;
@@ -269,11 +266,11 @@ body {
 
 @media only screen and (min-width: 25em) {
   .form__input {
-    width: 32.5rem;
+    width: 30rem;
   }
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 43.75em) {
   .form__input {
     width: 50rem;
   }
@@ -286,6 +283,8 @@ body {
 }
 
 .footer {
+  grid-row: -1;
+  grid-column: 1 / -1;
   padding: 1rem 0;
 }
 
@@ -304,26 +303,64 @@ body {
 }
 
 .header {
-  height: 28vh;
-  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  grid-column: 1 / -1;
+  z-index: 50;
+  height: 22vh;
   background-image: url(../img/pattern-bg.png);
   background-size: cover;
   padding-top: 2rem;
 }
 
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 43.75em) {
+  .header {
+    height: 23vh;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
   .header {
     height: 24vh;
   }
 }
 
-#map {
-  height: 67vh;
-  z-index: 0;
+@media only screen and (min-width: 75em) {
+  .header {
+    height: 25vh;
+  }
 }
 
-@media only screen and (min-width: 112.5em) {
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+  grid-column: 1 / -1;
+  z-index: 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+#map {
+  height: 80vh;
+}
+
+@media only screen and (min-width: 25em) {
   #map {
-    height: 71vh;
+    height: 78vh;
+  }
+}
+
+@media only screen and (min-width: 43.75em) {
+  #map {
+    height: 76vh;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  #map {
+    height: 74vh;
   }
 }

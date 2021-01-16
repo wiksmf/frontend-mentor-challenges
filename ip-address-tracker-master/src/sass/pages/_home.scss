@@ -1,8 +1,22 @@
-#map {
-  height: 67vh;
+.main {
+  grid-row: 2 / 4;
+  grid-column: 1 / -1;
   z-index: 0;
+  align-self: stretch;
+}
 
-  @include responsive(xx-large) {
-    height: 71vh;
+#map {
+  height: 80vh;
+
+  @include responsive(small) {
+    height: 78vh;
+  }
+
+  @include responsive(medium) {
+    height: 76vh;
+  }
+
+  @include responsive(x-large) {
+    height: 74vh;
   }
 }
