@@ -31,14 +31,14 @@
   <header class="header u-center-text">
     <h1 class="heading-primary u-margin-bottom-medium">IP Address Tracker</h1>
     <form action="#" class="form u-center-text">
-      <input type="text" class="form__input" placeholder="Search for any IP address or domain" required/>
+      <input type="text" class="form__input" placeholder="Search for any IP address or domain" aria-label="Search for any IP address or domain" required/>
       <button type="submit" class="btn btn--black">
         <img src="src/img/icon-arrow.svg" alt="search" />
       </button>
     </form>
   </header>
   
-  <section class="card u-center-text">
+  <div class="card u-center-text">
     <div class="card-box">
       <h2 class="heading-secondary u-margin-bottom-small">IP ADDRESS</h2>
       <p class="card-box__info"><span class="card-box__ip"></span></p>
@@ -59,10 +59,10 @@
       <h2 class="heading-secondary u-margin-bottom-small">ISP</h2>
       <p class="card-box__info"><span class="card-box__isp"></span></p>
     </div>
-  </section>
+  </div>
 
   <main class="main">
-    <section id="map"></section>
+    <div id="map"></div>
   </main>
 
   <footer class="footer u-center-text">
