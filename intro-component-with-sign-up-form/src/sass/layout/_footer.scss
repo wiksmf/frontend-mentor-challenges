@@ -1,0 +1,23 @@
+.footer {
+  align-self: center;
+
+  position: fixed;
+  bottom: 2rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      transform: scale(1.1);
+    }
+  }
+}
