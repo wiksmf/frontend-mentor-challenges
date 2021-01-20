@@ -1,4 +1,15 @@
 .main {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+}
+
+.section-intro {
+  text-align: center;
+}
+
+.header__text-box {
+  padding: 1.5rem 3.5rem;
+  border-radius: 1rem;
+  background-color: $color-secondary-bg;
+  box-shadow: 0 0.8rem rgba($color-primary-shadow, 0.2);
 }

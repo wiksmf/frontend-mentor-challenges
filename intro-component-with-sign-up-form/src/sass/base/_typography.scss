@@ -3,6 +3,20 @@
   color: $color-primary-text;
 }
 
+.heading-primary {
+  font-size: $font-size-big;
+}
+
+.heading-secondary {
+  font-size: $font-size-medium;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: $font-size-medium;
+  line-height: 1.8;
+}
+
 .form {
   &__input {
     font-family: inherit;
@@ -22,6 +36,7 @@
 .terms-conditions {
   color: $color-secondary-text;
   font-size: $font-size-small;
+  line-height: 2;
 
   &__link {
     &:link,
@@ -33,7 +48,7 @@
     &:focus,
     &:hover,
     &:active {
-      color: $color-primary-shadow;
+      color: $color-secondary-bg;
     }
   }
 }

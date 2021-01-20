@@ -1,9 +1,21 @@
 .btn {
   width: 100%;
-  margin-bottom: 2rem;
   border: none;
   padding: 1.7rem;
   border-radius: 0.5rem;
   background-color: $color-primary-btn;
   box-shadow: 0 0.5rem darken($color-primary-btn, 5%);
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: lighten($color-primary-btn, 5%);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(0.3rem);
+  }
 }
