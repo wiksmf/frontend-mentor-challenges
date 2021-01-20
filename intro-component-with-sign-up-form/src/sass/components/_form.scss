@@ -1,0 +1,14 @@
+.form {
+  background-color: $color-primary-text;
+  padding: 2.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.8rem rgba($color-primary-shadow, 0.3);
+
+  &__input {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.7rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid $color-secondary-text;
+  }
+}

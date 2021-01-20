@@ -1,16 +1,50 @@
 .container {
   font-family: $font-primary;
+  color: $color-primary-text;
 }
 
-.footer {
-  font-size: $font-primary;
-  color: $color-primary-text;
+.form {
+  &__input {
+    font-family: inherit;
+    font-size: $font-size-medium;
+    font-weight: 500;
+  }
+}
+
+.btn {
+  font-family: inherit;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  color: inherit;
+}
+
+.terms-conditions {
+  color: $color-secondary-text;
+  font-size: $font-size-small;
 
   &__link {
     &:link,
     &:visited {
-      color: darken($color-primary-bg, 50%);
+      color: $color-primary-bg;
+      text-decoration: none;
+    }
 
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary-shadow;
+    }
+  }
+}
+
+.footer {
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-small;
+      font-weight: 700;
+      color: darken($color-primary-bg, 50%);
       text-transform: uppercase;
       text-decoration: none;
     }
