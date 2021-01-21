@@ -9,12 +9,30 @@ html {
   font-size: 50%;
 }
 
+@media only screen and (min-width: 25em) {
+  html {
+    font-size: 53.125%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100vh;
   background-color: #ff7a7a;
   background-image: url(../img/bg-intro-mobile.png);
+}
+
+@media only screen and (min-width: 61.875em) {
+  body {
+    background-image: url(../img/bg-intro-desktop.png);
+  }
 }
 
 .container {
@@ -39,7 +57,13 @@ body {
 }
 
 .heading-primary {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
+}
+
+@media only screen and (min-width: 75em) {
+  .heading-primary {
+    font-size: 5rem;
+  }
 }
 
 .heading-secondary {
@@ -180,16 +204,66 @@ body {
 }
 
 .main {
-  padding-left: 2.2rem;
-  padding-right: 2.2rem;
+  max-width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 25em) {
+  .main {
+    max-width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 37.5em) {
+  .main {
+    max-width: 60rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .main {
+    max-width: 110rem;
+  }
 }
 
 .section-intro {
   text-align: center;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .section-intro {
+    margin-right: 5rem;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section-intro {
+    margin-right: 10rem;
+  }
+}
+
 .header__text-box {
-  padding: 1.5rem 3.5rem;
+  padding: 1.8rem 3.5rem;
   border-radius: 1rem;
   background-color: #6055a5;
   -webkit-box-shadow: 0 0.8rem rgba(62, 60, 73, 0.2);

@@ -4,7 +4,11 @@
 }
 
 .heading-primary {
-  font-size: $font-size-big;
+  font-size: $font-size-large;
+
+  @include responsive(x-large) {
+    font-size: $font-size-x-large;
+  }
 }
 
 .heading-secondary {

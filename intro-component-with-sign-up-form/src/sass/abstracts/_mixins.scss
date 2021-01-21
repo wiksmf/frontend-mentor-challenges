@@ -4,3 +4,29 @@
   justify-content: $justify-content;
   align-items: $align;
 }
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == small {
+    @media only screen and (min-width: 25em) {
+      @content;
+    } // 400px -> 400px / 16px = 25em
+  }
+
+  @if $breakpoint == medium {
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  } // 600px -> 600px / 16px = 37.5em
+
+  @if $breakpoint == large {
+    @media only screen and (min-width: 61.875em) {
+      @content;
+    }
+  } // 990px -> 990px / 16px = 61.875em
+
+  @if $breakpoint == x-large {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  } // 1200px -> 1200px / 16px = 75em
+}
