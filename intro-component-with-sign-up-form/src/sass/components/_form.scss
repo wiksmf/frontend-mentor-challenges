@@ -3,6 +3,25 @@
   border-radius: 1rem;
   background-color: $color-primary-text;
   box-shadow: 0 0.8rem rgba($color-primary-shadow, 0.3);
+  width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(small) {
+    width: 40rem;
+  }
+
+  @include responsive(medium) {
+    width: 60rem;
+  }
+
+  @include responsive(large) {
+    width: 50rem;
+  }
+
+  @include responsive(x-large) {
+    width: 60rem;
+  }
 
   &__input {
     width: 100%;
@@ -16,5 +35,15 @@
       outline: none;
       border-color: $color-primary-shadow;
     }
+  }
+}
+
+.error {
+  display: block;
+
+  &__input {
+    background: url(../img/icon-error.svg) no-repeat;
+    background-position: right 1.5rem center;
+    border: 0.1rem solid darken($color-primary-bg, 25%);
   }
 }

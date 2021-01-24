@@ -33,14 +33,26 @@
       </div>
 
       <form class="form" novalidate>
-        <input class="form__input u-margin-bottom-small" type="text" id="first-name" name="first-name" placeholder="First Name" required />
-        <span class="error u-hidden">First Name cannot be empty</span>
-        <input class="form__input u-margin-bottom-small" type="text" id="last-name" name="last-name" placeholder="Last Name" required />
-        <span class="error u-hidden"> Last Name cannot be empty</span>
-        <input class="form__input u-margin-bottom-small" type="email" id="email" name="email" placeholder="Email Address" required />
-        <span class="error u-hidden">Looks like this is not an email</span>
-        <input class="form__input u-margin-bottom-small" type="password" id="pwd" name="pwd" placeholder="Password" required />
-        <span class="error u-hidden">Password must be alphanumeric and contain 8 - 14 characters</span>
+        <div class="u-margin-bottom-small">
+          <input class="form__input" type="text" id="first-name" name="first-name"
+            placeholder="First Name" required />
+          <span class="error u-right-text u-margin-top-small u-hidden">First Name cannot be empty</span>
+        </div>
+        <div class="u-margin-bottom-small">
+          <input class="form__input" type="text" id="last-name" name="last-name"
+            placeholder="Last Name" required />
+          <span class="error u-right-text u-margin-top-small u-hidden"> Last Name cannot be empty</span>
+        </div>
+        <div class="u-margin-bottom-small">
+          <input class="form__input" type="email" id="email" name="email"
+            placeholder="Email Address" required />
+          <span class="error u-right-text u-margin-top-small u-hidden">Looks like this is not an email</span>
+        </div>
+        <div class="u-margin-bottom-small">
+          <input class="form__input" type="password" id="pwd" name="pwd" placeholder="Password"
+            required />
+          <span class="error u-right-text u-margin-top-small u-hidden">Password must be alphanumeric and contain 8 - 14 characters</span>
+        </div>
         <button class="btn u-margin-bottom-small" type="submit">CLAIM YOUR FREE TRIAL</button>
         <p class="terms-conditions u-center-text ">
           By clicking the button, you are agreeing to our

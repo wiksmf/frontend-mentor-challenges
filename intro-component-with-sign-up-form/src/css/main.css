@@ -117,8 +117,22 @@ body {
   color: black;
 }
 
+.error {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #fa0000;
+}
+
 .u-center-text {
   text-align: center;
+}
+
+.u-right-text {
+  text-align: right;
+}
+
+.u-margin-top-small {
+  margin-top: 0.78em;
 }
 
 .u-margin-bottom-small {
@@ -167,6 +181,33 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0 0.8rem rgba(62, 60, 73, 0.3);
           box-shadow: 0 0.8rem rgba(62, 60, 73, 0.3);
+  width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 25em) {
+  .form {
+    width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 37.5em) {
+  .form {
+    width: 60rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .form {
+    width: 50rem;
+  }
+}
+
+@media only screen and (min-width: 87.5em) {
+  .form {
+    width: 60rem;
+  }
 }
 
 .form__input {
@@ -179,6 +220,16 @@ body {
 .form__input:focus, .form__input:hover, .form__input:active {
   outline: none;
   border-color: #3e3c49;
+}
+
+.error {
+  display: block;
+}
+
+.error__input {
+  background: url(../img/icon-error.svg) no-repeat;
+  background-position: right 1.5rem center;
+  border: 0.1rem solid #fa0000;
 }
 
 .footer {
