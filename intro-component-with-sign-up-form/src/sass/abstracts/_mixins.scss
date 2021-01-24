@@ -25,8 +25,8 @@
   } // 990px -> 990px / 16px = 61.875em
 
   @if $breakpoint == x-large {
-    @media only screen and (min-width: 75em) {
+    @media only screen and (min-width: 87.5em) {
       @content;
     }
-  } // 1200px -> 1200px / 16px = 75em
+  } // 1400px -> 1400px / 16px = 75em
 }

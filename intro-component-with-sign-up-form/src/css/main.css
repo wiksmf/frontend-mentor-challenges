@@ -15,7 +15,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 87.5em) {
   html {
     font-size: 62.5%;
   }
@@ -60,7 +60,7 @@ body {
   font-size: 3.5rem;
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 87.5em) {
   .heading-primary {
     font-size: 5rem;
   }
@@ -239,9 +239,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 87.5em) {
   .main {
-    max-width: 110rem;
+    max-width: 120rem;
   }
 }
 
@@ -256,9 +256,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 87.5em) {
   .section-intro {
-    margin-right: 10rem;
+    margin-right: 8rem;
   }
 }
 

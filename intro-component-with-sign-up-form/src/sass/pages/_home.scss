@@ -22,7 +22,7 @@
   }
 
   @include responsive(x-large) {
-    max-width: 110rem;
+    max-width: 120rem;
   }
 }
 
@@ -35,7 +35,7 @@
   }
 
   @include responsive(x-large) {
-    margin-right: 10rem;
+    margin-right: 8rem;
   }
 }
 
