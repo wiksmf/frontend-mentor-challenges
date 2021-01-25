@@ -222,10 +222,6 @@ body {
   border-color: #3e3c49;
 }
 
-.error {
-  display: block;
-}
-
 .error__input {
   background: url(../img/icon-error.svg) no-repeat;
   background-position: right 1.5rem center;

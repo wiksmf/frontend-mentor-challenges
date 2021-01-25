@@ -34,24 +34,29 @@
 
       <form class="form" novalidate>
         <div class="u-margin-bottom-small">
-          <input class="form__input" type="text" id="first-name" name="first-name"
-            placeholder="First Name" required />
-          <span class="error u-right-text u-margin-top-small u-hidden">First Name cannot be empty</span>
+          <input class="form__input" type="text" id="first-name" name="first-name" placeholder="First Name" required />
+          <div class="u-right-text u-hidden">
+            <span class="error u-margin-top-small">First Name cannot be empty</span>
+          </div>
         </div>
         <div class="u-margin-bottom-small">
-          <input class="form__input" type="text" id="last-name" name="last-name"
-            placeholder="Last Name" required />
-          <span class="error u-right-text u-margin-top-small u-hidden"> Last Name cannot be empty</span>
+          <input class="form__input" type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+          <div class="u-right-text u-hidden">
+            <span class="error u-margin-top-small"> Last Name cannot be empty</span>
+          </div>
         </div>
         <div class="u-margin-bottom-small">
-          <input class="form__input" type="email" id="email" name="email"
-            placeholder="Email Address" required />
-          <span class="error u-right-text u-margin-top-small u-hidden">Looks like this is not an email</span>
+          <input class="form__input" type="email" id="email" name="email" placeholder="Email Address" required />
+          <div class="u-right-text u-hidden">
+            <span class="error u-margin-top-small">Looks like this is not an email</span>
+          </div>
         </div>
         <div class="u-margin-bottom-small">
-          <input class="form__input" type="password" id="pwd" name="pwd" placeholder="Password"
-            required />
-          <span class="error u-right-text u-margin-top-small u-hidden">Password must be alphanumeric and contain 8 - 14 characters</span>
+          <input class="form__input" type="password" id="pwd" name="pwd" placeholder="Password" required />
+          <div class="u-right-text u-hidden">
+            <span class="error u-margin-top-small">Password must be alphanumeric and contain 8 - 14
+              characters</span>
+          </div>
         </div>
         <button class="btn u-margin-bottom-small" type="submit">CLAIM YOUR FREE TRIAL</button>
         <p class="terms-conditions u-center-text ">

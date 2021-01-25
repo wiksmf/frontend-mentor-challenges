@@ -16,16 +16,18 @@ form.addEventListener('submit', e => {
 
   !firstName.value ? displayError(firstName) : removeError(firstName);
   !lastName.value ? displayError(lastName) : removeError(lastName);
-  !regEx.email.test(email.value) ? displayError(email) : removeError(email);
+  !regEx.email.test(email.value)
+    ? displayError(email, 'email@example/com')
+    : removeError(email);
   !regEx.pwd.test(password.value)
     ? displayError(password)
     : removeError(password);
 });
 
-function displayError(input) {
+function displayError(input, placeholder = '') {
   input.classList.add('error__input');
   input.nextElementSibling.classList.remove('u-hidden');
-  input.setAttribute('placeholder', '');
+  input.setAttribute('placeholder', placeholder);
 }
 
 function removeError(input) {
