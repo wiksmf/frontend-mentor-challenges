@@ -123,6 +123,22 @@ body {
   color: #fa0000;
 }
 
+.error__input::-webkit-input-placeholder {
+  color: #fa0000;
+}
+
+.error__input:-ms-input-placeholder {
+  color: #fa0000;
+}
+
+.error__input::-ms-input-placeholder {
+  color: #fa0000;
+}
+
+.error__input::placeholder {
+  color: #fa0000;
+}
+
 .u-center-text {
   text-align: center;
 }

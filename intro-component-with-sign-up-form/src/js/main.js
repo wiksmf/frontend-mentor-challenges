@@ -8,7 +8,7 @@ const password = document.querySelector('#pwd');
 
 const regEx = {
   email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-  pwd: /^[A-Za-z0-9]\w{7,15}$/,
+  pwd: /(?=.*\d)(?=.*[a-zA-Z])\w{7,}/,
 };
 
 form.addEventListener('submit', e => {
@@ -16,9 +16,11 @@ form.addEventListener('submit', e => {
 
   !firstName.value ? displayError(firstName) : removeError(firstName);
   !lastName.value ? displayError(lastName) : removeError(lastName);
+
   !regEx.email.test(email.value)
     ? displayError(email, 'email@example/com')
     : removeError(email);
+
   !regEx.pwd.test(password.value)
     ? displayError(password)
     : removeError(password);

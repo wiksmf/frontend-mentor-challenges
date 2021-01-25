@@ -80,4 +80,8 @@
   font-size: $font-size-small;
   font-style: italic;
   color: darken($color-primary-bg, 25%);
+
+  &__input::placeholder {
+    color: darken($color-primary-bg, 25%);
+  }
 }
