@@ -1,0 +1,14 @@
+.container {
+  font-family: 'Public Sans', sans-serif;
+}
+
+.navigation {
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-small;
+      color: $color-primary-text;
+      text-decoration: none;
+    }
+  }
+}
