@@ -1,3 +1,25 @@
+@-webkit-keyframes moveInTop {
+  0% {
+    top: -50%;
+    left: 50%;
+  }
+  100% {
+    top: 30%;
+    left: 50%;
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    top: -50%;
+    left: 50%;
+  }
+  100% {
+    top: 30%;
+    left: 50%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +69,10 @@ body {
   background-color: #fafafa;
 }
 
+.navigation {
+  position: relative;
+}
+
 .navigation__btn {
   border: none;
   background-color: none;
@@ -55,7 +81,7 @@ body {
 
 .navigation__nav {
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -64,6 +90,15 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: 0 2rem 5.5rem 1.5rem rgba(45, 49, 77, 0.4);
           box-shadow: 0 2rem 5.5rem 1.5rem rgba(45, 49, 77, 0.4);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.navigation__nav--animated-in {
+  -webkit-animation: moveInTop 1.6s ease-out;
+          animation: moveInTop 1.6s ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .navigation__list {
