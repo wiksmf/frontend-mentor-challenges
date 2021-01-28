@@ -46,8 +46,29 @@ body {
   text-decoration: none;
 }
 
+.btn--gradient {
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: 0.05rem;
+}
+
 .u-hidden {
   display: none;
+}
+
+.u-margin-bottom {
+  margin-bottom: 1.6rem;
+}
+
+.btn {
+  padding: 1.1rem 2.5rem;
+  border: none;
+  border-radius: 50rem;
+}
+
+.btn--gradient {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
 }
 
 .header {

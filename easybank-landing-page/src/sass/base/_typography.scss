@@ -12,3 +12,11 @@
     }
   }
 }
+
+.btn {
+  &--gradient {
+    font-weight: $font-weight-bold;
+    color: $color-primary-bg;
+    letter-spacing: 0.05rem;
+  }
+}
