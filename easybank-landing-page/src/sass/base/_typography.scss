@@ -60,3 +60,14 @@
     }
   }
 }
+
+.footer {
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-xs;
+      color: $color-tertiary-text;
+      text-decoration: none;
+    }
+  }
+}

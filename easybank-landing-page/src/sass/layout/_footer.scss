@@ -1,0 +1,36 @@
+.footer {
+  padding: 3rem 1rem;
+  background-color: $color-primary-text;
+  text-align: center;
+
+  &-nav {
+    list-style: none;
+    text-align: center;
+
+    &__item {
+      margin: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.social-icon {
+  &__item {
+    display: inline;
+    padding: 1rem 0.5rem;
+  }
+}
