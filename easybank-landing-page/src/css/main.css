@@ -87,8 +87,22 @@ body {
   text-decoration: none;
 }
 
+.footer__copyright {
+  color: #9698a6;
+}
+
 .footer__link:link, .footer__link:visited {
   font-size: 1.4rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.attribution {
+  color: #9698a6;
+}
+
+.attribution__link:link, .attribution__link:visited {
+  font-size: 1.1rem;
   color: #ffffff;
   text-decoration: none;
 }
@@ -169,8 +183,9 @@ body {
   text-align: center;
 }
 
-.footer-nav {
+.footer-nav--1, .footer-nav--2 {
   list-style: none;
+  text-align: center;
   text-align: center;
 }
 

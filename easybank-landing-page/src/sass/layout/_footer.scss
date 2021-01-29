@@ -4,8 +4,12 @@
   text-align: center;
 
   &-nav {
-    list-style: none;
-    text-align: center;
+    &--1,
+    &--2 {
+      list-style: none;
+      text-align: center;
+      text-align: center;
+    }
 
     &__item {
       margin: 1.5rem;
