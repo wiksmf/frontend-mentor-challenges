@@ -41,19 +41,31 @@ body {
 }
 
 .heading-primary {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.heading-secondary {
   font-size: 3rem;
+  font-weight: 400;
+  color: #2d314d;
+}
+
+.heading-tertiary {
+  font-size: 2.2rem;
   font-weight: 400;
   color: #2d314d;
 }
 
 .paragraph {
   font-size: 1.4rem;
+  font-weight: 400;
   color: #9698a6;
   line-height: 1.5;
 }
 
 .navigation__link:link, .navigation__link:visited {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #2d314d;
   text-decoration: none;
 }
@@ -68,12 +80,20 @@ body {
   display: none;
 }
 
+.u-margin-top-large {
+  margin-top: 5rem;
+}
+
 .u-margin-bottom-small {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
 }
 
 .u-margin-bottom-medium {
   margin-bottom: 2.3rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 5rem;
 }
 
 .background {
@@ -165,4 +185,11 @@ body {
 
 .section-about {
   text-align: center;
+  padding: 5rem 1rem;
+}
+
+.section-features {
+  text-align: center;
+  background-color: #f3f4f6;
+  padding: 5rem 1rem;
 }
