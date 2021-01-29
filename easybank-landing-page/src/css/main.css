@@ -40,6 +40,18 @@ body {
   font-family: 'Public Sans', sans-serif;
 }
 
+.heading-primary {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #2d314d;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  color: #9698a6;
+  line-height: 1.5;
+}
+
 .navigation__link:link, .navigation__link:visited {
   font-size: 1.8rem;
   color: #2d314d;
@@ -56,8 +68,27 @@ body {
   display: none;
 }
 
-.u-margin-bottom {
+.u-margin-bottom-small {
   margin-bottom: 1.6rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 2.3rem;
+}
+
+.background {
+  height: 35vh;
+  background-image: url(../img/bg-intro-mobile.svg);
+  background-size: cover;
+  background-position: 50% -5rem;
+  background-repeat: no-repeat;
+}
+
+.background__image {
+  position: relative;
+  top: -11.4rem;
+  z-index: 0;
+  width: 100%;
 }
 
 .btn {
@@ -87,6 +118,7 @@ body {
           align-items: center;
   position: relative;
   padding: 2.5rem 3.5rem;
+  z-index: 1;
   background-color: #fafafa;
 }
 
@@ -129,4 +161,8 @@ body {
 
 .navigation__item {
   margin: 3rem;
+}
+
+.section-about {
+  text-align: center;
 }

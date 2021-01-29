@@ -2,11 +2,23 @@
   font-family: 'Public Sans', sans-serif;
 }
 
+.heading-primary {
+  font-size: $font-size-big;
+  font-weight: $font-weight-medium;
+  color: $color-primary-text;
+}
+
+.paragraph {
+  font-size: $font-size-small;
+  color: $color-secondary-text;
+  line-height: 1.5;
+}
+
 .navigation {
   &__link {
     &:link,
     &:visited {
-      font-size: $font-size-small;
+      font-size: $font-size-medium;
       color: $color-primary-text;
       text-decoration: none;
     }

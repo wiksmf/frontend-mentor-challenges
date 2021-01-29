@@ -1,0 +1,15 @@
+.background {
+  height: 35vh;
+
+  background-image: url(../img/bg-intro-mobile.svg);
+  background-size: cover;
+  background-position: 50% -5rem;
+  background-repeat: no-repeat;
+
+  &__image {
+    position: relative;
+    top: -11.4rem;
+    z-index: 0;
+    width: 100%;
+  }
+}
