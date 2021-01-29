@@ -43,6 +43,7 @@ body {
 .heading-primary {
   font-size: 4rem;
   font-weight: 400;
+  color: #2d314d;
 }
 
 .heading-secondary {
@@ -64,6 +65,10 @@ body {
   line-height: 1.5;
 }
 
+.paragraph-author {
+  font-size: 1.1rem;
+}
+
 .navigation__link:link, .navigation__link:visited {
   font-size: 2.2rem;
   color: #2d314d;
@@ -76,24 +81,50 @@ body {
   letter-spacing: 0.05rem;
 }
 
+.article-box__link:link, .article-box__link:visited {
+  font-size: 1.8rem;
+  color: #2d314d;
+  text-decoration: none;
+}
+
 .u-hidden {
   display: none;
 }
 
-.u-margin-top-large {
-  margin-top: 5rem;
+.u-mb-xs {
+  margin-bottom: 1rem;
 }
 
-.u-margin-bottom-small {
+.u-mb-sm {
   margin-bottom: 1.8rem;
 }
 
-.u-margin-bottom-medium {
+.u-mb-md {
   margin-bottom: 2.3rem;
 }
 
-.u-margin-bottom-big {
+.u-mb-lg {
   margin-bottom: 5rem;
+}
+
+.article-box {
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+}
+
+.article-box__image {
+  width: 100%;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.article-box__preview {
+  text-align: left;
+  padding: 2rem 3rem 3.5rem;
+}
+
+.article-box__link {
+  display: inline-block;
 }
 
 .background {
@@ -120,6 +151,10 @@ body {
 .btn--gradient {
   background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+.information-box {
+  padding: 2rem 1rem;
 }
 
 .header {
@@ -185,11 +220,17 @@ body {
 
 .section-about {
   text-align: center;
-  padding: 5rem 1rem;
+  padding-bottom: 5rem;
 }
 
 .section-features {
   text-align: center;
-  background-color: #f3f4f6;
   padding: 5rem 1rem;
+  background-color: #f3f4f6;
+}
+
+.section-articles {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #fafafa;
 }

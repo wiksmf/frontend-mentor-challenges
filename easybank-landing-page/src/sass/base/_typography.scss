@@ -3,34 +3,39 @@
 }
 
 .heading-primary {
-  font-size: $font-size-x-big;
+  font-size: $font-size-xl;
   font-weight: $font-weight-medium;
+  color: $color-primary-text;
 }
 
 .heading-secondary {
-  font-size: $font-size-big;
+  font-size: $font-size-lg;
   font-weight: $font-weight-medium;
   color: $color-primary-text;
 }
 
 .heading-tertiary {
-  font-size: $font-size-medium;
+  font-size: $font-size-md;
   font-weight: $font-weight-medium;
   color: $color-primary-text;
 }
 
 .paragraph {
-  font-size: $font-size-small;
+  font-size: $font-size-xs;
   font-weight: $font-weight-medium;
   color: $color-secondary-text;
   line-height: 1.5;
+
+  &-author {
+    font-size: $font-size-xxs;
+  }
 }
 
 .navigation {
   &__link {
     &:link,
     &:visited {
-      font-size: $font-size-medium;
+      font-size: $font-size-md;
       color: $color-primary-text;
       text-decoration: none;
     }
@@ -42,5 +47,16 @@
     font-weight: $font-weight-bold;
     color: $color-primary-bg;
     letter-spacing: 0.05rem;
+  }
+}
+
+.article-box {
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-sm;
+      color: $color-primary-text;
+      text-decoration: none;
+    }
   }
 }

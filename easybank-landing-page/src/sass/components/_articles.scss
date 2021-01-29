@@ -1,0 +1,19 @@
+.article-box {
+  background-color: $color-tertiary-text;
+  border-radius: 0.7rem;
+
+  &__image {
+    width: 100%;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+
+  &__preview {
+    text-align: left;
+    padding: 2rem 3rem 3.5rem;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+}

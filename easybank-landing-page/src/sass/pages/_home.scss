@@ -1,10 +1,16 @@
 .section-about {
   text-align: center;
-  padding: 5rem 1rem;
+  padding-bottom: 5rem;
 }
 
 .section-features {
   text-align: center;
-  background-color: $color-secondary-bg;
   padding: 5rem 1rem;
+  background-color: $color-secondary-bg;
+}
+
+.section-articles {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: $color-primary-bg;
 }
