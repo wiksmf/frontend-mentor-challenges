@@ -1,9 +1,11 @@
 .footer {
-  padding: 3rem 1rem;
+  padding: 4.5rem 1rem;
   background-color: $color-primary-text;
   text-align: center;
 
   &-nav {
+    padding: 0.3rem;
+
     &--1,
     &--2 {
       list-style: none;
@@ -30,9 +32,15 @@
       transform: scale(1.1);
     }
   }
+
+  &__copyright {
+    padding: 1.5rem;
+  }
 }
 
 .social-icon {
+  padding: 1.2rem 0.5rem;
+
   &__item {
     display: inline;
     padding: 1rem 0.5rem;

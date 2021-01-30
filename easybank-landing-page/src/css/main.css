@@ -88,6 +88,7 @@ body {
 }
 
 .footer__copyright {
+  font-size: 1.4rem;
   color: #9698a6;
 }
 
@@ -140,7 +141,7 @@ body {
 
 .article-box__preview {
   text-align: left;
-  padding: 2rem 3rem 3.5rem;
+  padding: 2rem 1.5rem 3.5rem;
 }
 
 .article-box__link {
@@ -148,18 +149,20 @@ body {
 }
 
 .background {
-  height: 35vh;
+  height: 34vh;
   background-image: url(../img/bg-intro-mobile.svg);
   background-size: cover;
-  background-position: 50% -5rem;
+  background-position: 50% -7rem;
   background-repeat: no-repeat;
 }
 
 .background__image {
   position: relative;
-  top: -11.4rem;
+  top: -12rem;
   z-index: 0;
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -173,14 +176,18 @@ body {
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
 }
 
-.information-box {
-  padding: 2rem 1rem;
+.feature-box {
+  padding: 1.5rem 1rem;
 }
 
 .footer {
-  padding: 3rem 1rem;
+  padding: 4.5rem 1rem;
   background-color: #2d314d;
   text-align: center;
+}
+
+.footer-nav {
+  padding: 0.3rem;
 }
 
 .footer-nav--1, .footer-nav--2 {
@@ -203,6 +210,14 @@ body {
 .footer__link:focus, .footer__link:hover, .footer__link:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.footer__copyright {
+  padding: 1.5rem;
+}
+
+.social-icon {
+  padding: 1.2rem 0.5rem;
 }
 
 .social-icon__item {
@@ -242,15 +257,15 @@ body {
 
 .navigation__nav {
   position: fixed;
-  top: 30%;
+  top: 28%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: calc(100vw - 5rem);
   border-radius: 0.5rem;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 2rem 5.5rem 1.5rem rgba(45, 49, 77, 0.4);
-          box-shadow: 0 2rem 5.5rem 1.5rem rgba(45, 49, 77, 0.4);
+  -webkit-box-shadow: 0 12rem 5rem 12rem rgba(45, 49, 77, 0.25);
+          box-shadow: 0 12rem 5rem 12rem rgba(45, 49, 77, 0.25);
   -webkit-transition: all 2s;
   transition: all 2s;
 }
@@ -276,14 +291,18 @@ body {
   padding-bottom: 5rem;
 }
 
+.information-box {
+  padding: 3rem;
+}
+
 .section-features {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 5rem 3rem;
   background-color: #f3f4f6;
 }
 
 .section-articles {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 5rem 3rem;
   background-color: #fafafa;
 }
