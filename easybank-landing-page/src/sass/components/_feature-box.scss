@@ -1,3 +1,9 @@
-.feature-box {
-  padding: 1.5rem 1rem;
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 5rem;
 }
+
+// .feature-box {
+//   padding: 1.5rem 1rem;
+// }

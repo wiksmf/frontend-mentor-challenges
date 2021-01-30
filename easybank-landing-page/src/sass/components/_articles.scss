@@ -1,8 +1,15 @@
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 5rem;
+}
+
 .article-box {
   background-color: $color-tertiary-text;
   border-radius: 0.7rem;
 
   &__image {
+    height: 25rem;
     width: 100%;
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
@@ -10,7 +17,7 @@
 
   &__preview {
     text-align: left;
-    padding: 2rem 1.5rem 3.5rem;
+    padding: 2rem 1.3rem 3.5rem;
   }
 
   &__link {
