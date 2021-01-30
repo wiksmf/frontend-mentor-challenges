@@ -16,7 +16,7 @@
 }
 
 .paragraph {
-  @include textStyle($size: $font-size-xs);
+  @include textStyle($size: $font-size-xs, $color: $color-secondary-text);
   line-height: 1.5;
 
   &-author {
@@ -45,11 +45,7 @@
 .article-box {
   &__link {
 
-    &:link,
-    &:visited {
-      @include textStyle($size:$font-size-sm);
-      text-decoration: none;
-    }
+    @include linkStates ($size: $font-size-md, $color:$color-primary-text);
   }
 }
 
@@ -59,7 +55,7 @@
   }
 
   &__link {
-    @include linkStates;
+    @include linkStates();
   }
 }
 
@@ -67,6 +63,6 @@
   @include textStyle($size:$font-size-xs, $color:$color-secondary-text);
 
   &__link {
-    @include linkStates;
+    @include linkStates();
   }
 }

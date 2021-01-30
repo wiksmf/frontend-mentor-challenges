@@ -1,7 +1,10 @@
 .articles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 5rem;
+
+  @media only screen and (min-width: $bp-xl) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 5rem;
+  }
 }
 
 .article-box {
@@ -9,7 +12,7 @@
   border-radius: 0.7rem;
 
   &__image {
-    // height: 25rem;
+    height: 20rem;
     width: 100%;
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
