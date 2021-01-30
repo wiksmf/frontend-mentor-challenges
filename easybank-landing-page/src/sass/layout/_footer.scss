@@ -1,15 +1,34 @@
 .footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-
   padding: 4.5rem 1rem;
   background-color: $color-primary-text;
   text-align: center;
 
+  @media only screen and (min-width: $bp-xl) {
+    display: grid;
+    grid-template-columns: 30rem repeat(auto-fit, minmax(20rem, 1fr));
+
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+
   &-column {
+    &--1 {
+      @media only screen and (min-width: $bp-xl) {
+        text-align: left;
+      }
+    }
+
     &--2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      @media only screen and (min-width: $bp-xl) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+      }
+    }
+
+    &--3 {
+      @media only screen and (min-width: $bp-xl) {
+        text-align: right;
+      }
     }
   }
 
@@ -20,7 +39,10 @@
     &--2 {
       list-style: none;
       text-align: center;
-      text-align: center;
+
+      @media only screen and (min-width: $bp-xl) {
+        text-align: left;
+      }
     }
 
     &__item {
@@ -29,17 +51,12 @@
   }
 
   &__link {
+
     &:link,
     &:visited {
       display: inline-block;
       outline: none;
       transition: all 0.2s;
-    }
-
-    &:focus,
-    &:hover,
-    &:active {
-      transform: scale(1.1);
     }
   }
 
@@ -54,5 +71,15 @@
   &__item {
     display: inline;
     padding: 1rem 0.5rem;
+  }
+
+  &__link {
+    outline:none;
+    
+    &:focus #icon,
+    &:hover #icon {
+      cursor: pointer;
+      fill: $color-primary-gradient;
+    }
   }
 }

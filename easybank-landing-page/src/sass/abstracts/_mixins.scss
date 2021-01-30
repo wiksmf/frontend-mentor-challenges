@@ -4,3 +4,24 @@
   justify-content: $justify-content;
   align-items: $align;
 }
+
+@mixin textStyle ($size, $weight: $font-weight-medium, $color:$color-primary-text){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin linkStates{
+  &:link,
+  &:visited {
+    font-size: $font-size-xs;
+    color: $color-tertiary-text;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-primary-gradient;
+  }
+}

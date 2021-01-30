@@ -3,27 +3,20 @@
 }
 
 .heading-primary {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-medium;
-  color: $color-primary-text;
+  @include textStyle($size: $font-size-xl);
 }
 
 .heading-secondary {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-medium;
-  color: $color-primary-text;
+  @include textStyle($size: $font-size-lg);
 }
 
 .heading-tertiary {
-  font-size: $font-size-md;
-  font-weight: $font-weight-medium;
-  color: $color-primary-text;
+  @include textStyle($size: $font-size-md);
+
 }
 
 .paragraph {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-medium;
-  color: $color-secondary-text;
+  @include textStyle($size: $font-size-xs);
   line-height: 1.5;
 
   &-author {
@@ -33,10 +26,10 @@
 
 .navigation {
   &__link {
+
     &:link,
     &:visited {
-      font-size: $font-size-md;
-      color: $color-primary-text;
+      @include textStyle($size: $font-size-md, $color:$color-primary-text);
       text-decoration: none;
     }
   }
@@ -44,18 +37,17 @@
 
 .btn {
   &--gradient {
-    font-weight: $font-weight-bold;
-    color: $color-primary-bg;
+    @include textStyle($size:$font-size-xs, $weight: $font-weight-bold, $color: $color-primary-bg);
     letter-spacing: 0.05rem;
   }
 }
 
 .article-box {
   &__link {
+
     &:link,
     &:visited {
-      font-size: $font-size-sm;
-      color: $color-primary-text;
+      @include textStyle($size:$font-size-sm);
       text-decoration: none;
     }
   }
@@ -63,29 +55,18 @@
 
 .footer {
   &__copyright {
-    font-size: $font-size-xs;
-    color: $color-secondary-text;
+    @include textStyle($size:$font-size-xs, $color:$color-secondary-text);
   }
 
   &__link {
-    &:link,
-    &:visited {
-      font-size: $font-size-xs;
-      color: $color-tertiary-text;
-      text-decoration: none;
-    }
+    @include linkStates;
   }
 }
 
 .attribution {
-  color: $color-secondary-text;
+  @include textStyle($size:$font-size-xs, $color:$color-secondary-text);
 
   &__link {
-    &:link,
-    &:visited {
-      font-size: $font-size-xxs;
-      color: $color-tertiary-text;
-      text-decoration: none;
-    }
+    @include linkStates;
   }
 }

@@ -61,7 +61,7 @@ body {
 .paragraph {
   font-size: 1.4rem;
   font-weight: 400;
-  color: #9698a6;
+  color: #2d314d;
   line-height: 1.5;
 }
 
@@ -71,11 +71,13 @@ body {
 
 .navigation__link:link, .navigation__link:visited {
   font-size: 2.2rem;
+  font-weight: 400;
   color: #2d314d;
   text-decoration: none;
 }
 
 .btn--gradient {
+  font-size: 1.4rem;
   font-weight: 700;
   color: #fafafa;
   letter-spacing: 0.05rem;
@@ -83,12 +85,14 @@ body {
 
 .article-box__link:link, .article-box__link:visited {
   font-size: 1.8rem;
+  font-weight: 400;
   color: #2d314d;
   text-decoration: none;
 }
 
 .footer__copyright {
   font-size: 1.4rem;
+  font-weight: 400;
   color: #9698a6;
 }
 
@@ -98,14 +102,24 @@ body {
   text-decoration: none;
 }
 
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  color: #31d35c;
+}
+
 .attribution {
+  font-size: 1.4rem;
+  font-weight: 400;
   color: #9698a6;
 }
 
 .attribution__link:link, .attribution__link:visited {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #ffffff;
   text-decoration: none;
+}
+
+.attribution__link:focus, .attribution__link:hover, .attribution__link:active {
+  color: #31d35c;
 }
 
 .u-hidden {
@@ -142,7 +156,6 @@ body {
 }
 
 .article-box__image {
-  height: 25rem;
   width: 100%;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
@@ -157,32 +170,31 @@ body {
   display: inline-block;
 }
 
-.background {
-  height: 34vh;
-  background-image: url(../img/bg-intro-mobile.svg);
-  background-size: cover;
-  background-position: 50% -7rem;
-  background-repeat: no-repeat;
-}
-
-.background__image {
-  position: relative;
-  top: -12rem;
-  z-index: 0;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .btn {
   padding: 1.1rem 2.5rem;
   border: none;
   border-radius: 50rem;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  cursor: pointer;
 }
 
 .btn--gradient {
   background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+.btn:focus, .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-image: -webkit-gradient(linear, left top, right top, from(#5bdc7d), to(#56c6e2));
+  background-image: linear-gradient(to right, #5bdc7d, #56c6e2);
+}
+
+.btn:active {
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
 }
 
 .features {
@@ -191,23 +203,45 @@ body {
   -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 5rem;
+  text-align: left;
 }
 
 .footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   padding: 4.5rem 1rem;
   background-color: #2d314d;
   text-align: center;
 }
 
-.footer-column--2 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+@media only screen and (min-width: 75em) {
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30rem (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: 30rem repeat(auto-fit, minmax(20rem, 1fr));
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .footer-column--1 {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .footer-column--2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(20rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .footer-column--3 {
+    text-align: right;
+  }
 }
 
 .footer-nav {
@@ -217,7 +251,12 @@ body {
 .footer-nav--1, .footer-nav--2 {
   list-style: none;
   text-align: center;
-  text-align: center;
+}
+
+@media only screen and (min-width: 75em) {
+  .footer-nav--1, .footer-nav--2 {
+    text-align: left;
+  }
 }
 
 .footer-nav__item {
@@ -231,11 +270,6 @@ body {
   transition: all 0.2s;
 }
 
-.footer__link:focus, .footer__link:hover, .footer__link:active {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .footer__copyright {
   padding: 1.5rem;
 }
@@ -247,6 +281,16 @@ body {
 .social-icon__item {
   display: inline;
   padding: 1rem 0.5rem;
+}
+
+.social-icon__link {
+  outline: none;
+}
+
+.social-icon__link:focus #icon,
+.social-icon__link:hover #icon {
+  cursor: pointer;
+  fill: #31d35c;
 }
 
 .header {
@@ -267,6 +311,13 @@ body {
   padding: 2.5rem 3.5rem;
   z-index: 1;
   background-color: #fafafa;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .header {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
 
 .navigation {
@@ -312,21 +363,75 @@ body {
 
 .section-about {
   text-align: center;
-  padding-bottom: 5rem;
 }
 
-.information-box {
-  padding: 3rem;
+@media only screen and (min-width: 61.875em) {
+  .section-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50rem;
+        grid-template-rows: 50rem;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-about__image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -o-object-fit: none;
+       object-fit: none;
+    width: 60rem;
+    overflow: hidden;
+    background-image: url(../img/bg-intro-desktop.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-about__information {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 40rem;
 }
 
 .section-features {
+  position: relative;
+  z-index: -3;
   text-align: center;
   padding: 5rem 3rem;
   background-color: #f3f4f6;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-features {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: left;
+  }
 }
 
 .section-articles {
   text-align: center;
   padding: 5rem 3rem;
   background-color: #fafafa;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-articles {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: left;
+  }
 }

@@ -1,20 +1,78 @@
 .section-about {
   text-align: center;
-  padding-bottom: 5rem;
+
+  @media only screen and(min-width: $bp-lg) {
+    display: grid;
+    grid-template-rows: 50rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: left;
+  }
+  
+  &__image {
+    // position: relative;
+    // top: -12rem;
+    // z-index: 0;
+    // width: 90%;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    // background-image: url(../img/bg-intro-mobile.svg);
+    // background-size: cover;
+    // background-position: 50% -7rem;
+    // background-repeat: no-repeat;
+
+    @media only screen and (min-width: $bp-lg) {
+      order: 2;
+      justify-self: end;
+
+      // position: relative;
+      object-fit: none;
+      width: 60rem;
+      overflow: hidden;
+
+
+      background-image: url(../img/bg-intro-desktop.svg);
+      background-size: 100%;
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__information {
+    align-self: center;
+    justify-self: center;
+    width: 40rem;
+  }
 }
 
-.information-box {
-  padding: 3rem;
-}
 
 .section-features {
+  position: relative;
+  z-index: -3;
   text-align: center;
   padding: 5rem 3rem;
   background-color: $color-secondary-bg;
+
+  @media only screen and (min-width: $bp-lg) {
+    padding-left: 15rem;
+    padding-right: 15rem;
+
+    text-align: left;
+  }
 }
 
 .section-articles {
   text-align: center;
   padding: 5rem 3rem;
   background-color: $color-primary-bg;
+
+  @media only screen and (min-width: $bp-lg) {
+    padding-left: 15rem;
+    padding-right: 15rem;
+
+    text-align: left;
+  }
 }
