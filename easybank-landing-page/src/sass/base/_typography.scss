@@ -48,6 +48,7 @@
 
 .btn {
   &--gradient {
+    font-family: inherit;
     @include textStyle($weight: $font-weight-bold, $color: $color-primary-bg);
     letter-spacing: 0.05rem;
   }

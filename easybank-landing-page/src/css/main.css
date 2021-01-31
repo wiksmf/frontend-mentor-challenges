@@ -124,6 +124,7 @@ body {
 }
 
 .btn--gradient {
+  font-family: inherit;
   font-size: 1.3rem;
   font-weight: 700;
   color: #fafafa;
@@ -485,6 +486,52 @@ body {
 @media only screen and (min-width: 37.5em) {
   .main {
     text-align: left;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 55vh;
+        grid-template-rows: 55vh;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    text-align: left;
+  }
+}
+
+.section-about__image {
+  height: 35vh;
+  background-image: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
+  background-size: cover;
+  background-position: 50% -10rem, 50% -7rem;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-about__image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    height: 70vh;
+    background-image: url(../img/image-mockups.png), url(../img/bg-intro-desktop.svg);
+    background-size: cover, 120%;
+    background-position: 8rem -29rem, 3rem -20rem;
+    background-repeat: no-repeat;
+  }
+}
+
+.section-about__information {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 4rem 3rem;
+}
+
+@media only screen and (min-width: 25em) {
+  .section-about__information {
+    padding: 4rem 12rem;
   }
 }
 
