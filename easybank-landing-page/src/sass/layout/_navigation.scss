@@ -1,27 +1,41 @@
 .navigation {
-  position: relative;
-
   &__btn {
+    height: 1.5rem;
+    width: 2.5rem;
     border: none;
-    background-color: none;
-    background-color: transparent;
+    outline: none;
+    background: url(../img/icon-hamburger.svg) no-repeat;
+    transition: all 0.6s;
+
+    &--open {
+      height: 2.5rem;
+      width: 2.5rem;
+      transform: rotate(360deg);
+      background: url(../img/icon-close.svg) no-repeat;
+    }
+
+    @media only screen and(min-width: $bp-lg) {
+      display: none;
+    }
   }
 
   &__nav {
-    position: fixed;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    &--open {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-    width: calc(100vw - 5rem);
-    border-radius: 0.5rem;
-    background-color: $color-tertiary-text;
-    box-shadow: 0 12rem 5rem 12rem rgba($color-primary-text, 0.25);
-    transition: all 2s;
-
-    &--animated-in {
+      width: calc(100vw - 5rem);
+      border-radius: 0.5rem;
+      background-color: $color-tertiary-text;
+      box-shadow: 0 12rem 5rem 12rem rgba($color-primary-text, 0.25);
+      transition: all 1s;
       animation: moveInTop 1.6s ease-out;
-      animation-fill-mode: backwards;
+    }
+
+    @media only screen and(min-width: $bp-lg) {
+      display: inline-block;
     }
   }
 
@@ -32,11 +46,18 @@
 
   &__item {
     margin: 3rem;
-  }
+    border-bottom: .5rem solid transparent;
 
-  &__link {
-    &:link,
-    &:visited {
+    &:focus,
+    &:hover,
+    &:active {
+      border-image-source: $color-tertiary-gradient;
+      border-image-slice: 1;
+    }
+
+    @media only screen and(min-width: $bp-lg) {
+      display: inline;
+      padding-bottom: 3.8rem;
     }
   }
 }

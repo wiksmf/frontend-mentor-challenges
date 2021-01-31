@@ -1,17 +1,10 @@
-@mixin flexCenter($direction: row, $justify-content: center, $align: center) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify-content;
-  align-items: $align;
-}
-
-@mixin textStyle ($size, $weight: $font-weight-medium, $color:$color-primary-text){
+@mixin textStyle ($size:$font-size-sm, $weight: $font-weight-medium, $color:$color-primary-text){
   font-size: $size;
   font-weight: $weight;
   color: $color;
 }
 
-@mixin linkStates ($size:$font-size-xs, $color:$color-tertiary-text){
+@mixin linkStates ($size:$font-size-sm, $color:$color-tertiary-text){
   &:link,
   &:visited {
     font-size: $size;
@@ -23,5 +16,22 @@
   &:hover,
   &:active {
     color: $color-primary-gradient;
+  }
+}
+
+@mixin internalGrid() {
+  display: grid;
+  row-gap: 3rem;
+
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    
+    text-align: left;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -3,19 +3,24 @@ $color-primary-text: #2d314d;
 $color-secondary-text: #9698a6;
 $color-tertiary-text: #ffffff;
 
-$color-primary-gradient: #31d35c;
-$color-secondary-gradient: #2bb7da;
-
 $color-primary-bg: #fafafa;
 $color-secondary-bg: #f3f4f6;
 
+$color-primary-gradient: #31d35c;
+$color-secondary-gradient: #2bb7da;
+$color-tertiary-gradient: linear-gradient(
+  to right,
+  $color-primary-gradient,
+  $color-secondary-gradient
+);
+
 // FONTS
-$font-size-xxs: 1.1rem;
-$font-size-xs: 1.4rem;
-$font-size-sm: 1.8rem;
-$font-size-md: 2.2rem;
-$font-size-lg: 3rem;
-$font-size-xl: 4rem;
+$font-size-xs: 1rem;
+$font-size-sm: 1.3rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 3rem;
+$font-size-xxl: 4rem;
 
 $font-weight-regular: 300;
 $font-weight-medium: 400;
@@ -26,3 +31,4 @@ $bp-sm: 25em; // 400px
 $bp-md: 37.5em; // 600px
 $bp-lg: 61.875em; // 990px
 $bp-xl: 75em; // 1200px
+$bp-xxl: 112.5em;

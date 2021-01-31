@@ -1,32 +1,37 @@
 .footer {
-  padding: 4.5rem 1rem;
+  grid-column: center-start / center-end;
+
+  padding: 4rem 10rem;
   background-color: $color-primary-text;
   text-align: center;
 
-  @media only screen and (min-width: $bp-xl) {
+  @media only screen and (min-width: $bp-lg) {
     display: grid;
-    grid-template-columns: 30rem repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: 22rem repeat(auto-fit, minmax(20rem, 1fr));
 
-    padding-left: 15rem;
-    padding-right: 15rem;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 1fr));
+
   }
 
   &-column {
     &--1 {
-      @media only screen and (min-width: $bp-xl) {
+      @media only screen and (min-width: $bp-lg) {
         text-align: left;
       }
     }
 
     &--2 {
-      @media only screen and (min-width: $bp-xl) {
+      @media only screen and (min-width: $bp-lg) {
         display: grid;
-        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
       }
     }
 
     &--3 {
-      @media only screen and (min-width: $bp-xl) {
+      @media only screen and (min-width: $bp-lg) {
         text-align: right;
       }
     }
@@ -35,18 +40,18 @@
   &-nav {
     padding: 0.3rem;
 
+    @media only screen and (min-width: $bp-lg) {
+      padding: 0;
+    }
+
     &--1,
     &--2 {
       list-style: none;
       text-align: center;
 
-      @media only screen and (min-width: $bp-xl) {
+      @media only screen and (min-width: $bp-lg) {
         text-align: left;
       }
-    }
-
-    &__item {
-      margin: 1.5rem;
     }
   }
 
@@ -74,8 +79,8 @@
   }
 
   &__link {
-    outline:none;
-    
+    outline: none;
+
     &:focus #icon,
     &:hover #icon {
       cursor: pointer;

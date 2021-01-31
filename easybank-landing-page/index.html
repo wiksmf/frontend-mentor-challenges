@@ -22,9 +22,7 @@
     </div>
 
     <div class="navigation">
-      <button class="navigation__btn">
-        <img class="navigation__icon" src="src/img/icon-hamburger.svg" alt="Navigation button">
-      </button>
+      <button class="navigation__btn"></button>
       <nav class="navigation__nav u-hidden">
         <ul class="navigation__list">
           <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
@@ -39,11 +37,13 @@
     <button class="btn btn--gradient u-hidden">Request Invite</button>
   </header>
 
-  <main>
-    <section class="section-about">
-      <!-- <div class="background"> -->
-      <!-- <img class="section-about__image" src="src/img/image-mockups.png" alt=""> -->
-      <!-- </div> -->
+  <main class="main">
+    <!-- <section class="section-about">
+      <div class="section-about__image">
+        <div class="section-about__image-box">
+          <img class="image" src="src/img/image-mockups.png" alt="">
+        </div>
+      </div>
       <div class="section-about__information">
         <h1 class="heading-primary u-mb-sm">Next generation digital banking</h1>
         <p class="paragraph u-mb-md">
@@ -53,10 +53,9 @@
         </p>
         <button class="btn btn--gradient">Request Invite</button>
       </div>
-    </section>
-
+    </section> -->
     <section class="section-features">
-      <div class="information-box u-mb-sm">
+      <div class="intro-box u-mb-md">
         <h2 class="heading-secondary u-mb-sm">Why choose Easybank?</h2>
         <p class="paragraph">We leverage Open Banking to turn your bank account into your financial hub. Control
           your finances like never before.</p>
@@ -88,9 +87,11 @@
         </div>
       </div>
     </section>
-
+    
+    <!-- Articles section -->
     <section class="section-articles">
       <h2 class="heading-secondary u-mb-md">Latest Articles</h2>
+      <!-- Articles -->
       <div class="articles">
         <div class="article-box u-mb-sm">
           <img class="article-box__image" src="src/img/image-currency.jpg" alt="">
@@ -130,13 +131,18 @@
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
+    </main>
+    <!-- End articles section -->
+    
+    
+    <!-- Footer content -->
+    <footer class="footer">
     <div class="footer-column--1">
       <div class="footer__logo-box u-mb-md">
         <img class="footer__logo" src="src/img/logo-white.svg" alt="Logo">
       </div>
+    
+      <!-- Social icons -->
       <ul class="social-icon u-mb-md">
         <li class="social-icon__item">
           <a class="social-icon__link" href="#">
@@ -175,25 +181,27 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
               <path id="icon" fill="#FFF"
                 d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z" />
-              </svg>
+            </svg>
           </a>
         </li>
       </ul>
     </div>
-
+    
+    <!-- Navigation links -->
     <div class="footer-column--2 footer-nav u-mb-md">
       <ul class="footer-nav--1">
-        <li class="footer-nav__item"><a class="footer__link" href="#">About Us</a></li>
-        <li class="footer-nav__item"><a class="footer__link" href="#">Contact</a></li>
-        <li class="footer-nav__item"><a class="footer__link" href="#">Blog</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">About Us</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">Contact</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">Blog</a></li>
       </ul>
       <ul class="footer-nav--2">
-        <li class="footer-nav__item"><a class="footer__link" href="#">Careers</a></li>
-        <li class="footer-nav__item"><a class="footer__link" href="#">Support</a></li>
-        <li class="footer-nav__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">Careers</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">Support</a></li>
+        <li class="footer-nav__item u-mb-sm"><a class="footer__link" href="#">Privacy Policy</a></li>
       </ul>
     </div>
-
+    
+    <!-- Additional content -->
     <div class="footer-column--3">
       <button class="btn btn--gradient u-mb-md">Request Invite</button>
       <p class="footer__copyright u-mb-md">© Easybank. All Rights Reserved</p>
@@ -201,11 +209,12 @@
         Challenge by
         <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
           Mentor</a>.
-        Coded by <a class="footer__link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/easybank-landing-page">WIKS</a>.
+        Coded by <a class="footer__link"
+          href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/easybank-landing-page">WIKS</a>.
       </p>
     </div>
-  </footer>
-
+    </footer>
+    <!-- End footer content-->
 </body>
 
 </html>

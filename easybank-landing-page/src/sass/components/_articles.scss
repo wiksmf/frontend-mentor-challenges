@@ -1,10 +1,5 @@
 .articles {
-
-  @media only screen and (min-width: $bp-xl) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 5rem;
-  }
+  @include internalGrid;
 }
 
 .article-box {
