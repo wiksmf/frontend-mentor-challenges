@@ -5,8 +5,9 @@
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
-  
+
   @media only screen and (min-width: $bp-lg) {
     font-size: 68.75%; // 1 rem = 11px
   }
@@ -14,10 +15,6 @@ html {
   @media only screen and (min-width: $bp-xl) {
     font-size: 75%; // 1 rem = 12px
   }
-}
-
-body {
-  box-sizing: border-box;
 }
 
 .container {

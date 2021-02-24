@@ -1,53 +1,67 @@
 .main {
   text-align: center;
+  position: relative;
 
-  @media only screen and (min-width: $bp-md) {
-    text-align: left;
-  }
+
+  // @media only screen and (min-width: $bp-md) {
+  //   text-align: left;
+  // }
 }
 
 .section-about {
   @media only screen and(min-width: $bp-lg) {
     display: grid;
-    grid-template-rows: 55vh;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: 80vh;
+    grid-template-columns: repeat(2, 1fr);
 
     text-align: left;
   }
 
   &__image {
-    height: 35vh;
-
-    background-image: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
+    background-image: url(../img/bg-intro-mobile.svg);
     background-size: cover;
-    background-position: 50% -10rem, 50% -7rem;
+    background-position: 50% -4rem;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 
     @media only screen and (min-width: $bp-lg) {
       order: 1;
 
-      height: 70vh;
-      background-image: url(../img/image-mockups.png), url(../img/bg-intro-desktop.svg);
-      background-size: cover, 120%;
-      background-position: 8rem -29rem, 3rem -20rem;
+      background-image: url(../img/bg-intro-desktop.svg);
+      background-size: 120%;
+      background-position: 3rem -20rem;
       background-repeat: no-repeat;
+    }
+
+    .image {
+      width: 95%;
+      margin-top: -10rem;
+
+      @media only screen and (min-width: $bp-lg) {
+        width: 80%;
+
+        margin-top: -15rem;
+        margin-left: 23.5rem;
+     }
     }
   }
 
   &__information {
-    align-self: center;
-    padding: 4rem 3rem;
+    position: relative;
+    z-index: 0;
+
+    padding: 3rem;
 
     @media only screen and (min-width: $bp-sm) {
+      justify-content: center;
       padding: 4rem 12rem;
     }
   }
 }
 
-
 .section-features {
-  position: relative;
-  z-index: -3;
+  z-index: -1;
 
   padding: 4rem 3rem;
   background-color: $color-secondary-bg;
@@ -55,6 +69,10 @@
   @media only screen and (min-width: $bp-sm) {
     padding: 4rem 12rem;
   }
+
+  @media only screen and (min-width: $bp-lg) {
+    margin-top: -20rem;
+ }
 }
 
 .section-articles {

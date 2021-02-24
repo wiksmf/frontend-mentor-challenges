@@ -38,6 +38,8 @@
 }
 
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -51,11 +53,6 @@ html {
   html {
     font-size: 75%;
   }
-}
-
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 @media only screen and (min-width: 61.875em) {
@@ -406,7 +403,7 @@ body {
           align-items: center;
   position: relative;
   z-index: 1;
-  padding: 4rem 3rem 3.5rem;
+  padding: 3.5rem 3rem 2.5rem;
   background-color: #ffffff;
 }
 
@@ -481,32 +478,27 @@ body {
 
 .main {
   text-align: center;
-}
-
-@media only screen and (min-width: 37.5em) {
-  .main {
-    text-align: left;
-  }
+  position: relative;
 }
 
 @media only screen and (min-width: 61.875em) {
   .section-about {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 55vh;
-        grid-template-rows: 55vh;
-    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    -ms-grid-rows: 80vh;
+        grid-template-rows: 80vh;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     text-align: left;
   }
 }
 
 .section-about__image {
-  height: 35vh;
-  background-image: url(../img/image-mockups.png), url(../img/bg-intro-mobile.svg);
+  background-image: url(../img/bg-intro-mobile.svg);
   background-size: cover;
-  background-position: 50% -10rem, 50% -7rem;
+  background-position: 50% -4rem;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 61.875em) {
@@ -514,30 +506,43 @@ body {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    height: 70vh;
-    background-image: url(../img/image-mockups.png), url(../img/bg-intro-desktop.svg);
-    background-size: cover, 120%;
-    background-position: 8rem -29rem, 3rem -20rem;
+    background-image: url(../img/bg-intro-desktop.svg);
+    background-size: 120%;
+    background-position: 3rem -20rem;
     background-repeat: no-repeat;
   }
 }
 
+.section-about__image .image {
+  width: 95%;
+  margin-top: -10rem;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-about__image .image {
+    width: 80%;
+    margin-top: -15rem;
+    margin-left: 23.5rem;
+  }
+}
+
 .section-about__information {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 4rem 3rem;
+  position: relative;
+  z-index: 0;
+  padding: 3rem;
 }
 
 @media only screen and (min-width: 25em) {
   .section-about__information {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 4rem 12rem;
   }
 }
 
 .section-features {
-  position: relative;
-  z-index: -3;
+  z-index: -1;
   padding: 4rem 3rem;
   background-color: #f3f4f6;
 }
@@ -545,6 +550,12 @@ body {
 @media only screen and (min-width: 25em) {
   .section-features {
     padding: 4rem 12rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-features {
+    margin-top: -20rem;
   }
 }
 
