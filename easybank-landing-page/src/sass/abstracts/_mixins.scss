@@ -25,16 +25,17 @@
 
 @mixin internalGrid() {
   display: grid;
-  row-gap: 3rem;
+  row-gap: 2.8rem;
 
-  @media only screen and (min-width: $bp-md) {
+  @media only screen and (min-width: $bp-sm) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
 
-    text-align: left;
   }
 
   @media only screen and (min-width: $bp-lg) {
     grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+
   }
 }

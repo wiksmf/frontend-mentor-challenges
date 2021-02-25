@@ -8,18 +8,35 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
-  @media only screen and (min-width: $bp-lg) {
+  @media only screen and (min-width: $bp-xs) {
     font-size: 68.75%; // 1 rem = 11px
   }
 
-  @media only screen and (min-width: $bp-xl) {
+  @media only screen and (min-width: $bp-sm) {
     font-size: 75%; // 1 rem = 12px
   }
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 81.25%; // 1rem = 13px
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    font-size: 87.5%; // 1rem = 14px
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    font-size: 93.75%; // 1rem = 15px
+  }
+
+  // @media only screen and (min-width: $bp-xxl) {
+  //   font-size: 100%; // 1rem = 16px
+    
+  // }
 }
 
 .container {
   @media only screen and (min-width: $bp-lg) {
-    max-width: 140rem;
+    max-width: 110rem;
     margin: auto;
   }
 }

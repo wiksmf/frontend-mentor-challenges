@@ -7,4 +7,9 @@
   z-index: 1;
   padding: 3.5rem 3rem 2.5rem;
   background-color: $color-tertiary-text;
+
+  @media only screen and (min-width: $bp-lg) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }

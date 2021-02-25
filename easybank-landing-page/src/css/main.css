@@ -43,21 +43,39 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (min-width: 61.875em) {
+@media only screen and (min-width: 25em) {
   html {
     font-size: 68.75%;
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 37.5em) {
   html {
     font-size: 75%;
   }
 }
 
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
 @media only screen and (min-width: 61.875em) {
   .container {
-    max-width: 140rem;
+    max-width: 110rem;
     margin: auto;
   }
 }
@@ -103,14 +121,14 @@ html {
 
 .navigation__link:link, .navigation__link:visited {
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #2d314d;
 }
 
 @media only screen and (min-width: 61.875em) {
   .navigation__link:link, .navigation__link:visited {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #9698a6;
   }
@@ -193,7 +211,7 @@ html {
 .articles {
   display: -ms-grid;
   display: grid;
-  row-gap: 3rem;
+  row-gap: 2.8rem;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -202,7 +220,6 @@ html {
         grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 3rem;
             column-gap: 3rem;
-    text-align: left;
   }
 }
 
@@ -210,6 +227,7 @@ html {
   .articles {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+    text-align: left;
   }
 }
 
@@ -270,7 +288,7 @@ html {
 .features {
   display: -ms-grid;
   display: grid;
-  row-gap: 3rem;
+  row-gap: 2.8rem;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -279,7 +297,6 @@ html {
         grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 3rem;
             column-gap: 3rem;
-    text-align: left;
   }
 }
 
@@ -287,18 +304,27 @@ html {
   .features {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+    text-align: left;
   }
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 48em) {
   .intro-box {
-    width: 50rem;
+    width: 40rem;
+    margin: auto;
+    padding-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .intro-box {
+    width: 100%;
+    text-align: left;
   }
 }
 
 .footer {
-  grid-column: center-start / center-end;
-  padding: 4rem 10rem;
+  padding: 4rem 0;
   background-color: #2d314d;
   text-align: center;
 }
@@ -307,8 +333,9 @@ html {
   .footer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 22rem (minmax(20rem, 1fr))[auto-fit];
-        grid-template-columns: 22rem repeat(auto-fit, minmax(20rem, 1fr));
+    -ms-grid-columns: 22rem (minmax(10rem, 1fr))[auto-fit];
+        grid-template-columns: 22rem repeat(auto-fit, minmax(10rem, 1fr));
+    padding: 6rem;
   }
 }
 
@@ -407,6 +434,13 @@ html {
   background-color: #ffffff;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .header {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 .navigation__btn {
   height: 1.5rem;
   width: 2.5rem;
@@ -472,7 +506,7 @@ html {
 @media only screen and (min-width: 61.875em) {
   .navigation__item {
     display: inline;
-    padding-bottom: 3.8rem;
+    padding-bottom: 3.15rem;
   }
 }
 
@@ -485,8 +519,8 @@ html {
   .section-about {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 80vh;
-        grid-template-rows: 80vh;
+    -ms-grid-rows: 40rem;
+        grid-template-rows: 40rem;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     text-align: left;
@@ -501,6 +535,12 @@ html {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 48em) {
+  .section-about__image {
+    background-position: 50% -10rem;
+  }
+}
+
 @media only screen and (min-width: 61.875em) {
   .section-about__image {
     -webkit-box-ordinal-group: 2;
@@ -508,8 +548,16 @@ html {
             order: 1;
     background-image: url(../img/bg-intro-desktop.svg);
     background-size: 120%;
-    background-position: 3rem -20rem;
+    background-position: 3rem -12rem;
     background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section-about__image {
+    max-width: 100rem;
+    margin-top: 0rem;
+    margin-left: 5rem;
   }
 }
 
@@ -518,54 +566,94 @@ html {
   margin-top: -10rem;
 }
 
+@media only screen and (min-width: 25em) {
+  .section-about__image .image {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .section-about__image .image {
+    width: 85%;
+    margin-top: -15rem;
+  }
+}
+
 @media only screen and (min-width: 61.875em) {
   .section-about__image .image {
-    width: 80%;
-    margin-top: -15rem;
-    margin-left: 23.5rem;
+    margin-top: -10rem;
+    margin-left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .section-about__image .image {
+    width: 90%;
+    margin-top: -20rem;
+    margin-left: 12rem;
   }
 }
 
 .section-about__information {
   position: relative;
   z-index: 0;
-  padding: 3rem;
+  padding: 7rem 3.5rem;
 }
 
 @media only screen and (min-width: 25em) {
   .section-about__information {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 4rem 12rem;
+    padding: 4rem 4rem 7rem;
+  }
+}
+
+@media only screen and (min-width: 25em) {
+  .section-about__information {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .section-about__information {
+    width: 50rem;
+    margin: auto;
   }
 }
 
 .section-features {
   z-index: -1;
-  padding: 4rem 3rem;
+  padding: 6rem 4.2rem;
   background-color: #f3f4f6;
 }
 
 @media only screen and (min-width: 25em) {
   .section-features {
-    padding: 4rem 12rem;
+    padding: 6rem 4.2rem;
   }
 }
 
 @media only screen and (min-width: 61.875em) {
   .section-features {
-    margin-top: -20rem;
+    margin-top: -6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
 .section-articles {
-  padding: 4rem 3rem;
+  padding: 6rem 4.2rem;
   background-color: #fafafa;
 }
 
 @media only screen and (min-width: 25em) {
   .section-articles {
-    padding: 4rem 12rem;
+    padding: 6rem 4.2rem;
+  }
+}
+
+@media only screen and (min-width: 61.875em) {
+  .section-articles {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }

@@ -27,8 +27,9 @@ $font-weight-medium: 400;
 $font-weight-bold: 700;
 
 // RESPONSIVE BREAKPOINTS
-$bp-sm: 25em; // 400px
-$bp-md: 37.5em; // 600px
+$bp-xs: 25em; // 400px
+$bp-sm: 37.5em; // 600px
+$bp-md: 48em; // 768px
 $bp-lg: 61.875em; // 990px
 $bp-xl: 75em; // 1200px
-$bp-xxl: 112.5em;
+// $bp-xxl: 112.5em; // 1800px
