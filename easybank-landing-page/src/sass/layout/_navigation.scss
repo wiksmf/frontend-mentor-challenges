@@ -22,14 +22,14 @@
   &__nav {
     &--open {
       position: fixed;
-      top: 30%;
+      top: 25rem;
       left: 50%;
       transform: translate(-50%, -50%);
 
       width: calc(100vw - 5rem);
       border-radius: 0.5rem;
       background-color: $color-tertiary-text;
-      box-shadow: 0 12rem 5rem 12rem rgba($color-primary-text, 0.25);
+      box-shadow: 0 5rem 6.6rem 4.2rem rgba($color-primary-text, 0.75);
       transition: all 1s;
       animation: moveInTop 1.6s ease-out;
     }
