@@ -12,6 +12,7 @@
       display: grid;
       grid-template-columns: 18rem repeat(2, minmax(10rem, 1fr));
     }
+
     @media only screen and (min-width: $bp-xl) {
       grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 1fr));
     }
