@@ -1,13 +1,14 @@
 .footer {
-  padding: 4rem 0;
   background-color: $color-primary-text;
-  text-align: center;
+  padding: 5rem 3rem;
 
-  @media only screen and (min-width: $bp-lg) {
-    display: grid;
-    grid-template-columns: 22rem repeat(auto-fit, minmax(10rem, 1fr));
+  &-bar {
+    text-align: center;
 
-    padding: 6rem;
+    @media only screen and (min-width: $bp-lg) {
+      display: grid;
+      grid-template-columns: 18rem repeat(2, minmax(10rem, 1fr));
+    }
   }
 
   @media only screen and (min-width: $bp-xl) {
@@ -54,7 +55,6 @@
   }
 
   &__link {
-
     &:link,
     &:visited {
       display: inline-block;

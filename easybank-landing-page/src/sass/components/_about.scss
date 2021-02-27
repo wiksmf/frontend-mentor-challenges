@@ -1,0 +1,104 @@
+.about {
+  @media only screen and (min-width: $bp-lg) {
+    display: grid;
+    grid-template-rows: 45rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    grid-template-rows: 40rem;
+  }
+
+  &__image-box {
+    background-image: url(../img/bg-intro-mobile.svg);
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: $bp-lg) {
+      position: absolute;
+      top: -10rem;
+
+      background-image: url(../img/bg-intro-desktop.svg);
+      background-size: contain;
+      background-position: 36rem 0rem;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      background-position: 35rem -3rem;
+    }
+
+    @media only screen and (min-width: $bp-xxl) {
+      position: static;
+      overflow: visible;
+      background-position: 50% 50%;
+    }
+  }
+
+  &__mockup {
+    width: 100%;
+    margin-top: -20rem;
+
+    @media only screen and (min-width: $bp-md) {
+      width: 75%;
+      margin-top: -25rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      width: 60%;
+      margin-top: 10rem;
+      margin-left: 45rem;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      width: 55%;
+      margin-top: 7rem;
+      margin-left: 48.5rem;
+    }
+
+    @media only screen and (min-width: $bp-xxl) {
+      width: 100%;
+      margin-top: 0rem;
+      margin-left: 0rem;
+    }
+  }
+
+  &__information-box {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    align-self: center;
+
+    max-width: 55rem;
+    padding: 3rem 3rem 5rem;
+    margin: 0 auto;
+    z-index: 1;
+
+    @media only screen and (min-width: $bp-xs) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @media only screen and (min-width: $bp-sm) {
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      max-width: 70rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      margin-right: 2.9rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      margin-right: 4rem;
+    }
+  }
+}

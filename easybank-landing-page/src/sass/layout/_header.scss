@@ -1,15 +1,17 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   position: relative;
   z-index: 1;
-  padding: 3.5rem 3rem 2.5rem;
   background-color: $color-tertiary-text;
+  padding: 3rem 3rem 2rem;
 
   @media only screen and (min-width: $bp-lg) {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

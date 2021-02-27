@@ -16,7 +16,7 @@
 }
 
 .paragraph {
-  @include textStyle($size: $font-size-sm, $color: $color-secondary-text);
+  @include textStyle($size: $font-size-md, $color: $color-secondary-text);
   line-height: 1.5;
 
   &-author {
@@ -27,6 +27,7 @@
 .navigation {
   &__link {
     display: inline-block;
+    transition: transform .3s;
 
     &:link,
     &:visited {
