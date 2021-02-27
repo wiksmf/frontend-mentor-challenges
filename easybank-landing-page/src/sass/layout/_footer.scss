@@ -1,6 +1,9 @@
 .footer {
   background-color: $color-primary-text;
-  padding: 5rem 3rem;
+
+  @include internalPadding;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   &-bar {
     text-align: center;
@@ -9,10 +12,9 @@
       display: grid;
       grid-template-columns: 18rem repeat(2, minmax(10rem, 1fr));
     }
-  }
-
-  @media only screen and (min-width: $bp-xl) {
-    grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 1fr));
+    @media only screen and (min-width: $bp-xl) {
+      grid-template-columns: 25rem repeat(auto-fit, minmax(20rem, 1fr));
+    }
   }
 
   &-column {

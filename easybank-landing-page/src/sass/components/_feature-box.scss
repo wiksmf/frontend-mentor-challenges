@@ -5,11 +5,12 @@
 .intro-box {
   @media only screen and (min-width: $bp-md) {
     width: 40rem;
-    margin: auto;
+    margin: 0 auto;
     padding-bottom: 4rem;
   }
 
   @media only screen and (min-width: $bp-lg) {
-    width: 100%;
+    width: 55rem;
+    margin: 0;
   }
 }

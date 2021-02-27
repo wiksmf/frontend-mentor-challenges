@@ -7,6 +7,7 @@
 
   @media only screen and (min-width: $bp-xl) {
     grid-template-rows: 40rem;
+    grid-template-columns: 55rem 80rem;
   }
 
   &__image-box {
@@ -21,19 +22,21 @@
 
       background-image: url(../img/bg-intro-desktop.svg);
       background-size: contain;
-      background-position: 36rem 0rem;
+      background-position: 45rem -5rem;
       background-repeat: no-repeat;
       overflow: hidden;
     }
 
     @media only screen and (min-width: $bp-xl) {
-      background-position: 35rem -3rem;
+      background-position: 57rem -8rem;
     }
 
     @media only screen and (min-width: $bp-xxl) {
       position: static;
       overflow: visible;
-      background-position: 50% 50%;
+      background-size: cover;
+      background-position: -1rem -20rem;
+      text-align: center;
     }
   }
 
@@ -47,58 +50,53 @@
     }
 
     @media only screen and (min-width: $bp-lg) {
-      width: 60%;
-      margin-top: 10rem;
-      margin-left: 45rem;
+      width: 55%;
+      margin-top: -4rem;
+      margin-left: 57rem;
     }
 
     @media only screen and (min-width: $bp-xl) {
       width: 55%;
-      margin-top: 7rem;
-      margin-left: 48.5rem;
+      margin-top: -13rem;
+      margin-left: 69.5rem;
     }
 
     @media only screen and (min-width: $bp-xxl) {
-      width: 100%;
-      margin-top: 0rem;
+      width: 70%;
+      margin-top: -15rem;
       margin-left: 0rem;
     }
   }
 
   &__information-box {
-    grid-row: 1 / -1;
-    grid-column: 1 / 2;
-    align-self: center;
+    width: 30rem;
 
-    max-width: 55rem;
-    padding: 3rem 3rem 5rem;
     margin: 0 auto;
     z-index: 1;
 
+    @include internalPadding;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
     @media only screen and (min-width: $bp-xs) {
-      padding-left: 5rem;
-      padding-right: 5rem;
+      width: 40rem;
     }
 
     @media only screen and (min-width: $bp-sm) {
-      padding-left: 10rem;
-      padding-right: 10rem;
-    }
-
-    @media only screen and (min-width: $bp-md) {
-      max-width: 70rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      width: 50rem;
     }
 
     @media only screen and (min-width: $bp-lg) {
-      margin-right: 2.9rem;
-      padding-left: 0;
-      padding-right: 0;
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
+      align-self: center;
+
+      width: 60rem;
+      margin: 0;
     }
 
     @media only screen and (min-width: $bp-xl) {
-      margin-right: 4rem;
+      padding-right: 3rem;
     }
   }
 }

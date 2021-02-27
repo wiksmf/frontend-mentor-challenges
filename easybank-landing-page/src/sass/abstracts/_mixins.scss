@@ -1,6 +1,6 @@
 @mixin textStyle(
   $size: $font-size-sm,
-  $weight: $font-weight-medium,
+  $weight: $font-weight-regular,
   $color: $color-primary-text
 ) {
   font-size: $size;
@@ -22,6 +22,35 @@
   &:hover,
   &:active {
     color: $color-primary-gradient;
+  }
+}
+
+@mixin internalPadding() {
+  padding: 6rem 3rem;
+
+  @media only screen and (min-width: $bp-xs) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media only screen and (min-width: $bp-sm) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 }
 

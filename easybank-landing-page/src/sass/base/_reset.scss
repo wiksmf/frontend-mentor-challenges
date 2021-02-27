@@ -9,27 +9,11 @@ html {
   font-size: 62.5%; // 1rem = 10px
 
   @media only screen and (min-width: $bp-xs) {
-    font-size: 68.75%; // 1rem = 11px
+    font-size: 68.75%; // 1rem = 11pxc
   }
 
   @media only screen and (min-width: $bp-sm) {
     font-size: 75%; // 1rem = 12px
-  }
-
-  @media only screen and (min-width: $bp-md) {
-    font-size: 81.25%; // 1rem = 13px
-  }
-
-  @media only screen and (min-width: $bp-lg) {
-    font-size: 87.5%; // 1rem = 14px
-  }
-
-  @media only screen and (min-width: $bp-xl) {
-    font-size: 100%; // 1rem = 16px
-  }
-
-  @media only screen and (min-width: $bp-xxl) {
-    font-size: 112.5%; // 1rem = 18px
   }
 }
 
@@ -39,11 +23,7 @@ html {
 
   &-box {
     @media only screen and (min-width: $bp-lg) {
-      max-width: 90rem;
-      margin: 0 auto;
-
-      padding-left: 5rem;
-      padding-right: 5rem;
+      max-width: 150rem;
     }
   }
 }

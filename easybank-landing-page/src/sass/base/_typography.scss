@@ -7,12 +7,11 @@
 }
 
 .heading-secondary {
-  @include textStyle($size: $font-size-xl);
+  @include textStyle($size: $font-size-xl, $weight: $font-weight-medium);
 }
 
 .heading-tertiary {
   @include textStyle($size: $font-size-lg);
-
 }
 
 .paragraph {
@@ -20,22 +19,22 @@
   line-height: 1.5;
 
   &-author {
-    @include textStyle($size: $font-size-xs, $color: $color-secondary-text);
+    @include textStyle($size: $font-size-sm, $color: $color-secondary-text);
   }
 }
 
 .navigation {
   &__link {
     display: inline-block;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     &:link,
     &:visited {
       text-decoration: none;
-      @include textStyle($size: $font-size-md, $color:$color-primary-text);
+      @include textStyle($size: $font-size-md, $color: $color-primary-text);
 
       @media only screen and(min-width: $bp-lg) {
-        @include textStyle($color:$color-secondary-text);
+        @include textStyle($color: $color-secondary-text);
       }
     }
 
@@ -57,13 +56,13 @@
 
 .article-box {
   &__link {
-    @include linkStates ($size: $font-size-md, $color:$color-primary-text);
+    @include linkStates($size: $font-size-md, $color: $color-primary-text);
   }
 }
 
 .footer {
   &__copyright {
-    @include textStyle($color:$color-secondary-text);
+    @include textStyle($color: $color-secondary-text);
   }
 
   &__link {
@@ -72,7 +71,7 @@
 }
 
 .attribution {
-  @include textStyle($color:$color-secondary-text);
+  @include textStyle($color: $color-secondary-text);
 
   &__link {
     @include linkStates();
