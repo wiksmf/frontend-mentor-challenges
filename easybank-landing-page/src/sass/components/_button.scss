@@ -3,7 +3,8 @@
   border: none;
   border-radius: 50rem;
   outline: none;
-  transition: all 0.2s;
+  transition: all 0.15s;
+  // transition: all 0.2s;
   cursor: pointer;
 
   @media only screen and(min-width: $bp-lg) {

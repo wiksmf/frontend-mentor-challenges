@@ -9,7 +9,7 @@
 }
 
 @mixin linkStates($size: $font-size-sm, $color: $color-tertiary-text) {
-  transition: transform 0.3s;
+  transition: transform 0.1s;
 
   &:link,
   &:visited {

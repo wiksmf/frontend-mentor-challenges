@@ -103,10 +103,10 @@ html {
 
 .navigation__link {
   display: inline-block;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .navigation__link:link, .navigation__link:visited {
@@ -137,10 +137,10 @@ html {
 }
 
 .article-box__link {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .article-box__link:link, .article-box__link:visited {
@@ -160,10 +160,10 @@ html {
 }
 
 .footer__link {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .footer__link:link, .footer__link:visited {
@@ -183,10 +183,10 @@ html {
 }
 
 .attribution__link {
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .attribution__link:link, .attribution__link:visited {
@@ -419,6 +419,8 @@ html {
   width: 100%;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article-box__preview {
@@ -435,8 +437,8 @@ html {
   border: none;
   border-radius: 50rem;
   outline: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
   cursor: pointer;
 }
 
@@ -627,10 +629,12 @@ html {
 
 .social-icon__link {
   outline: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
-.social-icon__link:focus #icon,
-.social-icon__link:hover #icon {
+.social-icon__link:focus .icon,
+.social-icon__link:hover .icon {
   cursor: pointer;
   fill: #31d35c;
 }
