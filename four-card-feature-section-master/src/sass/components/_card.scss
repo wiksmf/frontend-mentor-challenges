@@ -20,6 +20,7 @@
   height: 16rem;
   padding: 2rem;
   border-radius: 0.5rem;
+  border-top: 0.3rem solid;
   box-shadow: 0 0.4rem 1rem 0.05rem lighten($color-primary, 50%);
   text-align: left;
 
@@ -28,7 +29,7 @@
   background-position: bottom 1.3rem right 1.3rem;
 
   &-supervisor {
-    border-top: 0.4rem solid $color-cyan;
+    border-top-color: $color-cyan;
     background-image: url(../img/icon-supervisor.svg);
 
     @media only screen and (min-width: $bp-lg) {
@@ -38,7 +39,7 @@
   }
 
   &-team {
-    border-top: 0.4rem solid $color-red;
+    border-top-color: $color-red;
     background-image: url(../img/icon-team-builder.svg);
 
     @media only screen and (min-width: $bp-lg) {
@@ -48,7 +49,7 @@
   }
 
   &-karma {
-    border-top: 0.4rem solid $color-orange;
+    border-top-color: $color-orange;
     background-image: url(../img/icon-karma.svg);
 
     @media only screen and (min-width: $bp-lg) {
@@ -58,7 +59,7 @@
   }
 
   &-calculator {
-    border-top: 0.4rem solid $color-blue;
+    border-top-color: $color-blue;
     background-image: url(../img/icon-calculator.svg);
 
     @media only screen and (min-width: $bp-lg) {

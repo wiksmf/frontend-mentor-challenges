@@ -35,6 +35,7 @@ body {
           align-items: center;
   padding: 5rem 2rem;
   background-color: white;
+  background-color: #efeff1;
   text-align: center;
 }
 
@@ -144,6 +145,7 @@ body {
   height: 16rem;
   padding: 2rem;
   border-radius: 0.5rem;
+  border-top: 0.3rem solid;
   -webkit-box-shadow: 0 0.4rem 1rem 0.05rem #d1d2db;
           box-shadow: 0 0.4rem 1rem 0.05rem #d1d2db;
   text-align: left;
@@ -153,7 +155,7 @@ body {
 }
 
 .card-supervisor {
-  border-top: 0.4rem solid #45d3d3;
+  border-top-color: #45d3d3;
   background-image: url(../img/icon-supervisor.svg);
 }
 
@@ -167,7 +169,7 @@ body {
 }
 
 .card-team {
-  border-top: 0.4rem solid #ea5353;
+  border-top-color: #ea5353;
   background-image: url(../img/icon-team-builder.svg);
 }
 
@@ -181,7 +183,7 @@ body {
 }
 
 .card-karma {
-  border-top: 0.4rem solid #fcaf4a;
+  border-top-color: #fcaf4a;
   background-image: url(../img/icon-karma.svg);
 }
 
@@ -195,7 +197,7 @@ body {
 }
 
 .card-calculator {
-  border-top: 0.4rem solid #549ef2;
+  border-top-color: #549ef2;
   background-image: url(../img/icon-calculator.svg);
 }
 
