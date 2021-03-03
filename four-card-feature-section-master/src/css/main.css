@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 75%;
+}
+
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 84.375%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 48em) {
+  .container {
+    max-width: 50rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    max-width: 80rem;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.heading-primary {
+  font-weight: 200;
+  color: #4c4e61;
+  letter-spacing: 0.05rem;
+}
+
+.heading-primary--bold {
+  font-weight: 600;
+}
+
+.heading-secondary {
+  color: #4c4e61;
+}
+
+.paragraph {
+  color: #a3a5ae;
+}
+
+.footer__link:link, .footer__link:visited {
+  font-weight: 600;
+  color: #549ef2;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  color: #ea5353;
+}
+
+.u-mb-sm {
+  margin-bottom: 0.5rem;
+}
+
+.u-mb-md {
+  margin-bottom: 1rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .u-mb-lg {
+    margin-bottom: 3rem;
+  }
+}
+
+.u-mt-lg {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .u-mt-lg {
+    margin-top: 3rem;
+  }
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .cards {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'a a b b c c' 'a a b b c c' 'a a d d c c' 'a a d d c c';
+  }
+}
+
+.card {
+  height: 16rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.4rem 1rem 0.05rem #d1d2db;
+          box-shadow: 0 0.4rem 1rem 0.05rem #d1d2db;
+  text-align: left;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-position: bottom 1.3rem right 1.3rem;
+}
+
+.card-supervisor {
+  border-top: 0.4rem solid #45d3d3;
+  background-image: url(../img/icon-supervisor.svg);
+}
+
+@media only screen and (min-width: 75em) {
+  .card-supervisor {
+    grid-area: a;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.card-team {
+  border-top: 0.4rem solid #ea5353;
+  background-image: url(../img/icon-team-builder.svg);
+}
+
+@media only screen and (min-width: 75em) {
+  .card-team {
+    grid-area: b;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
+.card-karma {
+  border-top: 0.4rem solid #fcaf4a;
+  background-image: url(../img/icon-karma.svg);
+}
+
+@media only screen and (min-width: 75em) {
+  .card-karma {
+    grid-area: d;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+.card-calculator {
+  border-top: 0.4rem solid #549ef2;
+  background-image: url(../img/icon-calculator.svg);
+}
+
+@media only screen and (min-width: 75em) {
+  .card-calculator {
+    grid-area: c;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.header {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__link:link, .footer__link:visited {
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
