@@ -10,6 +10,7 @@ body {
   letter-spacing: 0.05rem;
 
   &--bold {
+    display: block;
     font-weight: $font-weight-bold;
   }
 }
