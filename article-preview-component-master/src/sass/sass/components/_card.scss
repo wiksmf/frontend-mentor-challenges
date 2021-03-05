@@ -6,12 +6,26 @@
   border-radius: 1rem;
   width: 35rem;
 
+  @media only screen and (min-width: $bp-lg) {
+    width: 80rem;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 35rem 1fr;
+    gap: 1.5rem;
+  }
+
   &__image {
-    height: 25vh;
     width: 100%;
     object-fit: cover;
+    object-position: left;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+
+    @media only screen and (min-width: $bp-lg) {
+      height: 100%;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 1rem;
+    }
   }
 
   &__content {
@@ -46,6 +60,14 @@
   padding: 2.5rem 3rem;
 
   @include flexCenter($justify: start);
+
+  @media only screen and (min-width: $bp-lg) {
+    bottom: 15rem;
+    right: -15rem;
+    transform: translate(250%, 50%);
+    width: 25rem;
+    border-radius: 1rem;
+  }
 
   &__item {
     padding-left: 1.3rem;
