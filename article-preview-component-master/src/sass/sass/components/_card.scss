@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+
+  background-color: $color-primary-bg;
+  box-shadow: 0 0.7rem 2rem 0.1rem $color-secondary;
+  border-radius: 1rem;
+  width: 35rem;
+
+  &__image {
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &__content {
+    padding: 3.3rem 3rem 1.5rem;
+  }
+
+  &__info {
+    @include flexCenter($justify: space-between);
+
+    &-box {
+      @include flexCenter($justify: start);
+    }
+
+    &-avatar {
+      width: 15%;
+      border-radius: 100%;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.social-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+
+  background-color: $color-primary;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 2.5rem 3rem;
+
+  @include flexCenter($justify: start);
+
+  &__item {
+    padding-left: 1.3rem;
+  }
+
+  &__link {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  &--open {
+    opacity: 1;
+  }
+}

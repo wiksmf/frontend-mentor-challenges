@@ -1,0 +1,35 @@
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+}
+
+.heading-primary {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large;
+  color: $color-primary;
+}
+
+.paragraph {
+  font-size: $font-size-medium;
+  color: $color-secondary;
+
+  &-share {
+    color: $color-secondary-bg;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.card {
+  font-size: $font-size-small;
+
+  &__info {
+    &-name {
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+    }
+
+    &-date {
+      color: $color-secondary-bg;
+    }
+  }
+}
