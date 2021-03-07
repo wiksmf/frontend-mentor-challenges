@@ -1,8 +1,10 @@
 .footer {
+  position: fixed;
+  bottom: 5rem;
+
   &__link {
     &:link,
     &:visited {
-      display: inline-block;
       outline: none;
       transition: all 0.2s;
     }

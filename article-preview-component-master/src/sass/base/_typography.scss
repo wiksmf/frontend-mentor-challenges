@@ -33,3 +33,23 @@ body {
     }
   }
 }
+
+.footer {
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      color: $color-primary;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: darken($color-primary, 100%);
+      font-weight: $font-weight-bold;
+    }
+  }
+}

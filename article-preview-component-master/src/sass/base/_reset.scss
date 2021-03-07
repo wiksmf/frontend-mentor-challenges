@@ -7,10 +7,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (min-width: $bp-lg) {
+    font-size: 68.75%; // 1rem = 11px
+  }
 }
 
 body {
   height: 100vh;
+  padding: 2rem;
   background-color: lighten($color-secondary-bg, 15%);
 
   @include flexCenter($direction: column);
