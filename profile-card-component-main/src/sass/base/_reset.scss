@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (min-width: $bp-lg) {
+    font-size: 68.75%; // 1rem = 11px
+  }
+}
+
+body {
+  height: 100vh;
+  background: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg),
+    $color-background;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right calc(50vw + 5%) bottom calc(50vh - 10vw),
+    left calc(50vw + 5%) top calc(50vh + 1vw);
+
+  @include flexCenter($direction: column);
+}

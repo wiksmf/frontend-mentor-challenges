@@ -1,0 +1,37 @@
+.card {
+  position: relative;
+  background-color: lighten($color-tertiary, 50%);
+  box-shadow: 0 0 2rem 0.1rem rgba($color-primary, 0.3);
+  border-radius: 1rem;
+  width: 35rem;
+
+  &__header {
+    height: 15rem;
+    background-image: url(../img/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  &__profile {
+    height: 8rem;
+
+    &-photo {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      border: 0.5rem solid lighten($color-tertiary, 50%);
+      background-color: lighten($color-tertiary, 50%);
+    }
+  }
+
+  &__social {
+    height: 5rem;
+    padding: 4.5rem 1rem;
+    border-top: 0.05rem solid lighten($color-tertiary, 30%);
+    @include flexCenter($justify: space-evenly);
+  }
+}

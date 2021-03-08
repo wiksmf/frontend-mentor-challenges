@@ -1,0 +1,19 @@
+.footer {
+  position: fixed;
+  bottom: 5rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
