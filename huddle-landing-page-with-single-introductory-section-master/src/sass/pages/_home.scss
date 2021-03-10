@@ -1,0 +1,90 @@
+.header {
+  text-align: left;
+
+  &__logo {
+    width: 50%;
+  }
+}
+
+.overview {
+  @media only screen and (min-width: $bp-lg) {
+    @include flexCenter($direction: row, $justify: center, $align: center);
+  }
+
+  &__image-box {
+    margin: 4rem auto;
+
+    @media only screen and (min-width: $bp-lg) {
+      margin: 0;
+      margin-right: 5rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    @media only screen and (min-width: $bp-lg) {
+      width: 100%;
+    }
+  }
+
+  &__info-box {
+    @media only screen and (min-width: $bp-lg) {
+      text-align: left;
+      max-width: 40rem;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+
+  @include flexCenter($justify: space-between, $align: center);
+
+  &__link {
+    &:link,
+    &:visited {
+      outline: none;
+      transition: all 0.2s;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+.social-icon {
+  margin-bottom: 4rem;
+  @media only screen and (min-width: $bp-lg) {
+    align-self: flex-end;
+  }
+
+  &__link {
+    color: $color-tertiary;
+    margin: 0 0.5rem;
+    padding: 1rem 0.5rem 1rem 0.6rem;
+    border: 0.1rem solid $color-tertiary;
+    border-radius: 100%;
+    transition: all 0.1s;
+
+    &:link,
+    &:visited {
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: darken($color-secondary, 20%);
+      color: darken($color-secondary, 20%);
+    }
+  }
+
+  i.icon {
+    margin-right: 0;
+  }
+}
