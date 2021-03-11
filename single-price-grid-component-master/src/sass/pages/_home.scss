@@ -1,0 +1,41 @@
+.container {
+  @include gridCenter;
+}
+
+.section {
+  padding: 5rem;
+
+  &-top {
+    grid-column: 1 / span 2;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: lighten($color-bg-primary, 50%);
+  }
+
+  &-middle {
+    background-color: $color-bg-secondary;
+
+    @media only screen and (min-width: $bp-md) {
+      border-bottom-left-radius: 1rem;
+      grid-row: 2;
+    }
+
+    .center {
+      @include flexCenter;
+      justify-content: flex-start;
+    }
+  }
+
+  &-bottom {
+    background-color: lighten($color-bg-secondary, 20%);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    @media only screen and (min-width: $bp-md) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 1rem;
+      grid-row: 2;
+    }
+  }
+}
