@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" size="32x32" href="src/img/favicon-32x32.png">
-    <title>Frontend Mentor | Todo app</title>
-    <script defer src="src/js/main.js"></script>
-  </head>
-  <bod>
 
-    <h1>Todo</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" size="32x32" href="src/img/favicon-32x32.png">
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="stylesheet" href="src/css/main.css">
+  <script defer src="src/js/main.js"></script>
+</head>
+<body class="container ">
 
-    <input type="text" class="new-item"/>
+  <h1>Todo</h1>
+
+  <button class="btn btn-theme"></button>
+
+
+  <div>
     <button class="btn btn-add">Add</button>
+    <input type="text" class="new-item" />
+  </div>
 
   <ul class="todo-list"></ul>
 
-  <button class="btn btn-show btn-all">All</button>
-  <button class="btn btn-show btn-active">Active</button>
-  <button class="btn btn-show btn-completed">Completed</button>
+  <div class="item-list">
+    <p><span class="items-left"></span>items left</p>
+    <button class="btn btn-clear">Clear completed</button>
+  </div>
 
-  </bod>
+  <button class="btn btn-filter btn-all">All</button>
+  <button class="btn btn-filter btn-active">Active</button>
+  <button class="btn btn-filter btn-completed">Completed</button>
+
+</body>
+
 </html>

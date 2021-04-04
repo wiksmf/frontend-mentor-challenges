@@ -1,0 +1,42 @@
+.container {
+  background-image: url(../img/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+}
+
+.container--dark {
+  background-color: blue;
+  background-image: url(../img/bg-mobile-dark.jpg);
+}
+
+.btn-theme {
+  cursor: pointer;
+  background-color: pink;
+  background-image: url(../img/icon-sun.svg);
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn-theme--dark {
+  background-color: blue;
+  background-image: url(../img/icon-moon.svg);
+}
+
+.item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item {
+  padding: 1rem 4rem;
+  background-color: aquamarine;
+  cursor: move;
+}
+
+.completed {
+  background-color: red;
+}
