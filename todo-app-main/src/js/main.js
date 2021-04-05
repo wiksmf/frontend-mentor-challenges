@@ -7,13 +7,22 @@ const btnAdd = document.querySelector('.btn-add');
 const btnClear = document.querySelector('.btn-clear');
 const btnFilter = document.querySelectorAll('.btn-filter');
 const displayTodoList = document.querySelector('.todo-list');
+const displayItemsLeft = document.querySelector('.items-left');
 
 let todoList = JSON.parse(localStorage.getItem('todoList'));
 
+// Event handlers
 document.addEventListener('DOMContentLoaded', displayTodo());
 btnAdd.addEventListener('click', addTodo);
 btnClear.addEventListener('click', deleteCompleted);
 themeSwitch.addEventListener('click', switchTheme);
+btnFilter.forEach(btn =>
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('btn-all')) filterView();
+    if (btn.classList.contains('btn-active')) filterView('completed');
+    if (btn.classList.contains('btn-completed')) filterView('not-completed');
+  }),
+);
 
 // Toggle light and dark mode
 function switchTheme() {
@@ -30,13 +39,15 @@ function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
     listItem.setAttribute('draggable', true);
     listItem.innerHTML = `
       <div class="checkbox-container">
-        <input type="checkbox" class="btn btn-check" />
+        <input type="checkbox" class="btn btn-check" 
+          ${todo.isCompleted ? 'checked' : ''} />
         <span class="check"></span>
       </div>
-      <p class="item">${todo.todo}</p>
+      <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
       <button class="btn btn-delete">DELETE</button>
     `;
 
+    // Add event handlers to each todo
     listItem.addEventListener('dragstart', () => {
       listItem.classList.add('dragging');
     });
@@ -58,41 +69,18 @@ function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
     });
 
     listItem.querySelector('.btn-delete').addEventListener('click', () => {
-      deleteTodo(todo);
       displayTodoList.removeChild(listItem);
+      deleteTodo(todo);
     });
 
     displayTodoList.appendChild(listItem);
   });
+
+  itemsLeft();
+  dragItems();
 }
 
-// Mark todos as complete
-function completedTodo(todo, completed) {
-  const index = todoList.findIndex(index => index.todo === todo.todo);
-  todoList[index].isCompleted = completed;
-  // console.log(todoList[index], todoList[index].isCompleted);
-  localStorage.setItem('todoList', JSON.stringify(todoList));
-}
-
-// Delete todos form the list
-function deleteTodo(todo) {
-  const index = todoList.findIndex(index => index.todo === todo.todo);
-  todoList.splice(index, 1);
-  localStorage.setItem('todoList', JSON.stringify(todoList));
-}
-
-// Clear all completed todos
-// function deleteCompleted() {
-//   todoList = JSON.parse(localStorage.getItem('todoList'));
-//   todoList.forEach(todo => {
-//     console.log(todo);
-
-//     if (todo.isCompleted) console.log(todo);
-//     deleteTodo(todo);
-//   });
-// }
-
-// Add new todos to the list
+// Add new todo to the list
 function addTodo() {
   const todo = newItem.value.trim();
 
@@ -103,25 +91,39 @@ function addTodo() {
     isCompleted: false,
   };
 
-  displayTodo([todoItem]);
   todoList.push(todoItem);
   localStorage.setItem('todoList', JSON.stringify(todoList));
-
+  displayTodo([todoItem]);
+  itemsLeft();
   newItem.value = '';
   newItem.focus();
 }
 
-// Filter by all/active/complete todos
-btnFilter.forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.classList.contains('btn-all')) {
-    }
-    if (btn.classList.contains('btn-active')) {
-    }
-    if (btn.classList.contains('btn-completed')) {
-    }
-  });
-});
+// Mark todos as complete
+function completedTodo(todo, completed) {
+  const index = todoList.findIndex(index => index.todo === todo.todo);
+  todoList[index].isCompleted = completed;
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+  itemsLeft();
+}
+
+// Delete todos form the list
+function deleteTodo(todo) {
+  const index = todoList.findIndex(index => index.todo === todo.todo);
+  todoList.splice(index, 1);
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+  itemsLeft();
+}
+
+// Clear all completed todos
+function deleteCompleted() {
+  const completedItems = [...document.querySelectorAll('.completed')];
+  completedItems.forEach(item => item.parentNode.remove(item));
+
+  todoList = JSON.parse(localStorage.getItem('todoList'));
+  todoList = todoList.filter(todo => !todo.isCompleted);
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+}
 
 // Drag and drop to reorder items on the list
 function dragItems() {
@@ -148,4 +150,30 @@ function dragItems() {
   });
 }
 
-dragItems();
+// Filter by all/active/complete todos
+function filterView(itemType) {
+  let completedItems = [...document.querySelectorAll('.item')];
+  completedItems.forEach(item => {
+    item.parentNode.classList.remove('hide');
+  });
+
+  if (itemType) {
+    completedItems = completedItems.filter(item =>
+      itemType === 'completed'
+        ? item.classList.contains('completed')
+        : !item.classList.contains('completed'),
+    );
+
+    completedItems.forEach(item => {
+      item.parentNode.classList.add('class', 'hide');
+    });
+  }
+}
+
+// Display left todos
+function itemsLeft() {
+  const itemsLength = [...document.querySelectorAll('.item')];
+  displayItemsLeft.textContent = itemsLength.filter(
+    item => !item.classList.contains('completed'),
+  ).length;
+}
