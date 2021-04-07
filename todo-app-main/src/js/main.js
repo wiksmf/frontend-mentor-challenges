@@ -9,7 +9,8 @@ const btnFilter = document.querySelectorAll('.btn-filter');
 const displayTodoList = document.querySelector('.todo-list');
 const displayItemsLeft = document.querySelector('.items-left');
 
-let todoList = JSON.parse(localStorage.getItem('todoList'));
+// let todoList = [JSON.parse(localStorage.getItem('todoList'))];
+let todoList = [];
 
 // Event handlers
 document.addEventListener('DOMContentLoaded', displayTodo());
@@ -25,56 +26,73 @@ btnFilter.forEach(btn =>
 );
 
 // Toggle light and dark mode
-function switchTheme() {
-  container.classList.toggle('container--dark');
-  themeSwitch.classList.toggle('btn-theme--dark');
+let theme = localStorage.getItem('theme');
+
+function darkThemeOn() {
+  container.classList.add('container--dark');
+  themeSwitch.classList.add('btn-theme--dark');
+  localStorage.setItem('theme', 'true');
 }
+
+function darkThemeOff() {
+  container.classList.remove('container--dark');
+  themeSwitch.classList.remove('btn-theme--dark');
+  localStorage.setItem('theme', null);
+}
+
+function switchTheme() {
+  theme = localStorage.getItem('theme');
+  theme !== 'true' ? darkThemeOn() : darkThemeOff();
+}
+
+if (theme === 'true') darkThemeOn();
 
 // List all todos saved in local storage
 function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
-  todoList.forEach(todo => {
-    const listItem = document.createElement('li');
+  if (todoList)
+    todoList.forEach(todo => {
+      const listItem = document.createElement('li');
 
-    listItem.classList.add('item-list');
-    listItem.setAttribute('draggable', true);
-    listItem.innerHTML = `
-      <div class="checkbox-container">
-        <input type="checkbox" class="btn btn-check" 
-          ${todo.isCompleted ? 'checked' : ''} />
-        <span class="check"></span>
-      </div>
-      <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
-      <button class="btn btn-delete">DELETE</button>
-    `;
+      listItem.classList.add('item-list');
+      listItem.setAttribute('draggable', true);
+      listItem.innerHTML = `
+        <div class="checkbox-container">
+          <input type="checkbox" class="btn btn-check" 
+            ${todo.isCompleted ? 'checked' : ''} />
+          <span class="check"></span>
+        </div>
+        <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
+        <button class="btn btn-delete">DELETE</button>
+      `;
 
-    // Add event handlers to each todo
-    listItem.addEventListener('dragstart', () => {
-      listItem.classList.add('dragging');
+      // Add event handlers to each todo
+      listItem.addEventListener('dragstart', () => {
+        listItem.classList.add('dragging');
+      });
+
+      listItem.addEventListener('dragend', () => {
+        listItem.classList.remove('dragging');
+      });
+
+      listItem.querySelector('.btn-check').addEventListener('click', () => {
+        const completed = listItem.querySelector('.btn-check').checked
+          ? true
+          : false;
+
+        completed
+          ? listItem.querySelector('.item').classList.add('completed')
+          : listItem.querySelector('.item').classList.remove('completed');
+
+        completedTodo(todo, completed);
+      });
+
+      listItem.querySelector('.btn-delete').addEventListener('click', () => {
+        displayTodoList.removeChild(listItem);
+        deleteTodo(todo);
+      });
+
+      displayTodoList.appendChild(listItem);
     });
-
-    listItem.addEventListener('dragend', () => {
-      listItem.classList.remove('dragging');
-    });
-
-    listItem.querySelector('.btn-check').addEventListener('click', () => {
-      const completed = listItem.querySelector('.btn-check').checked
-        ? true
-        : false;
-
-      completed
-        ? listItem.querySelector('.item').classList.add('completed')
-        : listItem.querySelector('.item').classList.remove('completed');
-
-      completedTodo(todo, completed);
-    });
-
-    listItem.querySelector('.btn-delete').addEventListener('click', () => {
-      displayTodoList.removeChild(listItem);
-      deleteTodo(todo);
-    });
-
-    displayTodoList.appendChild(listItem);
-  });
 
   itemsLeft();
   dragItems();
