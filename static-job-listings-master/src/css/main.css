@@ -126,10 +126,14 @@ html {
 
 .btn-remove {
   margin-left: 1rem;
-  padding: 0.8rem 1rem 0.5rem;
+  height: 3rem;
+  width: 3rem;
   background-color: #5ba4a4;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
+  background-image: url(../img/icon-remove.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .btn-remove:focus, .btn-remove:hover {

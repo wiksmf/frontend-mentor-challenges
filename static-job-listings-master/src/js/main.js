@@ -5,21 +5,25 @@ const filterBar = document.querySelector('.filter-bar');
 const filterBarFilters = document.querySelector('.filters');
 const btnClear = document.querySelector('.btn-clear');
 
-let filterJobs = [];
+let filters = [];
 let data;
 
+// Get the data
 async function getData() {
   try {
     const res = await fetch('../../data.json');
-    if (!res.ok) throw new Error('problem :(');
+    if (!res.ok)
+      throw new Error('Whoops..something went wrong while getting data 💔');
+
     data = await res.json();
-    data.forEach(el => renderData(el));
+    data.forEach(job => displayJobs(job));
   } catch (e) {
-    console.log(e);
+    alert(e);
   }
 }
 
-function renderData(job) {
+// Render the data on the page
+function displayJobs(job) {
   const html = `
     <div class="job ${job.featured ? 'job__featured' : ''}" data-id=${job.id} > 
       <div class="job__information">
@@ -27,13 +31,18 @@ function renderData(job) {
           <img src="${job.logo}" class="job__logo" alt="">
         </div>
         <div class="job__description">
-          <p class="job__company">${job.company} 
-          ${job.new ? '<span class="job__type job__type--new">New!</span>' : ''}
-          ${
-            job.featured
-              ? '<span class="job__type job__type--featured">Featured</span>'
-              : ''
-          }  
+          <p class="job__company">
+            ${job.company} 
+            ${
+              job.new
+                ? '<span class="job__type job__type--new">New!</span>'
+                : ''
+            }
+            ${
+              job.featured
+                ? '<span class="job__type job__type--featured">Featured</span>'
+                : ''
+            }  
           </p>
           <a href='#' class="job__position u-mt-sm u-mb-sm">${job.position}</a>
           <ul class="job__details">
@@ -44,12 +53,8 @@ function renderData(job) {
         </div>  
       </div>
       <div class="job__categories u-mt-sm">
-        <span class="job__filter" data-id="${job.role}">
-          ${job.role}
-        </span>
-        <span class="job__filter" data-id="${job.level}">
-          ${job.level}
-        </span>
+        <span class="job__filter" data-id="${job.role}">${job.role}</span>
+        <span class="job__filter" data-id="${job.level}">${job.level}</span>
         <ul class="job__languages">
           ${job.languages.length > 0 ? renderList(job.languages) : ''}
         </ul>
@@ -58,11 +63,12 @@ function renderData(job) {
         </ul>
       </div>
     </div>    
-    `;
+  `;
 
   jobList.insertAdjacentHTML('beforeend', html);
 }
 
+// Render lists
 function renderList(list) {
   let html = '';
   list.forEach(
@@ -71,81 +77,50 @@ function renderList(list) {
   return html;
 }
 
-function clearJobList() {
-  jobList.innerHTML = '';
-}
-
+// Display the filters in the filter bar
 function displayFilters() {
   let html = '';
-  filterJobs.forEach(
-    job =>
+  filters.forEach(
+    filter =>
       (html = `
-        <li class="filters__item" data-id="${job}">
-          <span class="filters__filter">${job}</span>
-          <button class="btn btn-remove">
-            <img src="src/img/icon-remove.svg" alt="Remove ${job} from filters">
-          </button>
+        <li class="filters__item" data-id="${filter}">
+          <span class="filters__filter">${filter}</span>
+          <button class="btn btn-remove" aria-label="Remove ${filter} from filters"></button>
         </li>
       `),
   );
   filterBarFilters.insertAdjacentHTML('beforeend', html);
 }
 
-jobList.addEventListener('click', e => {
-  if (e.target.closest('.job__filter')) {
+// Filter the jobs
+function filterJobs(e) {
+  if (e.target.closest('.job__filter'))
     filterBar.classList.add('filter-bar--visible');
-    displayJobs(e);
-  }
-});
 
-filterBar.addEventListener('click', e => {
-  if (e.target.closest('.btn-remove')) {
-    const index = filterJobs.indexOf(e.target.parentNode.dataset.id);
-    filterJobs.splice(index, 1);
-    // console.log(e.target.parentElement);
-    // e.target.parentElement.remove();
-
-    // PROBLEMS !!!!!!!!!!!!!!!!!!!!!!!!!!
-
-    console.log(e.target.parentNode.parentNode);
-    e.target.parentNode.parentNode.parentNode.removeChild(
-      e.target.parentNode.parentNode,
-    );
-
-    clearJobList();
-
-    data.forEach(job => {
-      if (selectedJobs(job)) renderData(job);
-    });
-
-    if (filterJobs.length < 1) {
-      filterBar.classList.remove('filter-bar--visible');
-      clearJobList();
-      data.forEach(el => renderData(el));
-    }
-  }
-});
-
-function displayJobs(e) {
-  if (!filterJobs.includes(e.target.dataset.id)) {
-    clearJobList();
-    filterJobs.push(e.target.dataset.id);
+  if (!filters.includes(e.target.dataset.id)) {
+    filters.push(e.target.dataset.id);
     displayFilters();
-
-    data.forEach(job => {
-      if (selectedJobs(job)) renderData(job);
-    });
+    updateJobs();
   }
 }
 
-function selectedJobs(data) {
+// Display jobs by filters
+function updateJobs() {
+  clearJobList();
+  data.forEach(job => {
+    if (selectedJobs(job)) displayJobs(job);
+  });
+}
+
+// Check if a job category is in the filter list
+function selectedJobs(job) {
   let filtered = true;
-  filterJobs.forEach(job => {
+  filters.forEach(filter => {
     if (
-      data.role !== job &&
-      data.level !== job &&
-      !data.languages.includes(job) &&
-      !data.tools.includes(job)
+      job.role !== filter &&
+      job.level !== filter &&
+      !job.languages.includes(filter) &&
+      !job.tools.includes(filter)
     )
       filtered = false;
   });
@@ -153,12 +128,39 @@ function selectedJobs(data) {
   return filtered;
 }
 
-btnClear.addEventListener('click', () => {
-  filterJobs.splice(0, filterJobs.length);
-  filterBar.classList.remove('filter-bar--visible');
-  clearJobList();
-  filterBarFilters.innerHTML = '';
-  data.forEach(el => renderData(el));
-});
+// Remove a single filter
+function removeFilter(e) {
+  if (e.target.closest('.btn-remove')) {
+    const index = filters.indexOf(e.target.parentNode.dataset.id);
+    filters.splice(index, 1);
 
-getData();
+    if (filters.length < 1) filterBar.classList.remove('filter-bar--visible');
+
+    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    updateJobs();
+  }
+}
+
+// Remove all filters
+function removeAllFilters() {
+  filters.splice(0, filters.length);
+  filterBar.classList.remove('filter-bar--visible');
+  filterBarFilters.innerHTML = '';
+  clearJobList();
+  data.forEach(job => displayJobs(job));
+}
+
+// Clear the job list container
+function clearJobList() {
+  jobList.innerHTML = '';
+}
+
+// Initialize stuff
+function init() {
+  jobList.addEventListener('click', e => filterJobs(e));
+  filterBar.addEventListener('click', e => removeFilter(e));
+  btnClear.addEventListener('click', removeAllFilters);
+  getData();
+}
+
+init();

@@ -23,10 +23,15 @@
 
   &-remove {
     margin-left: 1rem;
-    padding: 0.8rem 1rem 0.5rem;
+    // padding: 0.8rem 1rem 0.5rem;
+    height: 3rem;
+    width: 3rem;
     background-color: $color-primary;
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
+    background-image: url(../img/icon-remove.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 
     &:focus,
     &:hover {
