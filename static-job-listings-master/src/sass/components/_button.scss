@@ -1,20 +1,18 @@
 .btn {
-  cursor: pointer;
-  border: none;
-  outline: none;
+  font-family: inherit;
+  font-weight: $font-weight-bd;
   background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
   transition: all 0.2s;
 
   &-clear {
-    align-self: center;
-
-    font-family: inherit;
-    font-weight: $font-weight-bold;
-    color: $secondary-color;
+    color: $color-secondary;
 
     &:focus,
     &:hover {
-      color: $primary-color;
+      color: $color-primary;
       text-decoration: underline;
     }
 
@@ -24,21 +22,19 @@
   }
 
   &-remove {
-    align-self: stretch;
-
     margin-left: 1rem;
     padding: 0.8rem 1rem 0.5rem;
-    background-color: $primary-color;
+    background-color: $color-primary;
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
 
     &:focus,
     &:hover {
-      background-color: $tertiary-color;
+      background-color: $color-tertiary;
     }
 
     &:active {
-      transform: scale(0.9);
+      transform: scale(0.95);
     }
   }
 }

@@ -27,7 +27,7 @@ function renderData(job) {
           <img src="${job.logo}" class="job__logo" alt="">
         </div>
         <div class="job__description">
-          <p class="job__company u-mt-sm u-mb-sm">${job.company} 
+          <p class="job__company">${job.company} 
           ${job.new ? '<span class="job__type job__type--new">New!</span>' : ''}
           ${
             job.featured
@@ -37,13 +37,13 @@ function renderData(job) {
           </p>
           <a href='#' class="job__position u-mt-sm u-mb-sm">${job.position}</a>
           <ul class="job__details">
-            <li class="job__date">${job.postedAt}</li>
-            <li class="job__contract">${job.contract}</li>
-            <li class="job_location">${job.location}</li>
+            <li class="job__details-date u-mb-xs">${job.postedAt}</li>
+            <li class="job__details-contract u-mb-xs">${job.contract}</li>
+            <li class="job__details-location u-mb-xs">${job.location}</li>
           </ul>
         </div>  
       </div>
-      <div class="job__categories u-mt-sm u-mb-sm">
+      <div class="job__categories u-mt-sm">
         <span class="job__filter" data-id="${job.role}">
           ${job.role}
         </span>
@@ -93,7 +93,7 @@ function displayFilters() {
 
 jobList.addEventListener('click', e => {
   if (e.target.closest('.job__filter')) {
-    filterBar.classList.remove('hidden');
+    filterBar.classList.add('filter-bar--visible');
     displayJobs(e);
   }
 });
@@ -119,7 +119,7 @@ filterBar.addEventListener('click', e => {
     });
 
     if (filterJobs.length < 1) {
-      filterBar.classList.add('hidden');
+      filterBar.classList.remove('filter-bar--visible');
       clearJobList();
       data.forEach(el => renderData(el));
     }
@@ -155,7 +155,7 @@ function selectedJobs(data) {
 
 btnClear.addEventListener('click', () => {
   filterJobs.splice(0, filterJobs.length);
-  filterBar.classList.add('hidden');
+  filterBar.classList.remove('filter-bar--visible');
   clearJobList();
   filterBarFilters.innerHTML = '';
   data.forEach(el => renderData(el));

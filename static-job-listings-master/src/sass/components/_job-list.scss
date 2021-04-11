@@ -1,22 +1,24 @@
-.job__list {
-  background-color: $secondary-bg-color;
-}
-
 .job {
   position: relative;
-
   margin: 4rem auto;
-  padding: 2rem 3rem;
+  padding: 3rem 2rem 2rem;
   border-radius: 0.5rem;
-  background-color: $primary-bg-color;
-  box-shadow: 0 0.5rem 1em 0.1rem rgba($primary-color, 0.3);
+  background-color: lighten($color-bg-secondary, 15%);
+  box-shadow: 0 0.5rem 1em 0.1rem rgba($color-primary, 0.3);
 
-  @media only screen and (min-width: $bp-md) {
+  @media only screen and (min-width: $bp-lg) {
+    padding: 2rem 3rem;
     @include flexCenter($justify: space-between);
   }
 
   &__featured {
-    border-left: 0.5rem solid $primary-color;
+    border-left: 0.5rem solid $color-primary;
+  }
+
+  &__information {
+    @media only screen and (min-width: $bp-lg) {
+      @include flexCenter($justify: space-between);
+    }
   }
 
   &__logo-box {
@@ -25,7 +27,7 @@
     left: 0;
     transform: translate(20%, -50%);
 
-    @media only screen and (min-width: $bp-md) {
+    @media only screen and (min-width: $bp-lg) {
       position: static;
       transform: translate(-20%, 0);
     }
@@ -35,13 +37,11 @@
     width: 50%;
 
     @media only screen and (min-width: $bp-md) {
-      width: 100%;
+      width: 70%;
     }
-  }
 
-  &__information {
-    @media only screen and (min-width: $bp-md) {
-      @include flexCenter($justify: space-between);
+    @media only screen and (min-width: $bp-lg) {
+      width: 100%;
     }
   }
 
@@ -52,37 +52,39 @@
     border-radius: 1rem;
 
     &--new {
-      background-color: darken($primary-color, 10%);
+      background-color: darken($color-primary, 10%);
     }
 
     &--featured {
-      background-color: darken($tertiary-color, 10%);
+      background-color: darken($color-tertiary, 10%);
     }
   }
 
   &__position {
     display: inline-block;
+    transition: all 0.2s;
   }
 
   &__details {
     list-style-position: inside;
     padding-bottom: 1rem;
-    border-bottom: 0.1rem solid $secondary-color;
+    border-bottom: 0.1rem solid lighten($color-secondary, 25%);
 
     @include flexCenter($justify: flex-start);
 
-    @media only screen and(min-width: $bp-md) {
+    @media only screen and(min-width: $bp-lg) {
+      padding-bottom: 0;
       border-bottom: none;
     }
-  }
 
-  &__date {
-    list-style: none;
-    margin-right: 1.1rem;
-  }
+    &-date {
+      list-style: none;
+      margin-right: 1.2rem;
+    }
 
-  &__contract {
-    margin-right: 1.1rem;
+    &-contract {
+      margin-right: 1.2rem;
+    }
   }
 
   &__categories {
@@ -90,15 +92,22 @@
   }
 
   &__filter {
-    margin: 0.7rem 0.5rem;
-    padding: 0.7rem;
+    margin: 0.7rem 0.5rem 0.7rem 0;
+    padding: 0.8rem 1rem 0.5rem;
     border-radius: 0.4rem;
-    background-color: rgba($primary-color, 0.2);
+    background-color: rgba($color-primary, 0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:focus,
+    &:hover {
+      background-color: $color-primary;
+    }
   }
 
   &__languages,
   &__tools {
     list-style: none;
-    @include flexCenter;
+    @include flexCenter($justify: flex-start);
   }
 }

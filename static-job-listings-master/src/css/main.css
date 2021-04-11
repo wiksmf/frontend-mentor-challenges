@@ -18,24 +18,22 @@ html {
 }
 
 .container {
-  background-color: #effafa;
+  background-color: #eef6f6;
 }
 
 .container {
   font-family: 'Spartan', sans-serif;
+  font-size: 1.1rem;
   font-weight: 500;
+  color: #5ba4a4;
 }
 
 .filters__item {
   font-weight: 700;
-  color: #5ba4a4;
-  font-size: 1.1rem;
 }
 
 .job__company {
-  font-size: 1.1rem;
   font-weight: 700;
-  color: #5ba4a4;
 }
 
 .job__type {
@@ -57,29 +55,29 @@ html {
 
 .job__details {
   color: #7b8e8e;
-  font-size: 1.1rem;
 }
 
 .job__filter {
   font-weight: 700;
-  color: #5ba4a4;
-  font-size: 1.1rem;
+}
+
+.job__filter:focus, .job__filter:hover {
+  color: #effafa;
 }
 
 .footer {
   font-size: 0.8rem;
+  color: #7b8e8e;
 }
 
 .footer__link:link, .footer__link:visited {
-  font-size: 0.8rem;
   font-weight: 700;
-  color: #5ba4a4;
+  color: #498383;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .footer__link:focus, .footer__link:hover, .footer__link:active {
-  font-weight: 700;
   color: #2c3a3a;
 }
 
@@ -87,25 +85,32 @@ html {
   margin-top: 1.3rem;
 }
 
+.u-mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .u-mb-xs {
+    margin-bottom: 0;
+  }
+}
+
 .u-mb-sm {
   margin-bottom: 1.3rem;
 }
 
 .btn {
-  cursor: pointer;
-  border: none;
-  outline: none;
+  font-family: inherit;
+  font-weight: 700;
   background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .btn-clear {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: inherit;
-  font-weight: 700;
   color: #7b8e8e;
 }
 
@@ -120,9 +125,6 @@ html {
 }
 
 .btn-remove {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
   margin-left: 1rem;
   padding: 0.8rem 1rem 0.5rem;
   background-color: #5ba4a4;
@@ -135,34 +137,28 @@ html {
 }
 
 .btn-remove:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .filter-bar {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  min-height: 7rem;
-  width: calc(100% - 15vw);
-  padding: 1.5rem 2rem;
-  background-color: #effafa;
-  -webkit-box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
-          box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
-  border-radius: 0.4rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
+  margin-top: -12.5vh;
+  padding: 1.5rem 2rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
+          box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-@media only screen and (min-width: 48em) {
-  .filter-bar {
-    max-width: 100rem;
-    width: calc(100% - 20vw);
-  }
+.filter-bar--visible {
+  opacity: 1;
 }
 
 .filters {
@@ -188,9 +184,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -202,22 +198,19 @@ html {
   height: 0.95rem;
 }
 
-.job__list {
-  background-color: #eef6f6;
-}
-
 .job {
   position: relative;
   margin: 4rem auto;
-  padding: 2rem 3rem;
+  padding: 3rem 2rem 2rem;
   border-radius: 0.5rem;
-  background-color: #effafa;
+  background-color: white;
   -webkit-box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
           box-shadow: 0 0.5rem 1em 0.1rem rgba(91, 164, 164, 0.3);
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 61.875em) {
   .job {
+    padding: 2rem 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -236,6 +229,22 @@ html {
   border-left: 0.5rem solid #5ba4a4;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .job__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .job__logo-box {
   position: absolute;
   top: 0;
@@ -244,7 +253,7 @@ html {
           transform: translate(20%, -50%);
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 61.875em) {
   .job__logo-box {
     position: static;
     -webkit-transform: translate(-20%, 0);
@@ -258,23 +267,13 @@ html {
 
 @media only screen and (min-width: 48em) {
   .job__logo {
-    width: 100%;
+    width: 70%;
   }
 }
 
-@media only screen and (min-width: 48em) {
-  .job__information {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+@media only screen and (min-width: 61.875em) {
+  .job__logo {
+    width: 100%;
   }
 }
 
@@ -295,12 +294,14 @@ html {
 
 .job__position {
   display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .job__details {
   list-style-position: inside;
   padding-bottom: 1rem;
-  border-bottom: 0.1rem solid #7b8e8e;
+  border-bottom: 0.1rem solid #c0c9c9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,19 +315,20 @@ html {
       flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 61.875em) {
   .job__details {
+    padding-bottom: 0;
     border-bottom: none;
   }
 }
 
-.job__date {
+.job__details-date {
   list-style: none;
-  margin-right: 1.1rem;
+  margin-right: 1.2rem;
 }
 
-.job__contract {
-  margin-right: 1.1rem;
+.job__details-contract {
+  margin-right: 1.2rem;
 }
 
 .job__categories {
@@ -344,10 +346,17 @@ html {
 }
 
 .job__filter {
-  margin: 0.7rem 0.5rem;
-  padding: 0.7rem;
+  margin: 0.7rem 0.5rem 0.7rem 0;
+  padding: 0.8rem 1rem 0.5rem;
   border-radius: 0.4rem;
   background-color: rgba(91, 164, 164, 0.2);
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.job__filter:focus, .job__filter:hover {
+  background-color: #5ba4a4;
 }
 
 .job__languages, .job__tools {
@@ -355,9 +364,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -380,12 +389,11 @@ html {
 .footer__link:focus, .footer__link:hover, .footer__link:active {
   padding-left: 1rem;
   padding-right: 1rem;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .header {
   position: relative;
+  z-index: -1;
   height: 15vh;
   background-color: #5ba4a4;
   background-image: url(../img/bg-header-mobile.svg);
@@ -400,7 +408,6 @@ html {
 }
 
 .main {
-  background-color: #eef6f6;
   padding: 6rem 4rem;
 }
 

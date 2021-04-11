@@ -1,26 +1,24 @@
 .container {
   font-family: 'Spartan', sans-serif;
-  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-md;
+  color: $color-primary;
 }
 
 .filters {
   &__item {
-    font-weight: $font-weight-bold;
-    color: $primary-color;
-    font-size: $font-size-sm;
+    font-weight: $font-weight-bd;
   }
 }
 
 .job {
   &__company {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-bold;
-    color: $primary-color;
+    font-weight: $font-weight-bd;
   }
 
   &__type {
     font-size: $font-size-xs;
-    color: $primary-bg-color;
+    color: $color-bg-primary;
     text-transform: uppercase;
   }
 
@@ -28,40 +26,41 @@
     &:link,
     &:visited {
       font-size: $font-size-md;
-      font-weight: $font-weight-bold;
-      color: $tertiary-color;
+      font-weight: $font-weight-bd;
+      color: $color-tertiary;
       text-decoration: none;
     }
 
     &:focus,
     &:hover,
     &:active {
-      color: $primary-color;
+      color: $color-primary;
     }
   }
 
   &__details {
-    color: $secondary-color;
-    font-size: $font-size-sm;
+    color: $color-secondary;
   }
 
   &__filter {
-    font-weight: $font-weight-bold;
-    color: $primary-color;
-    font-size: $font-size-sm;
+    font-weight: $font-weight-bd;
+
+    &:focus,
+    &:hover {
+      color: $color-bg-primary;
+    }
   }
 }
 
 .footer {
   font-size: $font-size-xs;
+  color: $color-secondary;
 
   &__link {
     &:link,
     &:visited {
-      font-size: $font-size-xs;
-      font-weight: $font-weight-bold;
-      color: $primary-color;
-
+      font-weight: $font-weight-bd;
+      color: darken($color-primary, 10%);
       text-transform: uppercase;
       text-decoration: none;
     }
@@ -69,8 +68,7 @@
     &:focus,
     &:hover,
     &:active {
-      font-weight: $font-weight-bold;
-      color: $tertiary-color;
+      color: $color-tertiary;
     }
   }
 }
