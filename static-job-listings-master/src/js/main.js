@@ -2,6 +2,7 @@
 
 const jobList = document.querySelector('.job__list');
 const filterBar = document.querySelector('.filter__bar');
+const filterBarFilters = document.querySelector('.filter__bar-filters');
 const btnClear = document.querySelector('.btn-clear');
 
 let filterJobs = [];
@@ -20,13 +21,13 @@ async function getData() {
 
 function renderData(job) {
   const html = `
-    <div class="job" data-id=${job.id}> 
+    <div class="job ${job.featured ? 'featured' : ''}" data-id=${job.id} > 
       <div class="job__logo-box">
         <img src="${job.logo}" job="job__logo" alt="">
         </div>
       <div class="job__description">
         <p class="job__company">${job.company} 
-          <span class="job__new">${job.new ? 'New' : ''}</span>
+          <span class="job__new">${job.new ? 'New!' : ''}</span>
           <span class="job__featured">${job.featured ? 'Featured' : ''}</span>
        </p>
         <p class="job__position"${job.position}</p>
@@ -58,6 +59,15 @@ function clearJobList() {
   jobList.innerHTML = '';
 }
 
+function displayFilters() {
+  let html = '';
+  filterJobs.forEach(
+    job =>
+      (html = `<li class="filter__item" data-id="${job}">${job} <button class="btn btn-close">X</button></li>`),
+  );
+  filterBarFilters.insertAdjacentHTML('beforeend', html);
+}
+
 jobList.addEventListener('click', e => {
   if (e.target.closest('.filter')) {
     filterBar.classList.remove('hidden');
@@ -65,74 +75,69 @@ jobList.addEventListener('click', e => {
   }
 });
 
-function displayJobs(e) {
-  if (!filterJobs.includes(e.target.dataset.id)) {
-    let filteredArr = [];
+filterBar.addEventListener('click', e => {
+  if (e.target.closest('.btn-close')) {
+    const index = filterJobs.indexOf(e.target.parentNode.dataset.id);
+    filterJobs.splice(index, 1);
+    console.log(e.target.parentElement);
+    e.target.parentElement.remove();
 
+    clearJobList();
+
+    data.forEach(job => {
+      if (selectedJobs(job)) renderData(job);
+    });
+
+    if (filterJobs.length < 1) {
+      filterBar.classList.add('hidden');
+      clearJobList();
+      data.forEach(el => renderData(el));
+    }
+  }
+});
+
+function displayJobs(e) {
+  clearJobList();
+
+  if (!filterJobs.includes(e.target.dataset.id)) {
     filterJobs.push(e.target.dataset.id);
     displayFilters();
 
-    data.forEach(details => {
-      if (selectedJobs(details)) {
-        filteredArr.push(details);
-        clearJobList();
-      }
+    data.forEach(job => {
+      if (selectedJobs(job)) renderData(job);
     });
-
-    filteredArr.forEach(item => renderData(item));
   }
 }
 
 function selectedJobs(data) {
-  let filtered = false;
+  let filtered = true;
   filterJobs.forEach(job => {
     if (
-      data.role === job ||
-      data.level === job ||
-      data.languages.includes(job) ||
-      data.tools.includes(job)
+      data.role !== job &&
+      data.level !== job &&
+      !data.languages.includes(job) &&
+      !data.tools.includes(job)
     )
-      filtered = true;
+      filtered = false;
   });
 
   return filtered;
 }
 
-filterBar.addEventListener('click', e => {
-  if (e.target.closest('.btn-close')) {
-    removeFilter(e);
-  }
+btnClear.addEventListener('click', () => {
+  filterJobs.splice(0, filterJobs.length);
+  filterBar.classList.add('hidden');
+  clearJobList();
+  filterBarFilters.innerHTML = '';
+  data.forEach(el => renderData(el));
 });
-
-function removeFilter(e) {
-  const index = filterJobs.indexOf(e.target.parentNode.dataset.id);
-  filterJobs.splice(index, 1);
-  e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-
-  if (filterJobs.length < 1) {
-    filterBar.classList.add('hidden');
-    clearJobList();
-    data.forEach(el => renderData(el));
-  }
-}
-
-function displayFilters() {
-  let html = '';
-  filterJobs.forEach(
-    job =>
-      (html = `<li class="filter__item" data-id="${job}">${job} <button class="btn btn-close">X</button></li>`),
-  );
-  filterBar.insertAdjacentHTML('beforeend', html);
-}
 
 function renderList(list) {
   let html = '';
-
   list.forEach(
     item =>
       (html += `<li class="job__language filter" data-id="${item}">${item}</é>`),
   );
-
   return html;
 }
 
