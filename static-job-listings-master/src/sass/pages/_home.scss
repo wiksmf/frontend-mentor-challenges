@@ -1,0 +1,9 @@
+.main {
+  background-color: $secondary-bg-color;
+  padding: 6rem 4rem;
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 100rem;
+    margin: auto;
+  }
+}

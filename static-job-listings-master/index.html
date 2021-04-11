@@ -4,18 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" size="32x32" href="src/img/favicon-32x32.png">
   <title>Frontend Mentor | Job Listings</title>
+  <link rel="icon" type="image/png" size="32x32" href="src/img/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="src/css/main.css">
+  <!-- JS -->
   <script defer src="src/js/main.js"></script>
 </head>
 
-<body class="container ">
-  <div class="filter__bar hidden">
-    <ul class="filter__bar-filters"></ul>
-    <button class="btn btn-clear">Clear</button>
-  </div>
-  <div class="job__list"></div>
+<body class="container">
+  <header class="header"></header>
+
+  <main class="main">
+    <div class="filter-bar">
+      <ul class="filters"></ul>
+      <button class="btn btn-clear">Clear</button>
+    </div>
+
+    <div class="job__list"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="attribution">
+      Challenge by
+      <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>.
+      Coded by
+      <a class="footer__link"
+        href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/static-job-listings-master"
+        target="_blank">
+        WIKS
+      </a>.
+    </p>
+  </footer>
 </body>
 
 </html>

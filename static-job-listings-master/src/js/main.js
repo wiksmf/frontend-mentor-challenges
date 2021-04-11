@@ -1,8 +1,8 @@
 'use strict';
 
 const jobList = document.querySelector('.job__list');
-const filterBar = document.querySelector('.filter__bar');
-const filterBarFilters = document.querySelector('.filter__bar-filters');
+const filterBar = document.querySelector('.filter-bar');
+const filterBarFilters = document.querySelector('.filters');
 const btnClear = document.querySelector('.btn-clear');
 
 let filterJobs = [];
@@ -21,25 +21,33 @@ async function getData() {
 
 function renderData(job) {
   const html = `
-    <div class="job ${job.featured ? 'featured' : ''}" data-id=${job.id} > 
-      <div class="job__logo-box">
-        <img src="${job.logo}" job="job__logo" alt="">
+    <div class="job ${job.featured ? 'job__featured' : ''}" data-id=${job.id} > 
+      <div class="job__information">
+        <div class="job__logo-box">
+          <img src="${job.logo}" class="job__logo" alt="">
         </div>
-      <div class="job__description">
-        <p class="job__company">${job.company} 
-          <span class="job__new">${job.new ? 'New!' : ''}</span>
-          <span class="job__featured">${job.featured ? 'Featured' : ''}</span>
-       </p>
-        <p class="job__position"${job.position}</p>
-        <p class="job__details">
-          <span class="job__date">${job.postedAt}</span>
-          <span class="job__contract">${job.contract}</span>
-          <span class="job_location">${job.location}</span>
-        </p>
+        <div class="job__description">
+          <p class="job__company u-mt-sm u-mb-sm">${job.company} 
+          ${job.new ? '<span class="job__type job__type--new">New!</span>' : ''}
+          ${
+            job.featured
+              ? '<span class="job__type job__type--featured">Featured</span>'
+              : ''
+          }  
+          </p>
+          <a href='#' class="job__position u-mt-sm u-mb-sm">${job.position}</a>
+          <ul class="job__details">
+            <li class="job__date">${job.postedAt}</li>
+            <li class="job__contract">${job.contract}</li>
+            <li class="job_location">${job.location}</li>
+          </ul>
+        </div>  
       </div>
-      <div class="job__requirements categories">
-        <span class="job__role filter" data-id="${job.role}">${job.role}</span>
-        <span class="job__level filter" data-id="${job.level}">
+      <div class="job__categories u-mt-sm u-mb-sm">
+        <span class="job__filter" data-id="${job.role}">
+          ${job.role}
+        </span>
+        <span class="job__filter" data-id="${job.level}">
           ${job.level}
         </span>
         <ul class="job__languages">
@@ -55,6 +63,14 @@ function renderData(job) {
   jobList.insertAdjacentHTML('beforeend', html);
 }
 
+function renderList(list) {
+  let html = '';
+  list.forEach(
+    item => (html += `<li class="job__filter" data-id="${item}">${item}</li>`),
+  );
+  return html;
+}
+
 function clearJobList() {
   jobList.innerHTML = '';
 }
@@ -63,24 +79,38 @@ function displayFilters() {
   let html = '';
   filterJobs.forEach(
     job =>
-      (html = `<li class="filter__item" data-id="${job}">${job} <button class="btn btn-close">X</button></li>`),
+      (html = `
+        <li class="filters__item" data-id="${job}">
+          <span class="filters__filter">${job}</span>
+          <button class="btn btn-remove">
+            <img src="src/img/icon-remove.svg" alt="Remove ${job} from filters">
+          </button>
+        </li>
+      `),
   );
   filterBarFilters.insertAdjacentHTML('beforeend', html);
 }
 
 jobList.addEventListener('click', e => {
-  if (e.target.closest('.filter')) {
+  if (e.target.closest('.job__filter')) {
     filterBar.classList.remove('hidden');
     displayJobs(e);
   }
 });
 
 filterBar.addEventListener('click', e => {
-  if (e.target.closest('.btn-close')) {
+  if (e.target.closest('.btn-remove')) {
     const index = filterJobs.indexOf(e.target.parentNode.dataset.id);
     filterJobs.splice(index, 1);
-    console.log(e.target.parentElement);
-    e.target.parentElement.remove();
+    // console.log(e.target.parentElement);
+    // e.target.parentElement.remove();
+
+    // PROBLEMS !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    console.log(e.target.parentNode.parentNode);
+    e.target.parentNode.parentNode.parentNode.removeChild(
+      e.target.parentNode.parentNode,
+    );
 
     clearJobList();
 
@@ -97,9 +127,8 @@ filterBar.addEventListener('click', e => {
 });
 
 function displayJobs(e) {
-  clearJobList();
-
   if (!filterJobs.includes(e.target.dataset.id)) {
+    clearJobList();
     filterJobs.push(e.target.dataset.id);
     displayFilters();
 
@@ -131,14 +160,5 @@ btnClear.addEventListener('click', () => {
   filterBarFilters.innerHTML = '';
   data.forEach(el => renderData(el));
 });
-
-function renderList(list) {
-  let html = '';
-  list.forEach(
-    item =>
-      (html += `<li class="job__language filter" data-id="${item}">${item}</é>`),
-  );
-  return html;
-}
 
 getData();

@@ -1,0 +1,76 @@
+.container {
+  font-family: 'Spartan', sans-serif;
+  font-weight: $font-weight-medium;
+}
+
+.filters {
+  &__item {
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    font-size: $font-size-sm;
+  }
+}
+
+.job {
+  &__company {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+  }
+
+  &__type {
+    font-size: $font-size-xs;
+    color: $primary-bg-color;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    &:link,
+    &:visited {
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      color: $tertiary-color;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $primary-color;
+    }
+  }
+
+  &__details {
+    color: $secondary-color;
+    font-size: $font-size-sm;
+  }
+
+  &__filter {
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    font-size: $font-size-sm;
+  }
+}
+
+.footer {
+  font-size: $font-size-xs;
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: $font-weight-bold;
+      color: $tertiary-color;
+    }
+  }
+}

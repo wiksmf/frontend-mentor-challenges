@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+
+  height: 15vh;
+  background-color: $primary-color;
+  background-image: url(../img/bg-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (min-width: $bp-md) {
+    background-image: url(../img/bg-header-desktop.svg);
+  }
+}
