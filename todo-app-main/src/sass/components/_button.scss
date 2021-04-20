@@ -1,0 +1,28 @@
+.btn {
+  font-family: inherit;
+  font-weight: $font-weight-bd;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+
+  &-theme {
+    background-image: url(../img/icon-moon.svg);
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3rem;
+
+    &--dark {
+      background-image: url(../img/icon-sun.svg);
+    }
+  }
+
+  &-add {
+    border-radius: 100%;
+    border: 0.1rem solid $color-lt-v-light-grayish-blue;
+    background-image: url(../img/icon-add.svg);
+    height: 3rem;
+    width: 3rem;
+  }
+}

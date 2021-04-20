@@ -6,32 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" size="32x32" href="src/img/favicon-32x32.png">
   <title>Frontend Mentor | Todo app</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="src/css/main.css">
+  <!-- JS -->
   <script defer src="src/js/main.js"></script>
 </head>
+
 <body class="container ">
+  <header class="header u-mt-lg u-mb-lg">
+    <h1 class="heading-primary">Todo</h1>
+    <button class="btn btn-theme"></button>
+  </header>
 
-  <h1>Todo</h1>
+  <main class="main">
+    <div class="block__add-todo">
+      <button class="btn btn-add"></button>
+      <input type="text" class="block__add-todo__input" placeholder="Create a new todo..." />
+    </div>
 
-  <button class="btn btn-theme"></button>
+    <div class="block__show-todo">
+      <ul class="list"></ul>
+    </div>
 
+    <div class="block__list-todo">
+      <div class="item-list">
+        <p><span class="items-left"></span> items left</p>
+        <button class="btn btn-clear">Clear completed</button>
+      </div>
+    </div>
 
-  <div>
-    <button class="btn btn-add">Add</button>
-    <input type="text" class="new-item" />
-  </div>
+    <div class="block__filter-todo">
+      <button class="btn btn-filter btn-all">All</button>
+      <button class="btn btn-filter btn-active">Active</button>
+      <button class="btn btn-filter btn-completed">Completed</button>
+    </div>
 
-  <ul class="todo-list"></ul>
+    <p class="paragraph">Drag and drop to reorder list</p>
+  </main>
 
-  <div class="item-list">
-    <p><span class="items-left"></span> items left</p>
-    <button class="btn btn-clear">Clear completed</button>
-  </div>
-
-  <button class="btn btn-filter btn-all">All</button>
-  <button class="btn btn-filter btn-active">Active</button>
-  <button class="btn btn-filter btn-completed">Completed</button>
-
+  <footer class="footer">
+    <p class="attribution">
+      Challenge by
+      <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>.
+      Coded by
+      <a class="footer__link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/todo-app-main"
+        target="_blank">
+        WIKS
+      </a>.
+    </p>
+  </footer>
 </body>
 
 </html>

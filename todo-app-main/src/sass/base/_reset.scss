@@ -1,43 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 75%; // 1rem = 12px
+  }
+}
+
 .container {
+  @include flexCenter($direction: column);
+
+  background-color: $color-lt-v-light-grayish-blue;
   background-image: url(../img/bg-mobile-light.jpg);
   background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media only screen and (min-width: $bp-md) {
+    background-image: url(../img/bg-desktop-light.jpg);
+  }
 
   &--dark {
-    background-color: blue;
+    background-color: $color-dt-v-dark-blue;
     background-image: url(../img/bg-mobile-dark.jpg);
+
+    @media only screen and (min-width: $bp-md) {
+      background-image: url(../img/bg-desktop-dark.jpg);
+    }
   }
-}
-
-.btn-theme {
-  cursor: pointer;
-  background-color: pink;
-  background-image: url(../img/icon-sun.svg);
-  background-repeat: no-repeat;
-  height: 2rem;
-  width: 2rem;
-
-  &--dark {
-    background-color: blue;
-    background-image: url(../img/icon-moon.svg);
-  }
-}
-
-.item-list {
-  display: flex;
-  align-items: center;
-}
-
-.item {
-  padding: 1rem 4rem;
-  background-color: aquamarine;
-
-  cursor: move;
-}
-
-.completed {
-  background-color: red;
-}
-
-.hide {
-  display: none;
 }

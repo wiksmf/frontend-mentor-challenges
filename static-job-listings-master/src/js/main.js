@@ -94,13 +94,14 @@ function displayFilters() {
 
 // Filter the jobs
 function filterJobs(e) {
-  if (e.target.closest('.job__filter'))
+  if (e.target.closest('.job__filter')) {
     filterBar.classList.add('filter-bar--visible');
 
-  if (!filters.includes(e.target.dataset.id)) {
-    filters.push(e.target.dataset.id);
-    displayFilters();
-    updateJobs();
+    if (!filters.includes(e.target.dataset.id)) {
+      filters.push(e.target.dataset.id);
+      displayFilters();
+      updateJobs();
+    }
   }
 }
 

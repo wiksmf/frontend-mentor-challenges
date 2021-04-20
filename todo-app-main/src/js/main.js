@@ -2,11 +2,11 @@
 
 const container = document.querySelector('.container');
 const themeSwitch = document.querySelector('.btn-theme');
-const newItem = document.querySelector('.new-item');
+const newTodo = document.querySelector('.input__add-todo');
 const btnAdd = document.querySelector('.btn-add');
 const btnClear = document.querySelector('.btn-clear');
 const btnFilter = document.querySelectorAll('.btn-filter');
-const displayTodoList = document.querySelector('.todo-list');
+const displayTodoList = document.querySelector('.list');
 const displayItemsLeft = document.querySelector('.items-left');
 
 // let todoList = [JSON.parse(localStorage.getItem('todoList'))];
@@ -53,7 +53,7 @@ function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
     todoList.forEach(todo => {
       const listItem = document.createElement('li');
 
-      listItem.classList.add('item-list');
+      listItem.classList.add('list__item');
       listItem.setAttribute('draggable', true);
       listItem.innerHTML = `
         <div class="checkbox-container">
@@ -100,7 +100,7 @@ function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
 
 // Add new todo to the list
 function addTodo() {
-  const todo = newItem.value.trim();
+  const todo = newTodo.value.trim();
 
   if (!todo) return;
 
@@ -113,8 +113,8 @@ function addTodo() {
   localStorage.setItem('todoList', JSON.stringify(todoList));
   displayTodo([todoItem]);
   itemsLeft();
-  newItem.value = '';
-  newItem.focus();
+  newTodo.value = '';
+  newTodo.focus();
 }
 
 // Mark todos as complete

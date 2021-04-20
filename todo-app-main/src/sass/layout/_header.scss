@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include flexCenter($justify: space-between);
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 40vw;
+  }
+}
