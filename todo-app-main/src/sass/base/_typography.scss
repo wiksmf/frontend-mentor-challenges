@@ -6,5 +6,35 @@
   font-size: $font-size-lg;
   letter-spacing: 1.5rem;
   text-transform: uppercase;
-  color: $color-lt-grayish-blue;
+  color: $color-lt-secondary-bg;
+}
+
+.block {
+  &__add-todo {
+    &__input {
+      font-family: inherit;
+      font-weight: $font-weight-md;
+      font-size: $font-size-md;
+      color: $color-lt-txt-active;
+      letter-spacing: 0.05rem;
+
+      &::placeholder {
+        color: $color-lt-txt-completed;
+      }
+    }
+  }
+}
+
+.container--dark {
+  .block {
+    &__add-todo {
+      &__input {
+        color: $color-dt-txt-active;
+
+        &::placeholder {
+          color: $color-dt-txt-completed;
+        }
+      }
+    }
+  }
 }

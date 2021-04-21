@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+
+  &__item {
+    cursor: pointer;
+    @include flexCenter($justify: flex-start);
+
+    padding: 1.2rem 1rem 1.2rem 2rem;
+    border-radius: 0.45rem;
+    background-color: $color-lt-secondary-bg;
+
+    &:focus > .btn-delete,
+    &:hover > .btn-delete {
+      display: inline-block;
+    }
+  }
+}
+
+.container--dark {
+  .list {
+    &__item {
+      background-color: $color-dt-secondary-bg;
+    }
+  }
+}

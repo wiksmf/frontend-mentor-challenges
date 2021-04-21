@@ -20,9 +20,52 @@
 
   &-add {
     border-radius: 100%;
-    border: 0.1rem solid $color-lt-v-light-grayish-blue;
-    background-image: url(../img/icon-add.svg);
-    height: 3rem;
-    width: 3rem;
+    border: 0.15rem solid $color-lt-border;
+    height: 2.5rem;
+    width: 2.8rem;
+
+    &:focus,
+    &:hover {
+      background-image: url(../img/icon-add.svg), $color-gradient;
+      background-position: center;
+    }
+  }
+
+  &-check {
+    height: 2.5rem;
+    width: 2.8rem;
+  }
+
+  &-delete {
+    background-image: url(../img/icon-cross.svg);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    @media only screen and (min-width: $bp-lg) {
+      display: none;
+    }
+  }
+}
+
+.container--dark {
+  .block {
+    &__add-todo {
+      &__input {
+        color: $color-dt-txt-active;
+
+        &::placeholder {
+          color: $color-dt-txt-completed;
+        }
+      }
+    }
+  }
+
+  .btn {
+    &-add {
+      // background-image: url(../img/icon-add.svg), $color-gradient;
+      border: 0.15rem solid $color-dt-border;
+    }
   }
 }

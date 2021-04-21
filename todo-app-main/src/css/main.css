@@ -11,13 +11,44 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 25em) {
   html {
     font-size: 75%;
   }
 }
 
 .container {
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: #e4e5f1;
+  background-image: url(../img/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media only screen and (min-width: 25em) {
+  .container {
+    background-image: url(../img/bg-desktop-light.jpg);
+  }
+}
+
+.container--dark {
+  background-color: #161722;
+  background-image: url(../img/bg-mobile-dark.jpg);
+}
+
+@media only screen and (min-width: 25em) {
+  .container--dark {
+    background-image: url(../img/bg-desktop-dark.jpg);
+  }
+}
+
+.wrapper {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,28 +62,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e4e5f1;
-  background-image: url(../img/bg-mobile-light.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-}
-
-@media only screen and (min-width: 48em) {
-  .container {
-    background-image: url(../img/bg-desktop-light.jpg);
-  }
-}
-
-.container--dark {
-  background-color: #161722;
-  background-image: url(../img/bg-mobile-dark.jpg);
-}
-
-@media only screen and (min-width: 48em) {
-  .container--dark {
-    background-image: url(../img/bg-desktop-dark.jpg);
-  }
 }
 
 .container {
@@ -60,14 +69,66 @@ html {
 }
 
 .heading-primary {
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 1.5rem;
   text-transform: uppercase;
+  color: #fafafa;
+}
+
+.block__add-todo__input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #484b6a;
+  letter-spacing: 0.05rem;
+}
+
+.block__add-todo__input::-webkit-input-placeholder {
   color: #d2d3db;
+}
+
+.block__add-todo__input:-ms-input-placeholder {
+  color: #d2d3db;
+}
+
+.block__add-todo__input::-ms-input-placeholder {
+  color: #d2d3db;
+}
+
+.block__add-todo__input::placeholder {
+  color: #d2d3db;
+}
+
+.container--dark .block__add-todo__input {
+  color: #e4e5f1;
+}
+
+.container--dark .block__add-todo__input::-webkit-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input:-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input::-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input::placeholder {
+  color: #4d5066;
+}
+
+.u-mt-md {
+  margin-top: 2.5rem;
 }
 
 .u-mt-lg {
   margin-top: 5rem;
+}
+
+.u-mb-md {
+  margin-bottom: 2.5rem;
 }
 
 .u-mb-lg {
@@ -98,10 +159,91 @@ html {
 
 .btn-add {
   border-radius: 100%;
-  border: 0.1rem solid #e4e5f1;
-  background-image: url(../img/icon-add.svg);
-  height: 3rem;
-  width: 3rem;
+  border: 0.15rem solid #e8e8ec;
+  height: 2.5rem;
+  width: 2.8rem;
+}
+
+.btn-add:focus, .btn-add:hover {
+  background-image: url(../img/icon-add.svg), -webkit-gradient(linear, left top, right bottom, from(#57ddff), to(#c058f3));
+  background-image: url(../img/icon-add.svg), linear-gradient(to bottom right, #57ddff, #c058f3);
+  background-position: center;
+}
+
+.btn-check {
+  height: 2.5rem;
+  width: 2.8rem;
+}
+
+.btn-delete {
+  background-image: url(../img/icon-cross.svg);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .btn-delete {
+    display: none;
+  }
+}
+
+.container--dark .block__add-todo__input {
+  color: #e4e5f1;
+}
+
+.container--dark .block__add-todo__input::-webkit-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input:-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input::-ms-input-placeholder {
+  color: #4d5066;
+}
+
+.container--dark .block__add-todo__input::placeholder {
+  color: #4d5066;
+}
+
+.container--dark .btn-add {
+  border: 0.15rem solid #393a4c;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.2rem 1rem 1.2rem 2rem;
+  border-radius: 0.45rem;
+  background-color: #fafafa;
+}
+
+.list__item:focus > .btn-delete,
+.list__item:hover > .btn-delete {
+  display: inline-block;
+}
+
+.container--dark .list__item {
+  background-color: #25273c;
 }
 
 .footer {
@@ -123,8 +265,6 @@ html {
 
 .header {
   width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,25 +280,40 @@ html {
           align-items: center;
 }
 
-@media only screen and (min-width: 48em) {
-  .header {
-    max-width: 40vw;
-  }
-}
-
 .main {
   width: 100%;
-  padding: 4rem 3rem;
 }
 
 .block__add-todo {
-  background-color: #e4e5f1;
+  padding: 1.2rem 1rem 1.2rem 2rem;
   border-radius: 0.45rem;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .block__add-todo__input {
-  width: 90%;
-  padding: 1.6rem;
+  width: 100%;
+  margin-left: 2.5rem;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container--dark .block__add-todo {
+  background-color: #25273c;
 }

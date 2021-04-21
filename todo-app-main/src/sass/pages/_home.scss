@@ -1,18 +1,31 @@
 .main {
   width: 100%;
-  padding: 4rem 3rem;
 }
 
 .block {
   &__add-todo {
-    background-color: $color-lt-v-light-grayish-blue;
+    padding: 1.2rem 1rem 1.2rem 2rem;
     border-radius: 0.45rem;
+    background-color: $color-lt-secondary-bg;
+
+    @include flexCenter;
 
     &__input {
-      width: 90%;
-      padding: 1.6rem;
+      width: 100%;
+      margin-left: 2.5rem;
       background-color: transparent;
       border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s;
+    }
+  }
+}
+
+.container--dark {
+  .block {
+    &__add-todo {
+      background-color: $color-dt-secondary-bg;
     }
   }
 }

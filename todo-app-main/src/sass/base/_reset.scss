@@ -8,30 +8,39 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
-  @media only screen and (min-width: $bp-md) {
+  @media only screen and (min-width: $bp-sm) {
     font-size: 75%; // 1rem = 12px
   }
 }
 
 .container {
-  @include flexCenter($direction: column);
+  max-width: 80rem;
+  margin: 0 auto;
 
-  background-color: $color-lt-v-light-grayish-blue;
+  background-color: $color-lt-primary-bg;
   background-image: url(../img/bg-mobile-light.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
+  transition: all 0.5s;
 
-  @media only screen and (min-width: $bp-md) {
+  @media only screen and (min-width: $bp-sm) {
     background-image: url(../img/bg-desktop-light.jpg);
   }
 
   &--dark {
-    background-color: $color-dt-v-dark-blue;
+    background-color: $color-dt-primary-bg;
     background-image: url(../img/bg-mobile-dark.jpg);
 
-    @media only screen and (min-width: $bp-md) {
+    @media only screen and (min-width: $bp-sm) {
       background-image: url(../img/bg-desktop-dark.jpg);
     }
   }
+}
+
+.wrapper {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+
+  @include flexCenter($direction: column);
 }
