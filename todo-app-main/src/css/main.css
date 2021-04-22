@@ -170,9 +170,56 @@ html {
   background-position: center;
 }
 
-.btn-check {
-  height: 2.5rem;
-  width: 2.8rem;
+.btn-checkbox {
+  display: none;
+}
+
+.btn-check--input {
+  display: inline;
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.btn-check--input:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.9rem;
+  width: 1.9rem;
+  border: 0.15rem solid #e8e8ec;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.btn-check--input:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-image: url(../img/icon-check.svg), -webkit-gradient(linear, left top, right bottom, from(#57ddff), to(#c058f3));
+  background-image: url(../img/icon-check.svg), linear-gradient(to bottom right, #57ddff, #c058f3);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-checkbox:not(:checked) + .btn-check--input:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.btn-checkbox:checked + .btn-check--input:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .btn-delete {
@@ -213,12 +260,17 @@ html {
   border: 0.15rem solid #393a4c;
 }
 
+.container--dark .btn-check--input:before {
+  border: 0.15rem solid #393a4c;
+}
+
 .list {
   list-style: none;
 }
 
 .list__item {
   cursor: pointer;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -3,6 +3,7 @@
 
   &__item {
     cursor: pointer;
+    height: 5rem;
     @include flexCenter($justify: flex-start);
 
     padding: 1.2rem 1rem 1.2rem 2rem;
