@@ -20,6 +20,28 @@
       transition: all 0.2s;
     }
   }
+
+  &__list-todo {
+    padding: 1.2rem 1rem 1.2rem 2rem;
+    border-radius: 0.45rem;
+    background-color: $color-lt-secondary-bg;
+  }
+
+  &__filter-todo {
+    padding: 1.2rem 1rem 1.2rem 2rem;
+    border-radius: 0.45rem;
+    background-color: $color-lt-secondary-bg;
+
+    @include flexCenter;
+  }
+}
+
+.item-list {
+  @include flexCenter($justify: space-between);
+}
+
+.checkbox-container {
+  @include flexCenter;
 }
 
 .container--dark {

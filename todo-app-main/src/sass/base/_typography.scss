@@ -9,6 +9,18 @@
   color: $color-lt-secondary-bg;
 }
 
+.paragraph {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bd;
+  color: $color-lt-txt-active;
+
+  &-list {
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $color-lt-txt-completed;
+  }
+}
+
 .block {
   &__add-todo {
     &__input {
@@ -26,6 +38,10 @@
 }
 
 .container--dark {
+  .paragraph {
+    color: $color-dt-txt-active;
+  }
+
   .block {
     &__add-todo {
       &__input {
@@ -35,6 +51,27 @@
           color: $color-dt-txt-completed;
         }
       }
+    }
+  }
+}
+
+.footer {
+  font-size: $font-size-xs;
+  color: $color-dt-btn;
+
+  &__link {
+    &:link,
+    &:visited {
+      font-weight: $font-weight-bd;
+      color: $color-lt-txt-active;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary;
     }
   }
 }

@@ -46,7 +46,7 @@
   &-check--input:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -0.6rem;
     left: 0;
     height: 1.9rem;
     width: 1.9rem;
@@ -58,7 +58,7 @@
   &-check--input:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: -0.6rem;
     left: 0;
     height: 2.2rem;
     width: 2.2rem;
@@ -79,9 +79,15 @@
     transform: scale(1);
   }
 
+  &-checkbox:checked + &-check--input .paragraph {
+    text-decoration: line-through;
+    color: $color-lt-txt-completed;
+  }
+
   &-delete {
     background-image: url(../img/icon-cross.svg);
     background-repeat: no-repeat;
+    margin-top: 1rem;
     margin-left: auto;
     height: 2.5rem;
     width: 2.5rem;
@@ -89,6 +95,16 @@
     @media only screen and (min-width: $bp-lg) {
       display: none;
     }
+  }
+
+  &-filter {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  &:focus,
+  &:hover {
+    color: $color-primary;
   }
 }
 
@@ -113,6 +129,11 @@
 
     &-check--input:before {
       border: 0.15rem solid $color-dt-border;
+    }
+
+    &-checkbox:checked + &-check--input .paragraph {
+      // text-decoration: ;
+      color: $color-dt-txt-completed;
     }
   }
 }
