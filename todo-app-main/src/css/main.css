@@ -510,6 +510,16 @@ html {
           align-items: center;
 }
 
+.block__dragDrop {
+  opacity: 0;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .block__dragDrop {
+    opacity: 1;
+  }
+}
+
 .container--dark .block__add-todo, .container--dark .block__item-leftCompleted, .container--dark .block__filter-todo {
   background-color: #25273c;
 }
