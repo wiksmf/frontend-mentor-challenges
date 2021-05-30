@@ -10,14 +10,12 @@
 }
 
 .paragraph {
-  font-size: $font-size-md;
+  font-size: $font-size-sm;
   font-weight: $font-weight-bd;
-  color: $color-lt-txt-active;
+  color: $color-lt-txt-generic;
 
-  &-list {
-    text-align: center;
-    font-size: $font-size-sm;
-    color: $color-lt-txt-completed;
+  &--small {
+    font-size: $font-size-xs;
   }
 }
 
@@ -37,9 +35,14 @@
   }
 }
 
+.item {
+  font-size: $font-size-md;
+  color: $color-lt-btn;
+}
+
 .container--dark {
   .paragraph {
-    color: $color-dt-txt-active;
+    color: $color-dt-txt-completed;
   }
 
   .block {
@@ -52,6 +55,10 @@
         }
       }
     }
+  }
+
+  .item {
+    color: $color-dt-txt-active;
   }
 }
 

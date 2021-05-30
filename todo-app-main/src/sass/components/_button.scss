@@ -1,6 +1,5 @@
 .btn {
   font-family: inherit;
-  font-weight: $font-weight-bd;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -20,46 +19,56 @@
 
   &-add {
     border-radius: 100%;
-    border: 0.15rem solid $color-lt-border;
+    border: 0.05rem solid $color-lt-border;
+    color: $color-lt-txt-generic;
+    font-size: $font-size-md;
     height: 2.5rem;
     width: 2.8rem;
 
     &:focus,
     &:hover {
-      background-image: url(../img/icon-add.svg), $color-gradient;
-      background-position: center;
+      color: $color-lt-secondary-bg;
+      background-image: $color-gradient;
     }
   }
 
-  &-checkbox {
-    display: none;
-  }
-
-  &-check--input {
-    display: inline;
+  &-check:checked,
+  &-check:not(:checked) {
     position: relative;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    opacity: 0;
+    z-index: 1;
   }
 
-  &-check--input:before {
+  &-check:checked + &-check--icon,
+  &-check:not(:checked) + &-check--icon {
+    display: inline;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    z-index: -1;
+  }
+
+  &-check:checked + &-check--icon:before,
+  &-check:not(:checked) + &-check--icon:before {
     content: '';
     position: absolute;
-    top: -0.6rem;
-    left: 0;
-    height: 1.9rem;
-    width: 1.9rem;
-    border: 0.15rem solid $color-lt-border;
+    top: 2rem;
+    left: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 0.05rem solid $color-lt-border;
     border-radius: 100%;
     background-color: transparent;
   }
 
-  &-check--input:after {
+  &-check:checked + &-check--icon:after,
+  &-check:not(:checked) + &-check--icon:after {
     content: '';
     position: absolute;
-    top: -0.6rem;
-    left: 0;
+    top: 2rem;
+    left: 2rem;
     height: 2.2rem;
     width: 2.2rem;
     background-image: url(../img/icon-check.svg), $color-gradient;
@@ -69,26 +78,28 @@
     transition: 0.3s ease-in-out;
   }
 
-  &-checkbox:not(:checked) + &-check--input:after {
+  &-check:not(:checked) + &-check--icon:after {
     opacity: 0;
     transform: scale(0);
   }
 
-  &-checkbox:checked + &-check--input:after {
+  &-check:checked + &-check--icon:after {
     opacity: 1;
     transform: scale(1);
   }
 
-  &-checkbox:checked + &-check--input .paragraph {
+  &-check:checked ~ .item {
     text-decoration: line-through;
     color: $color-lt-txt-completed;
   }
 
   &-delete {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translate(-50%, -50%);
     background-image: url(../img/icon-cross.svg);
     background-repeat: no-repeat;
-    margin-top: 1rem;
-    margin-left: auto;
     height: 2.5rem;
     width: 2.5rem;
 
@@ -100,40 +111,41 @@
   &-filter {
     margin-right: 2rem;
     margin-left: 2rem;
+    color: $color-lt-txt-generic;
+
+    &.selected {
+      color: $color-primary;
+    }
   }
 
-  &:focus,
-  &:hover {
-    color: $color-primary;
+  &-clear {
+    &:focus,
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
 
 .container--dark {
-  .block {
-    &__add-todo {
-      &__input {
-        color: $color-dt-txt-active;
+  .btn {
+    &-add {
+      border: 0.05rem solid $color-dt-border;
+      color: $color-lt-txt-generic;
 
-        &::placeholder {
-          color: $color-dt-txt-completed;
-        }
+      &:focus,
+      &:hover {
+        color: $color-lt-secondary-bg;
+        background-image: $color-gradient;
       }
+    }
+
+    &-check:checked ~ .item {
+      color: $color-dt-txt-completed;
     }
   }
 
-  .btn {
-    &-add {
-      // background-image: url(../img/icon-add.svg), $color-gradient;
-      border: 0.15rem solid $color-dt-border;
-    }
-
-    &-check--input:before {
-      border: 0.15rem solid $color-dt-border;
-    }
-
-    &-checkbox:checked + &-check--input .paragraph {
-      // text-decoration: ;
-      color: $color-dt-txt-completed;
-    }
+  .btn-check:checked + .btn-check--icon:before,
+  .btn-check:not(:checked) + .btn-check--icon:before {
+    border: 0.05rem solid $color-dt-border;
   }
 }

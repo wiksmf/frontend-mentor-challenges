@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="src/css/main.css">
   <!-- JS -->
   <script defer src="src/js/main.js"></script>
+  <script defer src="src/js/themeSwitcher.js"></script>
 </head>
 
 <body class="container ">
@@ -24,42 +25,52 @@
 
     <main class="main">
       <div class="block__add-todo">
-        <button class="btn btn-add"></button>
+        <button class="btn btn-add">+</button>
         <input type="text" class="block__add-todo__input" placeholder="Create a new todo..." />
       </div>
 
-      <div class="block__show-todo">
-        <ul class="list u-mt-md u-mb-md"></ul>
-      </div>
-    <div class="block__list-todo">
-      <div class="item-list">
-        <p><span class="items-left"></span> items left</p>
-        <button class="btn btn-clear">Clear completed</button>
-      </div>
-    </div>
+      <ul class="list u-mt-md u-mb-md">
+        <!-- <li class="list-item">
+          <div class="checkbox-container">
+            <input type="checkbox" class="btn btn-check" 
+              ${todo.isCompleted ? 'checked' : ''} />
+            <span class="check"></span>
+          </div>
+          <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
+          <button class="btn btn-delete">DELETE</button>
+        </li> -->
+      </ul>
 
-    <div class="block__filter-todo">
-      <button class="btn btn-filter btn-all">All</button>
-      <button class="btn btn-filter btn-active">Active</button>
-      <button class="btn btn-filter btn-completed">Completed</button>
-    </div>
+      <div class="block__item-leftCompleted">
+        <p class="paragraph paragraph--small"><span class="items-left"></span> items left</p>
+        <button class="btn btn-clear paragraph paragraph--small">Clear Completed</button>
+      </div>
 
-    <p class="paragraph paragraph--center">Drag and drop to reorder list</p>
+      <div class="block__filter-todo">
+        <button class="btn btn-filter btn-all selected">All</button>
+        <button class="btn btn-filter btn-active">Active</button>
+        <button class="btn btn-filter btn-completed">Completed</button>
+      </div>
+
+      <div class="u-mt-lg u-text-center">
+        <p class="paragraph">Drag and drop to reorder list</p>
+      </div>
+
     </main>
 
     <footer class="footer">
-    <p class="attribution">
-      Challenge by
-      <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </a>.
-      Coded by
-      <a class="footer__link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/todo-app-main"
-        target="_blank">
-        WIKS
-      </a>.
-    </p>
-  </footer>
+      <p class="attribution">
+        Challenge by
+        <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>.
+        Coded by
+        <a class="footer__link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/todo-app-main"
+          target="_blank">
+          WIKS
+        </a>.
+      </p>
+    </footer>
   </div>
 </body>
 

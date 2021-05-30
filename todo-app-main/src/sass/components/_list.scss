@@ -1,14 +1,28 @@
 .list {
   list-style: none;
+  border-radius: 0.45rem;
 
-  &__item {
+  &-item {
     cursor: pointer;
-    height: 5rem;
-    @include flexCenter($justify: flex-start);
-
-    padding: 1.2rem 1rem 1.2rem 2rem;
-    border-radius: 0.45rem;
+    padding: 2rem;
     background-color: $color-lt-secondary-bg;
+    position: relative;
+
+    // @include flexCenter($justify: flex-start);
+
+    &:first-child {
+      border-top-left-radius: 0.45rem;
+      border-top-right-radius: 0.45rem;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0.45rem;
+      border-bottom-right-radius: 0.45rem;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.1rem solid $color-lt-border;
+    }
 
     &:focus > .btn-delete,
     &:hover > .btn-delete {
@@ -17,10 +31,21 @@
   }
 }
 
+.item {
+  position: absolute;
+  top: 50%;
+  left: 7rem;
+  transform: translate(-50%, -50%);
+}
+
 .container--dark {
   .list {
-    &__item {
+    &-item {
       background-color: $color-dt-secondary-bg;
+
+      &:not(:last-child) {
+        border-bottom: 0.15rem solid $color-dt-border;
+      }
     }
   }
 }

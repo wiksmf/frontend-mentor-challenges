@@ -1,95 +1,68 @@
 'use strict';
 
 const container = document.querySelector('.container');
-const themeSwitch = document.querySelector('.btn-theme');
-const newTodo = document.querySelector('.block__add-todo__input');
+const newItem = document.querySelector('.block__add-todo__input');
 const btnAdd = document.querySelector('.btn-add');
 const btnClear = document.querySelector('.btn-clear');
 const btnFilter = document.querySelectorAll('.btn-filter');
 const displayTodoList = document.querySelector('.list');
-const displayItemsLeft = document.querySelector('.items-left');
+const itemsLeft = document.querySelector('.items-left');
 
-let todoList = [JSON.parse(localStorage.getItem('todoList'))];
-// let todoList = [];
-
-// Toggle light and dark mode
-let theme = localStorage.getItem('theme');
-
-function darkThemeOn() {
-  container.classList.add('container--dark');
-  themeSwitch.classList.add('btn-theme--dark');
-  localStorage.setItem('theme', 'true');
-}
-
-function darkThemeOff() {
-  container.classList.remove('container--dark');
-  themeSwitch.classList.remove('btn-theme--dark');
-  localStorage.setItem('theme', null);
-}
-
-function switchTheme() {
-  theme = localStorage.getItem('theme');
-  theme !== 'true' ? darkThemeOn() : darkThemeOff();
-}
-
-if (theme === 'true') darkThemeOn();
+let todoList = JSON.parse(localStorage.getItem('todoList'));
 
 // List all todos saved in local storage
 function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
-  if (todoList)
-    todoList.forEach(todo => {
-      const listItem = document.createElement('li');
+  if (!todoList) return;
 
-      listItem.classList.add('list__item');
-      listItem.setAttribute('draggable', true);
-      listItem.innerHTML = `
-        <div class="checkbox-container">
-          <input type="checkbox" id="completed" class="btn-checkbox
-            ${todo.isCompleted ? 'checked' : ''}" />
-          <label for="completed" class="btn-check--input">
-            <p class="paragraph paragraph-list 
-              ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
-          </label>
-        </div>
-        <button class="btn btn-delete"></button>
-      `;
+  todoList.forEach(todo => {
+    const listItem = document.createElement('li');
 
-      // Add event handlers to each todo
-      listItem.addEventListener('dragstart', () => {
-        listItem.classList.add('dragging');
-      });
+    listItem.classList.add('list-item');
+    listItem.setAttribute('draggable', true);
+    listItem.innerHTML = `
+        <input type="checkbox" class="btn btn-check" 
+          ${todo.isCompleted ? 'checked' : ''} />
+          <span class="btn-check--icon"></span>
+      <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
+      <button class="btn btn-delete"></button>
+    `;
 
-      listItem.addEventListener('dragend', () => {
-        listItem.classList.remove('dragging');
-      });
-
-      listItem.querySelector('.btn-checkbox').addEventListener('click', () => {
-        const completed = listItem.querySelector('.btn-checkbox').checked
-          ? true
-          : false;
-
-        completed
-          ? listItem.querySelector('.paragraph').classList.add('completed')
-          : listItem.querySelector('.paragraph').classList.remove('completed');
-
-        completedTodo(todo, completed);
-      });
-
-      listItem.querySelector('.btn-delete').addEventListener('click', () => {
-        displayTodoList.removeChild(listItem);
-        deleteTodo(todo);
-      });
-
-      displayTodoList.appendChild(listItem);
+    // Add event handlers to each todo
+    listItem.addEventListener('dragstart', () => {
+      listItem.classList.add('dragging');
     });
 
-  itemsLeft();
+    listItem.addEventListener('dragend', () => {
+      listItem.classList.remove('dragging');
+    });
+
+    listItem.querySelector('.btn-check').addEventListener('click', () => {
+      const completed = listItem.querySelector('.btn-check').checked
+        ? true
+        : false;
+
+      completed
+        ? listItem.querySelector('.item').classList.add('completed')
+        : listItem.querySelector('.item').classList.remove('completed');
+
+      completedTodo(todo, completed);
+    });
+
+    listItem.querySelector('.btn-delete').addEventListener('click', () => {
+      displayTodoList.removeChild(listItem);
+      deleteTodo(todo);
+    });
+
+    displayTodoList.appendChild(listItem);
+  });
+
+  displayItemsLeft();
   dragItems();
 }
 
 // Add new todo to the list
 function addTodo() {
-  const todo = newTodo.value.trim();
+  const todo = newItem.value.trim();
 
   if (!todo) return;
 
@@ -101,30 +74,35 @@ function addTodo() {
   todoList.push(todoItem);
   localStorage.setItem('todoList', JSON.stringify(todoList));
   displayTodo([todoItem]);
-  itemsLeft();
-  newTodo.value = '';
-  newTodo.focus();
+  displayItemsLeft();
+  dragItems();
+
+  newItem.value = '';
+  newItem.focus();
 }
 
 // Mark todos as complete
 function completedTodo(todo, completed) {
   const index = todoList.findIndex(index => index.todo === todo.todo);
+
   todoList[index].isCompleted = completed;
   localStorage.setItem('todoList', JSON.stringify(todoList));
-  itemsLeft();
+  displayItemsLeft();
 }
 
 // Delete todos form the list
 function deleteTodo(todo) {
   const index = todoList.findIndex(index => index.todo === todo.todo);
+
   todoList.splice(index, 1);
   localStorage.setItem('todoList', JSON.stringify(todoList));
-  itemsLeft();
+  displayItemsLeft();
 }
 
 // Clear all completed todos
 function deleteCompleted() {
   const completedItems = [...document.querySelectorAll('.completed')];
+
   completedItems.forEach(item => item.parentNode.remove(item));
 
   todoList = JSON.parse(localStorage.getItem('todoList'));
@@ -139,10 +117,10 @@ function dragItems() {
 
     if (
       !e.target.classList.contains('dragging') &&
-      e.target.classList.contains('item-list')
+      e.target.classList.contains('list-item')
     ) {
       const draggingItem = document.querySelector('.dragging');
-      const item = [...document.querySelectorAll('.item-list')];
+      const item = [...document.querySelectorAll('.list-item')];
       const currentPosition = item.indexOf(draggingItem);
       const newPosition = item.indexOf(e.target);
       const moved = todoList.splice(currentPosition, 1);
@@ -158,41 +136,50 @@ function dragItems() {
 }
 
 // Filter by all/active/complete todos
-function filterView(itemType) {
-  let completedItems = [...document.querySelectorAll('.paragraph-list')];
+function filterView(isCompleted) {
+  let completedItems = [...document.querySelectorAll('.item')];
+
   completedItems.forEach(item => {
-    item.parentNode.classList.remove('hide');
+    item.parentNode.classList.remove('u-hide');
   });
 
-  if (itemType) {
+  if (isCompleted) {
     completedItems = completedItems.filter(item =>
-      itemType === 'completed'
+      isCompleted === 'completed'
         ? item.classList.contains('completed')
         : !item.classList.contains('completed'),
     );
 
     completedItems.forEach(item => {
-      item.parentNode.classList.add('class', 'hide');
+      item.parentNode.classList.add('class', 'u-hide');
     });
   }
 }
 
 // Display left todos
-function itemsLeft() {
-  const itemsLength = [...document.querySelectorAll('.paragraph-list')];
-  displayItemsLeft.textContent = itemsLength.filter(
-    item => !item.classList.contains('completed'),
-  ).length;
+function displayItemsLeft() {
+  const itemsLength = [...document.querySelectorAll('.item')];
+
+  itemsLeft.textContent =
+    itemsLength.filter(item => !item.classList.contains('completed')).length ||
+    'No';
 }
 
+// Initialize event handlers
 function init() {
-  // Event handlerss
   document.addEventListener('DOMContentLoaded', displayTodo());
   btnAdd.addEventListener('click', addTodo);
+  newItem.addEventListener('keydown', e => {
+    if (e.keyCode === 13) btnAdd.click();
+  });
   btnClear.addEventListener('click', deleteCompleted);
-  themeSwitch.addEventListener('click', switchTheme);
   btnFilter.forEach(btn =>
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', e => {
+      if (btn === e.target) {
+        document.querySelector('.selected').classList.remove('selected');
+        btn.classList.add('selected');
+      }
+
       if (btn.classList.contains('btn-all')) filterView();
       if (btn.classList.contains('btn-active')) filterView('completed');
       if (btn.classList.contains('btn-completed')) filterView('not-completed');

@@ -4,7 +4,8 @@
 
 .block {
   &__add-todo {
-    padding: 1.2rem 1rem 1.2rem 2rem;
+    margin-top: 2.5rem;
+    padding: 2rem;
     border-radius: 0.45rem;
     background-color: $color-lt-secondary-bg;
 
@@ -21,32 +22,44 @@
     }
   }
 
-  &__list-todo {
-    padding: 1.2rem 1rem 1.2rem 2rem;
+  &__item-leftCompleted {
+    margin-top: 2.5rem;
+    padding: 2rem;
     border-radius: 0.45rem;
     background-color: $color-lt-secondary-bg;
+
+    @include flexCenter($justify: space-between);
   }
 
   &__filter-todo {
-    padding: 1.2rem 1rem 1.2rem 2rem;
+    margin-top: 2.5rem;
+    padding: 2rem 5rem;
     border-radius: 0.45rem;
     background-color: $color-lt-secondary-bg;
 
-    @include flexCenter;
+    @include flexCenter($justify: space-around);
   }
 }
 
-.item-list {
-  @include flexCenter($justify: space-between);
-}
+// .item-list {
+//   @include flexCenter($justify: space-between);
+// }
 
-.checkbox-container {
-  @include flexCenter;
-}
+// .checkbox-container {
+//   @include flexCenter;
+// }
 
 .container--dark {
   .block {
     &__add-todo {
+      background-color: $color-dt-secondary-bg;
+    }
+
+    &__item-leftCompleted {
+      background-color: $color-dt-secondary-bg;
+    }
+
+    &__filter-todo {
       background-color: $color-dt-secondary-bg;
     }
   }
