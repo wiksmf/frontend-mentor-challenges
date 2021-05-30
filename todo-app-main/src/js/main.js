@@ -20,9 +20,9 @@ function displayTodo(todoList = JSON.parse(localStorage.getItem('todoList'))) {
     listItem.classList.add('list-item');
     listItem.setAttribute('draggable', true);
     listItem.innerHTML = `
-        <input type="checkbox" class="btn btn-check" 
-          ${todo.isCompleted ? 'checked' : ''} />
-          <span class="btn-check--icon"></span>
+      <input type="checkbox" class="btn btn-check" 
+        ${todo.isCompleted ? 'checked' : ''} />
+      <span class="btn-check--icon"></span>
       <p class="item ${todo.isCompleted ? 'completed' : ''}">${todo.todo}</p>
       <button class="btn btn-delete"></button>
     `;

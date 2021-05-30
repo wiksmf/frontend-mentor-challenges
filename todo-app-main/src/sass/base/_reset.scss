@@ -39,10 +39,9 @@ html {
   width: calc(100vw - 5rem);
   margin: 0 auto;
 
+  @include flexCenter($direction: column);
+
   @media only screen and (min-width: $bp-sm) {
     max-width: 60rem;
-    margin: 0 auto;
   }
-
-  @include flexCenter($direction: column);
 }

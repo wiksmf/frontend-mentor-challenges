@@ -40,6 +40,27 @@
   color: $color-lt-btn;
 }
 
+.footer {
+  font-size: $font-size-xs;
+  color: $color-dt-btn;
+
+  &__link {
+    &:link,
+    &:visited {
+      font-weight: $font-weight-bd;
+      color: $color-lt-txt-active;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
+}
+
 .container--dark {
   .paragraph {
     color: $color-dt-txt-completed;
@@ -59,26 +80,5 @@
 
   .item {
     color: $color-dt-txt-active;
-  }
-}
-
-.footer {
-  font-size: $font-size-xs;
-  color: $color-dt-btn;
-
-  &__link {
-    &:link,
-    &:visited {
-      font-weight: $font-weight-bd;
-      color: $color-lt-txt-active;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: $color-primary;
-    }
   }
 }

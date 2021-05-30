@@ -44,8 +44,6 @@
   &-check:checked + &-check--icon,
   &-check:not(:checked) + &-check--icon {
     display: inline;
-    padding-left: 3rem;
-    padding-right: 2rem;
     cursor: pointer;
     z-index: -1;
   }
@@ -56,8 +54,8 @@
     position: absolute;
     top: 2rem;
     left: 2rem;
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border: 0.05rem solid $color-lt-border;
     border-radius: 100%;
     background-color: transparent;
@@ -69,8 +67,8 @@
     position: absolute;
     top: 2rem;
     left: 2rem;
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 1.9rem;
+    width: 1.9rem;
     background-image: url(../img/icon-check.svg), $color-gradient;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,8 +93,8 @@
 
   &-delete {
     position: absolute;
-    top: 50%;
-    right: 1.5rem;
+    top: 60%;
+    right: 0.5rem;
     transform: translate(-50%, -50%);
     background-image: url(../img/icon-cross.svg);
     background-repeat: no-repeat;
@@ -111,6 +109,7 @@
   &-filter {
     margin-right: 2rem;
     margin-left: 2rem;
+    font-size: $font-size-sm;
     color: $color-lt-txt-generic;
 
     &.selected {
