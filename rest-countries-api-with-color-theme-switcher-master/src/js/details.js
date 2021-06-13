@@ -11,31 +11,37 @@ const country = JSON.parse(sessionStorage.getItem('country'));
 // Display the details of a specific country
 function renderCountry(country) {
   const html = `
-      <div class="country" data-country-id=${country.alpha3Code}>
-        <img class="country__img" src="${country.flag}" />
-        <div class="country__country">
-          <h1 class="country__name">${country.name}</h1>
-          <p class="country__name-native"><span>Native Name: </span>
+      <div class="country-detail" data-country-id=${country.alpha3Code}>
+        <img class="country-detail__img" src="${country.flag}" />
+        <div class="country-detail__country">
+          <h1 class="heading-secondary u-mt-lg u-mb-md">${country.name}</h1>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__name-native">
+            <span class="additional-info--bold">Native Name: </span>
             ${country.nativeName}</p>
-          <p class="country__population"><span>Population: </span>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__population">
+            <span class="additional-info--bold">Population: </span>
             ${country.population.toLocaleString()}</p>
-          <p class="country__region"><span>Region: </span>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__region">
+            <span class="additional-info--bold">Region: </span>
             ${country.region}</p>
-          <p class="country__sub-region"><span>Sub Region: </span>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__sub-region">
+            <span class="additional-info--bold">Sub Region: </span>
             ${country.subregion}</p>
-          <p class="country__capital"><span>Capital: </span>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__capital">
+            <span class="additional-info--bold">Capital: </span>
             ${country.capital}</p>
-          <p class="country__domain"><span>Top Level Domain: </span>
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__domain">
+            <span class="additional-info--bold">Top Level Domain: </span>
             ${country.topLevelDomain}</p>
-          <p class="country__currencies">
-            <span>Currencies: </span>${renderList(country.currencies)}
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__currencies">
+            <span class="additional-info--bold">Currencies: </span>${renderList(country.currencies)}
           </p>
-          <p class="country__languages">
-            <span>Languages: </span>${renderList(country.languages)}
+          <p class="additional-info u-mt-sm u-mb-sm country-detail__languages">
+            <span class="additional-info--bold">Languages: </span>${renderList(country.languages)}
           </p>
         </div>
-        <ul class="country__borders">
-          <p class="country__border">Border Countries: </p>
+        <ul class="additional-info u-mt-sm u-mb-sm country-detail__borders">
+          <span class="additional-info--bold country-detail__border">Border Countries: </span>
             ${renderBorders(country.borders)}
         </ul>
       </div>
@@ -77,7 +83,7 @@ displayCountry.addEventListener('click', e => {
   if (e.target.closest('.border')) {
     const ID = e.target.closest('.border').dataset.borderId;
     const country = countries.filter(country => country.alpha3Code === ID);
-    displayCountry.removeChild(document.querySelector('.country'));
+    displayCountry.removeChild(document.querySelector('.country-detail'));
     renderCountry(country[0]);
   }
 });
@@ -87,4 +93,4 @@ btnBack.addEventListener('click', () => {
   window.location = 'index.html';
 });
 
-countries ? renderCountry(country[0]) : window.location = 'index.html' ;
+countries ? renderCountry(country[0]) : window.location = 'index.html';

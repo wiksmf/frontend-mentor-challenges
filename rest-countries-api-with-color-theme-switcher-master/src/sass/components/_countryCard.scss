@@ -1,0 +1,57 @@
+.countries {
+  @include flexCenter;
+  flex-wrap: wrap;
+}
+
+.country {
+  border-radius: 0.7rem;
+  margin: 2rem;
+  background-color: $color-dt-text-lt-elements;
+  cursor: pointer;
+
+  &__img {
+    width: 22.5rem;
+    height: 12.5rem;
+    object-fit: cover;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+
+  &__country {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.country-detail {
+  margin: 5rem 0;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__borders {
+    list-style: none;
+  }
+}
+
+.border {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.4rem;
+  background-color: $color-dt-text-lt-elements;
+  box-shadow: 0 0 0.5rem $color-lt-input;
+  cursor: pointer;
+
+}
+
+.container--dark {
+  .country {
+    background-color: $color-dt-elements;
+  }
+
+  .border {
+    background-color: $color-dt-elements;
+    box-shadow: 0 0 0.5rem $color-lt-text;
+  }
+}

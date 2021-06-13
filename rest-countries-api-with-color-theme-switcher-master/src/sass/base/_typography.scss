@@ -1,0 +1,53 @@
+.container {
+  font-family: 'Nunito Sans', sans-serif;
+  color: $color-lt-text;
+}
+
+.heading-primary {
+  font-weight: $font-weight-bd;
+}
+
+.heading-secondary {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bd;
+}
+
+.additional-info {
+
+  font-size: $font-size-md;
+
+  &--bold {
+    font-weight: $font-weight-md;
+  }
+}
+
+.border {
+  font-size: $font-size-sm;
+}
+
+
+.footer {
+  font-size: $font-size-xs;
+  color: $color-lt-text;
+
+  &__link {
+
+    &:link,
+    &:visited {
+      font-weight: $font-weight-bd;
+      color: $color-dt-elements;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-dt-bg;
+    }
+  }
+}
+
+.container--dark {
+  color: $color-dt-text-lt-elements;
+}

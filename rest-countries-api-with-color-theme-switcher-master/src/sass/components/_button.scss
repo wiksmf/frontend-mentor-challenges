@@ -1,0 +1,41 @@
+.btn {
+  font-family: inherit;
+  font-weight: $font-weight-md;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+
+  &-theme {
+    background-image: url(../img/icon-moon.svg);
+    background-repeat: no-repeat;
+    background-position: 0rem;
+    background-size: 1.8rem;
+    height: 2.5rem;
+    width: 11rem;
+  }
+
+  &-back {
+    padding: 0.5rem 2.3rem;
+    border-radius: 0.2rem;
+    color: $color-lt-text;
+    background-color: $color-dt-text-lt-elements;
+    box-shadow: 0 0 0.5rem $color-lt-input;
+  }
+}
+
+.container--dark {
+  .btn {
+    &-theme {
+      color: $color-dt-text-lt-elements;
+      background-image: url(../img/icon-sun.svg);
+    }
+
+    &-back {
+      color: $color-dt-text-lt-elements;
+      background-color: $color-dt-elements;
+      box-shadow: 0 0 0.5rem $color-lt-text;
+    }
+  }
+}

@@ -28,10 +28,10 @@ function renderCountry(country) {
       <div class="country" data-country-id=${country.alpha3Code}>
         <img class="country__img" src="${country.flag}" />
         <div class="country__country">
-          <h3 class="country__name">${country.name}</h3>
-          <p class="country__row"><span>Population: </span>${country.population.toLocaleString()}</p>
-          <p class="country__region"><span>Region: </span>${country.region}</p>
-          <p class="country__capital"><span>Capital: </span>${
+          <h2 class="heading-secondary u-mb-md">${country.name}</h2>
+          <p class="additional-info u-mt-sm u-mb-sm"><span class="additional-info--bold">Population: </span>${country.population.toLocaleString()}</p>
+          <p class="additional-info u-mt-sm u-mb-sm"><span class="additional-info--bold">Region: </span>${country.region}</p>
+          <p class="additional-info u-mt-sm u-mb-sm"><span class="additional-info--bold">Capital: </span>${
             country.capital
           }</p>
         </div>

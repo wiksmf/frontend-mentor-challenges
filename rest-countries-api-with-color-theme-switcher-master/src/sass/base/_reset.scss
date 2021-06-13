@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 75%; // 1rem = 12px
+  }
+}
+
+.container {
+  background-color: $color-lt-bg;
+  transition: all 0.5s;
+
+  &--dark {
+    background-color: $color-dt-bg;
+  }
+}

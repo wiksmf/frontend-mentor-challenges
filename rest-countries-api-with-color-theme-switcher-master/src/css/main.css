@@ -1,1 +1,254 @@
-/* No CSS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 25em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+.container {
+  background-color: #fafafa;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.container--dark {
+  background-color: #202c37;
+}
+
+.container {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #111517;
+}
+
+.heading-primary {
+  font-weight: 800;
+}
+
+.heading-secondary {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.additional-info {
+  font-size: 1.6rem;
+}
+
+.additional-info--bold {
+  font-weight: 600;
+}
+
+.border {
+  font-size: 1.4rem;
+}
+
+.footer {
+  font-size: 1.1rem;
+  color: #111517;
+}
+
+.footer__link:link, .footer__link:visited {
+  font-weight: 800;
+  color: #2b3945;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  color: #202c37;
+}
+
+.container--dark {
+  color: #ffffff;
+}
+
+.u-mt-sm {
+  margin-top: 0.5rem;
+}
+
+.u-mt-lg {
+  margin-top: 2.5rem;
+}
+
+.u-mb-sm {
+  margin-bottom: 0.5rem;
+}
+
+.u-mb-md {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-theme {
+  background-image: url(../img/icon-moon.svg);
+  background-repeat: no-repeat;
+  background-position: 0rem;
+  background-size: 1.8rem;
+  height: 2.5rem;
+  width: 11rem;
+}
+
+.btn-back {
+  padding: 0.5rem 2.3rem;
+  border-radius: 0.2rem;
+  color: #111517;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0.5rem #858585;
+          box-shadow: 0 0 0.5rem #858585;
+}
+
+.container--dark .btn-theme {
+  color: #ffffff;
+  background-image: url(../img/icon-sun.svg);
+}
+
+.container--dark .btn-back {
+  color: #ffffff;
+  background-color: #2b3945;
+  -webkit-box-shadow: 0 0 0.5rem #111517;
+          box-shadow: 0 0 0.5rem #111517;
+}
+
+.countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.country {
+  border-radius: 0.7rem;
+  margin: 2rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.country__img {
+  width: 22.5rem;
+  height: 12.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.country__country {
+  padding: 2rem 1.5rem;
+}
+
+.country-detail {
+  margin: 5rem 0;
+}
+
+.country-detail__img {
+  width: 100%;
+}
+
+.country-detail__borders {
+  list-style: none;
+}
+
+.border {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.4rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0.5rem #858585;
+          box-shadow: 0 0 0.5rem #858585;
+  cursor: pointer;
+}
+
+.container--dark .country {
+  background-color: #2b3945;
+}
+
+.container--dark .border {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0 0 0.5rem #111517;
+          box-shadow: 0 0 0.5rem #111517;
+}
+
+.footer {
+  position: fixed;
+  bottom: 50%;
+  right: 1rem;
+  -webkit-transform: rotate(180deg) translate(-50%, -50%);
+          transform: rotate(180deg) translate(-50%, -50%);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.5rem;
+  border-radius: .2rem;
+}
+
+.footer__link:link, .footer__link:visited {
+  display: inline-block;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__link:focus, .footer__link:hover, .footer__link:active {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header {
+  padding: 3rem 0.5rem 3rem 1rem;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container--dark .header {
+  background-color: #2b3945;
+}
+
+.main {
+  padding: 3rem;
+}

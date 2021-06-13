@@ -1,0 +1,12 @@
+.header {
+  padding: 3rem 0.5rem 3rem 1rem;
+  background-color: $color-dt-text-lt-elements;
+
+  @include flexCenter($justify: space-between);
+}
+
+.container--dark {
+  .header {
+    background-color: $color-dt-elements;
+  }
+}
