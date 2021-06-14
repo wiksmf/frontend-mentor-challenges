@@ -25,12 +25,28 @@
 .country-detail {
   margin: 5rem 0;
 
+  @media only screen and (min-width: $bp-lg) {
+    @include flexCenter($justify: space-evenly);
+  }
+
   &__img {
-    width: 100%;
+    width: 50%;
+    margin-right: 2rem;
+
   }
 
   &__borders {
     list-style: none;
+    grid-column: 1 / -1;
+  }
+
+  &__details {
+    @media only screen and (min-width: $bp-lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2rem;
+    }
   }
 }
 

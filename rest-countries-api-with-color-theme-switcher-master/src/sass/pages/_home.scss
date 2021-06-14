@@ -1,3 +1,48 @@
 .main {
   padding: 3rem;
 }
+
+.filters {
+  &__input {
+    width: 100%;
+    padding: 1rem 1.5rem 1rem 5rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-image: url(../img/search-outline-light.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: 0 0.2rem;
+    background-position: 1.5% 50%;
+    font-family: inherit;
+    font-weight: $font-weight-md;
+    outline: none;
+  }
+
+  &__region {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.2rem;
+    font-family: inherit;
+    font-weight: $font-weight-md;
+    outline: none;
+  }
+}
+
+
+.container--dark {
+  .filters {
+    &__input {
+      background-image: url(../img/search-outline-dark.svg);
+      background-color: $color-dt-elements;
+
+      &::placeholder {
+        color: $color-lt-bg;
+      }
+    }
+
+    &__region {
+      color: $color-lt-bg;
+      background-color: $color-dt-elements;
+    }
+  }
+}

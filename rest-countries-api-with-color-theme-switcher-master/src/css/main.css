@@ -103,7 +103,7 @@ html {
 .btn-theme {
   background-image: url(../img/icon-moon.svg);
   background-repeat: no-repeat;
-  background-position: 0rem;
+  background-position: 0;
   background-size: 1.8rem;
   height: 2.5rem;
   width: 11rem;
@@ -172,12 +172,44 @@ html {
   margin: 5rem 0;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .country-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .country-detail__img {
-  width: 100%;
+  width: 50%;
+  margin-right: 2rem;
 }
 
 .country-detail__borders {
   list-style: none;
+  grid-column: 1 / -1;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .country-detail__details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 .border {
@@ -251,4 +283,54 @@ html {
 
 .main {
   padding: 3rem;
+}
+
+.filters__input {
+  width: 100%;
+  padding: 1rem 1.5rem 1rem 5rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-image: url(../img/search-outline-light.svg);
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: 0 0.2rem;
+  background-position: 1.5% 50%;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+}
+
+.filters__region {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+}
+
+.container--dark .filters__input {
+  background-image: url(../img/search-outline-dark.svg);
+  background-color: #2b3945;
+}
+
+.container--dark .filters__input::-webkit-input-placeholder {
+  color: #fafafa;
+}
+
+.container--dark .filters__input:-ms-input-placeholder {
+  color: #fafafa;
+}
+
+.container--dark .filters__input::-ms-input-placeholder {
+  color: #fafafa;
+}
+
+.container--dark .filters__input::placeholder {
+  color: #fafafa;
+}
+
+.container--dark .filters__region {
+  color: #fafafa;
+  background-color: #2b3945;
 }

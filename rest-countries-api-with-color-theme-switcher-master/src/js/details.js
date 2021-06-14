@@ -15,35 +15,41 @@ function renderCountry(country) {
         <img class="country-detail__img" src="${country.flag}" />
         <div class="country-detail__country">
           <h1 class="heading-secondary u-mt-lg u-mb-md">${country.name}</h1>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__name-native">
-            <span class="additional-info--bold">Native Name: </span>
-            ${country.nativeName}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__population">
-            <span class="additional-info--bold">Population: </span>
-            ${country.population.toLocaleString()}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__region">
-            <span class="additional-info--bold">Region: </span>
-            ${country.region}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__sub-region">
-            <span class="additional-info--bold">Sub Region: </span>
-            ${country.subregion}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__capital">
-            <span class="additional-info--bold">Capital: </span>
-            ${country.capital}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__domain">
-            <span class="additional-info--bold">Top Level Domain: </span>
-            ${country.topLevelDomain}</p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__currencies">
-            <span class="additional-info--bold">Currencies: </span>${renderList(country.currencies)}
-          </p>
-          <p class="additional-info u-mt-sm u-mb-sm country-detail__languages">
-            <span class="additional-info--bold">Languages: </span>${renderList(country.languages)}
-          </p>
+          <div class="country-detail__details">
+            <div>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__name-native">
+              <span class="additional-info--bold">Native Name: </span>
+              ${country.nativeName}</p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__population">
+                <span class="additional-info--bold">Population: </span>
+                ${country.population.toLocaleString()}</p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__region">
+                <span class="additional-info--bold">Region: </span>
+                ${country.region}</p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__sub-region">
+                <span class="additional-info--bold">Sub Region: </span>
+                ${country.subregion}</p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__capital">
+                <span class="additional-info--bold">Capital: </span>
+                ${country.capital}</p>
+            </div>
+            <div>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__domain">
+              <span class="additional-info--bold">Top Level Domain: </span>
+              ${country.topLevelDomain}</p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__currencies">
+              <span class="additional-info--bold">Currencies: </span>${renderList(country.currencies)}
+              </p>
+              <p class="additional-info u-mt-sm u-mb-sm country-detail__languages">
+              <span class="additional-info--bold">Languages: </span>${renderList(country.languages)}
+              </p>
+            </div>
+            <ul class="additional-info u-mt-sm u-mb-sm country-detail__borders">
+              <span class="additional-info--bold country-detail__border">Border Countries: </span>
+                ${renderBorders(country.borders)}
+            </ul>
+          </div>
         </div>
-        <ul class="additional-info u-mt-sm u-mb-sm country-detail__borders">
-          <span class="additional-info--bold country-detail__border">Border Countries: </span>
-            ${renderBorders(country.borders)}
-        </ul>
       </div>
     `;
 
