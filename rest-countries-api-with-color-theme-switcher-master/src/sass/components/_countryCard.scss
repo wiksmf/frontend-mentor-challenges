@@ -1,9 +1,11 @@
 .countries {
-  @include flexCenter;
+  @include flexCenter($justify: space-between);
   flex-wrap: wrap;
 }
 
 .country {
+  width: 22.5rem;
+  height: 30rem;
   border-radius: 0.7rem;
   margin: 2rem;
   background-color: $color-dt-text-lt-elements;
@@ -23,29 +25,34 @@
 }
 
 .country-detail {
-  margin: 5rem 0;
+  margin: 5rem auto;
 
   @media only screen and (min-width: $bp-lg) {
-    @include flexCenter($justify: space-evenly);
+      display: grid;
+      grid-template-columns: repeat(2, 50rem);
+      grid-template-rows: 40rem;
+      gap: 5rem;
   }
 
   &__img {
-    width: 50%;
+    width: 100%;
     margin-right: 2rem;
 
+    @media only screen and (min-width: $bp-lg) {
+    width: 100%;
+
+    }
   }
 
   &__borders {
     list-style: none;
-    grid-column: 1 / -1;
   }
 
   &__details {
     @media only screen and (min-width: $bp-lg) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(2, 30rem);
+      gap: 2.5rem;
     }
   }
 }

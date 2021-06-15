@@ -27,22 +27,36 @@ html {
   background-color: #202c37;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
 .container {
   font-family: 'Nunito Sans', sans-serif;
   color: #111517;
 }
 
 .heading-primary {
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
 .heading-secondary {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
+@media only screen and (min-width: 61.875em) {
+  .heading-secondary {
+    font-size: 2.8rem;
+  }
+}
+
 .additional-info {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .additional-info--bold {
@@ -87,6 +101,10 @@ html {
 
 .u-mb-md {
   margin-bottom: 1.5rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 2.5rem;
 }
 
 .btn {
@@ -138,9 +156,9 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -149,6 +167,8 @@ html {
 }
 
 .country {
+  width: 22.5rem;
+  height: 30rem;
   border-radius: 0.7rem;
   margin: 2rem;
   background-color: #ffffff;
@@ -169,46 +189,43 @@ html {
 }
 
 .country-detail {
-  margin: 5rem 0;
+  margin: 5rem auto;
 }
 
 @media only screen and (min-width: 61.875em) {
   .country-detail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (50rem)[2];
+        grid-template-columns: repeat(2, 50rem);
+    -ms-grid-rows: 40rem;
+        grid-template-rows: 40rem;
+    gap: 5rem;
   }
 }
 
 .country-detail__img {
-  width: 50%;
+  width: 100%;
   margin-right: 2rem;
+}
+
+@media only screen and (min-width: 61.875em) {
+  .country-detail__img {
+    width: 100%;
+  }
 }
 
 .country-detail__borders {
   list-style: none;
-  grid-column: 1 / -1;
 }
 
 @media only screen and (min-width: 61.875em) {
   .country-detail__details {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
+    -ms-grid-columns: (30rem)[2];
+        grid-template-columns: repeat(2, 30rem);
+    gap: 2.5rem;
   }
 }
 
@@ -260,7 +277,7 @@ html {
 }
 
 .header {
-  padding: 3rem 0.5rem 3rem 1rem;
+  padding: 3rem;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,6 +302,25 @@ html {
   padding: 3rem;
 }
 
+@media only screen and (min-width: 48em) {
+  .filters {
+    padding: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .filters__input {
   width: 100%;
   padding: 1rem 1.5rem 1rem 5rem;
@@ -298,6 +334,14 @@ html {
   font-family: inherit;
   font-weight: 600;
   outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 48em) {
+  .filters__input {
+    width: 40rem;
+    margin: 0;
+  }
 }
 
 .filters__region {
@@ -307,6 +351,10 @@ html {
   font-family: inherit;
   font-weight: 600;
   outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
 }
 
 .container--dark .filters__input {

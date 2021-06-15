@@ -4,17 +4,23 @@
 }
 
 .heading-primary {
+  font-size: $font-size-md;
   font-weight: $font-weight-bd;
+
+
 }
 
 .heading-secondary {
-  font-size: $font-size-lg;
+  font-size: $font-size-md;
   font-weight: $font-weight-bd;
+
+  @media only screen and (min-width: $bp-lg) {
+    font-size: $font-size-lg;
+  }
 }
 
 .additional-info {
-
-  font-size: $font-size-md;
+  font-size: $font-size-sm;
 
   &--bold {
     font-weight: $font-weight-md;

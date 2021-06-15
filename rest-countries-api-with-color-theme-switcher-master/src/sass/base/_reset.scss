@@ -20,4 +20,9 @@ html {
   &--dark {
     background-color: $color-dt-bg;
   }
+
+  @media only screen and (min-width: $bp-lg) {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
 }

@@ -16,7 +16,7 @@ function renderCountry(country) {
         <div class="country-detail__country">
           <h1 class="heading-secondary u-mt-lg u-mb-md">${country.name}</h1>
           <div class="country-detail__details">
-            <div>
+            <div class="u-mb-lg ">
               <p class="additional-info u-mt-sm u-mb-sm country-detail__name-native">
               <span class="additional-info--bold">Native Name: </span>
               ${country.nativeName}</p>
@@ -33,7 +33,7 @@ function renderCountry(country) {
                 <span class="additional-info--bold">Capital: </span>
                 ${country.capital}</p>
             </div>
-            <div>
+            <div class="u-mb-lg ">
               <p class="additional-info u-mt-sm u-mb-sm country-detail__domain">
               <span class="additional-info--bold">Top Level Domain: </span>
               ${country.topLevelDomain}</p>
@@ -44,11 +44,11 @@ function renderCountry(country) {
               <span class="additional-info--bold">Languages: </span>${renderList(country.languages)}
               </p>
             </div>
-            <ul class="additional-info u-mt-sm u-mb-sm country-detail__borders">
+          </div>
+          <ul class="additional-info u-mt-sm u-mb-sm country-detail__borders">
               <span class="additional-info--bold country-detail__border">Border Countries: </span>
                 ${renderBorders(country.borders)}
             </ul>
-          </div>
         </div>
       </div>
     `;

@@ -3,6 +3,11 @@
 }
 
 .filters {
+  @media only screen and (min-width: $bp-md) {
+    padding: 3rem;
+    @include flexCenter($justify: space-between);
+  }
+
   &__input {
     width: 100%;
     padding: 1rem 1.5rem 1rem 5rem;
@@ -16,6 +21,12 @@
     font-family: inherit;
     font-weight: $font-weight-md;
     outline: none;
+    cursor: pointer;
+
+    @media only screen and (min-width: $bp-md) {
+      width: 40rem;
+      margin: 0;
+    }
   }
 
   &__region {
@@ -25,6 +36,8 @@
     font-family: inherit;
     font-weight: $font-weight-md;
     outline: none;
+    appearance: none;
+    cursor: pointer;
   }
 }
 
