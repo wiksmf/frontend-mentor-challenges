@@ -1,0 +1,6 @@
+.container {
+  width: 60%;
+  @include flexCenter;
+  transform-style: preserve-3d;
+  transition: all 0.5 ease-out;
+}

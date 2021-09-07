@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/bg-pattern-top.svg), url(../img/bg-pattern-bottom.svg),
     $color-background;
   background-repeat: no-repeat;
@@ -22,5 +22,6 @@ body {
   background-position: right calc(50vw + 5%) bottom calc(50vh - 10vw),
     left calc(50vw + 5%) top calc(50vh + 1vw);
 
-  @include flexCenter($direction: column);
+  @include flexCenter;
+  perspective: 62.5em;
 }
