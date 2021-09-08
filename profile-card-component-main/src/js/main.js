@@ -7,18 +7,18 @@ const profileName = document.querySelector('.card__profile-name');
 const profileSocial = document.querySelectorAll('.card__social-data');
 
 container.addEventListener('mousemove', e => {
-  let x = (window.innerWidth / 2 - e.clientX) / 25;
-  let y = (window.innerHeight / 2 - e.clientY) / 25;
+  let x = (window.innerWidth / 2 - e.clientX) / 10;
+  let y = (window.innerHeight / 2 - e.clientY) / 10;
 
-  card.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+  card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 });
 
-// container.addEventListener('mouseover', () => {
-//   profileImg.classList.toggle('update-style');
-//   profileName.classList.toggle('update-style');
-//   profileSocial.forEach(el => el.classList.toggle('update-style'));
-// });
+container.addEventListener('mouseover', () => {
+  profileImg.classList.toggle('highlight-elements');
+  profileName.classList.toggle('highlight-elements');
+  profileSocial.forEach(el => el.classList.toggle('highlight-elements'));
+});
 
-container.addEventListener('mouseleave', e => {
+container.addEventListener('mouseleave', () => {
   card.style.transform = 'rotate(0deg)';
 });

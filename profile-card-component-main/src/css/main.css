@@ -1,3 +1,8 @@
+.highlight-elements {
+  -webkit-transform: translateZ(1rem);
+          transform: translateZ(1rem);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -87,14 +92,14 @@ body {
 }
 
 .u-mt-lg {
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 
 .card {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   position: relative;
   background-color: white;
   -webkit-box-shadow: 0 0 2rem 0.1rem rgba(45, 50, 72, 0.3);
@@ -113,25 +118,21 @@ body {
 }
 
 .card__profile {
-  height: 8rem;
+  height: 15rem;
 }
 
 .card__profile-photo {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: -5rem;
   border-radius: 100%;
   border: 0.5rem solid white;
   background-color: white;
 }
 
 .card__profile-name {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .card__social {
@@ -150,17 +151,15 @@ body {
 }
 
 .card__social-data {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.has-transform {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .container {
   width: 60%;
+  height: 60rem;
+  -webkit-transition: all 0.3 ease-out;
+  transition: all 0.3 ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,10 +169,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: all 0.5 ease-out;
-  transition: all 0.5 ease-out;
 }
 
 .footer {

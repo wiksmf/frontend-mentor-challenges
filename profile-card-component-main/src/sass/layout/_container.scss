@@ -1,6 +1,6 @@
 .container {
   width: 60%;
+  height: 60rem;
+  transition: all 0.3 ease-out;
   @include flexCenter;
-  transform-style: preserve-3d;
-  transition: all 0.5 ease-out;
 }
