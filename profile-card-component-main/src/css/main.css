@@ -189,6 +189,6 @@ body {
 }
 
 .footer__link:focus, .footer__link:hover, .footer__link:active {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
