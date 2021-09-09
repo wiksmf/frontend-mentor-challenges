@@ -22,6 +22,6 @@ body {
   background-position: right calc(50vw + 5%) bottom calc(50vh - 10vw),
     left calc(50vw + 5%) top calc(50vh + 1vw);
 
-  @include flexCenter;
   perspective: 62.5em;
+  @include flexCenter;
 }
