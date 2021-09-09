@@ -1,6 +1,9 @@
 .footer {
   position: fixed;
-  bottom: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
 
   &__link {
     &:link,
