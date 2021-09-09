@@ -16,7 +16,7 @@ html {
 body {
   height: 100vh;
   padding: 2rem;
-  background-color: lighten($color-secondary-bg, 15%);
+  background-color: $color-primary-bg;
 
   @include flexCenter($direction: column);
 }
