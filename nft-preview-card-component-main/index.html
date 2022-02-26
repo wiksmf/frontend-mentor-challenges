@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <meta
+      name="description"
+      content="NFT preview card component using CSS Flexible Box Layout."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/images/favicon-32x32.png"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body>
+    <main class="card">
+      <div class="card-header">
+        <img
+          class="card-image"
+          src="src/images/image-equilibrium.jpg"
+          alt="Equilibrium image: die"
+        />
+        <div class="card-header--hover"></div>
+      </div>
+
+      <div class="card-body">
+        <div class="card-information">
+          <h1 class="heading-primary">
+            <a class="card__link" href="#">Equilibrium #3429</a>
+          </h1>
+
+          <p class="paragraph">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+        </div>
+
+        <div class="card-details">
+          <p class="paragraph-cryptocurrency">0.041 ETH</p>
+          <p class="paragraph paragraph-time">3 days left</p>
+        </div>
+
+        <div class="card-footer">
+          <img
+            class="profile-image"
+            src="src/images/image-avatar.png"
+            alt="image-avatar"
+          />
+          <p class="paragraph">
+            Creation of
+            <a class="card__link" href="#">Jules Wyvern</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      <p class="attribution-information">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >WIKS</a
+        >.
+      </p>
+
+      <button class="attribution__btn">
+        <i class="fa-solid fa-code"></i>
+      </button>
+    </div>
+  </body>
+</html>

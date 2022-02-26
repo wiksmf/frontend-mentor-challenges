@@ -1,0 +1,286 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 2 version
+*/
+
+:root {
+  --bg-color-primary: rgb(20, 37, 61);
+  --bg-color-secondary: rgb(13, 25, 43);
+
+  --text-primary: rgb(139, 172, 218);
+  --text-secondary: rgb(255, 255, 255);
+
+  --text-hover: rgb(0, 255, 247);
+  --image-hover: rgba(0, 255, 247, 0.5);
+
+  --line: rgb(47, 65, 91);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.2;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: var(--bg-color-secondary);
+  font-family: 'Outfit', sans-serif;
+}
+
+.card {
+  width: 35rem;
+  padding: 2.5rem 1rem 3rem;
+  border-radius: 1.5rem;
+  background-color: var(--bg-color-primary);
+  -webkit-box-shadow: 0 3rem 2rem -1.5rem var(--bg-color-secondary),
+    0 1.5rem 1.5rem 3rem var(--bg-color-secondary);
+  box-shadow: 0 3rem 2rem -1.5rem var(--bg-color-secondary),
+    0 1.5rem 1.5rem 3rem var(--bg-color-secondary);
+}
+
+.card-header {
+  position: relative;
+  margin: 0 auto;
+  width: 30rem;
+  height: 30rem;
+  cursor: pointer;
+}
+
+.card-header--hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 0.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.card-header:hover .card-header--hover {
+  background-image: url(../images/icon-view.svg);
+  background-color: var(--image-hover);
+  opacity: 1;
+}
+
+.card-image {
+  display: block;
+  width: 30rem;
+  height: 30rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-body {
+  padding: 0 1.5rem;
+}
+
+.card-information {
+  margin-bottom: 2.5rem;
+}
+
+.heading-primary {
+  margin: 2.5rem 0 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.paragraph {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.card-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.paragraph-cryptocurrency,
+.paragraph-time {
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.paragraph-cryptocurrency {
+  background-image: url(../images/icon-ethereum.svg);
+  background-size: contain;
+  padding-left: 1.7rem;
+  font-weight: 400;
+  color: var(--text-hover);
+}
+
+.paragraph-time {
+  background-image: url(../images/icon-clock.svg);
+  background-size: 1.7rem;
+  padding-left: 2.5rem;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.1rem;
+  padding: 1.6rem 0 0;
+  border-top: 0.1rem solid var(--line);
+}
+
+.profile-image {
+  margin-right: 1.5rem;
+  width: 3.3rem;
+  border: 0.1rem solid var(--text-secondary);
+  border-radius: 50%;
+}
+
+.card-footer .paragraph {
+  font-size: 1.6rem;
+}
+
+.card-footer .paragraph .card__link {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.card__link {
+  color: var(--text-secondary);
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.card__link:link,
+.card__link:visited {
+  color: var(--text-secondary);
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card__link:focus,
+.card__link:hover,
+.card__link:active {
+  color: var(--text-hover);
+}
+
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.attribution__btn {
+  margin-left: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  cursor: pointer;
+}
+
+.fa-solid.fa-code {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+}
+
+.attribution__btn:hover .fa-solid.fa-code {
+  color: var(--bg-color-secondary);
+  font-size: 1.5rem;
+}
+
+.attribution-information {
+  display: inline-block;
+  width: 0;
+  color: var(--text-primary);
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  text-align: right;
+  white-space: nowrap;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.attribution__link:focus,
+.attribution__link:hover,
+.attribution__link:active {
+  color: var(--text-hover);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.attribution-information.show {
+  width: 32.5rem;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
