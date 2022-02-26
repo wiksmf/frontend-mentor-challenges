@@ -75,35 +75,76 @@ body {
   color: var(--text-secondary);
 }
 
-.footer {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  font-size: 1.1rem;
-  color: var(--attribution-text);
-  letter-spacing: 0.1rem;
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  bottom: 3rem;
+  right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.footer__link:link,
-.footer__link:visited {
+.attribution__btn {
+  margin-left: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.fa-solid.fa-code {
+  color: var(--bg-color-secondary);
+  font-size: 1.5rem;
+}
+
+.attribution__btn:hover .fa-solid.fa-code {
+  color: var(--bg-color-primary);
+  font-size: 1.5rem;
+}
+
+.attribution-information {
+  display: inline-block;
+  width: 0;
+  color: var(--text-primary);
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  text-align: right;
+  white-space: nowrap;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  overflow: hidden;
+}
+
+.attribution__link:link,
+.attribution__link:visited {
   font-weight: 700;
-  color: var(--attribution-text);
+  color: var(--text-primary);
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   outline: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.footer__link:focus,
-.footer__link:hover,
-.footer__link:active {
-  color: var(--text-primary);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.attribution__link:focus,
+.attribution__link:hover,
+.attribution__link:active {
+  color: var(--attribution-text);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.attribution-information.show {
+  width: 32.5rem;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
 }

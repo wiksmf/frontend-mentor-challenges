@@ -18,13 +18,22 @@
       href="src/images/favicon-32x32.png"
     />
     <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/script.js"></script>
   </head>
 
   <body>
@@ -47,22 +56,29 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <p class="attribution">
+    <nav class="attribution">
+      <p class="attribution-information">
         Challenge by
         <a
-          class="footer__link"
+          class="attribution__link"
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
           >Frontend Mentor</a
         >. Coded by
         <a
-          class="footer__link"
+          class="attribution__link"
           href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/qr-code-component-main"
           target="_blank"
           >WIKS</a
         >.
       </p>
-    </footer>
+
+      <button
+        class="attribution__btn"
+        aria-label="Challenge author and developer information"
+      >
+        <i class="fa-solid fa-code"></i>
+      </button>
+    </nav>
   </body>
 </html>
