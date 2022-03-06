@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,6 +121,7 @@ body {
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   overflow: hidden;
+  opacity: 0;
 }
 
 .attribution__link:link,
@@ -143,8 +145,26 @@ body {
 }
 
 .attribution-information.show {
-  width: 32.5rem;
-  opacity: 1;
+  width: 31rem;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
+  opacity: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .attribution-information {
+    inline-size: 23rem;
+    white-space: normal;
+  }
+  .attribution-information.show {
+    inline-size: 23rem;
+    white-space: normal;
+  }
+}
+
+@media only screen and (orientation: landscape) and (hover: none) {
+  body {
+    min-height: 100vw;
+    height: 100vw;
+  }
 }
