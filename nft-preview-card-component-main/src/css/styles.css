@@ -276,7 +276,6 @@ body {
 
 .attribution-information.show {
   width: 31rem;
-  padding: 0.5rem 0.1rem;
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
   opacity: 1;

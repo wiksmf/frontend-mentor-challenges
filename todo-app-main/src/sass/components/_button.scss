@@ -7,28 +7,39 @@
   transition: all 0.2s;
 
   &-theme {
-    background-image: url(../img/icon-moon.svg);
+    background-image: var(--btn-theme);
     background-repeat: no-repeat;
     height: 3rem;
     width: 3rem;
-
-    &--dark {
-      background-image: url(../img/icon-sun.svg);
-    }
   }
 
   &-add {
+    position: relative;
+    height: 3rem;
+    width: 3.3rem;
+    font-weight: $font-weight-md;
     border-radius: 100%;
-    border: 0.05rem solid $color-lt-border;
-    color: $color-lt-txt-generic;
+    border: 0.05rem solid var(--color-border);
+    color: var(--color-txt-generic);
     font-size: $font-size-md;
-    height: 2.5rem;
-    width: 2.8rem;
+    // transition: all 0.5s linear;
+    transition: 0.3s ease-in-out;
+
+    // &::after {
+    //   position: absolute;
+    //   height: 3rem;
+    //   width: 3.3rem;
+    //   background-color: red;
+    // }
 
     &:focus,
     &:hover {
-      color: $color-lt-secondary-bg;
+      font-family: 'Font Awesome 5 Brands';
+      content: '\f099';
+      color: $color-secondary;
       background-image: $color-gradient;
+      opacity: 1;
+      transform: scale(1);
     }
   }
 
@@ -56,7 +67,7 @@
     left: 2rem;
     width: 1.8rem;
     height: 1.8rem;
-    border: 0.05rem solid $color-lt-border;
+    border: 0.05rem solid var(--color-border);
     border-radius: 100%;
     background-color: transparent;
   }
@@ -88,7 +99,7 @@
 
   &-check:checked ~ .item {
     text-decoration: line-through;
-    color: $color-lt-txt-completed;
+    color: var(--color-txt-completed);
   }
 
   &-delete {
@@ -106,45 +117,22 @@
     }
   }
 
-  &-filter {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: $font-size-sm;
-    color: $color-lt-txt-generic;
+  //   &-filter {
+  //     margin-right: 2rem;
+  //     margin-left: 2rem;
+  //     font-size: $font-size-sm;
+  //     color: var(--color-txt-generic);
 
-    &.selected {
-      color: $color-primary;
-    }
-  }
+  //     &.selected {
+  //       color: $color-primary;
+  //     }
+  //   }
 
-  &-clear {
-    &:focus,
-    &:hover {
-      color: $color-primary;
-    }
-  }
-}
-
-.container--dark {
-  .btn {
-    &-add {
-      border: 0.05rem solid $color-dt-border;
-      color: $color-lt-txt-generic;
-
-      &:focus,
-      &:hover {
-        color: $color-lt-secondary-bg;
-        background-image: $color-gradient;
-      }
-    }
-
-    &-check:checked ~ .item {
-      color: $color-dt-txt-completed;
-    }
-  }
-
-  .btn-check:checked + .btn-check--icon:before,
-  .btn-check:not(:checked) + .btn-check--icon:before {
-    border: 0.05rem solid $color-dt-border;
-  }
+  //   &-clear {
+  //     &:focus,
+  //     &:hover {
+  //       color: $color-primary;
+  //     }
+  //   }
+  // }
 }

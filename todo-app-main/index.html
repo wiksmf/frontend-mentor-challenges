@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="theme-light">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,26 +10,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="src/css/main.css">
   <!-- JS -->
   <script defer src="src/js/main.js"></script>
   <script defer src="src/js/themeSwitcher.js"></script>
 </head>
 
-<body class="container ">
+<body class="container">
   <div class="wrapper">
-    <header class="header u-mt-lg u-mb-lg">
+    <header class="header u-mt-lg u-mb-md">
       <h1 class="heading-primary">Todo</h1>
       <button class="btn btn-theme"></button>
     </header>
 
     <main class="main">
-      <div class="block__add-todo">
-        <button class="btn btn-add">+</button>
-        <input type="text" class="block__add-todo__input" placeholder="Create a new todo..." />
-      </div>
+      <form class="block__add-todo">
+        <button class="btn btn-add">
+          <!-- <i class="fas fa-plus"></i> -->
+        </button>
+        <input type="text" class="block__add-todo__input" placeholder="Create a new todo..."
+          aria-label="Create a new todo..." autocomplete="off" />
+      </form>
 
-      <ul class="list u-mt-md"></ul>
+      <ul class="list u-mt-md">
+        <li class="list-item">
+          <input type="checkbox" class="btn btn-check" />
+          <span class="btn-check--icon"></span>
+          <p class="item ">1234</p>
+          <button class="btn btn-delete"></button>
+        </li>
+        <li class="list-item">
+          <input type="checkbox" class="btn btn-check" />
+          <span class="btn-check--icon"></span>
+          <p class="item completed">abcd</p>
+          <button class="btn btn-delete"></button>
+        </li>
+      </ul>
+
+      <!-- 
 
       <div class="block__item-leftCompleted">
         <p class="paragraph paragraph--small"><span class="items-left"></span> items left</p>
@@ -45,7 +66,7 @@
       <div class="block__dragDrop u-mt-lg u-mb-lg u-text-center">
         <p class="paragraph">Drag and drop to reorder list</p>
       </div>
-
+-->
     </main>
 
     <footer class="footer">

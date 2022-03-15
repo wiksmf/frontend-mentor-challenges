@@ -5,7 +5,7 @@
   &-item {
     cursor: pointer;
     padding: 1.5rem;
-    background-color: $color-lt-secondary-bg;
+    background-color: var(--color-secondary-bg);
     position: relative;
 
     &:first-child {
@@ -24,7 +24,7 @@
     }
 
     &:not(:last-child) {
-      border-bottom: 0.1rem solid $color-lt-border;
+      border-bottom: 0.1rem solid var(--color-border);
     }
 
     &:focus > .btn-delete,
@@ -39,16 +39,4 @@
   top: 60%;
   left: 7rem;
   transform: translate(-50%, -50%);
-}
-
-.container--dark {
-  .list {
-    &-item {
-      background-color: $color-dt-secondary-bg;
-
-      &:not(:last-child) {
-        border-bottom: 0.15rem solid $color-dt-border;
-      }
-    }
-  }
 }

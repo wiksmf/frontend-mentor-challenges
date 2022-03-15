@@ -6,18 +6,18 @@
   font-size: $font-size-lg;
   letter-spacing: 1.5rem;
   text-transform: uppercase;
-  color: $color-lt-secondary-bg;
+  color: $color-secondary;
 }
 
-.paragraph {
-  font-size: $font-size-sm;
-  font-weight: $font-weight-bd;
-  color: $color-lt-txt-generic;
+// .paragraph {
+//   font-size: $font-size-sm;
+//   font-weight: $font-weight-bd;
+//   color: --color-txt-generic;
 
-  &--small {
-    font-size: $font-size-xs;
-  }
-}
+//   &--small {
+//     font-size: $font-size-xs;
+//   }
+// }
 
 .block {
   &__add-todo {
@@ -25,11 +25,11 @@
       font-family: inherit;
       font-weight: $font-weight-md;
       font-size: $font-size-md;
-      color: $color-lt-txt-active;
-      letter-spacing: 0.05rem;
+      color: var(--color-txt-active);
+      letter-spacing: 0.1rem;
 
       &::placeholder {
-        color: $color-lt-txt-completed;
+        color: var(--color-txt-completed);
       }
     }
   }
@@ -37,18 +37,18 @@
 
 .item {
   font-size: $font-size-md;
-  color: $color-lt-btn;
+  color: var(--color-btn);
 }
 
 .footer {
   font-size: $font-size-xs;
-  color: $color-dt-btn;
+  color: var(--color-txt-generic);
 
   &__link {
     &:link,
     &:visited {
       font-weight: $font-weight-bd;
-      color: $color-lt-txt-active;
+      color: var(--color-txt-active);
       text-transform: uppercase;
       text-decoration: none;
     }
@@ -58,27 +58,5 @@
     &:active {
       color: $color-primary;
     }
-  }
-}
-
-.container--dark {
-  .paragraph {
-    color: $color-dt-txt-completed;
-  }
-
-  .block {
-    &__add-todo {
-      &__input {
-        color: $color-dt-txt-active;
-
-        &::placeholder {
-          color: $color-dt-txt-completed;
-        }
-      }
-    }
-  }
-
-  .item {
-    color: $color-dt-txt-active;
   }
 }

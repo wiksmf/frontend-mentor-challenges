@@ -7,31 +7,26 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+  transition: all 0.5s ease-in;
 
-  @media only screen and (min-width: $bp-sm) {
-    font-size: 75%; // 1rem = 12px
-  }
+  //   @media only screen and (min-width: $bp-sm) {
+  //     font-size: 75%; // 1rem = 12px
+  //   }
 }
 
 .container {
-  background-color: $color-lt-primary-bg;
-  background-image: url(../img/bg-mobile-light.jpg);
+  // height: 100vh;
+  // width: 100vw;
+  background-color: var(--color-primary-bg);
+  background-image: var(--bg-small);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
-  transition: all 0.5s;
+  background-size: 100vw 30vh;
 
-  @media only screen and (min-width: $bp-lg) {
-    background-image: url(../img/bg-desktop-light.jpg);
-  }
+  // overflow: hidden;
 
-  &--dark {
-    background-color: $color-dt-primary-bg;
-    background-image: url(../img/bg-mobile-dark.jpg);
-
-    @media only screen and (min-width: $bp-lg) {
-      background-image: url(../img/bg-desktop-dark.jpg);
-    }
+  @media only screen and (min-width: $bp-sm) {
+    background-image: var(--bg-big);
   }
 }
 

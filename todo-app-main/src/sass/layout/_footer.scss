@@ -1,7 +1,7 @@
 .footer {
   position: fixed;
   bottom: 2.5rem;
-  right: 0.5rem;
+  right: 1rem;
   transform: rotate(180deg);
   writing-mode: vertical-rl;
 
@@ -10,7 +10,7 @@
     &:visited {
       display: inline-block;
       outline: none;
-      transition: all 0.2s;
+      transition: all 0.2s linear;
     }
 
     &:focus,

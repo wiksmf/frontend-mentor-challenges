@@ -1,22 +1,37 @@
 // COLORS
+:root[data-theme='theme-light'] {
+  --color-primary-bg: #e4e5f1;
+  --color-secondary-bg: #fafafa;
+  --color-border: #e8e8ec;
+  --color-btn: #40455f;
+  --color-txt-generic: #9393a5;
+  --color-txt-active: #484b6a;
+  --color-txt-completed: #d2d3db;
+
+  --bg-small: url('../img/bg-mobile-light.jpg');
+  --bg-big: url('../img/bg-desktop-light.jpg');
+
+  --btn-theme: url('../img/icon-moon.svg');
+}
+
+:root[data-theme='theme-dark'] {
+  --color-primary-bg: #161722;
+  --color-secondary-bg: #25273c;
+  --color-border: #393a4c;
+  --color-btn: #777a92;
+  --color-txt-generic: #cacde8;
+  --color-txt-active: #e4e5f1;
+  --color-txt-completed: #4d5066;
+
+  --bg-small: url('../img/bg-mobile-dark.jpg');
+  --bg-big: url('../img/bg-desktop-dark.jpg');
+
+  --btn-theme: url('../img/icon-sun.svg');
+}
+
 $color-primary: #3a7bfd;
+$color-secondary: #fafafa;
 $color-gradient: linear-gradient(to bottom right, #57ddff, #c058f3);
-
-$color-lt-primary-bg: #e4e5f1;
-$color-lt-secondary-bg: #fafafa;
-$color-lt-border: #e8e8ec;
-$color-lt-btn: #40455f;
-$color-lt-txt-generic: #9393a5;
-$color-lt-txt-active: #484b6a;
-$color-lt-txt-completed: #d2d3db;
-
-$color-dt-primary-bg: #161722;
-$color-dt-secondary-bg: #25273c;
-$color-dt-border: #393a4c;
-$color-dt-btn: #777a92;
-$color-dt-txt-generic: #cacde8;
-$color-dt-txt-active: #e4e5f1;
-$color-dt-txt-completed: #4d5066;
 
 // FONTS
 $font-size-xs: 1.2rem;
