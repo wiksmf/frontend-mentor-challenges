@@ -1,8 +1,16 @@
 'use strict';
 
-const attribution = document.querySelector('.attribution-information');
-const btn = document.querySelector('.attribution__btn');
+const attributionManagement = () => {
+  const attribution = document.querySelector('.attribution-information');
+  const btnAttribution = document.querySelector('.attribution-btn');
 
-btn.addEventListener('click', () => {
-  attribution.classList.toggle('show');
-});
+  btnAttribution.addEventListener('click', () => {
+    attribution.classList.toggle('show');
+  });
+};
+
+const init = () => {
+  attributionManagement();
+};
+
+init();
