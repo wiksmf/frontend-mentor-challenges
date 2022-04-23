@@ -26,16 +26,24 @@ body {
 }
 .main {
   position: relative;
+  min-width: 32.5rem;
   width: 32.5rem;
+  max-width: 32.5rem;
+  min-height: 36rem;
   height: 36rem;
+  max-height: 36rem;
 }
 .card {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0 auto;
+  min-width: 32.5rem;
   width: 32.5rem;
+  max-width: 32.5rem;
+  min-height: 36rem;
   height: 36rem;
+  max-height: 36rem;
   border-radius: 1.5rem;
   background-color: var(--bg-color-card);
   background-color: var(--bg-color-card);
@@ -238,12 +246,20 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .main {
+    min-width: 41.5rem;
     width: 41.5rem;
+    max-width: 41.5rem;
+    min-height: 41.5rem;
     height: 41.5rem;
+    max-height: 41.5rem;
   }
   .card {
+    min-width: 41.5rem;
     width: 41.5rem;
+    max-width: 41.5rem;
+    min-height: 41.5rem;
     height: 41.5rem;
+    max-height: 41.5rem;
     border-radius: 3rem;
     padding: 3.2rem 3.4em;
   }
