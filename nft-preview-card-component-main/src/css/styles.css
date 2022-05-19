@@ -121,6 +121,9 @@ body {
   background-size: 1.7rem;
   padding-left: 2.5rem;
 }
+.card-footer {
+  padding: 0 1.5rem;
+} 
 .card-footer figure {
   display: flex;
   align-items: center;
