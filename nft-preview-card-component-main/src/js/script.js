@@ -1,7 +1,6 @@
 'use strict';
 
 const attributionManagement = () => {
-  // const attribution = document.querySelector('.attribution-information');
   const btnAttribution = document.querySelector('.attribution-btn');
   const overlay = document.querySelector('.overlay');
 
