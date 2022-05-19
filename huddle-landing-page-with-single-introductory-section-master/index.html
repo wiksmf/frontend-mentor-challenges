@@ -4,26 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Huddle landing page with single introductory section using CSS Flex." />
   <title>Frontend Mentor | Huddle landing page with single introductory section</title>
-  <meta name="description" content="Landing page using CSS Flex." />
-  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
   <!-- CSS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-  <link rel="stylesheet" href="src/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="src/css/style.css">
+  <!-- JS -->
+  <script defer src="src/js/script.js"></script>
 </head>
 
 <body>
-  <!-- <div class="container"> -->
+   <div class="wrapper">
     <header class="header">
-      <img class="header__logo" src="src/img/logo.svg" alt="">
+      <img class="header__logo" src="src/images/logo.svg" alt="">
     </header>
   
     <main class="overview">
       <div class="overview__image-box">
-        <img class="overview__image" src="src/img/illustration-mockups.svg" alt="">
+        <img class="overview__image" src="src/images/illustration-mockups.svg" alt="">
       </div>
       <div class="overview__info-box">
         <h1 class="heading-primary">Build The Community Your Fans Will Love</h1>
@@ -35,18 +37,23 @@
   
     <footer class="footer">
       <div class="social-icon">
-        <a class="social-icon__link" href="#"><i class="social-icon__icon icon facebook f big"></i></a>
-        <a class="social-icon__link" href="#"><i class="social-icon__icon icon twitter big"></i></a>
-        <a class="social-icon__link" href="#"><i class="social-icon__icon icon instagram big"></i></a>
+        <a class="social-icon__link" href="#"><i class="social-icon__icon fa-brands fa-facebook-f"></i></a>
+        <a class="social-icon__link" href="#"><i class="social-icon__icon fa-brands fa-twitter"></i></a>
+        <a class="social-icon__link" href="#"><i class="social-icon__icon fa-brands fa-instagram"></i></a>
       </div>
-  
-      <p class="attribution">
-        Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-          Mentor</a>.
-        Coded by <a class="footer__link" href="#" target="_blank">WIKS</a>.
-      </p>
     </footer>
-  <!-- </div> -->
+   </div>
+
+    <nav class="attribution">
+      <h2 class="attribution-information">
+        Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a class="attribution-link" href="" target="_blank">WIKS</a>.
+      </h2>
+
+      <button class="attribution-btn" aria-label="Challenge author and developer information">
+        <i class="fa-solid fa-code"></i>
+      </button>
+    </nav>
 </body>
 
 </html>
