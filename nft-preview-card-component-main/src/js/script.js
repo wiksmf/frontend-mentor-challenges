@@ -1,5 +1,6 @@
 'use strict';
 
+// Attribution view management
 const attributionManagement = () => {
   const btnAttribution = document.querySelector('.attribution-btn');
   const overlay = document.querySelector('.overlay');
