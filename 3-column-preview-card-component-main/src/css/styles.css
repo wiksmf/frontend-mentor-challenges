@@ -1,0 +1,180 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-sedan: rgb(227, 136, 38);
+  --bg-suv: rgb(0, 105, 112);
+  --bg-luxury: rgb(0, 66, 65);
+  --color-main: rgb(242, 242, 242);
+  --color-paragraph: rgba(255, 255, 255, 0.75);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* STYLES */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 2.5rem;
+  background-color: var(--color-main);
+}
+.card {
+  max-width: 425px;
+  margin: 0 auto;
+}
+.heading-primary {
+  margin: 1.5rem 0 3rem;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 3.9rem;
+  color: var(--color-main);
+  text-transform: uppercase;
+}
+.paragraph {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: var(--color-paragraph);
+}
+.section {
+  padding: 5rem 5rem 2.6rem;
+}
+.section .car-icon {
+  height: 6rem;
+  width: 6rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-sedan {
+  background-color: var(--bg-sedan);
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  animation: fadeLeft 1s;
+}
+.section-sedan .car-icon {
+  background-image: url(/src/images/icon-sedans.svg);
+}
+.section-suv {
+  background-color: var(--bg-suv);
+  animation: fadeRight 1s;
+}
+.section-suv .car-icon {
+  background-image: url(/src/images/icon-suvs.svg);
+}
+.section-luxury {
+  background-color: var(--bg-luxury);
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  animation: fadeLeft 1s;
+}
+.section-luxury .car-icon {
+  background-image: url(/src/images/icon-luxury.svg);
+}
+.btn {
+  margin: 2.5rem 0;
+  padding: 1.4rem 3rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 0.2rem solid var(--color-main);
+  background-color: var(--color-main);
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: all 0.2s all;
+}
+.btn.btn-sedan {
+  color: var(--bg-sedan);
+}
+.btn.btn-suv {
+  color: var(--bg-suv);
+}
+.btn.btn-luxury {
+  color: var(--bg-luxury);
+}
+.btn:hover {
+  color: var(--color-main);
+}
+.btn.btn-sedan:hover {
+  background-color: var(--bg-sedan);
+}
+.btn.btn-suv:hover {
+  background-color: var(--bg-suv);
+}
+.btn.btn-luxury:hover {
+  background-color: var(--bg-luxury);
+}
+/* MEDIA QUERY */
+@media screen and (min-width: 1024px) {
+  .card {
+    display: flex;
+    max-width: 920px;
+  }
+  .section-sedan {
+    border-radius: 0;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+    animation: fadeBottom 1s;
+  }
+  .section-suv {
+    animation: fadeTop 1s;
+  }
+  .section-luxury {
+    border-radius: 0;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    animation: fadeBottom 1s;
+  }
+  .btn {
+    margin-top: 8rem;
+  }
+}
+/* ANIMATIONS */
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
