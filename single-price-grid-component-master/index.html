@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Single Price Grid Component." />
+    <title>Frontend Mentor | Single Price Grid Component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/attribution.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <body>
+    <!-- Main content -->
+    <main class="card">
+      <section class="section section-1">
+        <h1 class="heading-primary">Join our community</h1>
+        <h2 class="heading-secondary--green">30-day, hassle-free money back guarantee</h2>
+        <p class="paragraph">Gain access to our full library of tutorials along with expert code reviews.
+          <span>Perfect for any developers who are serious about honing their skills.</span>
+        </p>
+      </section>
 
-  <title>Frontend Mentor | Single Price Grid Component</title>
-  <meta name="description" content="Single Price Grid Component using CSS Flex and Grid" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet"> 
-  <!-- CSS -->
-  <link rel="stylesheet" href="src/css/main.css" />
-</head>
+      <div class="section-wrapper">
+        <section class="section section-2">
+          <h2 class="heading-secondary">Monthly Subscription</h2>
+          <div class="subscription-info">
+            <span class="subscription-price">&dollar;29</span>
+            <span class="subscription-period">per month</span>
+          </div>
+          <p class="paragraph paragraph--white">Full access for less than &dollar;1 a day</p>
+          <button type="button" class="btn">Sign Up</button>
+        </section>
 
-<body>
-  <main class="container">
-    <section class="section section-top">
-      <h1 class="heading-primary u-mb-md">Join our community</h1>
-      <h2 class="heading-secondary heading-secondary--alternative u-mb-sm">30-day, hassle-free money back guarantee</h2>
-      <p class="paragraph paragraph--dark">Gain access to our full library of tutorials along with expert code reviews.
-        Perfect for any developers who are serious about honing their skills.</p>
+        <section class="section section-3">
+          <h2 class="heading-secondary">Why Us</h2>
+          <ul class="why-us-links">
+            <li><a href="#" class="why-us-link">Tutorials by industry experts</a></li>
+            <li><a href="#" class="why-us-link">Peer &amp; expert code review</a></li>
+            <li><a href="#" class="why-us-link">Coding exercises</a></li>
+            <li><a href="#" class="why-us-link">Access to our GitHub repos</a></li>
+            <li><a href="#" class="why-us-link">Community forum</a></li>
+            <li><a href="#" class="why-us-link">Flashcard decks</a></li>
+            <li><a href="#" class="why-us-link">New videos every week</a></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- Attribution -->
+    <button class="attribution-btn" aria-label="Challenge author and developer information" ></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/single-price-grid-component-master" target="_blank">WIKS</a>.</span>
+      </h2>
     </section>
-
-    <section class="section section-middle">
-      <h2 class="heading-secondary u-mb-sm">Monthly Subscription</h2>
-      <p class="paragraph paragraph--big center u-mb-sm">&dollar;29 <span class="paragraph--medium">per month</span></p>
-      <p class="paragraph paragraph--light center u-mb-md">Full access for less than &dollar;1 a day</p>
-      <button class="btn">Sign Up</button>
-    </section>
-
-    <section class="section section-bottom">
-      <h2 class="heading-secondary u-mb-sm">Why Us</h2>
-      <ul class="navigation">
-        <li class="navigation__item"><a class="navigation__link" href="#">Tutorials by industry experts</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Peer &amp; expert code review</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Coding exercises</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Access to our GitHub repos</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Community forum</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Flashcard decks</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">New videos every week</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__attribution">
-      Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a class="footer__link" href="" target="_blank">WIKS</a>.
-    </p>
-  </footer>
-</body>
-
+    <div class="overlay hidden"></div>
+  </body>
 </html>
