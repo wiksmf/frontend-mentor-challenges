@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content=" Base Apparel coming soon page using CSS Flex." />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/attribution.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Main content -->
+    <main class="main">
+      <header class="header">
+        <a href="#"><img class="base-apparel-logo" src="src/images/logo.svg" alt="Base Apparel logo" /></a>
+      </header>
+
+      <div class="hero-image"></div>
+
+      <section class="coming-soon">
+        <h1 class="heading-primary"><span class="heading-primary--light">We're</span> coming soon</h1>
+        <p class="paragraph">
+          Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date
+          with announcements and our launch deals.
+        </p>
+
+        <div class="email-form-wrapper">
+          <form class="email-form">
+            <label for="email" class="label-email">Email Address </label>
+            <input type="email" id="email" class="user-email" placeholder="Email Address" />
+            <button type="button" class="btn-email"></button>
+            <span class="error-icon"></span>
+          </form>
+          <span class="error-info">Please provide a valid email</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Attribution -->
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank">WIKS</a>.</span>
+      </h2>
+    </section>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
