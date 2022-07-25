@@ -1,0 +1,12 @@
+.header {
+  @include device(tablet) {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+  @include device(desktop) {
+    margin-left: 15.9rem;
+    padding-bottom: 10.3rem;
+    animation: moveInLeft .5s ease-out .75s;
+    animation-fill-mode: backwards;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="brands">
+  <img
+  *ngFor="let brand of brands"
+  src="../../assets/images/{{ brand }}.svg"
+  alt="{{ brand }} logo"
+  class="brands-{{ brand }}"
+  aria-hidden="true" >
+</div>

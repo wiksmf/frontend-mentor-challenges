@@ -1,0 +1,78 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+  &-email-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-email {
+    margin: 0 auto;
+    width: 90%;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
+    line-height: 2.8rem;
+    color: $color-secondary;
+    padding: 0.9rem 1.5rem 0.9rem 3.2rem;
+    background-color: $color-blue-3;
+    border-radius: 2.8rem;
+    border: none;
+
+    &::placeholder {
+      color: $color-secondary;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: 2px solid $color-primary;
+    }
+
+    &-label {
+      display: none;
+    }
+
+    &--error {
+      display: inline-block;
+      padding-left: 3.2rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: $color-error;
+      text-align: left;
+      width: 90%;
+      margin: 0.8rem auto 0;
+
+      @include device(phone) {
+        width: 32.6rem;
+        max-width: 32.6rem;
+      }
+
+      @include device(tablet) {
+        margin: 0.8rem 0 0;
+      }
+    }
+
+    @include device(phone) {
+      width: 32.6rem;
+      max-width: 32.6rem;
+    }
+
+    @include device(tablet) {
+      padding: 1.4rem 1.5rem 1.4rem 3.2rem;
+      min-width: 42.7rem;
+      width: 42.7rem;
+      max-width: 42.7rem;
+    }
+  }
+
+  @include device(tablet) {
+    position: relative;
+    margin: 4rem 0 0;
+    min-width: 42.7rem;
+    width: 42.7rem;
+    max-width: 42.7rem;
+    flex-direction: row;
+  }
+}

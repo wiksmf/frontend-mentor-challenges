@@ -1,0 +1,45 @@
+.btn {
+  &-submit {
+    background-color: $color-primary;
+    margin: 0 auto;
+    padding: 9px 10px;
+    min-width: 90%;
+    width: fit-content;
+    border-radius: 2.8rem;
+    border: none;
+    // box-shadow: $default-box-shadow;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
+    line-height: 2.8rem;
+    color: $color-blue-4;
+    cursor: pointer;
+    transition: all .3s linear;
+
+    &:hover{
+      background-color: $color-hover;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: .9;
+    }
+
+    @include device(phone) {
+      min-width: 32.6rem;
+    }
+
+    @include device(tablet) {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      min-width: 16.2rem;
+      width: 16.2rem;
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 1;
+      }
+    }
+  }
+}

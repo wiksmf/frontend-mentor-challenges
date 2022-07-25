@@ -1,0 +1,33 @@
+<form
+  class="auth-form"
+  (ngSubmit)="onSubmit()"
+  #authForm="ngForm">
+
+  <div class="auth-form-email-container">
+    <label class="auth-form-email-label" for="email-address">Email address</label>
+
+    <input
+      class="auth-form-email"
+      placeholder="Email address"
+      type="email"
+      id="email-address"
+      required
+      email
+      ngModel
+      name="email-address"
+      #email="ngModel">
+
+    <span
+      class="auth-form-email--error"
+      *ngIf="!email.valid && email.touched">
+        <strong>Oops! Please check your email</strong>
+    </span>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-submit"
+    [disabled]="!authForm.valid">
+      <strong>Request Access</strong>
+    </button>
+</form>

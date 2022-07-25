@@ -1,0 +1,22 @@
+@mixin device($breakpoint) {
+  @if $breakpoint == phone {
+    // phone - 360px
+    @media only screen and (min-width: 22.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    // tablet - 768px
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    // desktop - 1275px
+    @media only screen and (min-width: 79.7em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+body {
+  font-family: 'Chivo', sans-serif;
+}
+
+.heading {
+  &-primary {
+    font-size: 2.6rem;
+    font-weight: $font-weight-light;
+    line-height: 3.8rem;
+    letter-spacing: 0;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+  &--white {
+    display: block;
+    color: $color-secondary;
+  }
+
+  @include device(tablet) {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+
+  @include device(desktop) {
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: $font-weight-light;
+  line-height: 2.5rem;
+  letter-spacing: 0;
+  color: $color-blue-1;
+
+  @include device(tablet) {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
