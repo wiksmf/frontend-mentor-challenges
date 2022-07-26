@@ -72,4 +72,8 @@ body {
   @include device(tablet) {
     margin: 0;
   }
+
+  @include device(desktop) {
+    max-width: 45rem;
+  }
 }
