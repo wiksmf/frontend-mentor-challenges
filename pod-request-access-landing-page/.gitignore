@@ -15,5 +15,6 @@
 .DS_Store
 .prettierignore
 
-# Ignore all node_modules directories
+# Ignore directories
 node_modules
+dist
