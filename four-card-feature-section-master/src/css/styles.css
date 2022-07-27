@@ -1,6 +1,7 @@
 /* CUSTOM PROPERTIES */
 :root {
   --bg-main: hsl(0, 0%, 98%);
+  --bg-card: hsl(0, 0%, 100%);
 
   --text-main: hsl(234, 12%, 34%);
   --text-light: hsl(229, 6%, 66%);
@@ -77,6 +78,7 @@ body {
   box-shadow: var(--shadow-card);
   border-radius: 0.8rem;
   text-align: left;
+  background-color: var(--bg-card);
   background-repeat: no-repeat;
   background-size: 5.7rem 5.7rem;
   background-position: right 2.8rem bottom 2.8rem;
