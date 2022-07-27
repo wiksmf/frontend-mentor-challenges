@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Four card feature section." />
+    <title>Frontend Mentor | Four card feature section</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/attribution.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Frontend Mentor | Four card feature section</title>
-  <meta name="description" content="Simple card feature section using CSS Grid Layout." />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <body>
+    <!-- Main content -->
+    <main class="main">
+      <div class="text-wrapper">
+        <h1 class="heading-primary">
+          Reliable, efficient delivery
+          <span class="heading--bold">
+            <strong>Powered by Technology</strong>
+          </span>
+        </h1>
+  
+        <p class="paragraph">
+          Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
+        </p>
+      </div>
 
-  <!-- CSS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/main.css" />
-</head>
-
-<body>
-  <div class="container">
-    <header class="header u-mb-lg">
-      <h1 class="heading-primary u-mb-md">Reliable, efficient delivery <span class="heading-primary--bold">Powered by Technology</span></h1>
-      <p class="paragraph">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
-    </header>
-
-    <main>
       <section class="cards">
-        <div class="card card-supervisor">
-          <h2 class="heading-secondary u-mb-sm">Supervisor</h2>
-          <p class="paragraph">Monitors activity to identify project roadblocks</p>
+        <div class="card card-1">
+          <div class="card-title">Supervisor</div>
+          <div class="card-description">Monitors activity to identify project roadblocks</div>
         </div>
-        <div class="card card-team">
-          <h2 class="heading-secondary u-mb-sm">Team Builder</h2>
-          <p class="paragraph">Scans our talent network to create the optimal team for your project</p>
+
+        <div class="card card-2">
+          <div class="card-title">Team Builder</div>
+          <div class="card-description">Scans our talent network to create the optimal team for your project</div>
         </div>
-        <div class="card card-karma">
-          <h2 class="heading-secondary u-mb-sm">Karma</h2>
-          <p class="paragraph">Regularly evaluates our talent to ensure quality</p>
+
+        <div class="card card-3">
+          <div class="card-title">Karma</div>
+          <div class="card-description">Regularly evaluates our talent to ensure quality</div>
         </div>
-        <div class="card card-calculator">
-          <h2 class="heading-secondary u-mb-sm">Calculator</h2>
-          <p class="paragraph">Uses data from past projects to provide better delivery estimates</p>
+
+        <div class="card card-4">
+          <div class="card-title">Calculator</div>
+          <div class="card-description">Uses data from past projects to provide better delivery estimates</div>
         </div>
       </section>
     </main>
 
-    <footer class="footer u-mt-lg">
-      <p class="attribution">
-        Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a class="footer__link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/four-card-feature-section-master" target="_blank">WIKS</a>.
-      </p>
-    </footer>
-  </div>
-</body>
-
+    <!-- Attribution -->
+    <nav>
+      <button class="attribution-btn" aria-label="Challenge author and developer information" ></button>
+      <section class="attribution-information">
+        <h2>
+          <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+          <span>Coded by <a class="attribution-link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/product-preview-card-component-main" target="_blank">WIKS</a>.</span>
+        </h2>
+      </section>
+      <div class="overlay hidden"></div>
+   </nav>
+  </body>
 </html>
