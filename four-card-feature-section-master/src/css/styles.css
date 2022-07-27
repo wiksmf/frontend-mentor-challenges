@@ -82,22 +82,22 @@ body {
   background-position: right 2.8rem bottom 2.8rem;
 }
 .card.card-1 {
-  border-top: 0.8rem solid var(--highlight-cyan);
+  border-top: 0.35rem solid var(--highlight-cyan);
   background-image: url(/src/images/icon-supervisor.svg);
   animation: moveInLeft .5s;
 }
 .card.card-2 {
-  border-top: 0.8rem solid var(--highlight-red);
+  border-top: 0.35rem solid var(--highlight-red);
   background-image: url(/src/images/icon-team-builder.svg);
   animation: moveInRight .5s;
 }
 .card.card-3 {
-  border-top: 0.8rem solid var(--highlight-orange);
+  border-top: 0.35rem solid var(--highlight-orange);
   background-image: url(/src/images/icon-karma.svg);
   animation: moveInLeft .5s;
 }
 .card.card-4 {
-  border-top: 0.8rem solid var(--highlight-blue);
+  border-top: 0.35rem solid var(--highlight-blue);
   background-image: url(/src/images/icon-calculator.svg);
   animation: moveInRight .5s;
 }
@@ -164,18 +164,22 @@ body {
   .card.card-1 {
     grid-area: a;
     align-self: center;
+    border-top: 0.4rem solid var(--highlight-cyan);
   }
   .card.card-2 {
     grid-area: b;
     align-self: start;
+    border-top: 0.4rem solid var(--highlight-red);
   }
   .card.card-3 {
     grid-area: c;
     align-self: end;
+    border-top: 0.4rem solid var(--highlight-orange);
   }
   .card.card-4 {
     grid-area: d;
     align-self: center;
+    border-top: 0.4rem solid var(--highlight-blue);
   }
   .card .card-title {
     margin-bottom: 0.6rem;
