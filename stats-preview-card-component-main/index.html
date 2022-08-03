@@ -20,7 +20,13 @@
   <body>
     <!-- Main content -->
     <main class="card">
-      <div class="hero-img"></div>
+      <div class="hero-img">
+        <picture>
+          <source srcset="/src/images/image-header-mobile.jpg" media="(max-width: 1104px)">
+          <source srcset="/src/images/image-header-desktop.jpg" media="(max-width: 1920px)">
+          <img src="/src/images/image-header-desktop.jpg" alt="">
+        </picture>
+      </div>
 
       <section class="section">
         <h1 class="heading-primary"><strong>Get <span class="accent">insights</span> that help your business grow.</strong></h1>

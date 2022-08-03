@@ -10,11 +10,12 @@ const incrementingCounter = () => {
     const updateCounter = () => {
       const target = +counter.getAttribute('data-target');
       const count = +counter.innerText;
+      const timer = index === 0 || index === 2 ? 60 : 1;
       const increment = target / 200;
 
-      if (count < target && index === 1) {
+      if (count < target) {
         counter.innerText = `${Math.ceil(count + increment)}`;
-        setTimeout(updateCounter, 1);
+        setTimeout(updateCounter, timer);
       } else {
         counter.innerHTML = target;
       }
