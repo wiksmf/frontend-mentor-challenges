@@ -1,0 +1,32 @@
+<form
+  class="form form-subscribe"
+  (ngSubmit)="onSubmit(subscribeForm)" #subscribeForm="ngForm">
+
+  <div
+    class="form-subscribe-wrapper"
+    [ngClass]="{'error': !email.valid && email.touched}">
+
+    <div class="email-wrapper">
+      <label class="email-label" for="email">Your email address...</label>
+      <input
+      class="email-input"
+      [ngClass]="{'error': !email.valid && email.touched}"
+      type="email"
+      name="email"
+      placeholder="Your email address..."
+      required
+      email
+      ngModel
+      #email="ngModel">
+
+      <span
+        class="email-error"
+        *ngIf="!email.valid && email.touched"><em>Please provide a valid email address</em></span>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-notify"
+      [disabled]="!subscribeForm.valid">Notify Me</button>
+  </div>
+</form>

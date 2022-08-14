@@ -1,0 +1,17 @@
+.header {
+  &-logo {
+    width: 5.6rem;
+    height: 2.4rem;
+    object-fit: contain;
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    &-logo {
+      width: 9rem;
+      height: 3rem;
+    }
+  }
+}

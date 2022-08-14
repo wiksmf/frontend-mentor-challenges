@@ -1,0 +1,28 @@
+.socials {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1.25rem;
+  margin-bottom: 2.7rem;
+
+  &-link {
+    text-decoration: none;
+
+    &--icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 3.1rem;
+      min-height: 3.1rem;
+      border: 0.918357px solid rgba(76, 123, 243, 0.15);
+      border-radius: 100%;
+      font-size: 1.5rem;
+      color: #4C7BF3;
+      transition: all .2s linear;
+
+      &:hover {
+        color: #FFFFFF;
+        background-color: #4C7BF3;
+      }
+    }
+  }
+}
