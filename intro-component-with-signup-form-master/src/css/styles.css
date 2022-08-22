@@ -173,10 +173,10 @@ body {
   text-align: center;
   width: 100%;
   cursor: pointer;
-  outline: 1px solid var(--border-line-focus);
 }
 .btn.btn-submit:hover {
   background-color: var(--btn-submit-hover);
+  outline: 1px solid var(--border-line-focus);
 }
 .paragraph-terms {
   padding: 0 1.5rem;
