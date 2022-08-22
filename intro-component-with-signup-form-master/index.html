@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Intro component with sign up form." />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/attribution.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/attribution.js"></script>
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body>
+    <main class="main">
+      <section class="section-intro">
+        <h1 class="heading-primary"><strong>Learn to code by watching others</strong></h1>
+
+        <p class="paragraph">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable.
+        </p>
+      </section>
+
+      <section class="section-form">
+        <h2 class="heading-secondary">
+          Try it free 7 days <span class="heading-secondary--light">then $20/mo. thereafter</span>
+        </h2>
+
+        <form class="form">
+          <div class="form-input">
+            <div class="input-wrapper">
+              <div class="label-wrapper">
+                <input type="text" class="first-name" id="first-name">
+                <label for="first-name">First Name</label>
+              </div>
+              <span class="error-info first-name-error"><em>First Name cannot be empty</em></span>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="label-wrapper">
+                <input type="text" class="last-name" id="last-name">
+                <label for="last-name">Last Name</label>
+              </div>
+              <span class="error-info last-name-error"><em>Last Name cannot be empty</em></span>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="label-wrapper">
+                <input type="text" class="email" id="email">
+                <label for="email">Email Address</label>
+              </div>
+              <span class="error-info email-error"><em>Looks like this is not an email</em></span>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="label-wrapper">
+                <input type="password" class="password" id="password">
+                <label for="password">Password</label>
+              </div>
+              <span class="error-info password-error"><em>Password cannot be empty</em></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-submit">Claim your free trial</button>
+          <p class="paragraph paragraph-terms">By clicking the button, you are agreeing to our <a class="paragraph-terms--link" href="#">Terms and Services</a></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Attribution -->
+    <nav>
+      <button class="attribution-btn" aria-label="Challenge author and developer information" ></button>
+      <section class="attribution-information">
+        <h2>
+          <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+          <span>Coded by <a class="attribution-link" href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/intro-component-with-sign-up-form" target="_blank">WIKS</a>.</span>
+        </h2>
+      </section>
+      <div class="overlay hidden"></div>
+   </nav>
+  </body>
+</html>
