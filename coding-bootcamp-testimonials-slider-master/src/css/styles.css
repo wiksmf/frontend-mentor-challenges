@@ -1,0 +1,202 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-color-primary: hsl(0, 0%, 100%);
+
+  --text-primary: hsl(240, 38%, 20%);
+  --text-secondary: hsl(240, 18%, 77%);
+ 
+  --box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.0991313);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: 'Inter', sans-serif;
+}
+/* STYLES */
+body {
+  position: relative;
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-image: url(/src/images/pattern-bg.svg), url(/src/images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 31rem, contain;
+  background-position: center top 7.5rem, left bottom;
+}
+.slider {
+  max-width: 110rem;
+  min-height: 60rem;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 1s;
+}
+.slider__btn--container {
+  display: flex;
+  position: absolute;
+  top: 26.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4rem;
+  width: 8rem;
+  background: var(--bg-color-primary);
+  box-shadow: var(--box-shadow);
+  border-radius: 2.8rem;
+  z-index: 1;
+}
+.slider__btn {
+  border: none;
+  height: 100%;
+  width: 50%;
+  background-color: transparent;
+  background-size: .9rem 1.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.slider__btn--left {
+  background-image: url(/src/images/icon-prev.svg);
+}
+.slider__btn--right {
+  background-image: url(/src/images/icon-next.svg);
+}
+.testimonial {
+  position: relative;
+  width: 100%;
+  max-width: 31.1rem;
+}
+.testimonial__photo {
+  width: 25.4rem;
+  height: 25.3rem;
+  object-fit: cover;
+}
+.testimonial__text {
+  margin: 5.7rem 0 1.9rem;
+  padding-top: 2.5rem;
+  background-image: url(/src/images/pattern-quotes.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 6rem 5rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--text-primary);
+}
+.testimonial__author {
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.testimonial__name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--text-primary);
+}
+.testimonial__role {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--text-secondary);
+}
+/* MEDIA QUERY */
+@media only screen and (min-width: 1115px) {
+  body {
+    justify-items: center;
+    background-size: 38%, 45%;
+    background-position: right 16vw center, left bottom;
+  }
+  .slider {
+    width: 100%;
+    min-height: 65rem;
+  }
+  .slider__btn--container {
+    top: unset;
+    bottom: 3rem;
+    left: 60%;
+    height: 5.6rem;
+    width: 11.2rem;
+  }
+  .slider__btn {
+    border: none;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    background-size: .9rem 1.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    max-width: unset;
+  }
+  .testimonial__photo {
+    width: 54rem;
+    height: 54rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  .testimonial__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3.2rem;
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+  }
+  .testimonial__text {
+    margin: 0;
+    padding-top: 6.4rem;
+    background-position: top left 9.5rem;
+    background-size: 12rem 10rem;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4.4rem;
+    max-width: 63.5rem;
+    margin-right: auto;
+  }
+  .testimonial__author {
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    width: 100%;
+  }
+  .testimonial__name {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.8rem;
+  }
+  .testimonial__role {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.8rem;
+  }
+}
