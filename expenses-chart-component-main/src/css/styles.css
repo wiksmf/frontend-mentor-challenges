@@ -1,0 +1,228 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-primary: hsla(28, 65%, 92%, 1);
+  --bg-secondary: hsla(30, 100%, 98%, 1);
+  --main: hsla(10, 79%, 64%, 1);
+  --highlight: hsla(186, 35%, 60%, 1);
+  --hover-main: hsla(10, 100%, 76%, 1);
+  --hover-highlight: hsla(186, 49%, 80%, 1);
+  --text-dark: hsla(25, 47%, 15%, 1);
+  --text-light: hsla(27, 10%, 52%, 1);
+  --border: hsla(27, 66%, 92%, 1);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* STYLES */
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  font-family: 'DM Sans', sans-serif;
+  transition: all .2 linear;
+}
+.heading-primary {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--bg-secondary);
+}
+.heading-primary--bold {
+  display: block;
+  margin-top: .4rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.1rem;
+}
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.1rem;
+  color: var(--text-dark);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  width: 34.3rem;
+}
+.header {
+  background-color: var(--main);
+  padding: 2rem 2rem 2.2rem;
+  border-radius: 1rem;
+  background-image: url(/src/images/logo.svg);
+  background-repeat: no-repeat;
+  background-position: right 2.4rem center;
+  background-size: auto;
+}
+.expenses-info {
+  background-color: var(--bg-secondary);
+  padding: 2.4rem 2rem;
+  border-radius: 1rem;
+}
+.chart-container {
+  display: inline-flex;
+  align-items: flex-end;
+  min-height: 21.1rem;
+  column-gap: 1.2rem;
+  margin-top: 1.8rem;
+  padding-bottom: 2.4rem;
+  text-align: center;
+}
+.column-day {
+  position: relative;
+  width: 3.3rem;
+}
+.daily-amount {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  background-color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  color: var(--bg-secondary);
+}
+.column-day:hover .daily-amount {
+  display: block;
+}
+.chart-bar {
+  display: inline-block;
+  width: 100%;
+  border-radius: .3rem;
+  background-color: var(--main);
+  margin-top: 3.5rem;
+}
+.chart-bar:hover {
+  background-color: var(--hover-main);
+}
+.column-day.highlight .chart-bar {
+  background-color: var(--highlight);
+}
+.column-day.highlight .chart-bar:hover {
+  background-color: var(--hover-highlight);
+}
+.weekday {
+  margin-top: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: var(--text-light);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.4rem;
+  border-top: .2rem solid var(--border);
+}
+.current-expenses {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--text-light);
+}
+.current-expenses--bold {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.9rem;
+  color: var(--text-dark);
+}
+.current-increase {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--text-light);
+  text-align: right;
+}
+.current-increase--bold {
+  display: block;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+/* MEDIA QUERY */
+@media only screen and (min-width: 768px) {
+  .heading-primary {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+  .heading-primary--bold {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  .heading-secondary {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  .card {
+    row-gap: 2.4rem;
+    width: 54rem;
+  }
+  .header {
+    padding: 2.7rem 3.2rem;
+    background-position: right 3.9rem center;
+    border-radius: 2rem;
+  }
+  .expenses-info {
+    padding: 3.2rem 4rem 4.1rem;
+    border-radius: 2rem;
+  }
+  .chart-container {
+    min-height: 26.1rem;
+    column-gap: 1.8rem;
+    padding-bottom: 3.2rem;
+  }
+  .column-day {
+    width: 5rem;
+  }
+  .daily-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+  }
+  .column-day:hover .daily-amount {
+    display: block;
+  }
+  .chart-bar {
+    border-radius: .5rem;
+    margin-top: 4.3rem;
+  }
+  .weekday {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+  .footer {
+    padding-top: 3.2rem;
+  }
+  .current-expenses {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-bottom: .1rem;
+  }
+  .current-expenses--bold {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+  }
+  .current-increase {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}

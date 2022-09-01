@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Expenses chart component." />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/attribution.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- JS -->
+    <script defer src="src/js/attribution.js"></script>
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Main content -->
+    <main class="card">
+      <header class="header">
+        <h1 class="heading-primary">My balance <span class="heading-primary--bold">$921.48</span></h1>
+      </header>
+
+      <section class="expenses-info">
+        <h2 class="heading-secondary">Spending - Last 7 days</h2>
+
+        <div class="chart-container"></div>
+
+        <footer class="footer">
+          <p class="current-expenses">Total this month<span class="current-expenses--bold">$478.33</span></p>
+          <p class="current-increase"><span class="current-increase--bold">+2.4%</span>from last month</p>
+        </footer>
+      </section>
+    </main>
+
+    <!-- Attribution --> 
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank">WIKS</a>.</span>
+      </h2>
+    </section>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
