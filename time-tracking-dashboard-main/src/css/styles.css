@@ -1,0 +1,259 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-body: hsla(226, 43%, 10%, 1);
+  --bg-card: hsla(236, 45%, 20%, 1);
+  --bg-user: hsla(246, 80%, 60%, 1);
+  --bg-card-hover:hsl(235, 41%, 34%);
+
+  --bg-card--work: hsla(15, 100%, 70%, 1);
+  --bg-card--play: hsla(195, 74%, 62%, 1);
+  --bg-card--study: hsla(348, 100%, 68%, 1);
+  --bg-card--exercise: hsla(145, 58%, 55%, 1);
+  --bg-card--social: hsla(264, 64%, 52%, 1);
+  --bg-card--self-care: hsla(43, 84%, 65%, 1);
+
+  --text-bluish: hsla(236, 100%, 87%, 1);
+  --text-purplish: hsla(235, 45%, 61%, 1);
+  --text-white: hsla(0, 0%, 100%, 1);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* STYLES */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-body);
+  font-family: 'Rubik', sans-serif;
+  padding: 8.1rem 0;
+}
+.main,
+.card-dashboard {
+  display: grid;
+  gap: 2.4rem;
+}
+.main {
+  grid-template-columns: 32.7rem;
+}
+.card-user {
+  background-color: var(--bg-card);
+  border-radius: 1.5rem;
+}
+.card-user--info {
+  padding: 3.5rem 3.2rem;
+  background-color: var(--bg-user);
+  border-radius: 1.5rem;
+}
+.card-user--header {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.card-user--report {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--text-bluish);
+}
+.card-user--name {
+  display: block;
+  margin-top: .4rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  color: var(--text-white);
+}
+.card-user--avatar {
+  width: 6.4rem;
+  height: 6.4rem;
+  object-fit: cover;
+  border: 3px solid var(--text-white);
+  border-radius: 100%;
+}
+.card-user .view-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2.5rem .5rem;
+}
+.card-dashboard--header {
+  height: 5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background-repeat: no-repeat;
+  background-position: top -1rem right 1rem;
+}
+.card-dashboard--card .card-dashboard--work {
+  background-color: var(--bg-card--work);
+  background-image: url(/src/images/icon-work.svg);
+  background-size: 7.8rem 7.8rem;
+}
+.card-dashboard--card .card-dashboard--play {
+  background-color: var(--bg-card--play);
+  background-image: url(/src/images/icon-play.svg);
+  background-size: 7.8rem 7.8rem;
+}
+.card-dashboard--card .card-dashboard--study {
+  background-color: var(--bg-card--study);
+  background-image: url(/src/images/icon-study.svg);
+  background-size: 9rem 9rem;
+}
+.card-dashboard--card .card-dashboard--exercise {
+  background-color: var(--bg-card--exercise);
+  background-image: url(/src/images/icon-exercise.svg);
+  background-size: 7.9rem 5.3rem;
+  background-position: top right 1rem;
+}
+.card-dashboard--card .card-dashboard--social {
+  background-color: var(--bg-card--social);
+  background-image: url(/src/images/icon-social.svg);
+  background-size: 7.3rem 10rem;
+}
+.card-dashboard--card .card-dashboard--self.care {
+  background-color: var(--bg-card--self-care);
+  background-image: url(/src/images/icon-self-care.svg);
+  background-size: 6.2rem 5.6rem;
+}
+.card-dashboard--details {
+  margin-top: -1.2rem;
+  padding: 2.8rem 2.4rem;
+  border-radius: 1.5rem;
+  background-color: var(--bg-card);
+  transition: all .2s linear;
+}
+.card-dashboard--details:hover {
+  background: var(--bg-card-hover);
+}
+.card-dashboard--category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .6rem;
+}
+.card-dashboard--category .category {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  color: var(--text-white);
+}
+.card-dashboard--tracks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-dashboard--tracks .current-time {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 3.8rem;
+  color: var(--text-white);
+}
+.card-dashboard--tracks .previous-time {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--text-bluish);
+}
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.btn.btn-view-option {
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--text-purplish);
+}
+.btn.btn-view-option:hover,
+.btn.btn-view-option.active {
+  color: var(--text-white);
+}
+.btn-dashboard-options {
+  width: 2.1rem;
+  height: .5rem;
+  background-image: url(/src/images/icon-ellipsis.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-dashboard-options:hover{
+  background-image: url(/src/images/icon-ellipsis-hover.svg);
+}
+.current-hours,
+.previous-hours {
+  display: none;
+}
+.current-hours.show,
+.previous-hours.show {
+  display: inline-block;
+}
+/* MEDIA QUERY */
+@media only screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 285px);
+  }
+  .card-user {
+    grid-column: 1 / 3;
+  }
+  .card-dashboard--category {
+    margin-bottom: 1.5rem;
+  }
+  .card-dashboard--tracks {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: .5rem;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  .main {
+    grid-template-columns: repeat(4, 25.5rem);
+    gap: 3rem;
+  }
+  .card-user {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  .card-user--info {
+    padding: 3.7rem 3.2rem 8rem;
+  }
+  .card-user--header {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4.3rem;
+  }
+  .card-user--name {
+    font-size: 4rem;
+    line-height: 4.7rem;
+  }
+  .card-user .view-option {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2.1rem;
+    padding: 2.5rem 3.2rem 3.2rem;
+  }
+  .card-dashboard--category {
+    margin-bottom: 2.4rem;
+  }
+  .card-dashboard--tracks {
+    row-gap: 0.8rem;
+  }
+  .card-dashboard--details {
+    margin-top: -1rem;
+    padding: 2.9rem 3rem 3.2rem;
+  }
+  .card-dashboard--tracks .current-time {
+    font-size: 5.6rem;
+    line-height: 6.6rem;
+  }
+}
