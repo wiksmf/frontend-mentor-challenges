@@ -232,6 +232,10 @@ body {
     align-items: flex-start;
     row-gap: 4.3rem;
   }
+  .card-user--avatar {
+    width: 7.8rem;
+    height: 7.8rem;
+  }
   .card-user--name {
     font-size: 4rem;
     line-height: 4.7rem;
