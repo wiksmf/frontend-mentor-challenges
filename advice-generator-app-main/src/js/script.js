@@ -8,7 +8,7 @@ const adviceGenerator = () => {
   const adviceApiUrl = 'https://api.adviceslip.com/advice';
 
   const getAdvice = async () => {
-    const adviceFromApi = await (await fetch(adviceApiUrl)).json();
+    const adviceFromApi = await (await fetch(adviceApiUrl, {cache: 'no-cache'})).json();
     const { id: adviceId, advice: adviceText } = adviceFromApi.slip;
 
     displayAdvice(adviceId, adviceText);
