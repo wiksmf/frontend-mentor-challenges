@@ -103,7 +103,7 @@ body {
   width: 7rem;
   font-size: 3.6rem;
   color: var(--color-highlight);
-  line-height: 1.81;
+  line-height: 1.8;
   background-color: var(--bg-card);
   mix-blend-mode: normal;
   overflow: hidden;
@@ -114,6 +114,7 @@ body {
   border-radius: 0.8rem 0.8rem 0 0;
   border-bottom: 0.047rem solid rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0 27px 2px hsla(0, 6%, 10%, 0.251);
+  border-top: 0.25rem solid transparent;
 }
 .flip-card .bottom,
 .flip-card .bottom-flip {
@@ -121,7 +122,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   border-radius: 0 0 0.8rem 0.8rem;
-  border-bottom: 0.12rem solid var(--bg-container);
+  /* border-bottom: 0.12rem solid var(--bg-container); */
 }
 .flip-card .top-flip,
 .flip-card .bottom-flip {
@@ -131,17 +132,16 @@ body {
 }
 .flip-card .top-flip {
   top: 0;
-  line-height: 1.7;
+  line-height: 1.75;
   transform: rotateX(0);
   transform-origin: center bottom;
-  animation: flip-top 250ms ease-in;
-  border-top: 0.25rem solid var(--bg-container);
+  animation: flip-top 500ms ease-in;
 }
 .flip-card .bottom-flip {
   top: 3.35rem;
   transform: rotateX(90deg);
   transform-origin: center top;
-  animation: flip-bottom 250ms ease-out 250ms;
+  animation: flip-bottom 500ms ease-out 499ms;
   line-height: 1.83;
 }
 .card-title {
@@ -183,7 +183,7 @@ body {
   background-image: url(/src/images/icon-instagram-hover.svg);
 }
 /* MEDIA QUERY */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 705px) {
   body {
     background-position: center bottom, center top, center top;
     background-size: contain;
@@ -227,19 +227,12 @@ body {
     height: 7rem;
     width: 14.8rem;
     font-size: 8rem;
-    line-height: 1.75;
+    line-height: 1.7;
   }
   .flip-card .top,
   .flip-card .top-flip {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 0 30px 2px hsla(0, 6%, 10%, 0.251);
-  }
-  .flip-card .bottom,
-  .flip-card .bottom-flip {
-    border-bottom: 0.2rem solid var(--bg-container);
-  }
-  .flip-card .top-flip {
-    border-top: 0.3rem solid var(--bg-container);
   }
   .flip-card .bottom-flip {
     top: 7.02rem;
@@ -253,11 +246,14 @@ body {
 }
 /* ANIMATIONS */
 @keyframes flip-top {
-  0%,
-  50% {
+  0% {
     transform: rotateX(0);
   }
+  5% {
+    border-top: 0.25rem solid red;
+  }
   100% {
+    border-top: 0;
     transform: rotateX(90deg);
   }
 }
@@ -265,8 +261,11 @@ body {
   0% {
     transform: rotateX(90deg);
   }
-  50%,
+  5% {
+    border-bottom: 0.25rem solid red;
+  }
   100% {
+    border-bottom: 0;
     transform: rotateX(0);
   }
 }

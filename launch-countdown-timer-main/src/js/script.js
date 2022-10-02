@@ -9,7 +9,7 @@ const countdownTimer = () => {
     const timeBetweenDates = countdownFromDate - currentDate;
 
     flipAllCards(timeBetweenDates);
-  }, 250);
+  }, 500);
 
   const flipAllCards = (time) => {
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
