@@ -1,0 +1,272 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-container: hsl(234, 17%, 12%);
+  --bg-card: hsla(236, 21%, 26%, 1);
+  --bg-gradient: linear-gradient(180deg, #1d1e28 0.12%, #261c2d 94.84%, #261a2d 100%);
+  --bg-left-dot: linear-gradient(90deg, #00000000 50%, #191a23 50%);
+  --bg-right-dot: linear-gradient(90deg, #191a23 50%, rgba(0, 0, 0, 0) 50%);
+
+  --text-primary: hsla(0, 0%, 100%, 1);
+  --text-secondary: hsla(236, 18%, 59%, 1);
+
+  --color-highlight: hsla(345, 95%, 68%, 1);
+  --color-highlight-opaque: rgb(251, 94, 132, 0.85);
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* STYLES */
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: url(/src/images/pattern-hills.svg), url(/src/images/bg-stars.svg), var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-position: bottom right -20rem, top, top;
+}
+.main {
+  margin-bottom: 25.9rem;
+}
+.heading-primary {
+  margin-bottom: 5.4rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  letter-spacing: 6.13636px;
+  color: var(--text-primary);
+  padding: 2rem;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.6rem;
+}
+.countdown-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+.card {
+  display: flex;
+  height: 7.1rem;
+  width: 7rem;
+}
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-container);
+  border-radius: 0.8rem;
+}
+.flip-card::before,
+.flip-card::after {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 100%;
+  z-index: 1;
+}
+.flip-card::before {
+  left: -0.3rem;
+  background-image: var(--bg-left-dot);
+}
+.flip-card::after {
+  right: -0.3rem;
+  background-image: var(--bg-right-dot);
+}
+.flip-card .top,
+.flip-card .bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: 3.3rem;
+  width: 7rem;
+  font-size: 3.6rem;
+  color: var(--color-highlight);
+  line-height: 1.81;
+  background-color: var(--bg-card);
+  mix-blend-mode: normal;
+  overflow: hidden;
+}
+.flip-card .top,
+.flip-card .top-flip {
+  color: var(--color-highlight-opaque);
+  border-radius: 0.8rem 0.8rem 0 0;
+  border-bottom: 0.047rem solid rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 27px 2px hsla(0, 6%, 10%, 0.251);
+}
+.flip-card .bottom,
+.flip-card .bottom-flip {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 0 0 0.8rem 0.8rem;
+  border-bottom: 0.12rem solid var(--bg-container);
+}
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.flip-card .top-flip {
+  top: 0;
+  line-height: 1.7;
+  transform: rotateX(0);
+  transform-origin: center bottom;
+  animation: flip-top 250ms ease-in;
+  border-top: 0.25rem solid var(--bg-container);
+}
+.flip-card .bottom-flip {
+  top: 3.35rem;
+  transform: rotateX(90deg);
+  transform-origin: center top;
+  animation: flip-bottom 250ms ease-out 250ms;
+  line-height: 1.83;
+}
+.card-title {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  letter-spacing: 2.95937px;
+  color: var(--text-secondary);
+}
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3.2rem;
+}
+.social-icon--link {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s linear;
+}
+.social-icon--link-facebook {
+  background-image: url(/src/images/icon-facebook.svg);
+}
+.social-icon--link-facebook:hover {
+  background-image: url(/src/images/icon-facebook-hover.svg);
+}
+.social-icon--link-pinterest {
+  background-image: url(/src/images/icon-pinterest.svg);
+}
+.social-icon--link-pinterest:hover {
+  background-image: url(/src/images/icon-pinterest-hover.svg);
+}
+.social-icon--link-instagram {
+  background-image: url(/src/images/icon-instagram.svg);
+}
+.social-icon--link-instagram:hover {
+  background-image: url(/src/images/icon-instagram-hover.svg);
+}
+/* MEDIA QUERY */
+@media only screen and (min-width: 768px) {
+  body {
+    background-position: center bottom, center top, center top;
+    background-size: contain;
+  }
+  .main {
+    margin-bottom: 25.2rem;
+  }
+  .heading-primary {
+    margin-bottom: 10.4rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    letter-spacing: 7.5px;
+    padding: 0;
+  }
+  .countdown {
+    column-gap: 3.2rem;
+  }
+  .countdown-card {
+    gap: 1.6rem;
+  }
+  .card {
+    height: 14rem;
+    width: 14.8rem;
+  }
+  .flip-card::before,
+  .flip-card::after {
+    top: 6.3rem;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .flip-card::before {
+    left: -0.6em;
+  }
+  .flip-card::after {
+    right: -0.6rem;
+  }
+  .flip-card .top,
+  .flip-card .bottom,
+  .flip-card .top-flip,
+  .flip-card .bottom-flip {
+    height: 7rem;
+    width: 14.8rem;
+    font-size: 8rem;
+    line-height: 1.75;
+  }
+  .flip-card .top,
+  .flip-card .top-flip {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 30px 2px hsla(0, 6%, 10%, 0.251);
+  }
+  .flip-card .bottom,
+  .flip-card .bottom-flip {
+    border-bottom: 0.2rem solid var(--bg-container);
+  }
+  .flip-card .top-flip {
+    border-top: 0.3rem solid var(--bg-container);
+  }
+  .flip-card .bottom-flip {
+    top: 7.02rem;
+    line-height: 1.75;
+  }
+  .card-title {
+    font-size: 1.4rem;
+    line-height: 1.85rem;
+    letter-spacing: 5.92px;
+  }
+}
+/* ANIMATIONS */
+@keyframes flip-top {
+  0%,
+  50% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+@keyframes flip-bottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(0);
+  }
+}
