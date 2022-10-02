@@ -205,7 +205,7 @@ body {
     gap: 1.6rem;
   }
   .card {
-    height: 14rem;
+    height: 15rem;
     width: 14.8rem;
   }
   .flip-card::before,
