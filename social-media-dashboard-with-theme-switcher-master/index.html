@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Social media dashboard with theme switcher master." />
+  <title>Frontend Mentor | Social media dashboard with theme switcher master</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/attribution.css">
+  <link rel="stylesheet" href="src/css/theme.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- JS -->
+  <script defer src="src/js/attribution.js"></script>
+  <script defer src="src/js/script.js"></script>
+</head>
+
+<body class="">
+  <!-- Main content -->
+  <main class="main">
+    <section class="section section-full">
+      <header class="header">
+        <div class="heading-wrapper">
+          <h1 class="heading-primary">Social Media Dashboard</h1>
+          <p class="paragraph">Total Followers: 23,004</p>
+        </div>
+
+        <div class="theme-switcher">
+          <p class="paragraph">Dark Mode</p>
+          <button class="btn-theme-switcher" aria-label="Toggle dark mode">
+            <span class="dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="cards">
+        <div class="card card-big card-facebook">
+          <p class="social-username"><span class="social-icon"></span>@nathanf</p>
+          <p class="social-followers"><span class="followers">1987</span>Followers</p>
+          <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>12 Today</p>
+        </div>
+        <div class="card card-big card-twitter">
+          <p class="social-username"><span class="social-icon"></span>@nathanf</p>
+          <p class="social-followers"><span class="followers">1044</span>Followers</p>
+          <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>99 Today</p>
+        </div>
+        <div class="card card-big card-instagram">
+          <p class="social-username"><span class="social-icon"></span>@realnathanf</p>
+          <p class="social-followers"><span class="followers">11k</span>Followers</p>
+          <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>1099 Today</p>
+        </div>
+        <div class="card card-big card-youtube">
+          <p class="social-username"><span class="social-icon"></span>Nathan F.</p>
+          <p class="social-followers"><span class="followers">8239</span>Subscribers</p>
+          <p class="social-stats social-stats-icon--decrease"><span class="social-stats-icon"></span>144 Today</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-daily">
+      <h2 class="heading-secondary">Overview - Today</h2>
+
+      <div class="cards">
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Page Views</p>
+            <span class="social-icon social-icon--facebook"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">87</p>
+            <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>3%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Likes</p>
+            <span class="social-icon social-icon--facebook"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">52</p>
+            <p class="social-stats social-stats-icon--decrease"><span class="social-stats-icon"></span>2%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Likes</p>
+            <span class="social-icon social-icon--instagram"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">5462</p>
+            <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>2257%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Page Views</p>
+            <span class="social-icon social-icon--instagram"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">52k</p>
+            <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>1375%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Retweets</p>
+            <span class="social-icon social-icon--twitter"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">117</p>
+            <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>303%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Likes</p>
+            <span class="social-icon social-icon--twitter"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">507</p>
+            <p class="social-stats social-stats-icon--increase"><span class="social-stats-icon"></span>553%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Likes</p>
+            <span class="social-icon social-icon--youtube"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">107</p>
+            <p class="social-stats social-stats-icon--decrease"><span class="social-stats-icon"></span>19%</p>
+          </div>
+        </div>
+
+        <div class="card card-small">
+          <div class="card-header">
+            <p class="card-info">Total Views</p>
+            <span class="social-icon social-icon--youtube"></span>
+          </div>
+          <div class="card-body">
+            <p class="card-info-number">1407</p>
+            <p class="social-stats social-stats-icon--decrease"><span class="social-stats-icon"></span>12%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Attribution -->
+  <nav>
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank" rel=noopener>Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank">WIKS</a>.</span>
+      </h2>
+    </section>
+  </nav>
+  <div class="overlay hidden"></div>
+</body>
+
+</html>
