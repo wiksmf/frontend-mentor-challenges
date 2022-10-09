@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Pricing component with toggle master." />
+  <title>Frontend Mentor | Pricing component with toggle master</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/attribution.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- JS -->
+  <script defer src="src/js/attribution.js"></script>
+  <script defer src="src/js/script.js"></script>
+</head>
+
+<body>
+  <!-- Main content -->
+  <header class="header">
+    <h1 class="heading-primary">Our Pricing</h1>
+    <div class="price-switcher">
+      <span class="txt-price-switcher price-annual">Annually</span>
+      <button class="btn-price-switcher" type="button" aria-label="Switch price view">
+        <span class="dot"></span>
+      </button>
+      <span class="txt-price-switcher price-month">Monthly</span>
+    </div>
+  </header>
+  <main class="card-container">
+    <div class="card-face">
+      <div class="card card-face-front card-side">
+        <p class="price-plan">Basic</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>19.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">500 GB Storage</li>
+          <li class="price-plan-advantage">2 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 3 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+      <div class="card card-face-back card-side">
+        <p class="price-plan">Basic</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>199.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">500 GB Storage</li>
+          <li class="price-plan-advantage">2 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 3 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+    </div>
+    <div class="card-face">
+      <div class="card card-face-front card-center">
+        <p class="price-plan">Professional</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>24.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">1 TB Storage</li>
+          <li class="price-plan-advantage">5 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 10 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+      <div class="card card-face-back card-center">
+        <p class="price-plan">Professional</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>249.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">1 TB Storage</li>
+          <li class="price-plan-advantage">5 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 10 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+    </div>
+    <div class="card-face">
+      <div class="card card-face-front card-side">
+        <p class="price-plan">Master</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>39.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">2 TB Storage</li>
+          <li class="price-plan-advantage">10 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 20 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+      <div class="card card-face-back card-side">
+        <p class="price-plan">Master</p>
+        <p class="price-view"><span class="price-currency">&dollar;</span>399.99</p>
+        <ul class="price-plan-advantages">
+          <li class="price-plan-advantage">2 TB Storage</li>
+          <li class="price-plan-advantage">10 Users Allowed</li>
+          <li class="price-plan-advantage">Send up to 20 GB</li>
+        </ul>
+        <button class="btn-learn-more" type="button" aria-label="Switch price view">Learn More</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Attribution -->
+  <nav>
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank" rel="noopener">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank">WIKS</a>.</span>
+      </h2>
+    </section>
+  </nav>
+  <div class="overlay hidden"></div>
+</body>
+
+</html>
