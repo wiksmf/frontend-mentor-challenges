@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Tip calculator app." />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/attribution.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- JS -->
+  <script defer src="src/js/attribution.js"></script>
+  <script defer src="src/js/script.js"></script>
+</head>
+
+<body>
+  <!-- Main content -->
+  <main class="main">
+    <h1 class="heading-primary">SPLITTER</h1>
+    <img src="/src/images/logo.svg" alt="Splitter logo" class="splitter-logo">
+
+    <div class="tip-calculator">
+      <div class="tip-calculator--left-side">
+        <div class="wrapper">
+          <div class="text-wrapper">
+            <label for="bill" class="label">Bill</label>
+            <p class="error error-bill">Can't be zero or less</p>
+          </div>
+          <div class="input-wrapper">
+            <span class="input-icon input-icon--dollar"></span>
+            <input type="number" id="bill" class="input-field" placeholder="0" />
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="text-wrapper">
+            <label for="tip-custom" class="label">Select Tip %</label>
+            <p class="error error-tip">Can't be zero or less</p>
+          </div>
+          <div class="wrapper-btn">
+            <button type="button" class="btn-tip" data-tip="5">5%</button>
+            <button type="button" class="btn-tip" data-tip="10">10%</button>
+            <button type="button" class="btn-tip" data-tip="15">15%</button>
+            <button type="button" class="btn-tip" data-tip="25">25%</button>
+            <button type="button" class="btn-tip" data-tip="50">50%</button>
+            <input type="number" id="tip-custom" class="btn-tip input-field input-btn" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="text-wrapper">
+            <label for="people" class="label">Number of People</label>
+            <p class="error error-people">Can't be zero or less</p>
+          </div>
+          <div class="input-wrapper">
+            <span class="input-icon input-icon--people"></span>
+            <input type="number" id="people" class="input-field" placeholder="0" />
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-calculator--right-side">
+        <div class="wrap-container">
+          <div class="flex-wrapper">
+            <p class="count-txt"><span class="count-txt--bold">Tip Amount</span>/ person</p>
+            <p class="count-value">$<span class="amount-value--final">0.00</span></p>
+          </div>
+          <div class="flex-wrapper">
+            <p class="count-txt"><span class="count-txt--bold">Total</span>/ person</p>
+            <p class="count-value">$<span class="total-value--final">0.00</span></p>
+          </div>
+        </div>
+
+        <button type="button" class="btn-reset">Reset</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Attribution -->
+  <nav>
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank" rel="noopener">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank" rel="noopener">WIKS</a>.</span>
+      </h2>
+    </section>
+  </nav>
+  <div class="overlay hidden"></div>
+</body>
+
+</html>
