@@ -1,0 +1,359 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-main: hsla(248, 15%, 11%, 1);
+  --bg-section: hsla(248, 10%, 15%, 1);
+  --text-heading: hsl(251, 9%, 53%);
+  --text-neutral: hsl(252, 11%, 91%);
+  --pwd-too-weak: hsl(0, 91%, 63%);
+  --pwd-weak: hsl(13, 95%, 66%);
+  --pwd-medium: hsl(42, 91%, 68%);
+  --pwd-strong: hsl(127, 100%, 82%);
+  --input-placeholder: hsla(252, 11%, 91%, 0.25);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* STYLES */
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+.main {
+  padding: 3rem 0;
+}
+.heading-primary {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--text-heading);
+  text-align: center;
+}
+.section {
+  min-width: 34.3rem;
+  background-color: var(--bg-section);
+  padding: 1.6rem;
+}
+.section.section-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.1rem auto 2.4rem;
+}
+.label {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--text-neutral);
+}
+.label-hidden {
+  display: none;
+}
+.label-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+input#password {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--text-neutral);
+  flex-grow: 1;
+}
+input#password::placeholder {
+  color: var(--input-placeholder);
+}
+input#password::selection {
+  background-color: var(--pwd-strong);
+  color: var(--bg-section);
+}
+.btn.btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.btn.btn-copy .btn-copy--text {
+  opacity: 0;
+  font-size: 1.2rem;
+  color: var(--pwd-strong);
+  transition: all .1s linear;
+}
+.btn.btn-copy .btn-copy--text.show{
+  opacity: 1;
+}
+.btn.btn-copy .btn-copy--icon {
+  display: inline-block;
+  width: 1.75rem;
+  height: 2rem;
+  background-image: url(/src/images/icon-copy.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.btn.btn-copy .btn-copy--icon:hover {
+  background-image: url(/src/images/icon-copy-hover.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.password-option--length {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--pwd-strong);
+}
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 1.6rem;
+}
+.strength-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.2rem 0;
+  padding: 1.4rem 1.4rem 1.4rem 1.6rem;
+  background-color: var(--bg-main);
+}
+.strength-container .strength-info {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: var(--text-heading);
+  text-transform: uppercase;
+}
+.strength-container .strength-info--big {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--text-neutral);
+}
+.strength-level {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+.strength-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .8rem;
+}
+.strength-bar-container .strength-bar {
+  display: inline-block;
+  width: 1rem;
+  height: 2.8rem;
+  border: 2px solid var(--text-neutral);
+}
+.strength-bar-container .strength-bar--too-weak {
+  border: 2px solid var(--pwd-too-weak);
+  background-color: var(--pwd-too-weak);
+}
+.strength-bar-container .strength-bar--weak {
+  border: 2px solid var(--pwd-weak);
+  background-color: var(--pwd-weak);
+}
+.strength-bar-container .strength-bar--medium {
+  border: 2px solid var(--pwd-medium);
+  background-color: var(--pwd-medium);
+}
+.strength-bar-container .strength-bar--strong {
+  border: 2px solid var(--pwd-strong);
+  background-color: var(--pwd-strong);
+}
+.btn.btn-generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.6rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: var(--bg-section);
+  text-transform: uppercase;
+  border: 2px solid var(--pwd-strong);
+  background-color: var(--pwd-strong);
+  width: 100%;
+  padding: 1.55rem;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.btn.btn-generate .arrow-right {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.2rem;
+  background-image: url(/src/images/icon-arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.btn.btn-generate:hover {
+  background-color: transparent;
+  color: var(--pwd-strong);
+}
+.btn.btn-generate:hover .arrow-right {
+  background-image: url(/src/images/icon-arrow-right-hover.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* INPUT RANGE STYLES */
+input#length {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color:  var(--bg-main);
+  height: .8rem;
+  width: 100%;
+  margin: 1.8rem 0 4.2rem;
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+input#length:focus {
+ outline: none;
+}
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+input#length::-webkit-slider-runnable-track {
+  height: .8rem;
+}
+input#length::-webkit-slider-thumb {
+ -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px; 
+  background-color: var(--text-neutral);
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 100%;
+}
+input#length:hover::-webkit-slider-thumb {
+  border: 2px solid var(--pwd-strong);
+  background-color: var(--bg-main);
+}
+/******** Firefox styles ********/
+input#length::-moz-range-thumb {
+  margin-top: -12px; 
+  border: 2px solid var(--text-neutral);
+  background-color: var(--text-neutral);
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 100%;
+}
+input#length:hover::-moz-range-thumb {
+  border: 2px solid var(--pwd-strong);
+  background-color: var(--bg-main);
+}
+/* INPUT CHECKBOX STYLE */
+.label-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 4rem;
+  cursor: pointer;
+}
+.label-checkbox input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.label-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 2px solid var(--text-neutral);
+  transition: all .1s linear;
+}
+.label-checkbox:hover .checkmark {
+  border: 2px solid var(--pwd-strong);
+}
+.label-checkbox input:checked ~ .checkmark {
+  background-color: var(--pwd-strong);
+  border: 2px solid var(--pwd-strong);
+}
+.label-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-image: url(/src/images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.label-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+/* MEDIA QUERY */
+@media only screen and (min-width: 768px) {
+  .heading-primary {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .section {
+    min-width: 54rem;
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+  .section.section-flex {
+    padding: 2.4rem 2.8rem 2.4rem 3.2rem;
+  }
+  .label {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  input#password {
+    font-size: 2.7rem;
+    line-height: 3.5rem;
+  }
+  .btn.btn-copy .btn-copy--icon {
+    width: 2.1rem;
+    height: 2.4rem;
+  }
+  .password-option--length {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+  .checkbox-container {
+    row-gap: 2.4rem;
+  }
+  .strength-container {
+    padding: 2.2rem 3.2rem;
+  }
+  .strength-container .strength-info {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .strength-container .strength-info--big {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .btn.btn-generate {
+    column-gap: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding: 2rem;
+  }
+  input#length {
+    margin: 2.6rem 0 4.2rem;
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Password generator app." />
+  <title>Frontend Mentor | Password generator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/attribution.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!-- JS -->
+  <script defer src="src/js/attribution.js"></script>
+  <script defer src="src/js/script.js"></script>
+</head>
+
+<body>
+  <!-- Main content -->
+  <main class="main">
+    <h1 class="heading-primary">Password Generator</h1>
+
+    <section class="section section-flex">
+      <label for="password" class="label label-hidden">Generated password: </label>
+      <input type="text" id="password" placeholder="P4$5W0rD!" readonly />
+
+      <button type="button" class="btn btn-copy" aria-label="Copy password">
+        <span class="btn-copy--text">COPIED</span>
+        <span class="btn-copy--icon"></span>
+      </button>
+    </section>
+
+    <section class="section">
+      <div class="input-container">
+        <label for="length" class="label label-flex"><span class="password-option">Character Length</span><span
+            class="password-option--length">0</span></label>
+        <input type="range" id="length" value="0" min="0" max="20" />
+      </div>
+
+      <div class="checkbox-container">
+        <div class="input-container">
+          <label for="uppercase" class="label label-checkbox">
+            Include Uppercase Letters
+            <input type="checkbox" id="uppercase">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="input-container">
+          <label for="lowercase" class="label label-checkbox">
+            Include Lowercase Letters
+            <input type="checkbox" id="lowercase">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="input-container">
+          <label for="numbers" class="label label-checkbox">
+            Include Numbers
+            <input type="checkbox" id="numbers">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="input-container">
+          <label for="symbols" class="label label-checkbox">
+            Include Symbols
+            <input type="checkbox" id="symbols">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="strength-container">
+        <p class="strength-info">Strength</p>
+
+        <div class="strength-level">
+          <p class="strength-info strength-info--big">MEDIUM</p>
+          <div class="strength-bar-container">
+            <span class="strength-bar"></span>
+            <span class="strength-bar"></span>
+            <span class="strength-bar"></span>
+            <span class="strength-bar"></span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-generate">
+        Generate
+        <span class="arrow-right"></span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Attribution -->
+  <nav>
+    <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+    <section class="attribution-information">
+      <h2>
+        <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank" rel="noopener">Frontend Mentor</a>.</span>
+        <span>Coded by <a class="attribution-link" href="" target="_blank" rel="noopener">WIKS</a>.</span>
+      </h2>
+    </section>
+  </nav>
+  <div class="overlay hidden"></div>
+</body>
+
+</html>
