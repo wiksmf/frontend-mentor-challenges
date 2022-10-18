@@ -70,6 +70,7 @@ input#password {
   background-color: transparent;
   border: none;
   outline: none;
+  font-family: inherit;
   font-size: 1.6rem;
   line-height: 2.1rem;
   color: var(--text-neutral);
@@ -355,5 +356,10 @@ input#length:hover::-moz-range-thumb {
   }
   input#length {
     margin: 2.6rem 0 4.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    padding: 0;
   }
 }
