@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="News homepage." />
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/attribution.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!-- JS -->
+    <script defer src="src/js/attribution.js"></script>
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Main content -->
+    <header class="header">
+      <a href="#" title="News homepage">
+        <img src="./src/images/logo.svg" alt="">
+      </a>
+
+        <button type="button" class="btn btn-nav-menu btn-nav-menu--open" aria-label="Button to open the menu view on mobile"></button>
+        <nav class="nav-menu open">
+          <button type="button" class="btn btn-nav-menu btn-nav-menu--close" aria-label="Button to close the menu view on mobile"></button>
+          <div class="nav-menu-container--link">
+            <a href="#" class="nav-menu--link">Home</a>
+            <a href="#" class="nav-menu--link">New</a>
+            <a href="#" class="nav-menu--link">Popular</a>
+            <a href="#" class="nav-menu--link">Trending</a>
+            <a href="#" class="nav-menu--link">Categories</a>
+          </div>
+        </nav>
+    </header>
+
+    <main class="main">
+      <div class="flex-wrapper">
+        <section class="section-hero">
+          <div class="section-hero--img"></div>
+          
+          <div class="section-hero--info">
+            <h1 class="heading-primary"><strong>The Bright Future of Web 3.0?</strong></h1>
+
+            <div class="section-hero--details">
+              <p class="paragraph paragraph--dark">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                But is it really fulfilling its promise?</p>
+      
+              <a href="#" class="btn btn-read-more">Read more</a>
+            </div>
+          </div>
+        </section>
+  
+        <section class="section-new">
+          <h2 class="heading-secondary heading-secondary--big"><strong>New</strong></h2>
+  
+          <div class="section-new--articles">
+            <div class="section-new--article">
+              <a href="#" class="heading-tertiary"><strong>Hydrogen VS Electric Cars</strong></a>
+              <p class="paragraph paragraph--light">Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
+            <div class="section-new--article">
+              <a href="#" class="heading-tertiary"><strong>The Downsides of AI Artistry</strong></a>
+              <p class="paragraph paragraph--light">What are the possible adverse effects of on-demand AI image generation?</p>
+            </div>
+            <div class="section-new--article">
+              <a href="#" class="heading-tertiary"><strong>Is VC Funding Drying Up?</strong></a>
+              <p class="paragraph paragraph--light">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="section-top-articles">
+        <div class="section-top-article">
+          <img class="section-top-article--img" src="./src/images/image-retro-pcs.jpg" alt="Retro PCs">
+
+          <div class="section-top-article--intro">
+            <span class="section-top-article--number">01</span>
+            <a href="#" class="heading-secondary heading-secondary--small">Reviving Retro PCs</a>
+            <p class="paragraph paragraph--dark">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="section-top-article">
+          <img class="section-top-article--img" src="./src/images/image-top-laptops.jpg" alt="Top laptops">
+
+          <div class="section-top-article--intro">
+            <span class="section-top-article--number">02</span>
+            <a href="#" class="heading-secondary heading-secondary--small">Top 10 Laptops of 2022</a>
+            <p class="paragraph paragraph--dark">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="section-top-article">
+          <img class="section-top-article--img" src="./src/images/image-gaming-growth.jpg" alt="Gaming growth">
+
+          <div class="section-top-article--intro">
+            <span class="section-top-article--number">03</span>
+            <a href="#" class="heading-secondary heading-secondary--small">The Growth of Gaming</a>
+            <p class="paragraph paragraph--dark">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Attribution --> 
+    <nav>
+      <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+      <section class="attribution-information">
+        <h2>
+          <span>Challenge by <a class="attribution-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.</span>
+          <span>Coded by <a class="attribution-link" href="" target="_blank" rel="noopener">WIKS</a>.</span>
+        </h2>
+      </section>
+    </nav>
+    <div class="overlay hidden"></div>
+    <div class="menu-overlay"></div>
+  </body>
+</html>
