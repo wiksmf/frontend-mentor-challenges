@@ -377,11 +377,17 @@ body {
   }
 
   .header {
-    padding: 8.9rem 0 5.5rem;
+    padding: 8.7rem 0 5.5rem;
   }
 
   .nav-menu-container--link {
     column-gap: 4rem;
+  }
+
+  .nav-menu--link:link,
+  .nav-menu--link:visited {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
   }
 
   .flex-wrapper {
