@@ -261,10 +261,10 @@ body {
 /* MEDIA QUERY */
 @media screen and (min-width: 600px) {
   body {
-    background-image: url(../images/image-hero-tablet@2x.webp);
+    background-image: url(../images/image-hero-tablet@2x.webp), var(--bg-gradient);
     background-repeat: no-repeat;
-    background-position: left 48vw top 5vw;
-    background-size: 57rem 57rem;
+    background-position: left 48vw top 5vw, center;
+    background-size: 57rem 57rem, cover;
   }
 
   .header,
@@ -328,10 +328,10 @@ body {
 
 @media screen and (min-width: 1140px) {
   body {
-    background-image: url(../images/image-hero-desktop@2x.webp);
+    background-image: url(../images/image-hero-desktop@2x.webp), var(--bg-gradient);
     background-repeat: no-repeat;
-    background-position: left 40vw top;
-    background-size: 99rem 93rem;
+    background-position: left 40vw top, center;
+    background-size: 99rem 93rem, cover;
   }
 
   .heading-primary {
@@ -422,7 +422,7 @@ body {
 
 @media screen and (min-width: 1210px) {
   body {
-    background-position: left 43vw top;
-    background-size: 99rem 93rem;
+    background-position: left 43vw top, center;
+    background-size: 99rem 93rem, cover;
   }
 }
