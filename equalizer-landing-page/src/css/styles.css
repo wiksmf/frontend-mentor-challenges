@@ -1,0 +1,429 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --bg-primary: hsla(20, 33%, 98%, 1);
+  --bg-cta: hsla(12, 94%, 65%, 1);
+  --text-dark: hsla(244, 23%, 12%, 1);
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* STYLES */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--bg-primary);
+  background-image: url(../images/bg-main-mobile.png);
+  background-position: left -10rem top -20rem;
+  background-size: 200%;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  letter-spacing: -0.454545px;
+  color: var(--text-dark);
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: var(--bg-primary);
+}
+
+.heading-primary strong,
+.heading-secondary strong {
+  font-weight: 700;
+}
+
+.paragraph {
+  font-weight: 400;
+}
+
+.paragraph.paragraph--dark {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--text-dark);
+}
+
+.paragraph.paragraph--light {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: var(--bg-primary);
+}
+
+.header {
+  margin: 0 4.1vw;
+  padding: 4rem 0 6.4rem;
+}
+
+.header-logo {
+  height: 3.2rem;
+  width: 14rem;
+  object-fit: contain;
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 0 4.1vw;
+}
+
+.section-download {
+  position: relative;
+  margin-top: 16.6rem;
+  padding-top: 38rem;
+  border-radius: 1.2rem;
+  background-color: var(--text-dark);
+  background-image: url(../images/bg-pattern-2.svg);
+  background-size: 28rem 42rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 1;
+}
+
+.section-download--img {
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20.8rem;
+  height: 43rem;
+  background-image: url(../images/illustration-app.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-download--container {
+  padding: 4.8rem 3.1rem;
+  border-radius: 1.2rem;
+  background-color: var(--bg-cta);
+  max-width: 39.9rem;
+  margin: 0 auto;
+}
+
+.section-download--container .paragraph {
+  margin: 1.2rem 0 3.6rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1.6rem;
+  color: var(--bg-primary);
+}
+
+.price-container .price-amount {
+  font-size: 6.5rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+}
+
+.price-container .price-period {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.8rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  text-decoration: none;
+  padding: 1.45rem 1rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  background-position: left center;
+  background-size: var(--p, 0);
+  background-repeat: no-repeat;
+  transition: 0.3s, background-position 0s;
+}
+
+.btn-download.btn-download--ios {
+  margin-top: 3.2rem;
+  color: var(--bg-primary);
+  background-image: linear-gradient(#66e2dc 0 0);
+  background-color: var(--text-dark);
+}
+
+.btn-download.btn-download--android {
+  margin-top: 1.6rem;
+  color: var(--text-dark);
+  background-image: linear-gradient(#ffb964 0 0);
+  background-color: var(--bg-primary);
+}
+
+.btn-download.btn-download--ios:hover,
+.btn-download.btn-download--android:hover {
+  --p: 200%;
+  background-position: right;
+}
+
+.btn-icon {
+  height: 2rem;
+  width: 1.7rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-icon.btn-icon--ios {
+  background-image: url(../images/icon-apple.svg);
+}
+
+.btn-download.btn-download--android .btn-icon.btn-icon--android {
+  background-image: url(../images/icon-android.svg);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+  padding: 6.4rem 0 8rem;
+  margin: 0 4.1vw;
+}
+
+.footer-logo {
+  height: 14.6rem;
+  width: 3.2rem;
+  object-fit: contain;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.copyright,
+.contact,
+.contact .contact-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  color: var(--text-dark);
+}
+
+.contact .contact-link {
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.social-link {
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.social-link--facebook {
+  background-image: url(../images/icon-facebook.svg);
+}
+
+.social-link--twitter {
+  background-image: url(../images/icon-twitter.svg);
+}
+
+.social-link--instagram {
+  background-image: url(../images/icon-instagram.svg);
+}
+
+.social-link--facebook:hover,
+.social-link--twitter:hover,
+.social-link--instagram:hover {
+  transform: scale(1.05);
+  filter: invert(77%) sepia(55%) saturate(5992%) hue-rotate(327deg) brightness(103%) contrast(96%);
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/bg-pattern-1.svg), url(../images/bg-main-tablet.png);
+    background-position: right -3rem top -4rem, center top;
+    background-size: 26.6rem 40rem, contain;
+    background-repeat: no-repeat;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .header-logo {
+    width: 14.6rem;
+  }
+
+  .heading-primary {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    letter-spacing: -0.727273px;
+  }
+
+  .paragraph.paragraph--dark {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .section-hero {
+    row-gap: 2.8rem;
+    padding-right: 25vw;
+  }
+
+  .section-download {
+    margin: 24.9rem auto 18.3rem;
+    height: 60rem;
+    max-width: 71.5rem;
+  }
+
+  .section-download--img {
+    top: -14rem;
+    left: 7rem;
+    transform: translateX(0);
+    width: 27rem;
+    height: 55rem;
+  }
+
+  .section-download--container {
+    position: absolute;
+    top: 15rem;
+    right: 5.5rem;
+  }
+
+  .footer {
+    padding: 0 0 8.5rem;
+  }
+
+  .footer-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-wrapper {
+    padding-right: 25rem;
+  }
+}
+
+@media screen and (min-width: 1125px) {
+  body {
+    background-position: right top -4rem, center top;
+  }
+
+  .heading-primary {
+    font-size: 8.8rem;
+    line-height: 8.8rem;
+    letter-spacing: -1px;
+  }
+
+  .heading-secondary {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  .paragraph.paragraph--dark,
+  .paragraph.paragraph--light {
+    font-size: 2rem;
+    line-height: 3.4rem;
+  }
+
+  .header {
+    position: relative;
+    max-width: 111rem;
+    margin: 0 auto;
+    padding: 6.2rem 0 12.7rem;
+  }
+
+  .section-hero {
+    row-gap: 4rem;
+    max-width: 111rem;
+    margin: 0 auto;
+    padding-right: 25rem;
+  }
+
+  .section-download {
+    margin: 32.1rem auto 20.2rem;
+    height: 60rem;
+    max-width: 111rem;
+    background-size: 31.2rem 46.8rem;
+  }
+
+  .section-download--img {
+    top: -17rem;
+    left: 16.5rem;
+    width: 31.2rem;
+    height: 64.2rem;
+  }
+
+  .section-download--container {
+    position: absolute;
+    top: 10rem;
+    right: 8.5rem;
+    padding: 4.8rem 3.3rem;
+  }
+
+  .section-download--container .paragraph {
+    margin: 2.2rem 0 3.9rem;
+  }
+
+  .btn-download.btn-download--ios {
+    margin-top: 4.6rem;
+  }
+
+  .footer {
+    max-width: 111rem;
+    margin: 0 auto;
+    padding: 0 0 9.1rem;
+  }
+
+  .text-wrapper {
+    padding-right: 50rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8.2rem;
+    background-image: url(../images/bg-pattern-1.svg);
+    background-position: right top -5rem;
+    background-size: 31.2rem 46.8rem;
+    background-repeat: no-repeat;
+    width: 31.2rem;
+    height: 46.8rem;
+  }
+}
