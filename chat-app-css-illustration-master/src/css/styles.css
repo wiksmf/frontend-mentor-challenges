@@ -362,7 +362,7 @@ body {
     padding: 2rem 0;
   }
   .main::before {
-    left: -15rem;
+    left: -9rem;
     height: 65rem;
     width: 35vw;
     border-bottom-left-radius: 25.5rem;
