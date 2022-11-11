@@ -363,13 +363,13 @@ body {
   }
   .main::before {
     left: -15rem;
-    height: 50rem;
+    height: 65rem;
     width: 35vw;
     border-bottom-left-radius: 25.5rem;
   }
   .main::after {
     right: 0;
-    height: 50rem;
+    height: 65rem;
     width: 35vw;
     border-top-right-radius: 25.5rem;
   }
