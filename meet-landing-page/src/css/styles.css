@@ -30,6 +30,7 @@ html {
 body {
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
+  background-color: var(--bg-break);
 }
 .header {
   padding: 4.8rem 5.4rem;
@@ -105,7 +106,6 @@ body {
   animation: pulseOnHover 0.45s linear infinite alternate;
 }
 .btn.btn-blue {
-  padding: 1.6rem 4.15rem;
   background-color: var(--bg-cta--blue);
 }
 .btn.btn-blue:hover {
@@ -117,6 +117,9 @@ body {
 }
 .btn.btn-purple:hover {
   background-color: var(--text-purplish--hover);
+}
+.btn.btn-download {
+  padding: 1.6rem 4.15rem;
 }
 .btn-version--bluish {
   color: var(--text-bluish);
@@ -167,7 +170,7 @@ body {
   font-weight: 900;
   line-height: 2.6rem;
   color: var(--text-neutral);
-  background: var(--bg-break);
+  background-color: var(--bg-break);
   border: 1px solid var(--border-break);
   border-radius: 2.9rem;
 }
