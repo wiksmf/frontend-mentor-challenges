@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Chat app css illustration master." />
+    <title>Frontend Mentor | Chat app css illustration master</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png" />
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/attribution.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <!-- JS -->
+    <script defer src="src/js/attribution.js"></script>
+  </head>
+
+  <body>
+    <!-- Main content -->
+    <main class="main">
+      <div class="section-phone">
+        <div class="section-phone-wrapper">
+          <div class="section-phone--header">
+            <div class="section-phone--header-wrapper">
+              <a href="#" class="btn-back" aria-label="Click to go back"></a>
+
+              <div class="user-info">
+                <img src="/src/images/avatar.jpg" alt="" class="user-avatar" />
+                <div class="user-details">
+                  <p class="user-name">Samuel Green</p>
+                  <p class="user-status">Available to Walk</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-options" aria-label="Customize and control chat"></button>
+          </div>
+
+          <div class="section-phone--body">
+            <div class="section-phone--chat-left">
+              <p class="chat pop-in-delay-0">That sounds great. I'd be happy with that.</p>
+              <p class="chat pop-in-delay-1">Could you send over some pictures of your dog, please?</p>
+            </div>
+
+            <div class="section-phone--chat-right">
+              <div class="chat-imgs pop-in-delay-2">
+                <img src="/src/images/dog-image-1.jpg" alt="Picture of happy dog" class="chat-img" />
+                <img src="/src/images/dog-image-2.jpg" alt="Another picture of happy dog" class="chat-img" />
+                <img
+                  src="/src/images/dog-image-3.jpg"
+                  alt="And..yeah, yet another picture of happy dog"
+                  class="chat-img"
+                />
+              </div>
+
+              <p class="chat pop-in-delay-3">Here are a few pictures. She's a happy girl!</p>
+              <p class="chat chat-small pop-in-delay-4">Can you make it?</p>
+            </div>
+
+            <div class="section-phone--chat-left">
+              <p class="chat pop-in-delay-5">
+                She looks so happy! The time we discussed works. How long shall I take her out for?
+              </p>
+
+              <div class="chat chat-option pop-in-delay-6">
+                <div class="chat-option-info">
+                  <span class="chat-option-circle"></span>
+                  <p class="chat-option-details">30 minute walk</p>
+                </div>
+                <p class="chat-option-price">$29</p>
+              </div>
+
+              <div class="chat chat-option pop-in-delay-7">
+                <div class="chat-option-info">
+                  <span class="chat-option-circle"></span>
+                  <p class="chat-option-details">1 hour walk</p>
+                </div>
+                <p class="chat-option-price">$49</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-phone--footer">
+            <p class="user-input">Type a message…</p>
+
+            <button type="button" class="btn-send" aria-label="Send message"></button>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-description pop-in-delay-0">
+        <h1 class="heading-primary">Simple booking</h1>
+        <p class="paragraph">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and
+          make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+        </p>
+      </section>
+    </main>
+
+    <!-- Attribution -->
+    <nav>
+      <button class="attribution-btn" aria-label="Challenge author and developer information"></button>
+      <section class="attribution-information">
+        <h2>
+          <span
+            >Challenge by
+            <a
+              class="attribution-link"
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              rel="noopener"
+              >Frontend Mentor</a
+            >.</span
+          >
+          <span
+            >Coded by
+            <a
+              class="attribution-link"
+              href="https://github.com/wiksmf/frontend-mentor-challenges/tree/master/advice-generator-app-main"
+              target="_blank"
+              rel="noopener"
+              >WIKS</a
+            >.</span
+          >
+        </h2>
+      </section>
+    </nav>
+    <div class="overlay hidden"></div>
+  </body>
+</html>
