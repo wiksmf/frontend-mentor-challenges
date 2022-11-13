@@ -1,7 +1,5 @@
 /* CUSTOM PROPERTIES */
 :root {
-  --bg-body: hsl(0, 0%, 95%);
-
   --txt-main: hsl(220, 50%, 17%);
   --txt-light: hsla(0, 0%, 100%, 1);
   --txt-neutral: hsl(221, 23%, 58%);
@@ -29,7 +27,6 @@ html {
 /* STYLES */
 body {
   font-family: 'Barlow', sans-serif;
-  background-color: var(--bg-body);
   overflow-x: hidden;
 }
 
