@@ -439,14 +439,14 @@ body {
     border-radius: 4rem;
     padding: 2.5rem 4rem;
     min-width: 40rem;
-    margin: 0 auto 12rem;
+    margin: 0 auto 11rem;
   } 
   .section-1 {
     padding: 22.5rem 2rem 0;
   }
   .section-1 .paragraph-mt-mb {
     max-width: 65rem;
-    margin: 2.6rem auto 4.9rem;
+    margin: 2.6rem auto 4.5rem;
   }
   .section-2 .paragraph {
     font-size: 1.6rem;
@@ -512,7 +512,7 @@ body {
     column-gap: 34.1rem;
   }
   .section-2 {
-    margin-top: 13.5rem;
+    margin-top: 15rem;
   }
   .section-1 .feature img, 
   .section-2 .feature img, 
