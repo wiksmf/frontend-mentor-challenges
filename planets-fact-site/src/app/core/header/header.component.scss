@@ -1,0 +1,255 @@
+@import 'src/assets/styles/abstracts/mixins';
+@import 'src/assets/styles/abstracts/variables';
+
+.header {
+  position: relative;
+  padding: 1rem 6.5vw;
+  max-width: 105rem;
+  margin: 0 auto;
+
+  @include displayFlex();
+
+  @include responsive(medium) {
+    @include displayFlex($justify-content: center);
+  }
+
+  @include responsive(large) {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 4rem 0 3.2rem;
+    border-bottom: 1px solid hsl(var(--color-border), 0.2);
+    @include displayFlex($justify-content: space-between);
+  }
+
+  &-logo {
+    color: hsl(var(--color-txt));
+    text-transform: uppercase;
+    text-decoration: none;
+    @include font-style($logo-font-style);
+
+    @include responsive(large) {
+      min-width: 11rem;
+    }
+  }
+}
+
+.nav {
+  flex-grow: 1;
+  display: none;
+  width: 100%;
+  padding: 0 6.5vw;
+  background-color: hsl(var(--color-bg));
+  border-top: 1px solid hsl(var(--color-border), 0.1);
+  border-bottom: 1px solid hsl(var(--color-border), 0.1);
+  @include positionAbsolute($top: 5.6rem, $left: 0, $zIndex: 5);
+
+  @include responsive(medium) {
+    display: block;
+    border-top: none;
+    background-color: transparent;
+  }
+
+  @include responsive(large) {
+    flex-grow: 0;
+    position: static;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &-btn {
+    border: none;
+    background: none;
+    width: 2.4rem;
+    height: 1.7rem;
+    cursor: pointer;
+    @include backgroundImage('../../../assets/images/icon-hamburger.svg');
+
+    @include responsive(medium) {
+      display: none;
+    }
+  }
+
+  &-list {
+    width: 100%;
+    list-style-type: none;
+    @include displayFlex($direction: column,
+      $align-items: flex-start,
+      $justify-content: flex-start);
+
+    @include responsive(medium) {
+      @include displayFlex($justify-content: center,
+        $column-gap: 2.1rem);
+    }
+
+    @include responsive(large) {
+      @include displayFlex($justify-content: flex-end,
+        $column-gap: 3.3rem);
+    }
+  }
+
+  &-link {
+    margin-top: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    @include font-style($nav-font-style);
+  }
+
+  &-item {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 2rem 0 2rem 2.5rem;
+    color: hsl(var(--color-txt), .75);
+    text-align: left;
+    transition: .3s linear;
+    transition-property: color, border-top, background-color;
+    cursor: pointer;
+
+    @include displayFlex($align-items: center,
+      $justify-content: flex-start,
+      $column-gap: 2.5rem);
+    @include backgroundImage('../../../assets/images/icon-chevron.svg',
+      $bg-size: .4rem .8rem,
+      $bg-position: right 0.7rem center);
+
+    @include responsive(medium) {
+      background-image: none;
+      border-top: 4px solid transparent;
+      padding: 2.7rem 1rem 2.7rem;
+      margin-top: 1.2rem;
+
+      @include displayFlex($align-items: center,
+        $justify-content: center,
+        $column-gap: 2.5rem);
+    }
+
+    @include responsive(large) {
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 2.9rem 1rem 2.7rem;
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid hsl(var(--color-border), 0.1);
+
+      @include responsive(medium) {
+        border-bottom: none;
+      }
+    }
+
+    &.active {
+      background-image: none;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-top: 4px solid;
+      color: hsl(var(--color-txt));
+    }
+
+    &-mercury:focus,
+    &-mercury:hover,
+    &-mercury.active {
+      border-top-color: hsl(var(--color-mercury));
+      background-color: hsl(var(--color-mercury), .2);
+    }
+
+    &-venus:focus,
+    &-venus:hover,
+    &-venus.active {
+      border-top-color: hsl(var(--color-venus));
+      background-color: hsl(var(--color-venus), .2);
+    }
+
+    &-earth:focus,
+    &-earth:hover,
+    &-earth.active {
+      border-top-color: hsl(var(--color-earth));
+      background-color: hsl(var(--color-earth), .2);
+    }
+
+    &-mars:focus,
+    &-mars:hover,
+    &-mars.active {
+      border-top-color: hsl(var(--color-mars));
+      background-color: hsl(var(--color-mars), .2);
+    }
+
+    &-jupiter:focus,
+    &-jupiter:hover,
+    &-jupiter.active {
+      border-top-color: hsl(var(--color-jupiter));
+      background-color: hsl(var(--color-jupiter), .2);
+    }
+
+    &-saturn:focus,
+    &-saturn:hover,
+    &-saturn.active {
+      border-top-color: hsl(var(--color-saturn));
+      background-color: hsl(var(--color-saturn), .2);
+    }
+
+    &-uranus:focus,
+    &-uranus:hover,
+    &-uranus.active {
+      border-top-color: hsl(var(--color-uranus));
+      background-color: hsl(var(--color-uranus), .2);
+    }
+
+    &-neptune:focus,
+    &-neptune:hover,
+    &-neptune.active {
+      border-top-color: hsl(var(--color-neptune));
+      background-color: hsl(var(--color-neptune), .2);
+    }
+
+    &--dot {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+
+      @include responsive(medium) {
+        display: none;
+      }
+
+      &-mercury {
+        background-color: hsl(var(--color-mercury));
+      }
+
+      &-venus {
+        background-color: hsl(var(--color-venus));
+      }
+
+      &-earth {
+        background-color: hsl(var(--color-earth));
+      }
+
+      &-mars {
+        background-color: hsl(var(--color-mars));
+      }
+
+      &-jupiter {
+        background-color: hsl(var(--color-jupiter));
+      }
+
+      &-saturn {
+        background-color: hsl(var(--color-saturn));
+      }
+
+      &-uranus {
+        background-color: hsl(var(--color-uranus));
+      }
+
+      &-neptune {
+        background-color: hsl(var(--color-neptune));
+      }
+    }
+  }
+}

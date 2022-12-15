@@ -1,0 +1,80 @@
+@mixin backgroundImage($bg-url,
+  $bg-size: contain,
+  $bg-repeat: no-repeat,
+  $bg-position: center) {
+  background-image: url($bg-url);
+  background-size: $bg-size;
+  background-repeat: $bg-repeat;
+  background-position: $bg-position;
+}
+
+@mixin displayFlex($direction: row,
+  $align-items: center,
+  $justify-content: space-between,
+  $column-gap: 0,
+  $row-gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+@mixin positionAbsolute($top: 0,
+  $left: unset,
+  $right : unset,
+  $zIndex: 1) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: $zIndex;
+}
+
+@mixin font-style($fs-map, $fs-breakpoints: $breakpoints) {
+
+  @each $fs-breakpoint,
+  $fs-font-style in $fs-map {
+    @if $fs-breakpoint ==null {
+      @include make-font-style($fs-font-style);
+    }
+
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-style($fs-font-style);
+      }
+    }
+  }
+}
+
+@mixin make-font-style($fs-font-style) {
+  font-family: nth($fs-font-style, 1);
+  font-size: nth($fs-font-style, 2);
+  font-weight: nth($fs-font-style, 3);
+  line-height: nth($fs-font-style, 4);
+  letter-spacing: nth($fs-font-style, 5);
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint ==small {
+    @media only screen and (min-width: $bp-small) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==medium {
+    @media only screen and (min-width: $bp-medium) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==large {
+    @media only screen and (min-width: $bp-large) {
+      @content
+    }
+  }
+}

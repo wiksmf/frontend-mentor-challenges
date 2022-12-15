@@ -1,0 +1,217 @@
+@import 'src/assets/styles/abstracts/mixins';
+@import 'src/assets/styles/abstracts/variables';
+
+:host {
+  @include displayFlex($justify-content: center, $column-gap: 4.3rem);
+
+  @include responsive(medium) {
+    @include displayFlex($direction: column,
+      $align-items: flex-start,
+      $row-gap: 1.6rem);
+  }
+}
+
+.btn {
+  &-view {
+    padding: 2rem 1rem 1.6rem;
+    border: none;
+    background: none;
+    border-bottom: 4px solid transparent;
+    color: hsl(var(--color-txt), .5);
+    text-transform: uppercase;
+    transition: .3s linear;
+    transition-property: color, border, background-color;
+    cursor: pointer;
+
+    @include font-style($overview-btn-font-style);
+
+    @include responsive(medium) {
+      padding: 1.4rem 2rem;
+      min-width: 28.1rem;
+      width: -moz-fit-content;
+      width: fit-content;
+      border: 1px solid hsl(var(--color-border), 0.2);
+      text-align: left;
+      color: hsl(var(--color-txt));
+    }
+
+    @include responsive(large) {
+      min-width: 35rem;
+      width: 100%;
+    }
+
+    &--txt {
+      display: none;
+
+      @include responsive(medium) {
+        display: inline-block;
+      }
+
+      &-gray {
+        color: hsl(var(--color-txt), .2);
+        margin-right: 1.4rem;
+      }
+    }
+
+    &.active {
+      border-bottom: 4px solid;
+      color: hsl(var(--color-txt));
+
+      @include responsive(medium) {
+        border: 1px solid;
+      }
+
+      .btn-view--txt {
+        &-gray {
+          color: hsl(var(--color-txt), .5);
+        }
+      }
+    }
+
+    &-mercury.active {
+      border-bottom-color: hsl(var(--color-mercury));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-mercury));
+        background-color: hsl(var(--color-mercury));
+      }
+    }
+
+    &-venus.active {
+      border-bottom-color: hsl(var(--color-venus));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-venus));
+        background-color: hsl(var(--color-venus));
+      }
+    }
+
+    &-earth.active {
+      border-bottom-color: hsl(var(--color-earth));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-earth));
+        background-color: hsl(var(--color-earth));
+      }
+    }
+
+    &-mars.active {
+      border-bottom-color: hsl(var(--color-mars));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-mars));
+        background-color: hsl(var(--color-mars));
+      }
+    }
+
+    &-jupiter.active {
+      border-bottom-color: hsl(var(--color-jupiter));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-jupiter));
+        background-color: hsl(var(--color-jupiter));
+      }
+    }
+
+    &-saturn.active {
+      border-bottom-color: hsl(var(--color-saturn));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-saturn));
+        background-color: hsl(var(--color-saturn));
+      }
+    }
+
+    &-uranus.active {
+      border-bottom-color: hsl(var(--color-uranus));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-uranus));
+        background-color: hsl(var(--color-uranus));
+      }
+    }
+
+    &-neptune.active {
+      border-bottom-color: hsl(var(--color-neptune));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-neptune));
+        background-color: hsl(var(--color-neptune));
+      }
+    }
+
+    &:hover {
+      border-bottom: 4px solid;
+      color: hsl(var(--color-txt));
+
+      @include responsive(medium) {
+        border: 1px solid;
+        background-color: hsla(0, 0%, 85%, .2);
+      }
+    }
+
+    &-mercury:hover {
+      border-bottom-color: hsl(var(--color-mercury));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-mercury));
+      }
+    }
+
+    &-venus:hover {
+      border-bottom-color: hsl(var(--color-venus));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-venus));
+      }
+    }
+
+    &-earth:hover {
+      border-bottom-color: hsl(var(--color-earth));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-earth));
+      }
+    }
+
+    &-mars:hover {
+      border-bottom-color: hsl(var(--color-mars));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-mars));
+      }
+    }
+
+    &-jupiter:hover {
+      border-bottom-color: hsl(var(--color-jupiter));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-jupiter));
+      }
+    }
+
+    &-saturn:hover {
+      border-bottom-color: hsl(var(--color-saturn));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-saturn));
+      }
+    }
+
+    &-uranus:hover {
+      border-bottom-color: hsl(var(--color-uranus));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-uranus));
+      }
+    }
+
+    &-neptune:hover {
+      border-bottom-color: hsl(var(--color-neptune));
+
+      @include responsive(medium) {
+        border-color: hsl(var(--color-neptune));
+      }
+    }
+  }
+}

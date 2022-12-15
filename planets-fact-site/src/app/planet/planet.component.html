@@ -1,0 +1,53 @@
+<div class="btn-view-container btn-view-container--mobile">
+  <app-planet-view-btn
+    [planet]="planet?.name"
+    (newPlanetEvent)="onUpdate($event)"></app-planet-view-btn>
+</div>
+
+<div class="main-center">
+  <div class="main-left">
+    <div class="planet-img-container">
+      <img *ngIf="selectedView === 'geology'" [src]="planet?.images?.planet" alt="" class="{{ 'planet-' + planet?.name }}">
+      <img [src]="planetView.image"  class="{{'planet-' + planet?.name }}" [class.planet-geology-img]="selectedView === 'geology'" alt="">
+    </div>
+  </div>
+
+  <div class="main-right">
+    <div class="planet-info-container">
+      <h1 class="planet-name">{{ planet?.name | uppercase }}</h1>
+
+      <p class="planet-description">{{ planetView.content }}</p>
+      <p class="planet-info-source">Source:
+        <a [href]="planetView.source" target="_blank" class="info-source--link">Wikipedia</a>
+        <span class="planet-info-source--icon"></span>
+      </p>
+    </div>
+
+    <div class="btn-view-container btn-view-container--desktop">
+      <app-planet-view-btn
+        [planet]="planet?.name"
+        (newPlanetEvent)="onUpdate($event)"></app-planet-view-btn>
+    </div>
+  </div>
+</div>
+
+<div class="main-bottom">
+  <ul class="planet-details-container">
+    <li class="planet-detail">
+      <span class="planet-detail-intro">Rotation Time</span>
+      <p class="planet-detail-info">{{ planet?.rotation }}</p>
+    </li>
+    <li class="planet-detail">
+      <span class="planet-detail-intro">Revolution Time</span>
+      <p class="planet-detail-info">{{ planet?.revolution }}</p>
+    </li>
+    <li class="planet-detail">
+      <span class="planet-detail-intro">Radius</span>
+      <p class="planet-detail-info">{{ planet?.radius }}</p>
+    </li>
+    <li class="planet-detail">
+      <span class="planet-detail-intro">Average Temp.</span>
+      <p class="planet-detail-info">{{ planet?.temperature }}</p>
+    </li>
+  </ul>
+</div>

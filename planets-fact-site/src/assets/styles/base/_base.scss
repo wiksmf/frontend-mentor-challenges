@@ -1,0 +1,7 @@
+body {
+  background-color: hsl(var(--color-bg));
+  @include backgroundImage($bg-url: '../../images/background-stars.svg',
+    $bg-size: cover,
+    $bg-repeat: repeat,
+    $bg-position: center)
+}

@@ -1,0 +1,338 @@
+@import 'src/assets/styles/abstracts/mixins';
+@import 'src/assets/styles/abstracts/variables';
+
+.main {
+  &-left {
+    height: 30.4rem;
+    @include displayFlex($justify-content: center);
+
+    @include responsive(medium) {
+      height: 55rem;
+      padding-top: 10rem;
+    }
+
+    @include responsive(large) {
+      flex-grow: 1;
+      height: 58.9rem;
+      padding-top: 0;
+    }
+  }
+
+  &-right {
+    padding: 0 15vw;
+    text-align: center;
+    @include displayFlex($justify-content: center);
+
+    @include responsive(medium) {
+      column-gap: 6.9rem;
+      padding: 0 5vw;
+      text-align: left;
+    }
+
+    @include responsive(large) {
+      max-width: 35rem;
+      padding: 0;
+      @include displayFlex($direction: column,
+        $align-items: flex-end);
+    }
+  }
+
+  &-center {
+    max-width: 105rem;
+    margin: 0 auto;
+
+    @include responsive(large) {
+      max-width: 144rem;
+      padding: 3rem 5vw 0;
+      @include displayFlex($justify-content: space-between,
+        $column-gap: 10rem);
+    }
+  }
+
+  &-bottom {
+    padding: 0 6.5vw;
+    margin-top: 2.5rem;
+    max-width: 105rem;
+    margin: 0 auto;
+
+    @include responsive(medium) {
+      padding: 0 5vw;
+      margin-top: 4.3rem;
+    }
+
+    @include responsive(large) {
+      max-width: 144rem;
+    }
+  }
+}
+
+.planet {
+  &-name {
+    text-transform: uppercase;
+    color: hsl(var(--color-txt));
+    @include font-style($h1-font-style);
+  }
+
+  &-description {
+    color: hsl(var(--color-txt));
+    margin: 1.6rem auto 3.2rem;
+    @include font-style($p-description-font-style);
+
+    @include responsive(medium) {
+      min-height: 11rem;
+      margin: 2.4rem auto 3.2rem;
+    }
+
+    @include responsive(large) {
+      min-height: 12.5rem;
+      margin: 2.3rem auto 2.4rem;
+    }
+  }
+
+  &-info {
+    &-source {
+      color: hsl(var(--color-txt), .5);
+      mix-blend-mode: normal;
+      margin-bottom: 2.8rem;
+      @include displayFlex($justify-content: center, $column-gap: .4rem);
+      @include font-style($p-source-font-style);
+
+      @include responsive(medium) {
+        @include displayFlex($justify-content: flex-start, $column-gap: .4rem);
+      }
+
+      @include responsive(large) {
+        margin-bottom: 3.9rem;
+      }
+
+      & a {
+        text-decoration-line: underline;
+        color: hsl(var(--color-txt), .5);
+        mix-blend-mode: normal;
+        @include font-style($p-source-font-style);
+      }
+
+      &--icon {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        @include backgroundImage('../../assets/images/icon-source.svg');
+      }
+    }
+  }
+
+  &-details-container {
+    @include displayFlex($direction: column,
+      $row-gap: .8rem);
+
+    @include responsive(small) {
+      flex-wrap: wrap;
+      @include displayFlex($justify-content: center,
+        $column-gap: .8rem,
+        $row-gap: .8rem);
+    }
+
+    @include responsive(medium) {
+      @include displayFlex($direction: row,
+        $justify-content: space-between,
+        $column-gap: .8rem,
+        $row-gap: .8rem);
+    }
+  }
+
+  &-detail {
+    width: 100%;
+    border: 1px solid hsl(var(--color-border), .2);
+    padding: 1.05rem 2.4rem;
+    @include displayFlex();
+
+    @include responsive(small) {
+      width: 40%;
+      @include displayFlex($direction: column,
+        $align-items: flex-start,
+        $row-gap: .6rem);
+    }
+
+    @include responsive(medium) {
+      width: 23.8%;
+      max-width: 25.5rem;
+    }
+
+    &-intro {
+      color: hsl(var(--color-txt), .5);
+      text-transform: uppercase;
+      mix-blend-mode: normal;
+      @include font-style($span-detail-font-style);
+    }
+
+    &-info {
+      text-align: right;
+      text-transform: uppercase;
+      color: hsl(var(--color-txt));
+      @include font-style($p-detail-font-style);
+    }
+  }
+
+  &-img-container {
+    position: relative;
+    @include displayFlex($justify-content: center);
+  }
+
+  &-mercury {
+    width: 111px;
+    height: 111px;
+
+    @include responsive(medium) {
+      width: 184px;
+      height: 184px;
+    }
+
+    @include responsive(large) {
+      width: 290px;
+      height: 290px;
+    }
+  }
+
+  &-venus {
+    width: 154px;
+    height: 154px;
+
+    @include responsive(medium) {
+      width: 253px;
+      height: 253px;
+    }
+
+    @include responsive(large) {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  &-earth {
+    width: 173px;
+    height: 173px;
+
+    @include responsive(medium) {
+      width: 285px;
+      height: 285px;
+    }
+
+    @include responsive(large) {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  &-mars {
+    width: 129px;
+    height: 129px;
+
+    @include responsive(medium) {
+      width: 213px;
+      height: 213px;
+    }
+
+    @include responsive(large) {
+      width: 336px;
+      height: 336px;
+    }
+  }
+
+  &-jupiter {
+    width: 224px;
+    height: 224px;
+
+    @include responsive(medium) {
+      width: 369px;
+      height: 369px;
+    }
+
+    @include responsive(large) {
+      width: 582px;
+      height: 582px;
+    }
+  }
+
+  &-saturn {
+    width: 256px;
+    height: 256px;
+
+    @include responsive(medium) {
+      width: 422px;
+      height: 422px;
+    }
+
+    @include responsive(large) {
+      width: 666.09px;
+      height: 666.09px;
+    }
+  }
+
+  &-uranus {
+    width: 176px;
+    height: 176px;
+
+    @include responsive(medium) {
+      width: 290px;
+      height: 290px;
+    }
+
+    @include responsive(large) {
+      width: 458px;
+      height: 458px;
+    }
+  }
+
+  &-neptune {
+    width: 173px;
+    height: 173px;
+
+    @include responsive(medium) {
+      width: 285px;
+      height: 285px;
+    }
+
+    @include responsive(large) {
+      width: 450px;
+      height: 450px;
+    }
+  }
+
+  &-geology-img {
+    width: 90px;
+    height: 111px;
+    @include positionAbsolute($top: 50%,
+      $right: 50%);
+
+    @include responsive(medium) {
+      width: 156px;
+      height: 184px;
+    }
+
+    @include responsive(large) {
+      width: 163px;
+      height: 199px;
+    }
+  }
+}
+
+.btn {
+  &-view-container {
+    &--mobile {
+      border-top: 1px solid hsl(var(--color-border), 0.2);
+      border-bottom: 1px solid hsl(var(--color-border), 0.2);
+
+      @include responsive(medium) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include responsive(medium) {
+        display: block;
+      }
+    }
+  }
+}

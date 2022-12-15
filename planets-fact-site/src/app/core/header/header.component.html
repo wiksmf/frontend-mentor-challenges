@@ -1,0 +1,24 @@
+<header class="header">
+  <a href="#" class="header-logo">The planets</a>
+
+  <button
+    type="button"
+    aria-label="Open menu"
+    class="nav-btn"
+    (click)="onToggleMenu()"></button>
+
+  <nav class="nav" [class.open]="isMenuOpen">
+    <div class="nav-list">
+      <button class="nav-item {{'nav-item-' + planet.name }}"
+        *ngFor="let planet of planets"
+        (click)="onToggleMenu()"
+        routerLinkActive="active"
+        [routerLink]="['planet', planet.name]"
+        >
+
+        <span class="nav-item--dot {{'nav-item--dot-' + planet.name }}"></span>
+        <a class="nav-link">{{ planet.name }}</a>
+      </button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,71 @@
+// COLORS
+:root {
+  --color-txt: 0, 0%, 100%;
+  --color-bg: 240, 67%, 8%;
+  --color-border: 0, 0%, 100%;
+  --color-mercury: 194, 48%, 50%;
+  --color-venus: 33, 82%, 61%;
+  --color-earth: 238, 99%, 66%;
+  --color-mars: 12, 100%, 64%;
+  --color-jupiter: 27, 75%, 70%;
+  --color-saturn: 40, 96%, 70%;
+  --color-uranus: 168, 82%, 67%;
+  --color-neptune: 222, 95%, 63%;
+}
+
+// BREAKPOINTS
+$bp-small: 31.25em; // 500
+$bp-medium: 48em; // 768
+$bp-large: 87.5em; // 1400
+
+$breakpoints: (
+  small : $bp-small,
+  medium: $bp-medium,
+  large : $bp-large
+);
+
+// FONTS
+$font-heading: 'Antonio', sans-serif;
+$font-body: 'League Spartan', sans-serif;
+
+$logo-font-style: (
+  null: ($font-heading, 2.8rem, 400, 3.6rem, -0.1rem),
+);
+
+$nav-font-style: (
+  null: ($font-body, 1.5rem, 700, 2.5rem, 0.13rem),
+  medium: ($font-body, 1.1rem, 700, 2.5rem, 0.1rem),
+);
+
+$overview-btn-font-style: (
+  null: ($font-body, .9rem, 700, 1rem, 0.19rem),
+  medium: ($font-body, .9rem, 700, 1rem, 0.19rem),
+  large: ($font-body, 1.2rem, 700, 1.3rem, 0.25rem),
+);
+
+$h1-font-style: (
+  null: ($font-heading, 4rem, 400, 5.2rem, 0),
+  medium: ($font-heading, 4.8rem, 400, 6.2rem, 0),
+  large: ($font-heading, 8rem, 400, 10.3rem, 0),
+);
+
+$p-description-font-style: (
+  null: ($font-body, 1.3rem, 400, 2.2rem, 0),
+  large: ($font-body, 1.4rem, 400, 2.5rem, 0),
+);
+
+$p-source-font-style: (
+  null: ($font-body, 1.2rem, 400, 2.5rem, 0),
+  large: ($font-body, 1.4rem, 400, 2.5rem, 0),
+);
+
+$p-detail-font-style: (
+  null: ($font-heading, 2rem, 400, 2.6rem, 0.07rem),
+  medium: ($font-heading, 2.4rem, 400, 3.1rem, -0.09rem),
+  large: ($font-heading, 4rem, 400, 5.2rem, -0.15rem),
+);
+
+$span-detail-font-style: (
+  null: ($font-body, .8rem, 700, 1.6rem, 0.07rem),
+  large: ($font-body, 1.1rem, 700, 2.5rem, 0.1rem),
+);

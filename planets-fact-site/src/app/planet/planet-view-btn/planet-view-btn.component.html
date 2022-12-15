@@ -1,0 +1,22 @@
+<button class="btn-view {{'btn-view-' + planet }}"
+  [class.active]="selectedView === 'overview'"
+  (click)="onUpdateView('overview')">
+  <span class="btn-view--txt btn-view--txt-gray">01</span>
+  Overview
+</button>
+
+<button class="btn-view {{'btn-view-' + planet }}"
+  [class.active]="selectedView === 'structure'"
+  (click)="onUpdateView('structure')">
+  <span class="btn-view--txt btn-view--txt-gray">02</span>
+  Structure
+  <span class="btn-view--txt">Structure</span>
+</button>
+
+<button class="btn-view {{'btn-view-' + planet }}"
+  [class.active]="selectedView === 'geology'"
+  (click)="onUpdateView('geology')">
+  <span class="btn-view--txt btn-view--txt-gray">03</span>
+  Surface
+  <span class="btn-view--txt">Geology</span>
+</button>
