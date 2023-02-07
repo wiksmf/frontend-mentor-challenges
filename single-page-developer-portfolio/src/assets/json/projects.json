@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Design portfolio",
+    "image": {
+      "small": "./assets/images/thumbnail-project-1-small.webp",
+      "large": "./assets/images/thumbnail-project-1-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS"
+    ],
+    "links": {
+      "project": "project-link-1",
+      "code": "code-link-1"
+    }
+  },
+  {
+    "name": "E-learning landing page",
+    "image": {
+      "small": "./assets/images/thumbnail-project-2-small.webp",
+      "large": "./assets/images/thumbnail-project-2-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS"
+    ],
+    "links": {
+      "project": "project-link-2",
+      "code": "code-link-2"
+    }
+  },
+  {
+    "name": "Todo web app",
+    "image": {
+      "small": "./assets/images/thumbnail-project-3-small.webp",
+      "large": "./assets/images/thumbnail-project-3-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "project": "project-link-3",
+      "code": "code-link-3"
+    }
+  },
+  {
+    "name": "Entertainment web app",
+    "image": {
+      "small": "./assets/images/thumbnail-project-4-small.webp",
+      "large": "./assets/images/thumbnail-project-4-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "project": "project-link-4",
+      "code": "code-link-4"
+    }
+  },
+  {
+    "name": "Memory Game",
+    "image": {
+      "small": "./assets/images/thumbnail-project-5-small.webp",
+      "large": "./assets/images/thumbnail-project-5-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "project": "project-link-5",
+      "code": "code-link-5"
+    }
+  },
+  {
+    "name": "Art gallery showcase",
+    "image": {
+      "small": "./assets/images/thumbnail-project-6-small.webp",
+      "large": "./assets/images/thumbnail-project-6-large.webp"
+    },
+    "techUsed": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "project": "project-link-6",
+      "code": "code-link-6"
+    }
+  }
+]

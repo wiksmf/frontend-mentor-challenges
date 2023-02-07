@@ -1,0 +1,8 @@
+<ul class="skillset-list">
+  <li class="skillset-item" *ngFor="let skills of skillset">
+    <ng-container *ngFor="let skill of skills | keyvalue">
+      <span class="heading-secondary">{{ skill.key }}</span>
+      <span class="paragraph">{{ skill.value }}</span>
+    </ng-container>
+  </li>
+</ul>

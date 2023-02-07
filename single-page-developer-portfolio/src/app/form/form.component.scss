@@ -1,0 +1,105 @@
+@import '../../assets/styles/abstracts/mixins';
+@import '../../assets/styles/abstracts/variables';
+@import '../../assets/styles/base/typography';
+
+.form {
+  position: relative;
+  padding: 5rem 0 0;
+  text-align: left;
+  z-index: 10;
+
+  @include changeBreakpointView(tablet) {
+    min-width: 44.5rem;
+  }
+
+  @include changeBreakpointView(desktop) {
+    padding: 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+    width: 100%;
+    max-width: 44.5rem;
+    margin: 0 auto;
+  }
+
+  &-label {
+    padding-left: 2.4rem;
+    text-transform: uppercase;
+    color: hsl(var(--color-txt-main), 0.5);
+    @include font-style($fs-input);
+  }
+
+  &-input {
+    background: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid hsl(var(--color-txt-main));
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-input);
+
+    &.is-invalid {
+      border-bottom: 1px solid hsl(var(--color-error));
+      background-image: url('../../assets/images/icon-error.svg');
+      background-size: 2.4rem;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+
+    &.is-valid {
+      border-bottom: 1px solid hsl(var(--color-highlight));
+    }
+  }
+
+  &-textarea {
+    background: none;
+    border: none;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 8.1rem;
+    border-bottom: 1px solid hsl(var(--color-txt-main));
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-input);
+
+    &.is-invalid {
+      border-bottom: 1px solid hsl(var(--color-error));
+      background-image: url('../../assets/images/icon-error.svg');
+      background-size: 2.4rem;
+      background-repeat: no-repeat;
+      background-position: bottom right;
+    }
+
+    &.is-valid {
+      border-bottom: 1px solid hsl(var(--color-highlight));
+    }
+  }
+
+  &-error {
+    text-align: right;
+    color: hsl(var(--color-error));
+    margin-top: 0.5rem;
+    @include font-style($fs-input-error);
+  }
+
+  &-btn-submit {
+    margin-left: auto;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+    color: hsl(var(--color-txt-main));
+    cursor: pointer;
+    transition: all .2s linear;
+    @include font-style($fs-contact-link);
+
+    &:hover {
+      color: hsl(var(--color-highlight));
+    }
+  }
+}

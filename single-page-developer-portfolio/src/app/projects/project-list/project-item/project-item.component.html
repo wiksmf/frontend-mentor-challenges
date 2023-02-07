@@ -1,0 +1,24 @@
+<div class="project-images-wrapper">
+  <picture class="project-images">
+    <source [srcset]="project.image.large" media="(min-width: 1024px)" />
+    <img [src]="project.image.small" alt="">
+  </picture>
+
+  <div class="project-links project-links-desktop">
+    <app-link [name]="'View project'" [url]="project.links.project"></app-link>
+    <app-link [name]="'View code'" [url]="project.links.code"></app-link>
+  </div>
+</div>
+
+<div class="project-info">
+  <h3 class="heading-tertiary">{{ project.name }}</h3>
+
+  <div class="project-tech">
+    <p class="paragraph paragraph-lg" *ngFor="let tech of project.techUsed">{{ tech }}</p>
+  </div>
+
+  <div class="project-links project-links-mobile">
+    <app-link [name]="'View project'" [url]="project.links.project"></app-link>
+    <app-link [name]="'View code'" [url]="project.links.code"></app-link>
+  </div>
+</div>

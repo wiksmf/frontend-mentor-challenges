@@ -1,0 +1,12 @@
+@import '../../../assets/styles/abstracts/mixins';
+
+:host {
+  text-align: left;
+
+  @include changeBreakpointView(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem 2.2rem;
+    justify-content: space-between;
+  }
+}

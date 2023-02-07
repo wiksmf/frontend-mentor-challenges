@@ -1,0 +1,14 @@
+@import '../../assets/styles/abstracts/mixins';
+
+.heading {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+
+    @include changeBreakpointView(tablet) {
+      justify-content: space-between;
+    }
+  }
+}

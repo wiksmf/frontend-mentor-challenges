@@ -1,0 +1,34 @@
+@import '../../assets/styles/abstracts/mixins';
+
+.heading-secondary {
+  @include changeBreakpointView(tablet) {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.skillset {
+  &-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+
+    @include changeBreakpointView(tablet) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 6rem 2.2rem;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+
+    @include changeBreakpointView(tablet) {
+      width: 45%;
+    }
+
+    @include changeBreakpointView(desktop) {
+      width: 30%;
+    }
+  }
+}

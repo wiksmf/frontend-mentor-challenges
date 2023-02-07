@@ -1,0 +1,36 @@
+.heading-primary {
+  color: hsl(var(--color-txt-main));
+  @include font-style($fs-heading-primary);
+}
+
+.heading-secondary {
+  color: hsl(var(--color-txt-main));
+  @include font-style($fs-heading-secondary);
+}
+
+.heading-tertiary {
+  color: hsl(var(--color-txt-main));
+  @include font-style($fs-heading-tertiary);
+}
+
+.paragraph {
+  color: hsl(var(--color-txt-gray));
+  @include font-style($fs-paragraph);
+
+  &-lg {
+    @include font-style($fs-paragraph-lg);
+  }
+}
+
+.txt-underline {
+  border-bottom-color: hsl(var(--color-highlight));
+  border-bottom-style: solid;
+
+  &--light {
+    border-bottom-width: 2px;
+  }
+
+  &--heavy {
+    border-bottom-width: 4px;
+  }
+}

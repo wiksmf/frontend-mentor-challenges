@@ -1,0 +1,84 @@
+@import '../../../assets/styles/abstracts/mixins';
+@import '../../../assets/styles/abstracts/variables';
+
+.nav {
+  width: 100%;
+  max-width: 111rem;
+  margin: 0 auto;
+
+  @include changeBreakpointView(tablet) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    z-index: 10;
+  }
+
+
+  @include changeBreakpointView(desktop) {
+    padding: 0;
+  }
+
+  &-logo {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-nav-logo);
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.5rem;
+    margin-top: 2rem;
+
+    @include changeBreakpointView(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &-item {
+    list-style: none;
+  }
+
+  &-link {
+    display: inline-block;
+    height: 1.9rem;
+    width: 1.9rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s linear;
+
+    &--github {
+      background-image: url(../../../assets/images/icon-github.svg);
+
+      &:hover {
+        background-image: url(../../../assets/images/icon-github-hover.svg);
+      }
+    }
+
+    &--frontend {
+      background-image: url(../../../assets/images/icon-frontend-mentor.svg);
+
+      &:hover {
+        background-image: url(../../../assets/images/icon-frontend-mentor-hover.svg);
+      }
+    }
+
+    &--linkedin {
+      background-image: url(../../../assets/images/icon-linkedin.svg);
+
+      &:hover {
+        background-image: url(../../../assets/images/icon-linkedin-hover.svg);
+      }
+    }
+
+    &--twitter {
+      background-image: url(../../../assets/images/icon-twitter.svg);
+
+      &:hover {
+        background-image: url(../../../assets/images/icon-twitter-hover.svg);
+      }
+    }
+  }
+}

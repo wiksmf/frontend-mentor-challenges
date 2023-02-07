@@ -1,0 +1,64 @@
+// COLORS
+:root {
+  --color-bg-main: 0, 0%, 8%;
+  --color-bg-gray: 0, 0%, 14%;
+  --color-bg-hover: 0, 0%, 1%;
+  --color-txt-main: 0, 0%, 100%;
+  --color-txt-gray: 0, 0%, 85%;
+  --color-highlight: 154, 71%, 59%;
+  --color-error: 7, 100%, 68%, 1;
+}
+
+// BREAKPOINTS
+$bp-small: 31.25em; // 500
+$bp-medium: 48em; // 768
+$bp-large: 87.5em; // 1400
+
+$breakpoints: (
+  medium: $bp-medium,
+  large : $bp-large
+);
+
+// FONTS
+$font-family: 'Space Grotesk', sans-serif;
+
+$fs-nav-logo: (
+  null: ($font-family, 2.4rem, 700, 3.2rem, -0.03rem),
+  medium: ($font-family, 3.2rem, 700, 3.2rem, -0.04rem),
+);
+
+$fs-heading-primary: (
+  null: ($font-family, 4rem, 700, 4rem, -0.11rem),
+  medium: ($font-family, 7.2rem, 700, 7.2rem, 0.05rem),
+  large: ($font-family, 8.8rem, 700, 8.8rem, -0.25rem),
+);
+
+$fs-heading-secondary: (
+  null: ($font-family, 3.2rem, 700, 4rem, -0.1rem),
+  medium: ($font-family, 4.8rem, 700, 5.6rem, -0.15rem),
+);
+
+$fs-heading-tertiary: (
+  null: ($font-family, 2.4rem, 700, 3.2rem, 0rem),
+);
+
+$fs-paragraph: (
+  null: ($font-family, 1.6rem, 500, 2.6rem, 0),
+  medium: ($font-family, 1.8rem, 500, 2.8rem, 0),
+);
+
+$fs-paragraph-lg: (
+  null: ($font-family, 1.8rem, 500, 2.8rem, 0),
+);
+
+$fs-contact-link: (
+  null: ($font-family, 1.6rem, 700, 2.6rem, 0.22rem),
+);
+
+$fs-input: (
+  null: ($font-family, 1.6rem, 500, 2.6rem, -0.02rem),
+);
+
+$fs-input-error: (
+  null: ($font-family, 1.2rem, 500, 1.6rem, -0.02rem),
+);

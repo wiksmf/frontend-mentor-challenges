@@ -1,0 +1,10 @@
+body {
+  padding: 1.6rem 0 0;
+  background-color: hsl(var(--color-bg-main));
+  text-align: center;
+
+  @include changeBreakpointView (tablet) {
+    padding: 2.9rem 0 0;
+    text-align: left;
+  }
+}

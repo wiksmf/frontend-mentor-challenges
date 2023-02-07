@@ -1,0 +1,50 @@
+<app-navigation></app-navigation>
+
+<section class="section section-hero">
+  <div class="section-hero-wrapper">
+    <picture class="section-hero-img">
+      <source media="(min-width: 1150px)" srcset="../assets/images/image-profile-desktop.webp">
+      <source media="(min-width: 768px)" srcset="../assets/images/image-profile-tablet.webp">
+      <img src="../assets/images/image-profile-mobile.webp" alt="">
+    </picture>
+
+   <div class="section-hero-info">
+    <h1 class="heading-primary">
+      Nice to meet you! I'm <span class="txt-underline txt-underline--heavy">Adam Keyes</span>.
+    </h1>
+
+    <p class="paragraph">
+      Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.
+    </p>
+
+    <app-link [name]="'Contact me'" [url]="'#contact-form'"></app-link>
+   </div>
+  </div>
+</section>
+
+<section class="section section-skillset">
+  <div class="section-skillset-wrapper">
+    <app-skillset></app-skillset>
+  </div>
+</section>
+
+<section class="section section-projects">
+  <app-projects></app-projects>
+</section>
+
+<section class="section section-contact-form" id="contact-form">
+  <div class="section-contact-form-wrapper">
+    <div class="section-contact-form-info">
+      <h2 class="heading-primary">Contact</h2>
+      <p class="paragraph">
+        I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.
+      </p>
+    </div>
+
+    <app-form></app-form>
+  </div>
+
+  <app-navigation></app-navigation>
+</section>
+
+<app-attribution></app-attribution>

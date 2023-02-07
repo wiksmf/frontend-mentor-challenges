@@ -1,0 +1,15 @@
+@import '../../assets/styles/abstracts/mixins';
+@import '../../assets/styles/abstracts/variables';
+
+.contact-link {
+  padding-bottom: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsl(var(--color-txt-main));
+  transition: all .2s linear;
+  @include font-style($fs-contact-link);
+
+  &:hover {
+    color: hsl(var(--color-highlight));
+  }
+}
