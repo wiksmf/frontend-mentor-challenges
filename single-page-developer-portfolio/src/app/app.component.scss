@@ -44,14 +44,15 @@
     }
 
     &-info {
+      position: relative;
       width: 100%;
       max-width: 45rem;
       margin: 0 auto;
+      z-index: 10;
 
       @include changeBreakpointView(tablet) {
         position: relative;
         margin-left: 0;
-        z-index: 10;
       }
 
       @include changeBreakpointView(desktop) {
