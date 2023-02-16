@@ -1,0 +1,61 @@
+// COLORS
+:root {
+  --color-txt-dr: 0, 0%, 1%;
+  --color-txt-lt: 0, 0%, 100%;
+  --color-txt-p: 30, 5%, 45%;
+  --color-btn-cta: 7, 77%, 66%;
+  --color-btn-cta--hover: 28, 89%, 67%;
+  --color-bg: 30, 100%, 97%;
+  --color-bg-graphic-design: 252, 66%, 62%;
+  --color-bg-ui-ux: 28, 89%, 67%;
+  --color-bg-apps: 0, 79%, 79%;
+  --color-bg-illustrations: 7, 77%, 66%;
+  --color-bg-photography: 172, 46%, 57%;
+  --color-bg-motion-graphics: 314, 46%, 23%;
+}
+
+// BREAKPOINTS
+$bp-small: 31.25em; // 500
+$bp-medium: 48em; // 768
+$bp-large: 71.875em; // 1150
+
+$breakpoints: (
+  small : $bp-small,
+  medium: $bp-medium,
+  large : $bp-large
+);
+
+// FONTS
+$font-family: 'Plus Jakarta Sans', sans-serif;
+
+$fs-nav-link: (
+  null: ($font-family, 1.4rem, 700, 2.8rem, 0),
+  medium: ($font-family, 1.6rem, 700, 2.8rem, 0)
+);
+
+$fs-heading-primary: (
+  null: ($font-family, 3.6rem, 700, 4.5rem, 0),
+  medium: ($font-family, 4.4rem, 700, 5.5rem, 0),
+  large: ($font-family, 5.6rem, 700, 7.1rem, 0)
+);
+
+$fs-heading-secondary: (
+  null: ($font-family, 2.6rem, 700, 3.3rem, 0),
+  medium: ($font-family, 3.2rem, 700, 4rem, 0),
+  large: ($font-family, 4rem, 700, 5rem, 0)
+);
+
+$fs-heading-tertiary: (
+  null: ($font-family, 2.4rem, 700, 3rem, 0),
+  medium: ($font-family, 3.2rem, 700, 4rem, 0),
+);
+
+
+$fs-paragraph: (
+  null: ($font-family, 1.6rem, 500, 2.6rem, 0),
+  large: ($font-family, 1.8rem, 700, 2.8rem, 0),
+);
+
+$fs-design-discipline--info: (
+  null: ($font-family, 2.4rem, 700, 3rem, 0)
+);

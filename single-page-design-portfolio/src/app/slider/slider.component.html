@@ -1,0 +1,22 @@
+<h3 class="heading-tertiary">My Work</h3>
+
+<div class="slider">
+  <div class="slider-wrap">
+      <div *ngFor="let slide of slides; index as i"
+      class="slide"
+      [ngClass]="{'selected': i == selectedIndex}"
+      [ngStyle]="{
+        'transform': 'translateX('+ translateX + '%' +')',
+        'transition': '.4s linear'}">
+
+      <img [src]="slide.img" alt="">
+    </div>
+  </div>
+
+  <div class="slider-btns">
+    <button class="slider-btn slider-btn-prev" (click)="previousSlide()" aria-label="Previous slide"></button>
+    <button class="slider-btn slider-btn-next" (click)="nextSlide()" aria-label="Next slide"></button>
+  </div>
+</div>
+
+

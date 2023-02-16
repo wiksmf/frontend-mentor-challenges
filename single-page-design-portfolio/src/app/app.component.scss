@@ -1,0 +1,248 @@
+@import 'src/assets/styles/abstracts/mixins';
+@import 'src/assets/styles/abstracts/variables';
+
+.hero {
+  margin: 3.2rem 1.6rem 10rem;
+
+  @include changeBreakpointVew(tablet) {
+    margin: 6.4rem 4rem 12rem;
+  }
+
+  @include changeBreakpointVew(desktop) {
+    margin: 6.6rem auto 13.6rem;
+    max-width: 111rem;
+  }
+
+  .heading-primary {
+    @include changeBreakpointVew(desktop) {
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  .paragraph {
+    @include changeBreakpointVew(tablet) {
+      width: 75%;
+      max-width: 90%;
+      margin: 0 auto 6.4rem;
+    }
+
+    @include changeBreakpointVew(desktop) {
+      width: 65%;
+      max-width: 65%;
+      margin: 0 auto 8rem;
+    }
+  }
+}
+
+.design-disciplines-container {
+  display: grid;
+  grid-template-areas:
+    'a a'
+    'b c'
+    'd d'
+    'e e'
+    'f f';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 36.4rem 18.2rem 15.8rem 18.2rem 18.2rem;
+  gap: 2.4rem;
+
+  @include changeBreakpointVew(tablet) {
+    grid-template-areas:
+      'a a b c'
+      'a a d d'
+      'e e f f';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 18.2rem 15.8rem 18.2rem;
+  }
+
+  @include changeBreakpointVew(desktop) {
+    grid-template-areas:
+      'a b c d'
+      'a e e f';
+    grid-template-columns: 35.4rem repeat(2, 16.4rem) 35.4rem;
+    grid-template-rows: 18.2rem 15.8rem;
+  }
+}
+
+.design-discipline {
+  position: relative;
+  padding: 2.4rem;
+  border-radius: .8rem;
+
+  &--graphic-design {
+    grid-area: a;
+    background-color: hsl(var(--color-bg-graphic-design));
+    @include backgroundImage($bg-url: '../../images/pattern-graphic-design.svg',
+      $bg-size: (12.8rem 19.2rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--ui-ux {
+    grid-area: b;
+    background-color: hsl(var(--color-bg-ui-ux));
+    @include backgroundImage($bg-url: '../../images/pattern-ui-ux.svg',
+      $bg-size: (6.4rem 6.4rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--apps {
+    grid-area: c;
+    background-color: hsl(var(--color-bg-apps));
+    @include backgroundImage($bg-url: '../../images/pattern-apps.svg',
+      $bg-size: (6.4rem 6.4rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--photography {
+    grid-area: d;
+    background-color: hsl(var(--color-bg-photography));
+    @include backgroundImage($bg-url: '../../images/pattern-photography.svg',
+      $bg-size: (16rem 6.4rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--illustrations {
+    grid-area: e;
+    background-color: hsl(var(--color-bg-illustrations));
+    @include backgroundImage($bg-url: '../../images/pattern-illustrations.svg',
+      $bg-size: (12.8rem 6.4rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--motion-graphics {
+    grid-area: f;
+    background-color: hsl(var(--color-bg-motion-graphics));
+    @include backgroundImage($bg-url: '../../images/pattern-motion-graphics.svg',
+      $bg-size: (12.8rem 6.4rem),
+      $bg-position: (right 2.4rem top 2.4rem))
+  }
+
+  &--info {
+    position: absolute;
+    bottom: 2.4rem;
+    color: hsl(var(--color-txt-lt));
+    @include font-style($fs-design-discipline--info);
+  }
+}
+
+.about-me {
+  margin: 0 1.6rem 10rem;
+
+  @include changeBreakpointVew(tablet) {
+    position: relative;
+    padding-left: 50vw;
+  }
+
+  @include changeBreakpointVew(desktop) {
+    padding-left: 57rem;
+    max-width: 111rem;
+    margin: 0 auto 8.8rem;
+  }
+
+  &--img {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @include changeBreakpointVew(tablet) {
+      position: absolute;
+      top: 0;
+      left: -6.5rem;
+      width: 364px;
+      height: 364px;
+    }
+
+    @include changeBreakpointVew(desktop) {
+      left: 0;
+    }
+  }
+
+  &--link {
+    min-width: 17.6rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .8rem 0;
+    border-radius: 2.8rem;
+    color: hsl(var(--color-txt-lt));
+    background-color: hsl(var(--color-btn-cta));
+    text-decoration: none;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    @include font-style($fs-nav-link);
+    @include displayFlex($justify-content: center);
+
+    &:hover {
+      box-shadow:
+        inset -9rem 0 0 0 hsl(var(--color-btn-cta--hover)),
+        inset 9rem 0 0 0 hsl(var(--color-btn-cta--hover));
+    }
+
+    @include changeBreakpointVew(tablet) {
+      margin-left: 0;
+    }
+  }
+
+  .heading-secondary {
+    @include changeBreakpointVew(tablet) {
+      text-align: left;
+    }
+  }
+
+  .paragraph {
+    @include changeBreakpointVew(tablet) {
+      padding-right: 5rem;
+      text-align: left;
+    }
+  }
+}
+
+.book-call {
+  margin: 10rem 1.6rem 4rem;
+  padding: 4.9rem 2.4rem;
+  background-color: hsl(var(--color-txt-dr));
+  border-radius: 1rem;
+
+  @include changeBreakpointVew(desktop) {
+    padding: 8.1rem 50rem 8.1rem 6.5rem;
+  }
+
+  @include changeBreakpointVew(tablet) {
+    width: 90vw;
+    max-width: 111rem;
+    margin: 12rem auto 5.6rem;
+  }
+
+  @include changeBreakpointVew(tablet) {
+    position: relative;
+  }
+
+  .heading-secondary {
+    @include changeBreakpointVew(desktop) {
+      text-align: left;
+    }
+  }
+
+  .paragraph {
+    @include changeBreakpointVew(tablet) {
+      margin-bottom: 2.6rem;
+      padding: 0 8rem;
+    }
+
+    @include changeBreakpointVew(desktop) {
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  .about-me--link {
+    @include changeBreakpointVew(tablet) {
+      margin: 0 auto;
+    }
+
+    @include changeBreakpointVew(desktop) {
+      position: absolute;
+      top: 50%;
+      right: 9.5rem;
+      transform: translateY(-50%);
+    }
+  }
+}

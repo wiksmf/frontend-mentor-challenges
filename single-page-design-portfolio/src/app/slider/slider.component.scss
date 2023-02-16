@@ -1,0 +1,66 @@
+@import '../../assets/styles/abstracts/_mixins.scss';
+@import '../../assets/styles/abstracts/variables.scss';
+
+
+.heading-tertiary {
+  margin-bottom: 3.2rem;
+  text-align: center;
+
+  @include changeBreakpointVew(tablet) {
+    margin-bottom: 5.6rem;
+  }
+}
+
+.slider {
+  position: relative;
+  overflow-x: hidden;
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.6rem;
+    margin-top: 3.2rem;
+  }
+
+  &-btn {
+    width: 6.4rem;
+    height: 6.4rem;
+    border: none;
+    border-radius: 100%;
+    background-color: hsl(var(--color-txt-dr));
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &-prev {
+      @include backgroundImage('../../assets/images/icon-arrow-left.svg', $bg-size: (1.6rem 1.4rem))
+    }
+
+    &-next {
+      @include backgroundImage('../../assets/images/icon-arrow-right.svg', $bg-size: (1.6rem 1.4rem))
+    }
+
+    &:hover {
+      background-color: hsl(var(--color-bg-graphic-design));
+    }
+  }
+}
+
+.slide {
+
+  & img {
+    margin: 0 .75rem;
+    display: block;
+    width: 72vw;
+    max-width: 54rem;
+    // min-height: 18rem;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}

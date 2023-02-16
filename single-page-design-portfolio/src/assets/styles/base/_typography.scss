@@ -1,0 +1,36 @@
+.heading-primary {
+  margin-bottom: 1.6rem;
+  color: hsl(var(--color-txt-dr));
+  text-align: center;
+  @include font-style($fs-heading-primary);
+}
+
+.heading-secondary {
+  text-align: center;
+  @include font-style($fs-heading-secondary);
+
+  &--dark {
+    margin-bottom: 2.4rem;
+    color: hsl(var(--color-txt-dr));
+  }
+
+  &--light {
+    margin-bottom: 2.2rem;
+    color: hsl(var(--color-txt-lt));
+  }
+}
+
+.heading-tertiary {
+  @include font-style($fs-heading-tertiary);
+}
+
+.paragraph {
+  margin-bottom: 3.2rem;
+  color: hsl(var(--color-txt-p));
+  text-align: center;
+  @include font-style($fs-paragraph);
+
+  &--light {
+    color: hsl(var(--color-bg));
+  }
+}
