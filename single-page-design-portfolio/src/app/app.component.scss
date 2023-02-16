@@ -130,29 +130,39 @@
 
   @include changeBreakpointVew(tablet) {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 50vw;
+    min-height: 36.4rem;
   }
 
   @include changeBreakpointVew(desktop) {
     padding-left: 57rem;
     max-width: 111rem;
     margin: 0 auto 8.8rem;
+    min-height: 44.5rem;
   }
 
   &--img {
+    display: inherit;
     width: 100%;
-    margin-bottom: 4rem;
+    max-width: 36.4rem;
+    margin: 0 auto 4rem;
 
     @include changeBreakpointVew(tablet) {
       position: absolute;
       top: 0;
       left: -6.5rem;
-      width: 364px;
-      height: 364px;
+      width: 36.4rem;
+      height: 36.4rem;
     }
 
     @include changeBreakpointVew(desktop) {
       left: 0;
+      width: 44.5rem;
+      max-width: 44.5rem;
+      height: 44.5rem;
     }
   }
 
