@@ -1,0 +1,12 @@
+<form class="form" [formGroup]="userSearchForm" (ngSubmit)="onSubmit()">
+  <label for="username" class="form-label">Search GitHub username</label>
+  <input type="text" id="username" class="form-input" formControlName="username" placeholder="Search GitHub username...">
+
+  <div class="form-wrapper">
+    <span class="form-error" *ngIf="errorUserNotFound">No results</span>
+
+    <button type="submit" class="form-btn" [disabled]="!userSearchForm.valid">
+      Search
+    </button>
+  </div>
+</form>

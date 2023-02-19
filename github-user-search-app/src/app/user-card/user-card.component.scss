@@ -1,0 +1,123 @@
+@import '../../assets/styles/abstracts/mixins';
+
+.card {
+  border-radius: 1.5rem;
+  padding: 3.2rem 2.4rem 4.8rem;
+
+  @include changeBreakpointView(tablet) {
+    padding: 4rem;
+  }
+
+  @include changeBreakpointView(desktop) {
+    position: relative;
+    padding: 4.4rem 4.8rem 4.8rem 20.2rem;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 3.4rem;
+
+    @include changeBreakpointView(tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &-body {
+    margin-bottom: 2.4rem;
+
+    @include changeBreakpointView(tablet) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+
+    @include changeBreakpointView(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+}
+
+.user {
+  &-avatar {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+    border-radius: 100%;
+
+    @include changeBreakpointView(desktop) {
+      position: absolute;
+      top: 4.8rem;
+      left: 4.8rem;
+      width: 11.7rem;
+      height: 11.7rem;
+    }
+  }
+
+  &-data {
+    @include changeBreakpointView(desktop) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      column-gap: 5rem;
+    }
+  }
+
+  &-login {
+    color: hsl(var(--color-neutral-btn));
+  }
+
+  &-bio {
+    margin-bottom: 2.3rem;
+
+    @include changeBreakpointView(tablet) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.8rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+
+    @include changeBreakpointView(tablet) {
+      padding: 1.7rem 3.2rem;
+      text-align: left;
+    }
+
+    &-heading {
+      margin-bottom: 0.8rem
+    }
+  }
+
+  &-stat {
+    @include changeBreakpointView(tablet) {
+      width: 33%;
+    }
+  }
+
+  &-link {
+    padding-left: 2.5rem;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include changeBreakpointView(tablet) {
+      padding-left: 3.3rem;
+    }
+  }
+}

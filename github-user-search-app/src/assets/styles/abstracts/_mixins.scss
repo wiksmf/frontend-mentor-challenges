@@ -1,0 +1,44 @@
+@mixin changeBreakpointView($device-breakpoint) {
+
+  //768px
+  @if $device-breakpoint ==tablet {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  //1024px
+  @if $device-breakpoint ==desktop {
+    @media only screen and (min-width: 64em) {
+      @content;
+    }
+  }
+}
+
+@mixin font-style($fs-map, $fs-breakpoints: $breakpoints) {
+
+  @each $fs-breakpoint,
+  $fs-font-style in $fs-map {
+    @if $fs-breakpoint ==null {
+      @include make-font-style($fs-font-style);
+    }
+
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-style($fs-font-style);
+      }
+    }
+  }
+}
+
+@mixin make-font-style($fs-font-style) {
+  font-family: nth($fs-font-style, 1);
+  font-size: nth($fs-font-style, 2);
+  font-weight: nth($fs-font-style, 3);
+  line-height: nth($fs-font-style, 4);
+  letter-spacing: nth($fs-font-style, 5);
+}

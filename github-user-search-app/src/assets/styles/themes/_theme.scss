@@ -1,0 +1,180 @@
+body.color-scheme-dark {
+  background-color: hsl(var(--color-main-bg-dark));
+
+  .heading-primary {
+    color: hsl(var(--color-main-txt-dark));
+  }
+
+  .form {
+    &-input {
+      color: hsl(var(--color-main-txt-dark));
+      background-color: hsl(var(--color-secondary-bg-dark));
+
+      &::placeholder {
+        color: hsl(var(--color-main-txt-dark));
+      }
+    }
+
+    &-wrapper {
+      background-image: linear-gradient(to right, transparent, hsl(var(--color-secondary-bg-dark)) 5%);
+    }
+  }
+
+  .card {
+    background-color: hsl(var(--color-secondary-bg-dark));
+  }
+
+  .user {
+    &-name {
+      color: hsl(var(--color-main-txt-dark));
+    }
+
+    &-joined-date {
+      color: hsl(var(--color-main-txt-dark));
+    }
+
+    &-bio {
+      color: hsl(var(--color-main-txt-dark));
+    }
+
+    &-stats {
+      color: hsl(var(--color-main-txt-dark));
+      background-color: hsl(var(--color-main-bg-dark));
+    }
+
+    &-link {
+      color: hsl(var(--color-main-txt-dark));
+
+      &-location {
+        background-image: url(../../images/icon-location-dark.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-location-dark-unavailable.svg);
+        }
+      }
+
+      &-blog {
+        background-image: url(../../images/icon-website-dark.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-website-dark-unavailable.svg);
+        }
+      }
+
+      &-twitter {
+        background-image: url(../../images/icon-twitter-dark.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-twitter-dark-unavailable.svg);
+        }
+      }
+
+      &-company {
+        background-image: url(../../images/icon-company-dark.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-company-dark-unavailable.svg);
+        }
+      }
+    }
+
+    &-info-unavailable {
+      color: hsl(var(--color-unavailable-txt-dark));
+    }
+  }
+}
+
+body.color-scheme-light {
+  background-color: hsl(var(--color-main-bg-light));
+
+  .heading-primary {
+    color: hsl(var(--color-main-txt-light));
+  }
+
+  .form {
+    &-input {
+      color: hsl(var(--color-btn-theme-light));
+      background-color: hsl(var(--color-main-txt-dark));
+      box-shadow: var(--box-shadow);
+
+      &::placeholder {
+        color: hsl(var(--color-btn-theme-light));
+      }
+    }
+
+    &-wrapper {
+      background-image: linear-gradient(to right, transparent, hsl(var(--color-main-txt-dark)) 5%);
+    }
+  }
+
+  .card {
+    background-color: hsl(var(--color-main-txt-dark));
+    box-shadow: var(--box-shadow);
+  }
+
+  .user {
+    &-name {
+      color: hsl(var(--color-card-header-light));
+    }
+
+    &-joined-date {
+      color: hsl(var(--color-btn-theme-light));
+    }
+
+    &-bio {
+      color: hsl(var(--color-btn-theme-light));
+    }
+
+    &-stats {
+      background-color: hsl(var(--color-main-bg-light));
+
+      &-heading {
+        color: hsl(var(--color-btn-theme-light));
+      }
+
+      &-value {
+        color: hsl(var(--color-card-header-light));
+      }
+    }
+
+    &-link {
+      color: hsl(var(--color-btn-theme-light));
+
+      &-location {
+        background-image: url(../../images/icon-location-light.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-location-light-unavailable.svg);
+        }
+      }
+
+      &-blog {
+        background-image: url(../../images/icon-website-light.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-website-light-unavailable.svg);
+        }
+      }
+
+      &-twitter {
+        background-image: url(../../images/icon-twitter-light.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-twitter-light-unavailable.svg);
+        }
+      }
+
+      &-company {
+        background-image: url(../../images/icon-company-light.svg);
+
+        &.user-info-unavailable {
+          background-image: url(../../images/icon-company-light-unavailable.svg);
+        }
+      }
+    }
+
+    &-info-unavailable {
+      color: hsl(var(--color-unavailable-txt-light));
+    }
+  }
+}

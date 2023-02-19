@@ -1,0 +1,33 @@
+@import '../../../../assets/styles/abstracts/variables';
+
+.btn-theme {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  padding-right: 3.6rem;
+  transition: all .2s linear;
+  cursor: pointer;
+
+  &.light {
+    color: hsl(var(--color-main-txt-dark));
+    background-image: url(../../../../assets/images/icon-sun.svg);
+
+    &:hover {
+      color: hsl(var(--color-txt-hover-dark));
+      background-image: url(../../../../assets/images/icon-sun-hover.svg);
+    }
+  }
+
+  &.dark {
+    color: hsl(var(--color-btn-theme-light));
+    background-image: url(../../../../assets/images/icon-moon.svg);
+
+    &:hover {
+      color: hsl(var(--color-main-txt-light));
+      background-image: url(../../../../assets/images/icon-moon-hover.svg);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '../assets/styles/abstracts/mixins';
+
+:host {
+  width: 100%;
+  max-width: 57.3rem;
+  margin: 0 auto;
+
+  @include changeBreakpointView(tablet) {
+    max-width: 73rem;
+  }
+}

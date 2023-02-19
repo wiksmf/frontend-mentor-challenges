@@ -1,0 +1,67 @@
+@import '../../assets/styles/abstracts/_mixins.scss';
+
+.form {
+  position: relative;
+  margin: 3.6rem auto 2.6rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.6rem;
+    transform: translateY(-50%);
+    height: 2.4rem;
+    width: 2.4rem;
+    background-image: url(../../assets/images/icon-search.svg);
+    background-repeat: no-repeat;
+
+    @include changeBreakpointView(tablet) {
+      left: 3.2rem;
+    }
+  }
+
+  &-label {
+    display: none;
+  }
+
+  &-input {
+    width: 100%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1.8rem 9.5rem 1.8rem 4.5rem;
+    cursor: pointer;
+
+    @include changeBreakpointView(tablet) {
+      padding: 2.2rem 20rem 2.2rem 8rem;
+    }
+  }
+
+  &-wrapper {
+    position: absolute;
+    top: 50%;
+    right: .7rem;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+    padding-left: 1.5rem;
+  }
+
+  &-error {
+    color: hsl(var(--color-error));
+  }
+
+  &-btn {
+    border: none;
+    border-radius: 1rem;
+    padding: 1.25rem 1.6rem;
+    color: hsl(var(--color-main-txt-dark));
+    background-color: hsl(var(--color-neutral-btn));
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover {
+      background-color: hsl(var(--color-neutral-btn-hover));
+    }
+  }
+}

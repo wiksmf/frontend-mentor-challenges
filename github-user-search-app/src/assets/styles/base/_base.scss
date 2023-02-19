@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  height: fit-content;
+  padding: 2.4rem;
+  transition: all .2s linear;
+
+  @include changeBreakpointView(tablet) {
+    padding: 2.4rem 9.75rem;
+  }
+}

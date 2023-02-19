@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@import 'src/assets/styles/abstracts/mixins';
+@import 'src/assets/styles/abstracts/variables';
+
+@import 'src/assets/styles/base/base';
+@import 'src/assets/styles/base/reset';
+@import 'src/assets/styles/base/typography';
+
+@import 'src/assets/styles/themes/theme.scss';

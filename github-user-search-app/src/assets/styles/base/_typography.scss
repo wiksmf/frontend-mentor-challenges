@@ -1,0 +1,53 @@
+.heading-primary {
+  @include font-style($fs-heading-primary);
+}
+
+.form {
+  &-input {
+    @include font-style($fs-form-input);
+  }
+
+  &-error {
+    @include font-style($fs-form-error);
+  }
+
+  &-btn {
+    @include font-style($fs-form-btn);
+  }
+}
+
+.btn-theme {
+  @include font-style($fs-btn-theme);
+}
+
+.user {
+  &-name {
+    @include font-style($fs-user-name);
+  }
+
+  &-login {
+    @include font-style($fs-user-login);
+  }
+
+  &-joined-date {
+    @include font-style($fs-user-joined-date);
+  }
+
+  &-bio {
+    @include font-style($fs-user-bio);
+  }
+
+  &-stats {
+    &-heading {
+      @include font-style($fs-user-stats-heading);
+    }
+
+    &-value {
+      @include font-style($fs-user-stats-value);
+    }
+  }
+
+  &-link {
+    @include font-style($fs-user-link);
+  }
+}
