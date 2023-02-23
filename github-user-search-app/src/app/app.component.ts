@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from './core/models/user.interface';
-import { UserServiceService } from './core/services/user-service.service';
+import { UserService } from './core/services/user.service';
 import { ColorSchemeService } from './core/services/color-scheme.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   user!: User;
 
   constructor(
-    private userService: UserServiceService,
+    private userService: UserService,
     private colorSchemeService: ColorSchemeService
   ) {
     this.colorSchemeService.loadTheme();

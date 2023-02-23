@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { User } from '../core/models/user.interface';
-import { UserServiceService } from '../core/services/user-service.service';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   selector: 'app-search-form',
@@ -14,7 +14,7 @@ export class SearchFormComponent implements OnInit {
   userSearchForm!: FormGroup;
   errorUserNotFound: boolean = false;
 
-  constructor(private userService: UserServiceService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.userSearchForm = new FormGroup({
