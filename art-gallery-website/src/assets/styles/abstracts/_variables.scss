@@ -1,0 +1,58 @@
+// COLORS
+:root {
+  --color-bg-dark: 0, 0%, 8%;
+  --color-bg-light: 20, 33%, 98%;
+  --color-bg-gold: 24, 56%, 63%;
+  --color-bg-gold-hover: 24, 56%, 63%, 1;
+  --color-txt-white: 0, 0%, 100%;
+}
+
+// BREAKPOINTS
+$bp-medium: 48em; // 768px
+$bp-large: 71.875em; // 1150px
+
+$breakpoints: (
+  medium: $bp-medium,
+  large: $bp-large
+);
+
+// FONTS
+$font-family-head: 'Big Shoulders Display', cursive;
+$font-family-body: 'Outfit', sans-serif;
+
+
+$fs-page-a: (
+  null: ($font-family-head, 2rem, 800, 2.4rem, 0.36rem),
+);
+
+$fs-default-p: (
+  null: ($font-family-body, 1.8rem, 300, 2.8rem, 0),
+  large: ($font-family-body, 2.2rem, 300, 3.2rem, 0),
+);
+
+$fs-hero-h1: (
+  null: ($font-family-head, 6rem, 900, 5.5rem, 0),
+  medium: ($font-family-head, 7rem, 900, 6.5rem, 0),
+  large: ($font-family-head, 9.6rem, 900, 8.8rem, 0),
+);
+
+$fs-gallery-h2: (
+  null: ($font-family-head, 5rem, 900, 4.5rem, 0),
+  large: ($font-family-head, 6rem, 900, 6rem, 0),
+);
+
+$fs-location-h1: (
+  null: ($font-family-head, 5rem, 900, 4.5rem, 0),
+  medium: ($font-family-head, 5.5rem, 900, 5rem, 0),
+  large: ($font-family-head, 7rem, 900, 7rem, 0),
+);
+
+$fs-location-h2: (
+  null: ($font-family-head, 3.2rem, 900, 3.2rem, 0),
+  large: ($font-family-head, 3.6rem, 900, 3.6rem, 0),
+);
+
+$fs-footer-p: (
+  null: ($font-family-body, 1.6rem, 300, 2.6rem, 0),
+  large: ($font-family-body, 1.8rem, 300, 2.8rem, 0),
+);

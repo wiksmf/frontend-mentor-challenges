@@ -1,0 +1,55 @@
+body {
+  background-color: hsl(var(--color-bg-light));
+  overflow-x: hidden;
+  transition: all .2s linear;
+}
+
+.page-a {
+  display: block;
+  position: relative;
+  min-width: 26rem;
+  width: fit-content;
+  text-decoration: none;
+  background-color: hsl(var(--color-bg-dark));
+  transition: all .2s linear;
+
+  &--right {
+    padding: 2.4rem 9.1rem 2.4rem 3.5rem;
+  }
+
+  &--left {
+    padding: 2.4rem 3.5rem 2.4rem 8.8rem;
+  }
+
+  &:hover {
+    background-color: hsl(var(--color-bg-gold-hover));
+  }
+
+  &:hover .page-a--arrow {
+    background-color: hsl(var(--color-bg-dark));
+  }
+
+  &--arrow {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 5.6rem;
+    height: 100%;
+    background-color: hsl(var(--color-bg-gold));
+    background-repeat: no-repeat;
+    background-size: .8rem 2.4rem;
+    background-position: center;
+    transition: all .2s linear;
+
+
+    &-right {
+      right: 0;
+      background-image: url('../../images/icon-arrow-right.svg');
+    }
+
+    &-left {
+      left: 0;
+      background-image: url('../../images/icon-arrow-left.svg');
+    }
+  }
+}

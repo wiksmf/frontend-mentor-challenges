@@ -1,0 +1,85 @@
+.page-a {
+  text-transform: uppercase;
+  color: hsl(var(--color-txt-white));
+  @include font-style($fs-page-a);
+}
+
+.hero {
+  color: hsl(var(--color-bg-dark));
+
+  &-h1 {
+    text-transform: uppercase;
+    @include font-style($fs-hero-h1);
+
+    @include changeBreakpointView(desktop) {
+      color: hsl(var(--color-txt-white));
+    }
+  }
+
+  &-p {
+    @include font-style($fs-default-p);
+  }
+}
+
+.gallery-tour {
+  &-h2 {
+    text-transform: uppercase;
+    @include font-style($fs-gallery-h2);
+
+    &--light {
+      color: hsl(var(--color-bg-dark));
+    }
+
+    &--dark {
+      color: hsl(var(--color-txt-white));
+    }
+  }
+
+  &-p {
+    @include font-style($fs-default-p);
+
+    &--light {
+      color: hsl(var(--color-bg-dark));
+    }
+
+    &--dark {
+      color: hsl(var(--color-txt-white));
+    }
+  }
+}
+
+.location {
+  color: hsl(var(--color-txt-white));
+
+  &-h1 {
+    text-transform: uppercase;
+    @include font-style($fs-location-h1);
+  }
+
+  &-h2 {
+    text-transform: uppercase;
+    color: hsl(var(--color-bg-gold));
+    @include font-style($fs-location-h2);
+  }
+
+  &-h3 {
+    @include font-style($fs-default-p);
+  }
+
+  &-p {
+    @include font-style($fs-default-p);
+  }
+}
+
+.footer {
+  &-p {
+    color: hsl(var(--color-txt-white));
+    @include font-style($fs-footer-p);
+  }
+}
+
+.footer.footer-location {
+  .footer-p {
+    color: hsl(var(--color-bg-dark));
+  }
+}
