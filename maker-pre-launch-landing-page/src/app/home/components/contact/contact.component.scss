@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/abstracts/mixins';
+
+.contact {
+  margin-top: 14.4rem;
+  padding-bottom: 16.4rem;
+  background-image: url(../../../../assets/images/bg-footer-squiggle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include changeBreakpointView(tablet) {
+    margin-top: 13.5rem;
+    padding-bottom: 11.9rem;
+  }
+
+  @include changeBreakpointView(desktop) {
+    margin-top: 20.3rem;
+    padding-bottom: 15.9rem;
+  }
+
+  &-h2 {
+    margin-bottom: 3.2rem;
+    padding: 0 8rem;
+
+    @include changeBreakpointView(tablet) {
+      margin-bottom: 2.9rem;
+    }
+  }
+}

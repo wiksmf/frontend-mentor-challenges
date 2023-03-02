@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/abstracts/mixins';
+
+.header {
+  padding: 4rem 5rem 6.5rem;
+
+  @include changeBreakpointView(tablet) {
+    padding: 4.8rem 3.9rem 7.7rem;
+    text-align: left;
+  }
+
+  @include changeBreakpointView(desktop) {
+    padding: 8.1rem 0 1.4rem;
+    max-width: 111rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &-img {
+    width: 12rem;
+    height: 3.5rem;
+  }
+}

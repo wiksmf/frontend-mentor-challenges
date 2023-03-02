@@ -1,0 +1,143 @@
+@import '../../../../assets/styles/abstracts/mixins';
+@import '../../../../assets/styles/abstracts/variables';
+
+.pricing {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  transition: all .2s linear;
+
+  @include changeBreakpointView(desktop) {
+    max-width: 92rem;
+  }
+
+  &-h2 {
+    margin-bottom: 2.7rem;
+    padding: 0 2.8rem;
+  }
+
+  &-h3 {
+    margin-bottom: 1.9rem;
+
+    &--big {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      column-gap: .75rem;
+    }
+  }
+
+  &-p {
+    padding: 0 2.8rem;
+    margin-bottom: 3.2rem;
+
+    @include changeBreakpointView(desktop) {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    &--card {
+      padding-left: 0;
+    }
+  }
+
+  &-cards {
+    margin-top: 7.9rem;
+
+    @include changeBreakpointView(desktop) {
+      display: flex;
+      column-gap: 3rem;
+      margin-top: 10.5rem;
+    }
+  }
+
+  &-card {
+    position: relative;
+    padding: 4.9rem 3rem 3.2rem;
+    text-align: left;
+    border-radius: .8rem;
+    max-width: 44.5rem;
+    margin: 0 auto;
+
+    @include changeBreakpointView(desktop) {
+      min-width: 44.5rem;
+      width: 44.5rem;
+    }
+
+    &--light {
+      background-color: hsl(var(--color-bg-card-dark));
+
+      @include changeBreakpointView(desktop) {
+        transform: scale(0.95);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -2.3rem;
+        left: 3rem;
+        width: 4.6rem;
+        height: 4.6rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../../../../assets/images/icon-free.svg);
+      }
+    }
+
+    &--dark {
+      margin-top: 6.5rem;
+      background-color: hsl(var(--color-txt-highlight));
+
+      @include changeBreakpointView(desktop) {
+        margin-top: 0;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -2.3rem;
+        left: 3rem;
+        width: 4.6rem;
+        height: 4.6rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../../../../assets/images/icon-paid.svg);
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    list-style: none;
+  }
+
+  &-item {
+    position: relative;
+    padding-left: 2.6rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%);
+      width: 1.2rem;
+      height: .8rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--light::before {
+      background-image: url(../../../../assets/images/icon-check-light.svg);
+    }
+
+    &--dark::before {
+      background-image: url(../../../../assets/images/icon-check-dark.svg);
+    }
+  }
+}

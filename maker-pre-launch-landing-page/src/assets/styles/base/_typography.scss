@@ -1,0 +1,102 @@
+.hero {
+  &-h1 {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-hero-h1);
+
+    &--highlight {
+      color: hsl(var(--color-txt-highlight));
+    }
+  }
+
+  &-p {
+    color: hsl(var(--color-txt-p));
+    @include font-style($fs-default-p);
+  }
+}
+
+.feature {
+  &-h2 {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-default-h2);
+  }
+
+  &-p {
+    color: hsl(var(--color-txt-p));
+    @include font-style($fs-default-p);
+  }
+}
+
+.pricing {
+  &-h2 {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-default-h2--big);
+  }
+
+  &-h3 {
+    @include font-style($fs-default-h2);
+
+    &--big {
+      @include font-style($fs-default-h3--big);
+    }
+  }
+
+  &-p {
+    color: hsl(var(--color-txt-p));
+    @include font-style($fs-default-p);
+
+    &--light {
+      color: hsl(var(--color-txt-main));
+    }
+
+    &--dark {
+      color: hsl(var(--color-bg-main));
+    }
+  }
+
+  &-period {
+    color: hsl(var(--color-bg-main));
+    @include font-style($fs-default-p);
+  }
+
+  &-card {
+    &--light {
+      color: hsl(var(--color-txt-main));
+    }
+
+    &--dark {
+      color: hsl(var(--color-bg-main));
+    }
+  }
+
+  &-item {
+    @include font-style($fs-default-p);
+  }
+}
+
+.contact {
+  &-h2 {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-default-h2--big);
+  }
+}
+
+.form {
+  &-input {
+    color: hsl(var(--color-txt-main));
+    @include font-style($fs-default-p);
+
+    &::placeholder {
+      color: hsl(var(--color-txt-main), .4);
+    }
+  }
+
+  &-btn {
+    color: hsl(var(--color-bg-main));
+    @include font-style($fs-default-p);
+  }
+
+  &-error {
+    color: hsl(var(--color-error));
+    @include font-style($fs-error);
+  }
+}

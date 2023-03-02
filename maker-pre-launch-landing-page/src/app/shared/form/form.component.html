@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+  <div class="form-wrapper">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" id="email"class="form-input" placeholder="Email address"
+      formControlName="email"
+      [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)" />
+
+      <span *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched && !contactForm.controls['email'].dirty" class="form-error">
+        Oops! Please add your email.
+      </span>
+
+      <span *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].dirty" class="form-error">
+        Oops! That doesn't look like an email address.
+      </span>
+  </div>
+
+  <button type="submit" class="form-btn"
+    [disabled]="!contactForm.valid">Get notified</button>
+</form>

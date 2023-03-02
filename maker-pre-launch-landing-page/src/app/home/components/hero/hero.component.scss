@@ -1,0 +1,79 @@
+@import '../../../../assets/styles/abstracts/mixins';
+
+.hero {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 28rem 0 14.4rem;
+  background-image: url(../../../../assets/images/illustration-hero-mobile.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow-x: hidden;
+  transition: all .2s linear;
+
+  @include changeBreakpointView(tablet) {
+    max-width: unset;
+    padding: 12rem 0 16.1em;
+    background-image: url(../../../../assets/images/bg-hero-squiggle.svg);
+    background-position: center;
+    background-size: 45.7rem 27.2rem;
+  }
+
+  @include changeBreakpointView(desktop) {
+    padding: 15rem 0 27.2rem;
+  }
+
+  &-h1 {
+    max-width: 45rem;
+    margin: 0 auto 2.3rem;
+    padding: 0 6.5rem;
+
+    @include changeBreakpointView(tablet) {
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+      @include changeBreakpointView(tablet) {
+        content: '';
+        position: absolute;
+        top: -55%;
+        width: 31.4rem;
+        height: 35.6rem;
+        background-position: contain;
+        background-size: 31.4rem 35.6rem;
+      }
+    }
+
+    &::before {
+      @include changeBreakpointView(tablet) {
+        content: '';
+        left: -75%;
+        background-image: url(../../../../assets/images/illustration-hero-left.svg);
+      }
+    }
+
+    &::after {
+      @include changeBreakpointView(tablet) {
+        content: '';
+        right: -75%;
+        background-image: url(../../../../assets/images/illustration-hero-right.svg);
+      }
+    }
+  }
+
+  &-p {
+    max-width: 50rem;
+    margin: 0 auto 3.2rem;
+    padding: 0 2rem;
+  }
+
+  &-scroll-icon {
+    width: 2.6rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    background-image: url(../../../../assets/images/icon-scroll.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

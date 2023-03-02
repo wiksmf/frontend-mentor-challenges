@@ -1,0 +1,82 @@
+@import '../../../assets/styles/abstracts/mixins';
+@import '../../../assets/styles/abstracts/variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  padding: 0 2.4rem;
+
+  @include changeBreakpointView(tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 1.6rem;
+  }
+
+  &-label {
+    display: none;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: .4rem;
+  }
+
+  &-input {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+    border-radius: 2.4rem;
+    border: 2px solid hsl(var(--color-bg-card-dark));
+    background-color: hsl(var(--color-bg-card-dark));
+    padding: 1rem 1.8rem;
+    transition: all .2s linear;
+
+    &.is-invalid {
+      border: 2px solid hsl(var(--color-error));
+    }
+
+    @include changeBreakpointView(tablet) {
+      min-width: 32rem;
+      width: 32rem;
+      margin: 0;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+    border-radius: 2.4rem;
+    border: 2px solid hsl(var(--color-txt-highlight));
+    background-color: hsl(var(--color-txt-highlight));
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    @include changeBreakpointView(tablet) {
+      min-width: 14rem;
+      width: fit-content;
+      margin: 0;
+    }
+
+    &:disabled {
+      border: 2px solid hsl(var(--color-txt-highlight), .8);
+      background-color: hsl(var(--color-txt-highlight), .8);
+    }
+
+    &:not(:disabled):focus,
+    &:not(:disabled):hover {
+      border: 2px solid hsl(var(--color-txt-highlight));
+      background-color: hsl(var(--color-bg-main));
+      color: hsl(var(--color-txt-main));
+    }
+  }
+
+  &-error {
+    padding-left: 1.8rem;
+    text-align: left;
+  }
+}
