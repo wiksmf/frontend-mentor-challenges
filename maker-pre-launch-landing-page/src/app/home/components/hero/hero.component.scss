@@ -20,7 +20,7 @@
   }
 
   @include changeBreakpointView(desktop) {
-    padding: 15rem 0 27.2rem;
+    padding: 18.5rem 0 27.2rem;
   }
 
   &-h1 {
@@ -42,6 +42,13 @@
         height: 35.6rem;
         background-position: contain;
         background-size: 31.4rem 35.6rem;
+
+        @include changeBreakpointView(desktop) {
+          top: -25%;
+          width: 40.8rem;
+          height: 45.9rem;
+          background-size: 40.8rem 45.9rem;
+        }
       }
     }
 
@@ -50,6 +57,10 @@
         content: '';
         left: -75%;
         background-image: url(../../../../assets/images/illustration-hero-left.svg);
+
+        @include changeBreakpointView(desktop) {
+          left: -120%;
+        }
       }
     }
 
@@ -58,6 +69,10 @@
         content: '';
         right: -75%;
         background-image: url(../../../../assets/images/illustration-hero-right.svg);
+
+        @include changeBreakpointView(desktop) {
+          right: -120%;
+        }
       }
     }
   }

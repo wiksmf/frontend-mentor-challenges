@@ -11,14 +11,14 @@
 
   @include changeBreakpointView(tablet) {
     max-width: 57.3rem;
-    padding: 0 0 20.2rem;
+    padding: 0 0 14.1rem;
   }
 
   @include changeBreakpointView(desktop) {
     flex-direction: row;
     column-gap: 3rem;
     max-width: 111rem;
-    padding: 0 0 14.1rem;
+    padding: 0 0 20.2rem;
   }
 }
 
@@ -80,6 +80,8 @@
 
     @include changeBreakpointView(desktop) {
       margin: 0;
+      width: 16rem;
+      height: 16.4rem;
     }
   }
 
