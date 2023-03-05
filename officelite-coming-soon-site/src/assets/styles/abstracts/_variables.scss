@@ -1,0 +1,13 @@
+// COLORS
+:root {}
+
+// BREAKPOINTS
+$bp-medium: 48em; // 768px
+$bp-large: 71.875em; // 1150px
+
+$breakpoints: (
+  medium: $bp-medium,
+  large: $bp-large
+);
+
+// FONTS
