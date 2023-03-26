@@ -33,6 +33,7 @@
   }
 
   &-input {
+    padding: 0 0 16px 24px;
     background: none;
     border: none;
     width: 100%;
@@ -54,6 +55,8 @@
   }
 
   &-textarea {
+    resize: none;
+    padding-left: 24px;
     background: none;
     border: none;
     min-width: 100%;

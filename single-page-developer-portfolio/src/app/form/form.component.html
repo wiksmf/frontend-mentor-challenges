@@ -1,8 +1,7 @@
 <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
   <div class="form-wrapper">
     <div class="form-wrapper-input">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" id="name" class="form-input" formControlName="name"
+      <input placeholder="NAME" type="text" id="name" class="form-input" formControlName="name"
         [class.is-invalid]="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)"
         [class.is-valid]="contactForm.controls['name'].valid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)"/>
       <div *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)" class="form-error">
@@ -11,8 +10,7 @@
     </div>
 
     <div class="form-wrapper-input">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" id="email"class="form-input" formControlName="email"
+      <input placeholder="EMAIL" type="email" id="email"class="form-input" formControlName="email"
         [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"
         [class.is-valid]="contactForm.controls['email'].valid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"/>
       <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)" class="form-error">
@@ -21,8 +19,7 @@
     </div>
 
     <div class="form-wrapper-input">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message" class="form-textarea" formControlName="message"
+      <textarea placeholder="MESSAGE" id="message" class="form-textarea" formControlName="message"
         [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"
         [class.is-valid]="contactForm.controls['message'].valid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"></textarea>
       <div *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)" class="form-error">
